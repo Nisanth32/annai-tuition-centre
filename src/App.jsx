@@ -1348,7 +1348,7 @@ function Admissions() {
               </label>
               <label>
                 Email address
-                <input name="email" type="email" maxLength="254" placeholder="Optional" />
+                <input name="email" type="email" maxLength="254" placeholder="Optional" autoComplete="off" />
               </label>
               <label>
                 Current class *
@@ -1652,7 +1652,7 @@ function ContactForm() {
       </label>
       <label>
         Email address
-        <input type="email" name="email" maxLength="254" placeholder="Optional" />
+        <input type="email" name="email" maxLength="254" placeholder="Optional" autoComplete="off" />
       </label>
       <label>
         Message *
