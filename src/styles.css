@@ -2185,3 +2185,237 @@
   }
 }
 
+/* EXECUTIVE COLOR PALETTE UPGRADE: SOFT SLATE & NAVY REPLACING STARK WHITE */
+body {
+  background-color: #f6f8fc !important;
+  color: #172648;
+}
+
+/* Sections that were flat white get elegant luxury tones */
+.welcome {
+  background: linear-gradient(180deg, #f8fafc 0%, #edf3fa 100%) !important;
+}
+
+.results-preview {
+  background: #f4f7fc !important;
+}
+
+.contact-preview {
+  background: #edf2f9 !important;
+}
+
+.classes-strip {
+  background: #eef3f9 !important;
+}
+
+/* Page Heroes Get Deep Royal Navy with Gold Accents */
+.page-hero {
+  background: linear-gradient(135deg, #0a1738 0%, #11234f 50%, #182e66 100%) !important;
+  color: #ffffff !important;
+  border-bottom: 3px solid var(--gold);
+}
+.page-hero .eyebrow {
+  color: #ffd875 !important;
+}
+.page-hero h1 {
+  color: #ffffff !important;
+}
+.page-hero h1 em {
+  color: #f3bd42 !important;
+}
+.page-hero p {
+  color: #cbd5e1 !important;
+}
+
+/* Refined Cards with Crisp Contrast against the soft slate background */
+.welcome-card,
+.course-card,
+.subject-card,
+.facility-card,
+.student-feature,
+.class-chip,
+.score-card,
+.location-card,
+.form-card,
+.aside-card:not(.aside-dark) {
+  background: #ffffff !important;
+  border-color: #dbe2ef !important;
+  box-shadow: 0 10px 28px rgba(16, 32, 70, 0.05) !important;
+}
+
+.welcome-card:hover,
+.course-card:hover,
+.subject-card:hover,
+.facility-card:hover,
+.class-chip:hover {
+  border-color: #cbb27a !important;
+  box-shadow: 0 18px 36px rgba(16, 32, 70, 0.09) !important;
+}
+
+/* Hero Photography Box with Authentic Classroom Visual */
+.hero-photo-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.hero-photo-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  font-size: 11.5px;
+  color: #e2e8f0;
+}
+.photo-topbar-tag {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  color: #ffd875;
+}
+.live-status-pill {
+  font-size: 10px;
+  font-weight: 800;
+  color: #34d399;
+  letter-spacing: 0.06em;
+}
+.hero-photo-box {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  background: #0f1c3f;
+  border: 2px solid rgba(243, 189, 66, 0.45);
+}
+.hero-main-photo {
+  width: 100%;
+  height: 385px;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero-photo-box:hover .hero-main-photo {
+  transform: scale(1.02);
+}
+.hero-photo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 12px;
+  color: var(--navy);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Faculty Recruitment & Careers Band */
+.faculty-apply-band {
+  background: linear-gradient(135deg, #0b1736 0%, #142857 50%, #1c3573 100%);
+  border: 1.5px solid rgba(243, 189, 66, 0.45);
+  border-radius: 18px;
+  padding: 36px 32px;
+  color: #fff;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  box-shadow: 0 16px 40px rgba(11, 23, 54, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.faculty-apply-content {
+  flex: 1;
+  max-width: 680px;
+}
+.faculty-apply-content h3 {
+  font: 800 25px/1.25 Manrope, sans-serif;
+  color: #ffffff;
+  margin: 10px 0 12px;
+}
+.faculty-apply-content p {
+  color: #cbd5e1;
+  font-size: 13.5px;
+  line-height: 1.7;
+  margin: 0 0 18px;
+}
+.faculty-apply-content strong {
+  color: #ffd875;
+}
+.faculty-apply-perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.apply-perk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffd875;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(243, 189, 66, 0.3);
+}
+.faculty-apply-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.faculty-apply-actions .button {
+  padding: 12px 22px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.apply-call-btn {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #ffffff !important;
+}
+.apply-call-btn:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: #ffffff !important;
+}
+
+@media (max-width: 900px) {
+  .faculty-apply-band {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 22px;
+  }
+  .faculty-apply-actions {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .faculty-apply-actions .button {
+    flex: 1;
+  }
+}
+@media (max-width: 700px) {
+  .hero-main-photo {
+    height: 240px;
+  }
+  .hero-photo-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .hero-photo-footer .hero-note-action {
+    width: 100%;
+    justify-content: center;
+  }
+  .faculty-apply-actions {
+    flex-direction: column;
+  }
+  .faculty-apply-actions .button {
+    width: 100%;
+  }
+}
+
