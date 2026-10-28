@@ -246,7 +246,7 @@ const branchesInfo = [
     mapLink: 'https://www.google.com/maps/search/?api=1&query=21%2F87+Puthur+Agraharam+Near+Bishop+School+Trichy+17',
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=21%2F87+Puthur+Agraharam+Near+Bishop+School+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=21%2F87%2C+Puthur+Agraharam%2C+Near+Bishop+School%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
-    timings: 'Class Timings: 6:30 PM – 9:00 PM | Mon – Sat (Sunday: Special Batches)',
+    timings: 'Class Timings: 6:30 PM – 9:00 PM | Mon – Sat & Sunday Special Classes',
     facilities: ['Dedicated Parking Facility', 'Interactive Smart Board', '24/7 CCTV Surveillance', 'Spacious Classrooms', '100% Safe for Girls'],
   },
   {
@@ -261,7 +261,7 @@ const branchesInfo = [
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=Ramakrishna+Middle+School%2C+Near+Aruna+Theatre%2C+Puthur%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
-    timings: 'Class Timings: 6:30 PM – 9:00 PM | Mon – Sat (Sunday: Test Series)',
+    timings: 'Class Timings: 6:30 PM – 9:00 PM | Mon – Sat & Sunday Special Classes',
     facilities: ['Dedicated Parking Facility', 'Interactive Smart Board', 'Spacious Desks & CCTV', 'Distraction-Free Environment', '100% Safe for Girls'],
   },
 ];
@@ -310,7 +310,7 @@ function Header() {
         <div className="topline-left">
           <span>Welcome to Annai Tuition Centre, Trichy</span>
           <span className="topline-timing-pill">
-            <Clock size={11} /> Timings: 6:30 PM – 9:00 PM
+            <Clock size={11} /> Timings: 6:30 PM – 9:00 PM (Sunday Classes Available)
           </span>
           <span className="msme-pill">
             <ShieldCheck size={12} /> MSME Registered
@@ -1440,7 +1440,7 @@ function ReferenceHeroSection() {
             </p>
             <div className="ref-timing-chip">
               <Clock size={16} />
-              <span>Class Timings: 6:30 PM – 9:00 PM</span>
+              <span>Class Timings: 6:30 PM – 9:00 PM (Sunday Classes Available)</span>
             </div>
             <div className="ref-cta-group">
               <Link to="/admissions" className="ref-enroll-btn">
@@ -1463,8 +1463,8 @@ function ReferenceHeroSection() {
           <div className="ref-visual-wrapper">
             <div className="ref-image-frame">
               <img
-                src="/images/annai-hero-student.jpg"
-                alt="Happy students studying at Annai Tuition Centre"
+                src="/images/annai-classroom-hero.jpg"
+                alt="Students studying in classroom at Annai Tuition Centre"
               />
               <div className="ref-chalk-doodle">
                 <span className="ref-chalk-rays">✨ Small Steps ✨</span>
@@ -1563,7 +1563,7 @@ function RealClassroomSection() {
               <strong>
                 <Clock size={14} /> Class Timings: 6:30 PM – 9:00 PM
               </strong>
-              <span>Monday – Saturday</span>
+              <span>Monday – Saturday & Sunday Special Classes</span>
             </div>
           </div>
 
@@ -1592,7 +1592,7 @@ function RealClassroomSection() {
                 </div>
                 <div className="real-feat-text">
                   <strong>Class Timings: 6:30 PM – 9:00 PM</strong>
-                  <p>Structured daily schedule allowing students to master concepts, complete homework, and prepare for exams.</p>
+                  <p>Structured daily schedule with Sunday special classes allowing students to master concepts and prepare for exams.</p>
                 </div>
               </div>
 
@@ -1802,7 +1802,7 @@ function Home() {
               </Link>
             ))}
           </div>
-          <p className="note-small">Class timings: 6:30 PM – 9:00 PM. Contact us for current admissions.</p>
+          <p className="note-small">Class timings: 6:30 PM – 9:00 PM (Sunday classes available). Contact us for current admissions.</p>
         </div>
       </section>
 
@@ -1830,7 +1830,7 @@ function Home() {
           <div>
             <span className="eyebrow eyebrow-light">Learn Today... Lead Tomorrow.</span>
             <h2>Ready to take the next step?</h2>
-            <p>Class timings: 6:30 PM – 9:00 PM. Tell us what your child needs to secure their seat.</p>
+            <p>Class timings: 6:30 PM – 9:00 PM with Sunday special classes. Tell us what your child needs to secure their seat.</p>
           </div>
           <Link to="/admissions" className="button button-gold">
             Enroll Now <ArrowRight size={16} />
@@ -1913,7 +1913,7 @@ function About() {
               </div>
               <div className="about-point">
                 <Clock size={17} />
-                <span>Class Timings: 6:30 PM – 9:00 PM (Mon – Sat)</span>
+                <span>Class Timings: 6:30 PM – 9:00 PM (Daily & Sunday Classes)</span>
               </div>
               <div className="about-point">
                 <Tv size={17} />
@@ -2049,7 +2049,7 @@ function ClassesPage() {
           <SectionTitle
             eyebrow="All Grade Levels & Streams"
             title="All Classes We Offer"
-            text="Choose your class to enquire about class timings (6:30 PM – 9:00 PM), subjects, and batch availability."
+            text="Choose your class to enquire about class timings (6:30 PM – 9:00 PM), Sunday special classes, subjects, and batch availability."
           />
           <div className="courses-grid">
             {classes.map((c, i) => (
