@@ -188,7 +188,7 @@ export const subjectsList = [
       '1-on-1 personalized doubt clearing tutorials with senior faculty',
       'Daily homework tracking & mental arithmetic drills for Classes 1–8',
       'Board exam crash tutorials & blueprint model question series',
-      'Evening concept-strengthening tutorials for slow learners',
+      'Concept-strengthening tutorials for focused learners',
     ],
   },
   {
@@ -246,7 +246,7 @@ const branchesInfo = [
     mapLink: 'https://www.google.com/maps/search/?api=1&query=21%2F87+Puthur+Agraharam+Near+Bishop+School+Trichy+17',
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=21%2F87+Puthur+Agraharam+Near+Bishop+School+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=21%2F87%2C+Puthur+Agraharam%2C+Near+Bishop+School%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
-    timings: 'Daily Evening Batches: 6:30 PM – 9:00 PM | Mon – Sat (Sunday: Special Batches)',
+    timings: 'Class Timings: 6:30 PM – 9:00 PM | Mon – Sat (Sunday: Special Batches)',
     facilities: ['Dedicated Parking Facility', 'Interactive Smart Board', '24/7 CCTV Surveillance', 'Spacious Classrooms', '100% Safe for Girls'],
   },
   {
@@ -261,7 +261,7 @@ const branchesInfo = [
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=Ramakrishna+Middle+School%2C+Near+Aruna+Theatre%2C+Puthur%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
-    timings: 'Daily Evening Batches: 6:30 PM – 9:00 PM | Mon – Sat (Sunday: Test Series)',
+    timings: 'Class Timings: 6:30 PM – 9:00 PM | Mon – Sat (Sunday: Test Series)',
     facilities: ['Dedicated Parking Facility', 'Interactive Smart Board', 'Spacious Desks & CCTV', 'Distraction-Free Environment', '100% Safe for Girls'],
   },
 ];
@@ -310,7 +310,7 @@ function Header() {
         <div className="topline-left">
           <span>Welcome to Annai Tuition Centre, Trichy</span>
           <span className="topline-timing-pill">
-            <Clock size={11} /> Evening Batches: 6:30 PM – 9:00 PM
+            <Clock size={11} /> Timings: 6:30 PM – 9:00 PM
           </span>
           <span className="msme-pill">
             <ShieldCheck size={12} /> MSME Registered
@@ -1137,10 +1137,10 @@ export function FacultySection() {
             <span className="eyebrow eyebrow-light">Faculty Recruitment & Careers</span>
             <h3>Join Our Faculty Panel — Apply for Teaching Positions</h3>
             <p>
-              Are you an experienced educator dedicated to academic excellence? Annai Tuition Centre invites qualified <strong>Postgraduate (PG) & B.Ed. Teachers</strong> for <strong>Mathematics, Physics, Chemistry, Biology, English</strong>, and <strong>Junior Foundation</strong> for evening batches in Puthur, Trichy.
+              Are you an experienced educator dedicated to academic excellence? Annai Tuition Centre invites qualified <strong>Postgraduate (PG) & B.Ed. Teachers</strong> for <strong>Mathematics, Physics, Chemistry, Biology, English</strong>, and <strong>Junior Foundation</strong> for coaching batches in Puthur, Trichy.
             </p>
             <div className="faculty-apply-perks">
-              <span className="apply-perk-badge"><CheckCircle size={14} /> Evening & Weekend Batches</span>
+              <span className="apply-perk-badge"><CheckCircle size={14} /> Structured Batch Timings</span>
               <span className="apply-perk-badge"><CheckCircle size={14} /> Respectful Academic Environment</span>
               <span className="apply-perk-badge"><CheckCircle size={14} /> Competitive Compensation</span>
             </div>
@@ -1190,7 +1190,7 @@ export function SubjectsTutorialsSection() {
               Science, Commerce & <span className="serif-accent">Specialized Tutorials</span>.
             </>
           }
-          text="Targeted concept mastery in Mathematics, Physics, Chemistry, Biology, Computer Science, and Commerce & Accountancy with dedicated evening coaching."
+          text="Targeted concept mastery in Mathematics, Physics, Chemistry, Biology, Computer Science, and Commerce & Accountancy with dedicated subject coaching."
           align="align-center"
         />
 
@@ -1440,7 +1440,7 @@ function ReferenceHeroSection() {
             </p>
             <div className="ref-timing-chip">
               <Clock size={16} />
-              <span>Evening Batches: 6:30 PM – 9:00 PM</span>
+              <span>Class Timings: 6:30 PM – 9:00 PM</span>
             </div>
             <div className="ref-cta-group">
               <Link to="/admissions" className="ref-enroll-btn">
@@ -1454,13 +1454,16 @@ function ReferenceHeroSection() {
               >
                 <MessageCircle size={17} /> Chat on WhatsApp
               </a>
+              <a href="tel:+919626265456" className="ref-call-btn">
+                <Phone size={16} /> 96262 65456
+              </a>
             </div>
           </div>
 
           <div className="ref-visual-wrapper">
             <div className="ref-image-frame">
               <img
-                src="/images/annai-hero-reference.jpg"
+                src="/images/annai-hero-student.jpg"
                 alt="Happy students studying at Annai Tuition Centre"
               />
               <div className="ref-chalk-doodle">
@@ -1558,7 +1561,7 @@ function RealClassroomSection() {
             </div>
             <div className="real-class-timing-overlay">
               <strong>
-                <Clock size={14} /> Evening Batches: 6:30 PM – 9:00 PM
+                <Clock size={14} /> Class Timings: 6:30 PM – 9:00 PM
               </strong>
               <span>Monday – Saturday</span>
             </div>
@@ -1588,8 +1591,8 @@ function RealClassroomSection() {
                   <Clock size={20} />
                 </div>
                 <div className="real-feat-text">
-                  <strong>Convenient Evening Batches: 6:30 PM – 9:00 PM</strong>
-                  <p>Ideal after-school timing allowing students to revise lessons, finish homework, and prepare for exams.</p>
+                  <strong>Class Timings: 6:30 PM – 9:00 PM</strong>
+                  <p>Structured daily schedule allowing students to master concepts, complete homework, and prepare for exams.</p>
                 </div>
               </div>
 
@@ -1799,7 +1802,7 @@ function Home() {
               </Link>
             ))}
           </div>
-          <p className="note-small">Daily evening batches: 6:30 PM – 9:00 PM. Contact us for current admissions.</p>
+          <p className="note-small">Class timings: 6:30 PM – 9:00 PM. Contact us for current admissions.</p>
         </div>
       </section>
 
@@ -1827,7 +1830,7 @@ function Home() {
           <div>
             <span className="eyebrow eyebrow-light">Learn Today... Lead Tomorrow.</span>
             <h2>Ready to take the next step?</h2>
-            <p>Daily evening batches: 6:30 PM – 9:00 PM. Tell us what your child needs to secure their seat.</p>
+            <p>Class timings: 6:30 PM – 9:00 PM. Tell us what your child needs to secure their seat.</p>
           </div>
           <Link to="/admissions" className="button button-gold">
             Enroll Now <ArrowRight size={16} />
@@ -1910,7 +1913,7 @@ function About() {
               </div>
               <div className="about-point">
                 <Clock size={17} />
-                <span>Daily Evening Batches: 6:30 PM – 9:00 PM (Mon – Sat)</span>
+                <span>Class Timings: 6:30 PM – 9:00 PM (Mon – Sat)</span>
               </div>
               <div className="about-point">
                 <Tv size={17} />
@@ -2046,7 +2049,7 @@ function ClassesPage() {
           <SectionTitle
             eyebrow="All Grade Levels & Streams"
             title="All Classes We Offer"
-            text="Choose your class to enquire about evening timings (6:30 PM – 9:00 PM), subjects, and batch availability."
+            text="Choose your class to enquire about class timings (6:30 PM – 9:00 PM), subjects, and batch availability."
           />
           <div className="courses-grid">
             {classes.map((c, i) => (
