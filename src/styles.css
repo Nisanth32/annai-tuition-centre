@@ -1448,30 +1448,30 @@
   color: #64748b;
 }
 .milestone-stat-callout {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(22, 41, 86, 0.6) 100%);
-  border: 2px solid rgba(245, 158, 11, 0.45);
+  background: linear-gradient(145deg, #162956 0%, #0d1a3a 100%);
+  border: 2px solid rgba(245, 158, 11, 0.6);
   border-radius: 24px;
   padding: 34px 28px;
   text-align: center;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45), 0 0 40px rgba(245, 158, 11, 0.15);
-  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 45px rgba(22, 41, 86, 0.25), 0 0 30px rgba(245, 158, 11, 0.15);
 }
 .milestone-big-number {
   font: 900 clamp(54px, 6.5vw, 82px) / 1 Manrope, sans-serif;
-  color: var(--gold);
+  color: #f3bd42;
   letter-spacing: -0.05em;
   display: block;
-  text-shadow: 0 4px 25px rgba(245, 158, 11, 0.35);
+  text-shadow: 0 4px 25px rgba(243, 189, 66, 0.4);
 }
 .milestone-big-label {
-  font: 800 19px Manrope;
-  color: #fff;
+  font: 800 20px Manrope;
+  color: #ffffff;
   display: block;
   margin: 10px 0 6px;
+  letter-spacing: -0.02em;
 }
 .milestone-big-sub {
-  font-size: 12px;
-  color: #94a3b8;
+  font-size: 13px;
+  color: #cbd5e1;
   display: block;
   margin-bottom: 24px;
 }
@@ -1483,19 +1483,25 @@
   margin-bottom: 26px;
 }
 .mini-badge {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 10px;
-  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 12px;
-  color: #e2e8f0;
+  gap: 12px;
+  font-size: 13px;
+  color: #ffffff;
   font-weight: 600;
+  transition: transform 0.2s, background 0.2s, border-color 0.2s;
+}
+.mini-badge:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(243, 189, 66, 0.5);
+  transform: translateX(4px);
 }
 .mini-badge svg {
-  color: var(--gold);
+  color: #f3bd42;
   flex-shrink: 0;
 }
 .milestone-action-cta .button {
@@ -1508,16 +1514,17 @@
   margin-top: 10px;
 }
 .milestone-pillar-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 26px 20px;
-  transition: transform 0.25s, border-color 0.25s, background 0.25s;
+  box-shadow: 0 4px 16px rgba(22, 41, 86, 0.05);
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
 }
 .milestone-pillar-card:hover {
   transform: translateY(-4px);
   border-color: rgba(245, 158, 11, 0.6);
-  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 28px rgba(22, 41, 86, 0.12);
 }
 .pillar-icon-box {
   width: 46px;
@@ -1527,19 +1534,19 @@
   place-items: center;
   margin-bottom: 16px;
 }
-.pillar-icon-box.gold { background: rgba(245, 158, 11, 0.2); color: #ffd875; }
-.pillar-icon-box.blue { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
-.pillar-icon-box.green { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; }
-.pillar-icon-box.purple { background: rgba(168, 85, 247, 0.2); color: #d8b4fe; }
+.pillar-icon-box.gold { background: #fef3c7; color: #b45309; }
+.pillar-icon-box.blue { background: #dbeafe; color: #1d4ed8; }
+.pillar-icon-box.green { background: #dcfce7; color: #15803d; }
+.pillar-icon-box.purple { background: #f3e8ff; color: #7e22ce; }
 .milestone-pillar-card h4 {
   font: 700 17px Manrope;
-  color: #fff;
+  color: #162956;
   margin: 0 0 10px;
 }
 .milestone-pillar-card p {
   font-size: 13px;
   line-height: 1.7;
-  color: #94a3b8;
+  color: #475569;
   margin: 0;
 }
 
@@ -2011,6 +2018,7 @@
   place-items: center;
   margin-bottom: 18px;
 }
+.subject-card-icon.commerce { background: #ecfdf5; color: #047857; }
 .subject-card-icon.cs { background: #e0f2fe; color: #0369a1; }
 .subject-card-icon.bio { background: #dcfce7; color: #15803d; }
 .subject-card-icon.tut { background: #fef3c7; color: #b45309; }

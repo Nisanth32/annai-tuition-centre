@@ -146,10 +146,10 @@ export const subjectsList = [
     icon: 'Briefcase',
     color: 'commerce',
     points: [
-      'Accountancy: Journal, Ledger, Final Accounts, Partnership & Company Accounts',
-      'Commerce: Business Principles, Banking, Management & Financial Markets',
-      'Economics: Micro, Macro, Public Finance & Indian Economic Development',
-      'Business Mathematics & Statistics: Matrices, Commercial Arithmetic & Calculus',
+      'Step-by-step balance sheet & ledger balancing made crystal clear',
+      'Zero exam stress with simple debit-credit rules & shortcut tricks',
+      'Proven blueprint strategy for scoring 100/100 centum marks',
+      'Real-world business economics with interactive classroom coaching',
     ],
   },
   {
@@ -159,10 +159,10 @@ export const subjectsList = [
     icon: 'Code',
     color: 'cs',
     points: [
-      'Python Programming: OOP, Functions, File Handling & Modules',
-      'C++ Fundamentals, Data Structures & Logic Gates',
-      'Database Management with MySQL & SQL Table Queries',
-      'Practical record completion & viva-voce 100/100 scoring prep',
+      'Easy hands-on Python programming & C++ logic building',
+      '100% practical record completion with full-marks viva prep',
+      'Fast database MySQL query mastery & visual algorithm diagrams',
+      'Consistent past board centum track record year after year',
     ],
   },
   {
@@ -172,10 +172,10 @@ export const subjectsList = [
     icon: 'Dna',
     color: 'bio',
     points: [
-      'Samacheer Kalvi syllabus line-by-line concept clarity',
-      'Human Physiology, Plant Anatomy, Genetics & Biotechnology',
-      'High-speed scientific diagrammatic drawing & labeling drills',
-      'Weekly unit tests, previous 10-year board paper analyses',
+      'Fast scientific diagram drawing drills with perfect labeling',
+      'Line-by-line Samacheer Kalvi clarity that makes concepts stick',
+      'Weekly unit tests with 10-year previous board question analysis',
+      'Strong foundation building for future medical aspirants (NEET/MBBS)',
     ],
   },
   {
@@ -185,10 +185,10 @@ export const subjectsList = [
     icon: 'Layers',
     color: 'tut',
     points: [
-      '1-on-1 personalized doubt clearing tutorials with senior faculty',
-      'Daily homework tracking & mental arithmetic drills for Classes 1–8',
-      'Board exam crash tutorials & blueprint model question series',
-      'Concept-strengthening tutorials for focused learners',
+      '1-on-1 personalized mentoring with daily doubt clearing',
+      'Daily homework tracking & confidence building for junior classes',
+      'Turning difficult subjects into high-scoring student strengths',
+      'Flexible evening timings (6:30–9:00 PM) plus Sunday revision',
     ],
   },
   {
@@ -198,10 +198,10 @@ export const subjectsList = [
     icon: 'Cpu',
     color: 'math',
     points: [
-      'Calculus, Trigonometry, Coordinate Geometry & Algebra mastery',
-      'Proprietary formula mnemonics and speed shortcut techniques',
-      'Daily 5-problem challenge & chapter-wise unit assessments',
-      'Proven track record of centums (100/100) year after year',
+      'Speed shortcut techniques & easy formula memory mnemonics',
+      'Daily 5-problem challenge for 100% calculation accuracy',
+      'Step-by-step problem breakdown that removes all math fear',
+      'Consistent 100/100 centum results produced every single year',
     ],
   },
   {
@@ -211,10 +211,10 @@ export const subjectsList = [
     icon: 'Sparkles',
     color: 'phy',
     points: [
-      'Mechanics, Electromagnetism, Wave Optics & Modern Physics',
-      'Derivations written step-by-step with mark allocation focus',
-      'Numerical problem-solving formulas and dimensional checks',
-      'Board blueprint-aligned revision drills',
+      'Visual learning on smart interactive boards for complex concepts',
+      'Step-by-step derivation drills formatted for full board marks',
+      'Easy numerical problem-solving formulas and dimensional checks',
+      'Targeted board blueprint revision to maximize final scores',
     ],
   },
   {
@@ -224,10 +224,10 @@ export const subjectsList = [
     icon: 'Microscope',
     color: 'chem',
     points: [
-      'Organic chemistry conversions, named reactions & mechanisms',
-      'Physical chemistry thermodynamics, chemical kinetics & solutions',
-      'Inorganic coordination compounds, p-block & d-block elements',
-      'Chapter-wise formula sheets & quick memory maps',
+      'Simplified organic reaction roadmaps & quick memory tricks',
+      'Ready-to-use chapter formula charts for effortless recall',
+      'Balanced equation workouts & hands-on practical exam readiness',
+      'Chapter-wise mock tests ensuring total board exam confidence',
     ],
   },
 ];
@@ -911,16 +911,15 @@ export function Legacy70kSection() {
               <em>16+ Years</em> of Proven Academic Excellence
             </h2>
             <p className="milestone-intro-text">
-              Since 2008, <strong>Annai Tuition Centre</strong> has trained and guided over <strong>7,000+ students</strong> to
-              board exam triumph in Trichy. This milestone represents 16+ uninterrupted years of transformative teaching,
-              turning academic stress into confidence and producing thousands of top board scorers and centum achievers.
+              Since 2008, <strong>Annai Tuition Centre</strong> has empowered over <strong>7,000+ students</strong> across Trichy
+              to achieve board exam success. We turn exam stress into genuine confidence, guiding every learner to top ranks
+              and centum marks with personal care and proven shortcut techniques.
             </p>
             <div className="milestone-quote-box">
               <Quote size={20} className="milestone-quote-icon" />
               <p>
-                “7,000+ students passed out is not merely a number to us. It stands for 7,000+ families who trusted us with
-                their children’s future, hundreds of doctors, engineers, and software professionals whom we helped nurture,
-                and our unwavering commitment to concept clarity since day one.”
+                “Every student has the power to excel. For 16+ years, our promise to parents has been simple — caring
+                individual attention, crystal-clear concepts, and the confidence to achieve 100/100.”
               </p>
               <div className="milestone-author">
                 <strong>S. Thiyagarajan</strong>
@@ -963,10 +962,9 @@ export function Legacy70kSection() {
             <div className="pillar-icon-box gold">
               <Award size={22} />
             </div>
-            <h4>16+ Golden Years of Trust</h4>
+            <h4>16+ Years of Trust</h4>
             <p>
-              Serving Trichy families since 2008 across 2 prime campuses in Puthur. Pioneering modern teaching methods
-              with compassionate care.
+              Trichy’s most trusted tuition landmark since 2008 with 2 modern, student-friendly Puthur campuses.
             </p>
           </div>
 
@@ -974,10 +972,9 @@ export function Legacy70kSection() {
             <div className="pillar-icon-box blue">
               <CheckCircle size={22} />
             </div>
-            <h4>Consistent Centums (100/100)</h4>
+            <h4>100/100 Centum Mastery</h4>
             <p>
-              Proven blueprint drills and individual problem solving yield centum scores in Mathematics, Physics, Chemistry,
-              Biology, and Computer Science.
+              Smart shortcut techniques & daily problem drills producing consistent top board rankers every year.
             </p>
           </div>
 
@@ -987,8 +984,7 @@ export function Legacy70kSection() {
             </div>
             <h4>MSME Certified & Safe Campus</h4>
             <p>
-              Officially MSME-registered institution with 24/7 CCTV surveillance, 100% safety for girls, and dedicated on-site
-              parking facility.
+              Government-registered, 24/7 CCTV surveillance, 100% safety for girls, and dedicated on-site parking.
             </p>
           </div>
 
@@ -996,10 +992,9 @@ export function Legacy70kSection() {
             <div className="pillar-icon-box purple">
               <Users size={22} />
             </div>
-            <h4>Illustrious Alumni Network</h4>
+            <h4>Doctor & Engineer Alumni</h4>
             <p>
-              Our passed-out students study in premier medical colleges (MBBS), IITs, NIT Trichy, and work in global tech
-              companies and civil services.
+              Proud alumni excelling in premier Medical Colleges (MBBS), IITs, NIT Trichy, and global tech firms.
             </p>
           </div>
         </div>
@@ -1190,7 +1185,7 @@ export function SubjectsTutorialsSection() {
               Science, Commerce & <span className="serif-accent">Specialized Tutorials</span>.
             </>
           }
-          text="Targeted concept mastery in Mathematics, Physics, Chemistry, Biology, Computer Science, and Commerce & Accountancy with dedicated subject coaching."
+          text="Master every subject with Trichy's top mentors. Simple concepts, smart shortcuts, and caring personal attention to help your child score top marks."
           align="align-center"
         />
 
