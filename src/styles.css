@@ -2365,12 +2365,26 @@ body {
   white-space: nowrap;
 }
 .apply-call-btn {
-  border-color: rgba(255, 255, 255, 0.4) !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  color: #162956 !important;
+  border: 2px solid #ffffff !important;
+  font-weight: 800 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+.apply-call-btn svg {
+  color: #b45309 !important;
+  flex-shrink: 0;
 }
 .apply-call-btn:hover {
-  background: rgba(255, 255, 255, 0.15) !important;
-  border-color: #ffffff !important;
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #f8fafc !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 900px) {

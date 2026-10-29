@@ -1149,7 +1149,7 @@ export function FacultySection() {
             >
               Apply for Teaching Position <ArrowRight size={15} />
             </a>
-            <a href="tel:+919626265456" className="button button-outline apply-call-btn">
+            <a href="tel:+919626265456" className="button apply-call-btn">
               <Phone size={15} /> Call: 96262 65456
             </a>
           </div>
