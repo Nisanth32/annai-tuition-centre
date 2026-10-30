@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, NavLink, Route, Routes, useLocation, useSearchParams } from 'react-router-dom';
+import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import {
   ArrowDown,
   ArrowRight,
@@ -138,157 +138,6 @@ export const facultyPanels = [
   },
 ];
 
-
-export const tutorialSteps = [
-  {
-    step: '01',
-    title: 'Board & Smart Board Teaching',
-    desc: 'Teachers explain each concept and formula step-by-step on the blackboard & interactive Smart Board.',
-    icon: 'BookOpen',
-  },
-  {
-    step: '02',
-    title: 'Daily Notebook Checking',
-    desc: 'Mentors check each student’s calculation steps in class and correct mistakes immediately.',
-    icon: 'CheckCircle2',
-  },
-  {
-    step: '03',
-    title: 'Direct Doubt Clearing',
-    desc: 'Friendly, patient atmosphere where students ask questions freely without hesitation.',
-    icon: 'MessageCircle',
-  },
-  {
-    step: '04',
-    title: 'Weekly Unit Tests',
-    desc: 'Regular chapter tests to track progress, with results shared directly with parents.',
-    icon: 'TrendingUp',
-  },
-];
-
-export const tutorialTracks = [
-  {
-    id: '10th-board',
-    title: '10th Standard Board Exam Coaching',
-    category: 'Board Coaching',
-    grade: 'Class 10 (Tamil Nadu State Board)',
-    icon: 'Trophy',
-    badge: '100% Centum Focus',
-    timing: '6:30 PM – 9:00 PM (Daily & Sunday)',
-    highlights: [
-      'Maths, Science, Social Science, Tamil & English',
-      'Daily formula drills & previous 10-year question practice',
-      'Weekly unit tests with personal mark review',
-    ],
-    classParam: '10th Standard',
-  },
-  {
-    id: '12th-board',
-    title: '12th Standard HSC Board Coaching',
-    category: 'Higher Secondary',
-    grade: 'Class 12 (Science & Commerce)',
-    icon: 'Award',
-    badge: 'State Board Blueprint',
-    timing: '6:30 PM – 9:00 PM (Daily & Sunday)',
-    highlights: [
-      'Maths, Physics, Chemistry, Biology, CS & Commerce',
-      'Blueprint-based revision & step-by-step problem solving',
-      'Full-length model pre-board exams before finals',
-    ],
-    classParam: '12th Standard',
-  },
-  {
-    id: 'maths',
-    title: 'Mathematics Centum Coaching',
-    category: 'Math Excellence',
-    grade: 'Classes 6 to 12 (State Board)',
-    icon: 'Cpu',
-    badge: 'Step-by-Step Logic',
-    timing: '6:30 PM – 9:00 PM',
-    highlights: [
-      'Algebra, Geometry, Trigonometry & Calculus breakdown',
-      'Formula shortcut memory tips that remove math fear',
-      'Daily individual notebook checking for calculation accuracy',
-    ],
-    classParam: 'Mathematics',
-  },
-  {
-    id: 'science',
-    title: 'Science (Physics, Chemistry, Biology)',
-    category: 'Visual Science',
-    grade: 'Classes 9 to 12',
-    icon: 'Sparkles',
-    badge: 'Interactive Smart Board',
-    timing: '6:30 PM – 9:00 PM',
-    highlights: [
-      'Interactive Smart Board visual 3D simulations',
-      'Chemical equations, organic reaction maps & physics derivations',
-      'Diagram drawing drills with correct scientific labeling',
-    ],
-    classParam: 'Science Stream',
-  },
-  {
-    id: 'commerce',
-    title: 'Commerce & Accountancy',
-    category: 'Commerce Wing',
-    grade: 'Classes 11 & 12',
-    icon: 'Briefcase',
-    badge: 'Balance Sheet Mastery',
-    timing: '6:30 PM – 9:00 PM',
-    highlights: [
-      'Simple debit-credit rules & ledger balancing practice',
-      'Balance sheet problem drills with zero confusion',
-      'Business economics & accountancy blueprint coaching',
-    ],
-    classParam: 'Commerce & Accountancy',
-  },
-  {
-    id: 'cs',
-    title: 'Computer Science (Python & Theory)',
-    category: 'Practical & Theory',
-    grade: 'Classes 11 & 12',
-    icon: 'Code',
-    badge: 'Practical Record Prep',
-    timing: '6:30 PM – 9:00 PM',
-    highlights: [
-      'Hands-on Python code logic, syntax & flowcharts',
-      'MySQL database queries made simple and clear',
-      'Practical record completion & viva interview prep',
-    ],
-    classParam: 'Computer Science',
-  },
-  {
-    id: 'junior',
-    title: 'Classes 1–8 Junior Foundation',
-    category: 'All-Round Care',
-    grade: 'Classes 1 to 8 (All Subjects)',
-    icon: 'Layers',
-    badge: 'Homework & Basics',
-    timing: '6:30 PM – 8:30 PM',
-    highlights: [
-      'Daily school homework assistance and handwriting care',
-      'Mental arithmetic & foundational concept clarity',
-      'Disciplined daily evening study habit building',
-    ],
-    classParam: 'Classes 1-8 Junior Foundation',
-  },
-  {
-    id: 'individual',
-    title: '1-on-1 Individual Doubt Clearing',
-    category: 'Personal Attention',
-    grade: 'Any Subject · On Demand',
-    icon: 'CheckCircle',
-    badge: '1-on-1 Mentorship',
-    timing: 'Flexible Evening & Sunday Slots',
-    highlights: [
-      'Dedicated teacher for difficult chapters',
-      'Personal pace for students needing extra support',
-      'Steady improvement with regular parent updates',
-    ],
-    classParam: '1-on-1 Tutorial Support',
-  },
-];
-
 export const subjectsList = [
   {
     id: 'commerce',
@@ -386,7 +235,7 @@ export const subjectsList = [
 
 const branchesInfo = [
   {
-    type: 'Branch 1 (Registered Office)',
+    type: 'Registered Office',
     name: 'Annai Tuition Centre',
     subtitle: 'Main Administrative Hub & State Board Coaching Wings',
     doorNo: 'Door No.: 21/87',
@@ -401,7 +250,7 @@ const branchesInfo = [
     facilities: ['Dedicated Parking Facility', 'Interactive Smart Board', '24/7 CCTV Surveillance', 'Spacious Classrooms', '100% Safe for Girls'],
   },
   {
-    type: 'Branch 2 (Campus)',
+    type: 'Branch Campus',
     name: 'Annai Tuition Centre',
     subtitle: 'Secondary & Higher Secondary Exam Wing',
     doorNo: 'Branch 2',
@@ -409,7 +258,6 @@ const branchesInfo = [
     landmark: 'Near Aruna Theatre, Puthur',
     city: 'Trichy – 17',
     fullAddress: 'Ramakrishna Middle School, Near Aruna Theatre, Puthur, Trichy – 17',
-    image: '/images/annai-branch2-classroom.jpg',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=Ramakrishna+Middle+School%2C+Near+Aruna+Theatre%2C+Puthur%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
@@ -456,24 +304,11 @@ function Brand({ small = false }) {
 function Header() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    setOpen(false);
-  }, [location.pathname]);
-
-  useEffect(() => {
-    function handleKeyDown(e) {
-      if (e.key === 'Escape') setOpen(false);
-    }
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
   return (
     <header className="header">
       <div className="topline">
         <div className="topline-left">
-          <span className="topline-welcome">Welcome to Annai Tuition Centre, Trichy</span>
+          <span>Welcome to Annai Tuition Centre, Trichy</span>
           <span className="topline-timing-pill">
             <Clock size={11} /> Timings: 6:30 PM – 9:00 PM (Sunday Classes Available)
           </span>
@@ -482,46 +317,27 @@ function Header() {
           </span>
         </div>
         <span className="topline-right">
-          <span className="topline-loc">
-            <MapPin size={13} /> Puthur, Trichy-17
-          </span>
-          <i></i>
-          <a href="tel:+919626265456" className="topline-phone-link">
+          <MapPin size={13} /> Puthur, Trichy-17 <i></i>
+          <a href="tel:+919626265456">
             <Phone size={13} /> 96262 65456
           </a>
           <i></i>
-          <a href="tel:+919994148476" className="topline-phone-link">
+          <a href="tel:+919994148476">
             <Phone size={13} /> 99941 48476
           </a>
         </span>
       </div>
       <div className="nav-wrap container">
         <Brand />
-        <div className="header-mobile-right">
-          <a
-            href="tel:+919626265456"
-            className="mobile-header-call-btn"
-            aria-label="Call Annai Tuition Centre"
-          >
-            <Phone size={18} />
-          </a>
-          <button
-            className="menu-toggle"
-            aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
-            aria-expanded={open}
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-        {open && <div className="nav-backdrop" onClick={() => setOpen(false)} aria-hidden="true" />}
+        <button className="menu-toggle" aria-label={open ? 'Close menu' : 'Open menu'} onClick={() => setOpen(!open)}>
+          {open ? <X /> : <Menu />}
+        </button>
         <nav className={open ? 'nav open' : 'nav'} aria-label="Main navigation">
           {[
             { label: 'Home', path: '/' },
-            { label: 'Faculty', path: '/faculty' },
             { label: 'Courses', path: '/classes' },
-            { label: 'Tutorials', path: '/tutorials' },
-            { label: 'Enquiry', path: '/contact' },
+            { label: 'About Us', path: '/about' },
+            { label: 'Faculty', path: '/faculty' },
             { label: 'Results', path: '/results' },
             { label: 'Contact', path: '/contact' },
           ].map((item) => (
@@ -546,27 +362,9 @@ function Header() {
             <MessageCircle size={15} />
             <span>Chat on WhatsApp</span>
           </a>
-          <a className="button button-gold nav-cta" href="/#enquiry" onClick={() => setOpen(false)}>
-            Admission Enquiry <ArrowRight size={15} />
-          </a>
-          <div className="nav-mobile-info">
-            <div className="nav-mobile-hours">
-              <Clock size={13} />
-              <span>Timings: 6:30 PM – 9:00 PM (Daily & Sunday)</span>
-            </div>
-            <div className="nav-mobile-location">
-              <MapPin size={13} />
-              <span>Campus: Puthur, Trichy – 17</span>
-            </div>
-            <div className="nav-mobile-call-row">
-              <a href="tel:+919626265456" className="nav-mobile-phone-btn">
-                <Phone size={13} /> Call 96262 65456
-              </a>
-              <a href="tel:+919994148476" className="nav-mobile-phone-btn">
-                <Phone size={13} /> Call 99941 48476
-              </a>
-            </div>
-          </div>
+          <Link className="button button-primary nav-cta" to="/admissions" onClick={() => setOpen(false)}>
+            Enroll Now <ArrowRight size={15} />
+          </Link>
         </nav>
       </div>
     </header>
@@ -634,12 +432,12 @@ function Footer() {
 
         <div>
           <h3>Explore</h3>
-          <Link to="/">Home</Link>
-          <Link to="/faculty">Faculty & Mentors</Link>
+          <Link to="/about">About Us & 7K+ Legacy</Link>
           <Link to="/classes">Classes & Subjects</Link>
-          <Link to="/tutorials">Specialized Tutorials</Link>
+          <Link to="/faculty">Faculty & Teaching Careers</Link>
           <Link to="/results">Student Results & Toppers</Link>
-          <Link to="/contact">Contact & Campuses</Link>
+          <Link to="/admissions">Admission Enquiry</Link>
+          <Link to="/contact">Our Branches & Parking</Link>
         </div>
 
         <div>
@@ -721,38 +519,6 @@ function ScrollToTop() {
   return null;
 }
 
-function MobileBottomBar() {
-  return (
-    <nav className="mobile-bottom-bar" aria-label="Mobile quick actions">
-      <a href="tel:+919626265456" className="mobile-bar-item mobile-bar-call">
-        <Phone size={18} />
-        <span>Call</span>
-      </a>
-      <a
-        href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20admissions."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mobile-bar-item mobile-bar-whatsapp"
-      >
-        <MessageCircle size={18} />
-        <span>WhatsApp</span>
-      </a>
-      <Link to="/classes" className="mobile-bar-item mobile-bar-classes">
-        <BookOpen size={18} />
-        <span>Courses</span>
-      </Link>
-      <Link to="/tutorials" className="mobile-bar-item mobile-bar-tutorials">
-        <Sparkles size={18} />
-        <span>Tutorials</span>
-      </Link>
-      <a href="/#enquiry" className="mobile-bar-item mobile-bar-enquire">
-        <GraduationCap size={18} />
-        <span>Enquiry</span>
-      </a>
-    </nav>
-  );
-}
-
 function AppShell({ children }) {
   return (
     <>
@@ -760,7 +526,6 @@ function AppShell({ children }) {
       <Header />
       {children}
       <Footer />
-      <MobileBottomBar />
     </>
   );
 }
@@ -895,7 +660,7 @@ function CoachingSection() {
             </ul>
 
             <div className="coaching-card-action">
-              <Link to="/contact?class=10th%20Standard" className="button button-gold">
+              <Link to="/admissions?class=10th%20Standard" className="button button-gold">
                 Enquire for 10th Admission <ArrowRight size={15} />
               </Link>
             </div>
@@ -940,7 +705,7 @@ function CoachingSection() {
             </ul>
 
             <div className="coaching-card-action">
-              <Link to="/contact?class=12th%20Standard" className="button button-primary">
+              <Link to="/admissions?class=12th%20Standard" className="button button-primary">
                 Enquire for 12th Admission <ArrowRight size={15} />
               </Link>
             </div>
@@ -1184,7 +949,7 @@ export function Legacy70kSection() {
             </div>
 
             <div className="milestone-action-cta">
-              <Link to="/contact" className="button button-gold">
+              <Link to="/admissions" className="button button-gold">
                 Join Our Next Batch of Toppers <ArrowRight size={15} />
               </Link>
             </div>
@@ -1396,7 +1161,7 @@ export function FacultySection() {
             <span>Meet Founder S. Thiyagarajan and our experienced faculty at our Puthur campus.</span>
           </div>
           <div className="faculty-strip-cta">
-            <Link to="/contact" className="button button-primary">
+            <Link to="/admissions" className="button button-primary">
               Book Faculty Consultation <ArrowRight size={15} />
             </Link>
           </div>
@@ -1458,7 +1223,7 @@ export function SubjectsTutorialsSection() {
                 </ul>
                 <div className="subject-card-action">
                   <Link
-                    to={`/contact?class=${encodeURIComponent(subj.title)}`}
+                    to={`/admissions?class=${encodeURIComponent(subj.title)}`}
                     className="subject-link"
                   >
                     Enquire for {subj.title} <ArrowRight size={14} />
@@ -1496,15 +1261,6 @@ function BranchesSection() {
                 <span className="branch-type-badge">{branch.type}</span>
                 <span className="branch-status-badge">● Admissions Open</span>
               </div>
-
-              {branch.image && (
-                <div className="branch-photo-box">
-                  <img src={branch.image} alt={`${branch.name} - ${branch.doorNo} Classroom`} />
-                  <span className="branch-photo-badge">
-                    <Camera size={13} /> Branch 2 Classroom (Ramakrishna Middle School)
-                  </span>
-                </div>
-              )}
 
               <h3>{branch.name}</h3>
               <p className="branch-subtitle">{branch.subtitle}</p>
@@ -1595,7 +1351,7 @@ function BranchesSection() {
                   <ExternalLink size={14} /> Open Map
                 </a>
                 <Link
-                  to={`/contact?branch=${encodeURIComponent(branch.fullAddress)}`}
+                  to={`/admissions?branch=${encodeURIComponent(branch.fullAddress)}`}
                   className="button button-gold branch-enquire-btn"
                 >
                   Enquire for this Campus <ArrowRight size={14} />
@@ -1662,88 +1418,62 @@ function SocialMediaSection() {
 }
 
 /* =========================================================================
-   ORIGINAL PRESTIGIOUS NAVY & GOLD HERO (HOMEPAGE IMAGE RESTORED)
+   HOME PAGE HERO SECTION (MATCHING FIRST IMAGE REFERENCE)
    ========================================================================= */
-function Hero() {
+function ReferenceHeroSection() {
   return (
-    <section className="hero">
-      <div className="hero-glow" />
-      <div className="container hero-grid">
-        <div className="hero-copy">
-          <div className="hero-badge-group">
-            <span className="eyebrow eyebrow-light">
-              <span className="eyebrow-dot" /> Admissions Open · Est. 2008
-            </span>
-            <span className="msme-badge-hero">
-              <ShieldCheck size={13} /> MSME Registered
-            </span>
-          </div>
-          <h1>
-            Every learner has a <em>brighter</em> future.
-          </h1>
-          <p className="hero-lead">
-            Trichy’s trusted tuition centre in Puthur since 2008. Dedicated concept-based coaching for
-            Classes 1 to 12 & Board Examinations with individual care and personal attention.
-          </p>
-          <p className="hero-tagline">Better Education... Brighter Future...</p>
-
-          <div className="hero-timing-pill">
-            <Clock size={15} />
-            <span>Class Timings: 6:30 PM – 9:00 PM (Sunday Classes Available)</span>
-          </div>
-
-          <div className="hero-actions">
-            <a href="#enquiry" className="button button-gold">
-              Enquire for Admission <ArrowRight size={17} />
-            </a>
-            <a
-              href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20admissions."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button button-whatsapp-hero"
-            >
-              <MessageCircle size={16} /> WhatsApp Us
-            </a>
-            <a href="tel:+919626265456" className="button button-ghost">
-              <Phone size={15} /> 96262 65456
-            </a>
-          </div>
-
-          <div className="hero-proof">
-            <span className="proof-icon">
-              <Trophy size={18} />
-            </span>
-            <span>
-              <strong>7,000+ Students Passed Out</strong>
-              <small>Established 2008 · 2 Campuses in Puthur, Trichy</small>
-            </span>
-          </div>
-        </div>
-
-        <div className="hero-art">
-          <div className="hero-photo-frame">
-            <img
-              src="/images/annai-classroom-hero.jpg"
-              alt="Students learning in Annai Tuition Centre"
-              className="hero-main-photo"
-            />
-            <div className="hero-note">
-              <span className="hero-note-icon">
-                <Trophy size={19} />
-              </span>
-              <span>
-                <strong>100% Board Exam Results</strong>
-                <small>Maths Centums & Top Scores Since 2008</small>
-              </span>
+    <section className="ref-hero-section">
+      <div className="container">
+        <div className="ref-hero-grid">
+          <div className="ref-hero-copy">
+            <div className="ref-welcome-text">Welcome to</div>
+            <h1 className="ref-main-title">ANNAI TUITION CENTRE</h1>
+            <p className="ref-tagline">Better Learning | Brighter Future</p>
+            <p className="ref-description">
+              We provide quality education with experienced faculty, personal attention and a supportive environment
+              to help every student achieve their goals.
+            </p>
+            <div className="ref-timing-chip">
+              <Clock size={16} />
+              <span>Class Timings: 6:30 PM – 9:00 PM (Sunday Classes Available)</span>
+            </div>
+            <div className="ref-cta-group">
+              <Link to="/admissions" className="ref-enroll-btn">
+                Enroll Now <ArrowRight size={17} />
+              </Link>
+              <a
+                href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20admissions."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ref-whatsapp-btn"
+              >
+                <MessageCircle size={17} /> Chat on WhatsApp
+              </a>
+              <a href="tel:+919626265456" className="ref-call-btn">
+                <Phone size={16} /> 96262 65456
+              </a>
             </div>
           </div>
-          <div className="hero-spark spark-a">✳</div>
-          <div className="hero-spark spark-b">✦</div>
-        </div>
-      </div>
 
-      {/* 5-Column Feature Strip */}
-      <div className="container hero-features-wrap">
+          <div className="ref-visual-wrapper">
+            <div className="ref-image-frame">
+              <img
+                src="/images/annai-classroom-hero.jpg"
+                alt="Students studying in classroom at Annai Tuition Centre"
+              />
+              <div className="ref-chalk-doodle">
+                <span className="ref-chalk-rays">✨ Small Steps ✨</span>
+                <strong>Big Dreams</strong>
+                <GraduationCap size={22} />
+              </div>
+              <div className="ref-brush-badge">
+                Your Success Our Priority
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 5-Column Reference Feature Strip */}
         <div className="ref-features-strip">
           <div className="ref-feature-item">
             <div className="ref-feature-icon icon-faculty">
@@ -1795,72 +1525,96 @@ function Hero() {
             </div>
           </div>
         </div>
-      </div>
 
-      <a className="scroll-cue" href="#achievements">
-        <span>Scroll to explore</span>
-        <ArrowDown size={14} />
-      </a>
+        {/* Bottom Winged Quote */}
+        <div className="ref-bottom-quote">
+          <span className="ref-quote-wing">✦ ✦</span>
+          <span>Join Annai Tuition Centre and take the first step towards a successful tomorrow!</span>
+          <span className="ref-quote-wing">✦ ✦</span>
+        </div>
+      </div>
     </section>
   );
 }
 
 /* =========================================================================
-   BRANCH 2 REAL CLASSROOM SHOWCASE (USER UPLOADED PHOTO - BRANCH 1 IMAGE REMOVED)
+   REAL CLASSROOM SHOWCASE SECTION (FROM USER SECOND ATTACHED PHOTO)
    ========================================================================= */
 function RealClassroomSection() {
   return (
-    <section className="real-classroom-section section" id="classroom">
+    <section className="real-classroom-section" id="classroom">
       <div className="container">
-        <SectionTitle
-          eyebrow="Inside Our Branch 2 Classroom"
-          title={
-            <>
-              Real Classroom at <span className="serif-accent">Ramakrishna Middle School</span>
-            </>
-          }
-          text="Authentic photo from our daily classes in Puthur, Trichy. Disciplined, concept-first teaching with blackboard, small batches, and individual student care."
-          align="align-center"
-        />
-
-        <div className="single-branch-showcase">
-          <div className="single-branch-img-box">
+        <div className="real-class-grid">
+          <div className="real-class-photo-card">
             <img
-              src="/images/annai-branch2-classroom.jpg"
-              alt="Annai Tuition Centre Branch 2 Classroom - Ramakrishna Middle School, Puthur, Trichy"
+              src="/images/annai-real-classroom.jpg"
+              alt="Real Classroom teaching at Annai Tuition Centre Puthur Trichy"
             />
-            <span className="single-branch-badge">
-              <Camera size={14} /> Branch 2 Classroom · Ramakrishna Middle School, Puthur
-            </span>
-            <div className="single-branch-timing-overlay">
-              <Clock size={14} /> Class Timings: 6:30 PM – 9:00 PM (Monday – Saturday + Sunday Classes)
+            <div className="real-class-badge-pill">
+              <Camera size={13} />
+              <span>Real Classroom · 21/87 Puthur Agraharam Campus</span>
+            </div>
+            <div className="real-class-timing-overlay">
+              <strong>
+                <Clock size={14} /> Class Timings: 6:30 PM – 9:00 PM
+              </strong>
+              <span>Monday – Saturday & Sunday Special Classes</span>
             </div>
           </div>
 
-          <div className="single-branch-details">
-            <div className="branch-meta-row">
-              <span className="branch-chip"><ShieldCheck size={13} /> 100% Safe for Girls</span>
-              <span className="branch-chip"><Video size={13} /> 24/7 CCTV Monitored</span>
-              <span className="branch-chip"><Car size={13} /> Dedicated Parking</span>
-            </div>
-            <h3>Concept-First Board Coaching</h3>
-            <p>
-              Step-by-step problem breakdown in Maths (Trigonometry, Algebra, Calculus), Sciences & Commerce. Mentors check
-              every student's notebook daily and clear doubts patiently.
+          <div className="real-class-copy">
+            <span className="eyebrow">Authentic Campus Life</span>
+            <h2>Inside Our Real Classroom in Puthur, Trichy</h2>
+            <p className="lead">
+              Experience our disciplined, concept-first learning atmosphere where dedicated faculty explain formulas step-by-step
+              on the board with individual care for every student.
             </p>
-            <div className="single-branch-actions">
-              <a href="#enquiry" className="button button-gold">
-                Enquire for Admission <ArrowRight size={15} />
-              </a>
-              <a
-                href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20visit%20your%20Branch%202%20campus."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button button-outline"
-              >
-                <MessageCircle size={15} /> Chat on WhatsApp
-              </a>
+
+            <div className="real-class-features">
+              <div className="real-class-feature-row">
+                <div className="real-feat-icon blue">
+                  <BookOpen size={20} />
+                </div>
+                <div className="real-feat-text">
+                  <strong>Concept-First Blackboard Teaching</strong>
+                  <p>Step-by-step problem breakdown in Maths (Trigonometry, Calculus), Sciences & Accountancy.</p>
+                </div>
+              </div>
+
+              <div className="real-class-feature-row">
+                <div className="real-feat-icon gold">
+                  <Clock size={20} />
+                </div>
+                <div className="real-feat-text">
+                  <strong>Class Timings: 6:30 PM – 9:00 PM</strong>
+                  <p>Structured daily schedule with Sunday special classes allowing students to master concepts and prepare for exams.</p>
+                </div>
+              </div>
+
+              <div className="real-class-feature-row">
+                <div className="real-feat-icon green">
+                  <ShieldCheck size={20} />
+                </div>
+                <div className="real-feat-text">
+                  <strong>100% Safe for Girls & 24/7 CCTV Monitored</strong>
+                  <p>Disciplined, respectful environment with dedicated parking facility for two-wheelers and bicycles.</p>
+                </div>
+              </div>
+
+              <div className="real-class-feature-row">
+                <div className="real-feat-icon purple">
+                  <Users size={20} />
+                </div>
+                <div className="real-feat-text">
+                  <strong>Personal Mentorship & Small Batches</strong>
+                  <p>Individual desk seating where mentors check every student’s notebook and clear doubts patiently.</p>
+                </div>
+              </div>
             </div>
+
+            <Link to="/admissions" className="button button-gold">
+              Book a Classroom Visit <ArrowRight size={15} />
+            </Link>
           </div>
         </div>
       </div>
@@ -1953,117 +1707,134 @@ function SmartBoardSection() {
 function Home() {
   return (
     <main>
-      {/* 1. Original Prestigious Deep Navy & Gold Hero */}
-      <Hero />
+      {/* 1. Reference Hero Section (matching user image 1) */}
+      <ReferenceHeroSection />
 
-      {/* 2. 7,000+ Students Passed Out Achievement Stats Strip */}
+      {/* 2. Real Classroom Showcase (user image 2) */}
+      <RealClassroomSection />
+
+      {/* 3. Interactive Smart Board Section */}
+      <SmartBoardSection />
+
+      {/* 4. 7,000+ Students Passed Out Achievement Stats Strip */}
       <div id="achievements">
         <AchievementsStrip />
       </div>
 
-      {/* 3. Distinguished Faculty Spotlight */}
-      <FacultySection />
+      {/* 5. Comprehensive 7,000+ Milestone Section */}
+      <Legacy70kSection />
 
-      {/* 4. Specialized Board Exam Coaching (Classes 10 & 12) */}
-      <CoachingSection />
+      {/* 6. Advanced Subjects & Specialized Tutorials (CS, Bio, Commerce, Maths) */}
+      <SubjectsTutorialsSection />
 
-      {/* 5. Subject Tutorials & Daily Teaching Routine */}
-      <TutorialsSpotlightSection />
-
-      {/* 6. Real Classroom Showcase - Both Branches with Photos */}
-      <RealClassroomSection />
-
-      {/* 7. Facilities Section (CCTV, Dedicated Parking Facility, Smart Boards, MSME) */}
-      <FacilitiesSection />
-
-      {/* 8. Student Results Preview */}
-      <ResultsPreview />
-
-      {/* 9. Our 2 Branches with Google Maps & Classroom Photos */}
-      <BranchesSection />
-
-      {/* 10. Direct Admission Enquiry Section (Prominent Enquiry Form on Home) */}
-      <HomeEnquirySection />
-    </main>
-  );
-}
-
-/* =========================================================================
-   HOME QUICK ADMISSION ENQUIRY SECTION (ENQUIRY FORM PROMINENT ON HOME)
-   ========================================================================= */
-function HomeEnquirySection() {
-  return (
-    <section className="section home-enquiry-section" id="enquiry">
-      <div className="container">
-        <SectionTitle
-          eyebrow="Admissions Open 2026–2027"
-          title={
-            <>
-              Admission <span className="serif-accent">Enquiry Form</span>
-            </>
-          }
-          text="Fill out your details below for instant WhatsApp admission enquiry, class timings (6:30 PM – 9:00 PM), and fees details."
-          align="align-center"
-        />
-
-        <div className="home-enquiry-grid">
-          <div className="home-enquiry-info-card">
-            <h3>Why Parents Choose Annai</h3>
-            <p>16+ years of academic trust in Puthur, Trichy. Simple concept teaching, personal care, and high board marks.</p>
-
-            <div className="enquiry-facts-list">
-              <div className="enquiry-fact-item">
-                <Clock size={18} />
-                <div>
-                  <strong>Class Timings</strong>
-                  <span>6:30 PM – 9:00 PM (Mon–Sat + Sunday Special Classes)</span>
-                </div>
-              </div>
-
-              <div className="enquiry-fact-item">
-                <MapPin size={18} />
-                <div>
-                  <strong>2 Campuses in Puthur</strong>
-                  <span>Branch 1 (Agraharam) & Branch 2 (Ramakrishna School)</span>
-                </div>
-              </div>
-
-              <div className="enquiry-fact-item">
-                <ShieldCheck size={18} />
-                <div>
-                  <strong>100% Safety for Girls</strong>
-                  <span>24/7 CCTV Camera Monitored at Both Campuses</span>
-                </div>
-              </div>
-
-              <div className="enquiry-fact-item">
-                <Car size={18} />
-                <div>
-                  <strong>Dedicated Parking</strong>
-                  <span>Safe parking facility for cycles & two-wheelers</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="enquiry-direct-calls">
-              <span>Need immediate assistance? Call us directly:</span>
-              <div className="enquiry-call-row">
-                <a href="tel:+919626265456" className="button button-primary">
-                  <Phone size={14} /> 96262 65456
-                </a>
-                <a href="tel:+919994148476" className="button button-outline">
-                  <Phone size={14} /> 99941 48476
-                </a>
-              </div>
-            </div>
+      {/* 7. Welcome Summary (Small & Sweet) */}
+      <section className="welcome section" id="welcome">
+        <div className="container welcome-grid">
+          <div>
+            <SectionTitle
+              eyebrow="A little about us"
+              title={
+                <>
+                  A steady place to <span className="serif-accent">grow</span>.
+                </>
+              }
+              text="Annai Tuition Centre supports students and families in Trichy with a welcoming place to learn, build deep concept understanding, and achieve outstanding board exam results."
+            />
+            <p className="body-copy">
+              Founded in 2008 by <strong>S. Thiyagarajan</strong> (M.Sc., IT., B.Ed.), Annai Tuition Centre has guided
+              over <strong>7,000+ students</strong> with personalized academic care, certified MSME standards,
+              dedicated parking facilities, and uncompromising safety for all learners.
+            </p>
+            <Link to="/about" className="text-link">
+              Get to know Annai <ArrowRight size={16} />
+            </Link>
           </div>
-
-          <div className="home-enquiry-form-card">
-            <ContactForm />
+          <div className="welcome-cards">
+            <div className="welcome-card">
+              <span className="card-icon navy-icon">
+                <BookOpen size={21} />
+              </span>
+              <span className="card-overline">Academic Excellence</span>
+              <h3>Focused Classroom Learning</h3>
+              <p>Individual student desks, disciplined study environment, and concept-first teaching by senior faculty.</p>
+            </div>
+            <div className="welcome-card welcome-card-gold">
+              <span className="card-icon gold-icon">
+                <ShieldCheck size={21} />
+              </span>
+              <span className="card-overline">Safety & Convenience</span>
+              <h3>100% Safe for Girls & Dedicated Parking</h3>
+              <p>Round-the-clock CCTV surveillance, safe on-site two-wheeler & parent vehicle parking facility.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* 8. Specialized Board Exam Coaching (Classes 10 & 12) */}
+      <CoachingSection />
+
+      {/* 9. Distinguished Faculty Section (7-8+ Years Experience) */}
+      <FacultySection />
+
+      {/* 10. Classes Overview Strip */}
+      <section className="classes-strip section">
+        <div className="container">
+          <div className="strip-heading">
+            <div>
+              <span className="eyebrow">All Learning Paths</span>
+              <h2>All Classes Supported</h2>
+            </div>
+            <Link to="/classes" className="text-link">
+              Explore all classes <ArrowRight size={16} />
+            </Link>
+          </div>
+          <div className="class-chips">
+            {classes.map((c, i) => (
+              <Link key={c} to={`/admissions?class=${encodeURIComponent(c)}`} className="class-chip">
+                <span className="class-number">{i === 0 ? '01' : `0${i + 2}`}</span>
+                <span>{c}</span>
+                <ArrowRight size={15} />
+              </Link>
+            ))}
+          </div>
+          <p className="note-small">Class timings: 6:30 PM – 9:00 PM (Sunday classes available). Contact us for current admissions.</p>
+        </div>
+      </section>
+
+      {/* 11. Facilities Section (CCTV, Dedicated Parking Facility, Smart Boards, MSME) */}
+      <FacilitiesSection />
+
+      {/* 12. Girls' Safety and Security Section */}
+      <GirlsSafetySection />
+
+      {/* 13. Student Results Preview */}
+      <ResultsPreview />
+
+      {/* 14. Our Branches Section */}
+      <BranchesSection />
+
+      {/* 15. Social Media Links Section */}
+      <SocialMediaSection />
+
+      {/* 16. Banner CTA */}
+      <section className="banner-cta">
+        <div className="container banner-inner">
+          <span className="banner-icon">
+            <GraduationCap size={25} />
+          </span>
+          <div>
+            <span className="eyebrow eyebrow-light">Learn Today... Lead Tomorrow.</span>
+            <h2>Ready to take the next step?</h2>
+            <p>Class timings: 6:30 PM – 9:00 PM with Sunday special classes. Tell us what your child needs to secure their seat.</p>
+          </div>
+          <Link to="/admissions" className="button button-gold">
+            Enroll Now <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
+
+      <ContactPreview />
+    </main>
   );
 }
 
@@ -2170,8 +1941,8 @@ function About() {
             </div>
 
             <div className="about-cta-row">
-              <Link to="/contact" className="button button-gold">
-                Enquire for Admission <ArrowRight size={16} />
+              <Link to="/admissions" className="button button-primary">
+                Ask about admission <ArrowRight size={16} />
               </Link>
               <a href="tel:+919626265456" className="button button-outline">
                 <Phone size={15} /> 96262 65456
@@ -2239,14 +2010,12 @@ function About() {
 function PageHero({ eyebrow, title, text }) {
   return (
     <section className="page-hero">
-      <div className="hero-glow" />
       <div className="container">
-        <span className="eyebrow eyebrow-light">
-          <span className="eyebrow-dot" /> {eyebrow}
-        </span>
+        <span className="eyebrow">{eyebrow}</span>
         <h1>{title}</h1>
-        {text && <p className="hero-lead">{text}</p>}
+        {text && <p>{text}</p>}
       </div>
+      <div className="page-hero-decoration" />
     </section>
   );
 }
@@ -2297,7 +2066,7 @@ function ClassesPage() {
                 <div className="class-chip-timing">
                   <Clock size={12} /> Daily: 6:30 PM – 9:00 PM
                 </div>
-                <Link to={`/contact?class=${encodeURIComponent(c)}`} className="course-link">
+                <Link to={`/admissions?class=${encodeURIComponent(c)}`} className="course-link">
                   Enquire about this class <ArrowRight size={15} />
                 </Link>
               </article>
@@ -2703,31 +2472,21 @@ function ContactPreview() {
 }
 
 function Contact() {
-  const [params] = useSearchParams();
-  const classParam = params.get('class');
-  const branchParam = params.get('branch');
-  let defaultSubject = '';
-  if (classParam) {
-    defaultSubject = `I would like to enquire about coaching for ${classParam}.`;
-  } else if (branchParam) {
-    defaultSubject = `I would like to enquire about admissions at ${branchParam}.`;
-  }
-
   return (
     <main>
       <PageHero
-        eyebrow="Get in touch & Admissions"
+        eyebrow="Get in touch"
         title={
           <>
-            We’re just a call or message <em>away.</em>
+            We’re just a call <em>away.</em>
           </>
         }
-        text="Contact Annai Tuition Centre to ask about classes, admissions, batch timings (6:30 PM – 9:00 PM), or visit either campus in Puthur, Trichy."
+        text="Contact Annai Tuition Centre to ask about classes, admission, or visiting either location in Puthur, Trichy."
       />
 
       <section className="phone-band">
         <div className="container">
-          <span className="eyebrow eyebrow-light">Call or WhatsApp Directly</span>
+          <span className="eyebrow eyebrow-light">Call Us Directly</span>
           <div className="phone-links">
             {phoneNumbers.map((n) => (
               <a key={n} href={`tel:+91${n.replaceAll(' ', '')}`}>
@@ -2736,41 +2495,41 @@ function Contact() {
               </a>
             ))}
             <a
-              href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20admissions."
+              href="https://wa.me/919626265456"
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-phone-link"
             >
-              <MessageCircle size={17} /> WhatsApp: 96262 65456
+              WhatsApp: 96262 65456
             </a>
           </div>
         </div>
       </section>
 
-      {/* Branches with detailed cards & Google Maps */}
+      {/* Branches with detailed cards */}
       <BranchesSection />
 
       {/* Contact Form Section */}
-      <section className="section" id="enquiry">
+      <section className="section">
         <div className="container contact-form-layout">
           <div>
-            <span className="eyebrow">Quick Enquiry</span>
-            <h2>How can we help you?</h2>
-            <p>Leave your enquiry below. Our team connects immediately via WhatsApp or phone to guide you on courses, batch timings, and admissions.</p>
+            <span className="eyebrow">Write to us</span>
+            <h2>How can we help?</h2>
+            <p>Leave a contact enquiry and our academic counselors will follow up using your preferred details.</p>
 
             <div className="contact-side-card">
               <h3>Centre Operating Information</h3>
               <p>
-                <strong>Centre Head:</strong> S. Thiyagarajan (M.Sc., IT., B.Ed.)
+                <strong>Center Head:</strong> S. Thiyagarajan (M.Sc., IT., B.Ed.)
               </p>
               <p>
-                <strong>Class Timings:</strong> 6:30 PM – 9:00 PM (Mon – Sat & Sunday Special Classes)
+                <strong>Admissions & Enquiries:</strong> Available Mon – Sat
               </p>
               <p>
                 <strong>Phone Numbers:</strong> 96262 65456, 99941 48476
               </p>
               <p>
-                <strong>Facilities:</strong> 24/7 CCTV Monitoring, Dedicated Parking Facility, Smart Boards, 100% Safe for Girls
+                <strong>Facilities:</strong> 24/7 CCTV Monitoring, Dedicated Parking Facility, Smart-Base Classrooms, 100% Safe for Girls
               </p>
               <div className="contact-social-embed">
                 <strong>Follow us on Social Media:</strong>
@@ -2778,14 +2537,14 @@ function Contact() {
               </div>
             </div>
           </div>
-          <ContactForm defaultSubject={defaultSubject} />
+          <ContactForm />
         </div>
       </section>
     </main>
   );
 }
 
-function ContactForm({ defaultSubject = '' }) {
+function ContactForm() {
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState('');
 
@@ -2795,61 +2554,38 @@ function ContactForm({ defaultSubject = '' }) {
     if (!form.reportValidity()) return;
     setBusy(true);
     setMessage('');
-
-    const data = Object.fromEntries(new FormData(form));
-
-    // Compile WhatsApp message
-    const msgLines = [
-      'Hello Annai Tuition Centre, I have an enquiry:',
-      `• Name: ${data.parent_name}`,
-      `• Mobile: ${data.mobile}`,
-      data.email ? `• Email: ${data.email}` : null,
-      `• Message / Subject: ${data.message}`,
-    ].filter(Boolean);
-
-    const waText = msgLines.join('\n');
-    const waUrl = `https://wa.me/919626265456?text=${encodeURIComponent(waText)}`;
-
-    // Open WhatsApp directly
-    window.open(waUrl, '_blank', 'noopener,noreferrer');
-
-    // Attempt background save if VITE_API_BASE_URL is set
     try {
       const url = import.meta.env.VITE_API_BASE_URL;
-      if (url) {
-        await fetch(`${url.replace(/\/$/, '')}/contact/`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        });
-      }
-    } catch {}
-
-    setMessage('Your enquiry has been opened in WhatsApp. Please tap Send to complete. You can also call us directly at 96262 65456.');
-    setBusy(false);
-    form.reset();
+      if (!url) throw new Error('Contact enquiries are not connected yet. Please call 96262 65456 or 99941 48476.');
+      const r = await fetch(`${url.replace(/\/$/, '')}/contact/`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      });
+      const data = await r.json();
+      if (!r.ok) throw new Error(apiErrorText(data, 'We could not save this enquiry. Please call us instead.'));
+      setMessage('Your enquiry has been saved. We’ll be in touch.');
+      form.reset();
+    } catch (err) {
+      setMessage(err.message);
+    } finally {
+      setBusy(false);
+    }
   }
 
   return (
     <form onSubmit={submit} className="contact-form form-card">
       <label>
         Your name *
-        <input name="parent_name" required maxLength="120" placeholder="Full name" autoComplete="name" />
+        <input name="parent_name" required maxLength="120" placeholder="Full name" />
       </label>
       <label>
         Mobile number *
-        <input
-          name="mobile"
-          required
-          inputMode="tel"
-          pattern="[+0-9 ()-]{10,18}"
-          placeholder="e.g. 98765 43210"
-          autoComplete="tel"
-        />
+        <input name="mobile" required inputMode="tel" pattern="[+0-9 ()-]{10,18}" placeholder="e.g. 98765 43210" />
       </label>
       <label>
         Email address
-        <input type="email" name="email" maxLength="254" placeholder="Optional" autoComplete="email" />
+        <input type="email" name="email" maxLength="254" placeholder="Optional" autoComplete="off" />
       </label>
       <label>
         Message *
@@ -2858,15 +2594,18 @@ function ContactForm({ defaultSubject = '' }) {
           required
           rows="4"
           maxLength="1200"
-          defaultValue={defaultSubject}
           placeholder="Which class or subject are you enquiring about?"
         />
       </label>
-      <button disabled={busy} className="button button-gold form-submit" style={{ width: '100%', marginTop: '14px' }}>
+      <label className="consent">
+        <input name="consent" type="checkbox" value="true" required />
+        <span>I agree that Annai Tuition Centre may contact me regarding this enquiry. *</span>
+      </label>
+      <button disabled={busy} className="button button-primary">
         {busy ? 'Sending…' : 'Send enquiry'} <Send size={15} />
       </button>
       {message && (
-        <p role="status" className="form-status success">
+        <p role="status" className="form-status">
           {message}
         </p>
       )}
@@ -3274,292 +3013,6 @@ function Admin() {
   );
 }
 
-
-/* =========================================================================
-   TUTORIALS SPOTLIGHT COMPONENT (HOME PAGE) - SIMPLE, SHORT & TRUTHFUL
-   ========================================================================= */
-export function TutorialsSpotlightSection() {
-  return (
-    <section className="tutorials-section section" id="tutorials-spotlight">
-      <div className="container">
-        <SectionTitle
-          eyebrow="Annai Tuition Centre · Puthur, Trichy"
-          title={
-            <>
-              Subject Tutorials & <span className="serif-accent">Concept Coaching</span>
-            </>
-          }
-          text="Evening tuition batches (6:30 PM – 9:00 PM) for Classes 1 to 12. Small batches, personal attention, daily notebook checking, and weekly unit tests."
-          align="align-center"
-        />
-
-        {/* 4 Truthful Method Steps */}
-        <div className="tutorial-method-box">
-          <div className="tutorial-method-header">
-            <span className="eyebrow">Our Daily Routine</span>
-            <h3>How Teaching Happens in Every Class</h3>
-          </div>
-          <div className="tutorial-steps-grid">
-            {tutorialSteps.map((st) => (
-              <div className="tutorial-step-card" key={st.step}>
-                <span className="step-num">{st.step}</span>
-                <h4>{st.title}</h4>
-                <p>{st.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* 4 Featured Tutorial Tracks */}
-        <div className="tutorials-grid">
-          {tutorialTracks.slice(0, 4).map((trk) => {
-            const Icon =
-              trk.icon === 'Trophy'
-                ? Trophy
-                : trk.icon === 'Cpu'
-                ? Cpu
-                : trk.icon === 'Sparkles'
-                ? Sparkles
-                : trk.icon === 'Dna'
-                ? Dna
-                : trk.icon === 'Briefcase'
-                ? Briefcase
-                : trk.icon === 'Code'
-                ? Code
-                : BookOpen;
-
-            return (
-              <div className="tutorial-card" key={trk.id}>
-                <div className="tutorial-card-top">
-                  <div className="tutorial-icon-wrap">
-                    <Icon size={22} />
-                  </div>
-                  <div>
-                    <span className="tutorial-badge">{trk.badge}</span>
-                  </div>
-                </div>
-
-                <h3>{trk.title}</h3>
-                <span className="tutorial-grade">{trk.grade}</span>
-
-                <ul className="tutorial-highlights">
-                  {trk.highlights.map((h, idx) => (
-                    <li key={idx}>
-                      <CheckCircle2 size={14} />
-                      <span>{h}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="tutorial-timing-chip">
-                  <Clock size={12} />
-                  <span>{trk.timing}</span>
-                </div>
-
-                <div className="tutorial-card-actions">
-                  <Link
-                    to={`/contact?class=${encodeURIComponent(trk.classParam)}`}
-                    className="button button-gold tutorial-enquire-btn"
-                  >
-                    Enquire for this Class <ArrowRight size={14} />
-                  </Link>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="tutorials-view-all-wrap">
-          <Link to="/tutorials" className="button button-outline">
-            View All 8 Tutorial Programs & Batches <ArrowRight size={16} />
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* =========================================================================
-   DEDICATED TUTORIALS PAGE (/tutorials & /tutorial) - SIMPLE & HONEST
-   ========================================================================= */
-export function TutorialsPage() {
-  return (
-    <main>
-      <PageHero
-        eyebrow="Puthur, Trichy · Since 2008"
-        title={
-          <>
-            Subject Tutorials & <em>Coaching Batches.</em>
-          </>
-        }
-        text="Evening tuition batches (6:30 PM – 9:00 PM) for Classes 1 to 12. Led by Founder S. Thiyagarajan, M.Sc. (IT), B.Ed. and experienced mentors. Daily notebook checking, personal doubt solving, and weekly tests."
-      />
-
-      {/* 4 Truthful Highlights Bar */}
-      <section className="tutorial-quick-strip">
-        <div className="container tutorial-quick-grid">
-          <div className="quick-item">
-            <Clock size={20} />
-            <div>
-              <strong>6:30 PM – 9:00 PM</strong>
-              <span>Daily + Sunday Special Classes</span>
-            </div>
-          </div>
-          <div className="quick-item">
-            <MapPin size={20} />
-            <div>
-              <strong>Puthur, Trichy</strong>
-              <span>2 Campuses (Agraharam & School)</span>
-            </div>
-          </div>
-          <div className="quick-item">
-            <ShieldCheck size={20} />
-            <div>
-              <strong>100% Safe for Girls</strong>
-              <span>24/7 CCTV Camera Monitored</span>
-            </div>
-          </div>
-          <div className="quick-item">
-            <Car size={20} />
-            <div>
-              <strong>Dedicated Parking</strong>
-              <span>Safe cycle & two-wheeler parking</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How Teaching Happens (4 Steps) */}
-      <section className="section tutorial-method-section">
-        <div className="container">
-          <SectionTitle
-            eyebrow="Our Simple 4-Step Method"
-            title="How Teaching Happens in Every Class"
-            text="No unnecessary theory. Just clear concept explanation, daily problem practice, and personal attention."
-            align="align-center"
-          />
-
-          <div className="tutorial-steps-grid">
-            {tutorialSteps.map((st) => (
-              <div className="tutorial-step-card" key={st.step}>
-                <span className="step-num">{st.step}</span>
-                <h4>{st.title}</h4>
-                <p>{st.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* All 8 Tutorial Programs */}
-      <section className="section" id="all-tutorials">
-        <div className="container">
-          <SectionTitle
-            eyebrow="Classes 1 to 12"
-            title="All 8 Tutorial Coaching Programs"
-            text="Choose your child's class or subject to enquire about batch timings and seats."
-            align="align-center"
-          />
-
-          <div className="tutorials-grid">
-            {tutorialTracks.map((trk) => {
-              const Icon =
-                trk.icon === 'Trophy'
-                  ? Trophy
-                  : trk.icon === 'Cpu'
-                  ? Cpu
-                  : trk.icon === 'Sparkles'
-                  ? Sparkles
-                  : trk.icon === 'Dna'
-                  ? Dna
-                  : trk.icon === 'Briefcase'
-                  ? Briefcase
-                  : trk.icon === 'Code'
-                  ? Code
-                  : trk.icon === 'Layers'
-                  ? Layers
-                  : trk.icon === 'CheckCircle'
-                  ? CheckCircle
-                  : BookOpen;
-
-              return (
-                <div className="tutorial-card" key={trk.id}>
-                  <div className="tutorial-card-top">
-                    <div className="tutorial-icon-wrap">
-                      <Icon size={22} />
-                    </div>
-                    <div>
-                      <span className="tutorial-badge">{trk.badge}</span>
-                    </div>
-                  </div>
-
-                  <h3>{trk.title}</h3>
-                  <span className="tutorial-grade">{trk.grade}</span>
-
-                  <ul className="tutorial-highlights">
-                    {trk.highlights.map((h, idx) => (
-                      <li key={idx}>
-                        <CheckCircle2 size={14} />
-                        <span>{h}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="tutorial-timing-chip">
-                    <Clock size={12} />
-                    <span>{trk.timing}</span>
-                  </div>
-
-                  <div className="tutorial-card-actions">
-                    <Link
-                      to={`/contact?class=${encodeURIComponent(trk.classParam)}`}
-                      className="button button-gold tutorial-enquire-btn"
-                    >
-                      Enquire for this Class <ArrowRight size={14} />
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Free 1-Day Trial Class Banner */}
-      <section className="section tutorial-trial-section">
-        <div className="container">
-          <div className="tutorial-trial-box">
-            <div className="tutorial-trial-content">
-              <span className="eyebrow eyebrow-light">Zero Cost · Experience First</span>
-              <h2>Attend a Free 1-Day Trial Tutorial Class</h2>
-              <p>
-                Bring your child to attend an evening class at our Puthur campus. Meet our teachers, experience our
-                Smart Board classroom, and see how our daily notebook checking helps.
-              </p>
-              <div className="tutorial-trial-actions">
-                <a
-                  href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20attend%20a%20Free%201-Day%20Trial%20Class%20for%20my%20child."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="button button-gold"
-                >
-                  <MessageCircle size={17} /> Message on WhatsApp
-                </a>
-                <a href="tel:+919626265456" className="button button-ghost">
-                  <Phone size={16} /> Call 96262 65456
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Two Campuses in Puthur */}
-      <BranchesSection />
-    </main>
-  );
-}
-
 function FacultyPage() {
   return (
     <main>
@@ -3584,15 +3037,12 @@ export default function App() {
     <AppShell>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/faculty" element={<FacultyPage />} />
         <Route path="/classes" element={<ClassesPage />} />
-        <Route path="/tutorials" element={<TutorialsPage />} />
         <Route path="/results" element={<Results />} />
         <Route path="/contact" element={<Contact />} />
-        {/* Simplified navigation aliases for backward compatibility */}
-        <Route path="/tutorial" element={<TutorialsPage />} />
-        <Route path="/about" element={<FacultyPage />} />
-        <Route path="/admissions" element={<Contact />} />
+        <Route path="/admissions" element={<Admissions />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
