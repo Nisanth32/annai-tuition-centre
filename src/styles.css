@@ -4778,7 +4778,7 @@ iframe {
 
 .tutorial-steps-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
@@ -5022,11 +5022,8 @@ iframe {
     gap: 18px;
   }
   .tutorial-steps-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .tutorial-step-card:nth-child(4),
-  .tutorial-step-card:nth-child(5) {
-    grid-column: span 1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 }
 

@@ -142,172 +142,150 @@ export const facultyPanels = [
 export const tutorialSteps = [
   {
     step: '01',
-    title: 'Concept Breakdown',
-    desc: 'Our 7–8+ years experienced faculty explain formulas and theories step-by-step on Blackboard and 4K Interactive Smart Board with real-world examples.',
+    title: 'Board & Smart Board Teaching',
+    desc: 'Teachers explain each concept and formula step-by-step on the blackboard & interactive Smart Board.',
     icon: 'BookOpen',
   },
   {
     step: '02',
-    title: 'Guided Notebook Practice',
-    desc: 'Students solve curated blueprint problems in their notebooks while mentors observe their calculation steps and correct mistakes on the spot.',
+    title: 'Daily Notebook Checking',
+    desc: 'Mentors check each student’s calculation steps in class and correct mistakes immediately.',
     icon: 'CheckCircle2',
   },
   {
     step: '03',
-    title: 'Zero-Hesitation Doubt Clearing',
-    desc: 'A patient, friendly learning atmosphere where no student feels shy to ask questions. Every doubt is answered until 100% clarity is reached.',
+    title: 'Direct Doubt Clearing',
+    desc: 'Friendly, patient atmosphere where students ask questions freely without hesitation.',
     icon: 'MessageCircle',
   },
   {
     step: '04',
-    title: 'Weekly Unit Assessments',
-    desc: 'Rigorous weekly chapter tests and formula workouts evaluate steady progress, with detailed feedback shared with parents.',
+    title: 'Weekly Unit Tests',
+    desc: 'Regular chapter tests to track progress, with results shared directly with parents.',
     icon: 'TrendingUp',
-  },
-  {
-    step: '05',
-    title: 'Centum Drills & Pre-Board Mock Exams',
-    desc: 'Full 3-hour pre-board simulations under genuine examination conditions build speed, confidence, and blueprint exam temperament.',
-    icon: 'Trophy',
   },
 ];
 
 export const tutorialTracks = [
   {
-    id: 'board-exam',
-    title: '10th & 12th Board Exam Centum Tutorial',
-    category: 'Board Excellence',
-    grade: 'Classes 10 & 12 (SSLC & HSC State Board)',
+    id: '10th-board',
+    title: '10th Standard Board Exam Coaching',
+    category: 'Board Coaching',
+    grade: 'Class 10 (Tamil Nadu State Board)',
     icon: 'Trophy',
-    badge: 'Centum Focus',
-    description: 'High-intensity chapter-wise concept tutorials, blueprint question analysis, formula derivation drills, and time-management practice.',
-    highlights: [
-      'Chapter-wise unit tests & 10-year question analysis',
-      'Special 100/100 Centum scoring methodology',
-      'Daily 5-problem challenge for calculation accuracy',
-      'Full-length model pre-board practice under exam conditions',
-    ],
+    badge: '100% Centum Focus',
     timing: '6:30 PM – 9:00 PM (Daily & Sunday)',
-    classParam: '10th & 12th Board Exam Tutorial',
+    highlights: [
+      'Maths, Science, Social Science, Tamil & English',
+      'Daily formula drills & previous 10-year question practice',
+      'Weekly unit tests with personal mark review',
+    ],
+    classParam: '10th Standard',
   },
   {
-    id: 'math-mastery',
-    title: 'Mathematics & Centum Shortcut Tutorial',
+    id: '12th-board',
+    title: '12th Standard HSC Board Coaching',
+    category: 'Higher Secondary',
+    grade: 'Class 12 (Science & Commerce)',
+    icon: 'Award',
+    badge: 'State Board Blueprint',
+    timing: '6:30 PM – 9:00 PM (Daily & Sunday)',
+    highlights: [
+      'Maths, Physics, Chemistry, Biology, CS & Commerce',
+      'Blueprint-based revision & step-by-step problem solving',
+      'Full-length model pre-board exams before finals',
+    ],
+    classParam: '12th Standard',
+  },
+  {
+    id: 'maths',
+    title: 'Mathematics Centum Coaching',
     category: 'Math Excellence',
-    grade: 'Classes 6 to 12 (State Board & Foundation)',
+    grade: 'Classes 6 to 12 (State Board)',
     icon: 'Cpu',
-    badge: 'Formula Mastery',
-    description: 'Eliminate math fear with clear logic, easy formula memory mnemonics, step-by-step algebra, geometry, trigonometry, and calculus derivation tutorials.',
+    badge: 'Step-by-Step Logic',
+    timing: '6:30 PM – 9:00 PM',
     highlights: [
-      'Speed calculation tricks & mental arithmetic shortcuts',
-      'Step-by-step problem breakdown that makes concepts crystal clear',
-      'Daily individual notebook checking by experienced teachers',
-      'Centum score coaching produced consistently every year',
+      'Algebra, Geometry, Trigonometry & Calculus breakdown',
+      'Formula shortcut memory tips that remove math fear',
+      'Daily individual notebook checking for calculation accuracy',
     ],
-    timing: '6:30 PM – 9:00 PM (Daily Batches)',
-    classParam: 'Mathematics Tutorial',
+    classParam: 'Mathematics',
   },
   {
-    id: 'science-physics-chem',
-    title: 'Science, Physics & Chemistry Tutorial',
+    id: 'science',
+    title: 'Science (Physics, Chemistry, Biology)',
     category: 'Visual Science',
-    grade: 'Classes 9 to 12 & Foundation',
+    grade: 'Classes 9 to 12',
     icon: 'Sparkles',
-    badge: 'Smart Board Labs',
-    description: 'Deep visual understanding with 3D Smart Board simulations, ray optics, balanced chemical equations, and organic reaction roadmaps.',
+    badge: 'Interactive Smart Board',
+    timing: '6:30 PM – 9:00 PM',
     highlights: [
-      'Interactive Smart Board visual science simulations',
-      'Simplified organic reaction roadmaps & formula charts',
-      'Step-by-step numerical problem breakdown in Physics',
-      'Practical record completion & full-marks viva prep',
+      'Interactive Smart Board visual 3D simulations',
+      'Chemical equations, organic reaction maps & physics derivations',
+      'Diagram drawing drills with correct scientific labeling',
     ],
-    timing: '6:30 PM – 9:00 PM (Evening Batches)',
-    classParam: 'Science & Physics/Chemistry Tutorial',
+    classParam: 'Science Stream',
   },
   {
-    id: 'biology-diagrams',
-    title: 'Biology & Scientific Diagram Tutorial',
-    category: 'Medical Foundation',
-    grade: 'Classes 9, 10, 11 & 12 (Botany & Zoology)',
-    icon: 'Dna',
-    badge: 'Diagram Drills',
-    description: 'Master fast scientific diagram drawing drills with perfect labeling, line-by-line Samacheer Kalvi clarity, and strong medical/NEET foundations.',
-    highlights: [
-      'Rapid scientific diagram drawing drills with exact labeling',
-      'Line-by-line textbook concept clarity for effortless recall',
-      'Botany life cycles and human physiology simplified',
-      'Weekly unit tests with previous board question analysis',
-    ],
-    timing: '6:30 PM – 9:00 PM (Special Batches)',
-    classParam: 'Biology Tutorial',
-  },
-  {
-    id: 'commerce-accountancy',
-    title: 'Commerce & Accountancy Mastery Tutorial',
-    category: 'Commerce Stream',
-    grade: 'Classes 11 & 12 (State Board & CBSE)',
+    id: 'commerce',
+    title: 'Commerce & Accountancy',
+    category: 'Commerce Wing',
+    grade: 'Classes 11 & 12',
     icon: 'Briefcase',
-    badge: 'Balance Sheet Centum',
-    description: 'Double-entry bookkeeping made easy, debit-credit rules demystified, ledger balancing drills, and company accounts coaching.',
+    badge: 'Balance Sheet Mastery',
+    timing: '6:30 PM – 9:00 PM',
     highlights: [
-      'Step-by-step ledger balancing & balance sheet mastery',
-      'Zero confusion with simple debit-credit rules & shortcuts',
-      'Proven blueprint strategy for scoring 100/100 marks',
-      'Real-world business economics and case studies',
+      'Simple debit-credit rules & ledger balancing practice',
+      'Balance sheet problem drills with zero confusion',
+      'Business economics & accountancy blueprint coaching',
     ],
-    timing: '6:30 PM – 9:00 PM (Commerce Wing)',
-    classParam: 'Commerce & Accountancy Tutorial',
+    classParam: 'Commerce & Accountancy',
   },
   {
-    id: 'computer-science',
-    title: 'Computer Science & Python Coding Tutorial',
+    id: 'cs',
+    title: 'Computer Science (Python & Theory)',
     category: 'Practical & Theory',
-    grade: 'Classes 11 & 12 (State Board)',
+    grade: 'Classes 11 & 12',
     icon: 'Code',
-    badge: '100% Practical',
-    description: 'Hands-on Python programming, flowchart logic, algorithm tracing, MySQL queries, and complete practical examination preparation.',
+    badge: 'Practical Record Prep',
+    timing: '6:30 PM – 9:00 PM',
     highlights: [
-      'Hands-on Python code tracing & debugging practice',
-      'Easy flowchart logic & database MySQL query mastery',
-      'Complete practical record completion & viva training',
-      'Past board centum track record year after year',
+      'Hands-on Python code logic, syntax & flowcharts',
+      'MySQL database queries made simple and clear',
+      'Practical record completion & viva interview prep',
     ],
-    timing: '6:30 PM – 9:00 PM (Daily Batches)',
-    classParam: 'Computer Science Tutorial',
+    classParam: 'Computer Science',
   },
   {
-    id: 'junior-foundation',
-    title: 'Junior Foundation Tutorial (Classes 1–8)',
+    id: 'junior',
+    title: 'Classes 1–8 Junior Foundation',
     category: 'All-Round Care',
     grade: 'Classes 1 to 8 (All Subjects)',
     icon: 'Layers',
-    badge: 'Foundational Care',
-    description: 'Caring individual attention for junior students, daily homework tracking, spelling & mental math drills, and disciplined study habits.',
+    badge: 'Homework & Basics',
+    timing: '6:30 PM – 8:30 PM',
     highlights: [
-      'Daily school homework assistance and concept revision',
-      'Neat handwriting drills & mental math speed training',
-      'Nurturing confidence, curiosity, and polite classroom discipline',
-      'Strong academic foundation for high school transition',
+      'Daily school homework assistance and handwriting care',
+      'Mental arithmetic & foundational concept clarity',
+      'Disciplined daily evening study habit building',
     ],
-    timing: '6:30 PM – 8:30 PM (Evening Batches)',
-    classParam: 'Junior Foundation Tutorial',
+    classParam: 'Classes 1-8 Junior Foundation',
   },
   {
-    id: 'remedial-1on1',
-    title: '1-on-1 Remedial & Doubt-Clearing Tutorial',
+    id: 'individual',
+    title: '1-on-1 Individual Doubt Clearing',
     category: 'Personal Attention',
-    grade: 'All Grades (Tailored Need)',
+    grade: 'Any Subject · On Demand',
     icon: 'CheckCircle',
-    badge: 'Individual Focus',
-    description: 'Customized one-on-one tutorial attention for students struggling with specific chapters or exam anxiety, turning weaknesses into strengths.',
-    highlights: [
-      'Dedicated mentor checking every step and clearing doubts',
-      'Customized pace matching the individual student’s capability',
-      'Confidence-building drills with regular parent updates',
-      'Proven improvement in marks within 30 to 45 days',
-    ],
+    badge: '1-on-1 Mentorship',
     timing: 'Flexible Evening & Sunday Slots',
-    classParam: '1-on-1 Remedial Tutorial',
+    highlights: [
+      'Dedicated teacher for difficult chapters',
+      'Personal pace for students needing extra support',
+      'Steady improvement with regular parent updates',
+    ],
+    classParam: '1-on-1 Tutorial Support',
   },
 ];
 
@@ -1976,13 +1954,10 @@ function Home() {
       {/* 4. Specialized Board Exam Coaching (Classes 10 & 12) */}
       <CoachingSection />
 
-      {/* 5. Comprehensive Subject Tutorials Hub */}
+      {/* 5. Subject Tutorials & Concept Coaching */}
       <TutorialsSpotlightSection />
 
-      {/* 6. Advanced Subjects & Specialized Tutorials (CS, Bio, Commerce, Maths) */}
-      <SubjectsTutorialsSection />
-
-      {/* 5. Real Classroom Showcase */}
+      {/* 6. Real Classroom Showcase */}
       <RealClassroomSection />
 
       {/* 6. Interactive Smart Board Section */}
@@ -3226,28 +3201,28 @@ function Admin() {
 
 
 /* =========================================================================
-   TUTORIALS SPOTLIGHT COMPONENT (HOME PAGE & COURSE PAGES)
+   TUTORIALS SPOTLIGHT COMPONENT (HOME PAGE) - SIMPLE, SHORT & TRUTHFUL
    ========================================================================= */
 export function TutorialsSpotlightSection() {
   return (
     <section className="tutorials-section section" id="tutorials-spotlight">
       <div className="container">
         <SectionTitle
-          eyebrow="Concept Clarity & Mentorship"
+          eyebrow="Annai Tuition Centre · Puthur, Trichy"
           title={
             <>
-              Specialized Subject <span className="serif-accent">Tutorials</span>
+              Subject Tutorials & <span className="serif-accent">Concept Coaching</span>
             </>
           }
-          text="Transform difficult subjects into high-scoring strengths. Structured concept tutorials, daily doubt-clearing sessions, and step-by-step blueprint mastery for Classes 1 to 12 in Puthur, Trichy."
+          text="Evening tuition batches (6:30 PM – 9:00 PM) for Classes 1 to 12. Small batches, personal attention, daily notebook checking, and weekly unit tests."
           align="align-center"
         />
 
-        {/* 5-Step Learning Method Cards */}
+        {/* 4 Truthful Method Steps */}
         <div className="tutorial-method-box">
           <div className="tutorial-method-header">
-            <span className="eyebrow">Our Proven Method</span>
-            <h3>How Annai Tutorials Ensure High Board Marks</h3>
+            <span className="eyebrow">Our Daily Routine</span>
+            <h3>How Teaching Happens in Every Class</h3>
           </div>
           <div className="tutorial-steps-grid">
             {tutorialSteps.map((st) => (
@@ -3260,7 +3235,7 @@ export function TutorialsSpotlightSection() {
           </div>
         </div>
 
-        {/* Tutorial Highlight Cards (First 4 Tracks) */}
+        {/* 4 Featured Tutorial Tracks */}
         <div className="tutorials-grid">
           {tutorialTracks.slice(0, 4).map((trk) => {
             const Icon =
@@ -3285,14 +3260,12 @@ export function TutorialsSpotlightSection() {
                     <Icon size={22} />
                   </div>
                   <div>
-                    <span className="tutorial-category">{trk.category}</span>
                     <span className="tutorial-badge">{trk.badge}</span>
                   </div>
                 </div>
 
                 <h3>{trk.title}</h3>
                 <span className="tutorial-grade">{trk.grade}</span>
-                <p className="tutorial-desc">{trk.description}</p>
 
                 <ul className="tutorial-highlights">
                   {trk.highlights.map((h, idx) => (
@@ -3313,7 +3286,7 @@ export function TutorialsSpotlightSection() {
                     to={`/contact?class=${encodeURIComponent(trk.classParam)}`}
                     className="button button-gold tutorial-enquire-btn"
                   >
-                    Enquire for this Tutorial <ArrowRight size={14} />
+                    Enquire for this Class <ArrowRight size={14} />
                   </Link>
                 </div>
               </div>
@@ -3323,7 +3296,7 @@ export function TutorialsSpotlightSection() {
 
         <div className="tutorials-view-all-wrap">
           <Link to="/tutorials" className="button button-outline">
-            View All 8 Specialized Tutorial Programs <ArrowRight size={16} />
+            View All 8 Tutorial Programs & Batches <ArrowRight size={16} />
           </Link>
         </div>
       </div>
@@ -3332,66 +3305,66 @@ export function TutorialsSpotlightSection() {
 }
 
 /* =========================================================================
-   FULL DEDICATED TUTORIALS PAGE (/tutorials & /tutorial)
+   DEDICATED TUTORIALS PAGE (/tutorials & /tutorial) - SIMPLE & HONEST
    ========================================================================= */
 export function TutorialsPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Personalized Concept Coaching"
+        eyebrow="Puthur, Trichy · Since 2008"
         title={
           <>
-            Specialized Subject <em>Tutorials.</em>
+            Subject Tutorials & <em>Coaching Batches.</em>
           </>
         }
-        text="From foundational clarity to 100/100 Centum mastery. Explore our 8 specialized tutorial tracks with daily evening classes (6:30 PM – 9:00 PM), Sunday revision sessions, and interactive Smart Board learning in Puthur, Trichy."
+        text="Evening tuition batches (6:30 PM – 9:00 PM) for Classes 1 to 12. Led by Founder S. Thiyagarajan, M.Sc. (IT), B.Ed. and experienced mentors. Daily notebook checking, personal doubt solving, and weekly tests."
       />
 
-      {/* Quick Overview Strip */}
+      {/* 4 Truthful Highlights Bar */}
       <section className="tutorial-quick-strip">
         <div className="container tutorial-quick-grid">
           <div className="quick-item">
             <Clock size={20} />
             <div>
-              <strong>Class Timings</strong>
-              <span>6:30 PM – 9:00 PM (Daily & Sunday)</span>
+              <strong>6:30 PM – 9:00 PM</strong>
+              <span>Daily + Sunday Special Classes</span>
             </div>
           </div>
           <div className="quick-item">
-            <Trophy size={20} />
+            <MapPin size={20} />
             <div>
-              <strong>7,000+ Alumni</strong>
-              <span>Empowering students since 2008</span>
+              <strong>Puthur, Trichy</strong>
+              <span>2 Campuses (Agraharam & School)</span>
             </div>
           </div>
           <div className="quick-item">
-            <Tv size={20} />
+            <ShieldCheck size={20} />
             <div>
-              <strong>Interactive Smart Board</strong>
-              <span>4K Touch visual simulations</span>
+              <strong>100% Safe for Girls</strong>
+              <span>24/7 CCTV Camera Monitored</span>
             </div>
           </div>
           <div className="quick-item">
             <Car size={20} />
             <div>
-              <strong>Dedicated Parking Facility</strong>
-              <span>Safe two-wheeler parking & CCTV</span>
+              <strong>Dedicated Parking</strong>
+              <span>Safe cycle & two-wheeler parking</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5-Step Methodology */}
+      {/* How Teaching Happens (4 Steps) */}
       <section className="section tutorial-method-section">
         <div className="container">
           <SectionTitle
-            eyebrow="Step-by-Step Learning System"
-            title="How Annai Tutorials Guide Every Student to Success"
-            text="We do not just ask students to memorize. Our step-by-step tutorial methodology identifies learning gaps, builds concept logic, and reinforces knowledge with guided daily practice."
+            eyebrow="Our Simple 4-Step Method"
+            title="How Teaching Happens in Every Class"
+            text="No unnecessary theory. Just clear concept explanation, daily problem practice, and personal attention."
             align="align-center"
           />
 
-          <div className="tutorial-steps-grid full-grid">
+          <div className="tutorial-steps-grid">
             {tutorialSteps.map((st) => (
               <div className="tutorial-step-card" key={st.step}>
                 <span className="step-num">{st.step}</span>
@@ -3403,13 +3376,13 @@ export function TutorialsPage() {
         </div>
       </section>
 
-      {/* All 8 Specialized Tutorial Programs */}
+      {/* All 8 Tutorial Programs */}
       <section className="section" id="all-tutorials">
         <div className="container">
           <SectionTitle
-            eyebrow="Our 8 Specialized Tutorial Tracks"
-            title="Choose the Tutorial Program for Your Child"
-            text="Every tutorial track is designed by 7–8+ years experienced mentors to maximize marks, boost confidence, and eliminate exam fear."
+            eyebrow="Classes 1 to 12"
+            title="All 8 Tutorial Coaching Programs"
+            text="Choose your child's class or subject to enquire about batch timings and seats."
             align="align-center"
           />
 
@@ -3441,14 +3414,12 @@ export function TutorialsPage() {
                       <Icon size={22} />
                     </div>
                     <div>
-                      <span className="tutorial-category">{trk.category}</span>
                       <span className="tutorial-badge">{trk.badge}</span>
                     </div>
                   </div>
 
                   <h3>{trk.title}</h3>
                   <span className="tutorial-grade">{trk.grade}</span>
-                  <p className="tutorial-desc">{trk.description}</p>
 
                   <ul className="tutorial-highlights">
                     {trk.highlights.map((h, idx) => (
@@ -3469,7 +3440,7 @@ export function TutorialsPage() {
                       to={`/contact?class=${encodeURIComponent(trk.classParam)}`}
                       className="button button-gold tutorial-enquire-btn"
                     >
-                      Enquire for this Tutorial <ArrowRight size={14} />
+                      Enquire for this Class <ArrowRight size={14} />
                     </Link>
                   </div>
                 </div>
@@ -3479,25 +3450,25 @@ export function TutorialsPage() {
         </div>
       </section>
 
-      {/* Free 1-Day Trial Tutorial Session Banner */}
+      {/* Free 1-Day Trial Class Banner */}
       <section className="section tutorial-trial-section">
         <div className="container">
           <div className="tutorial-trial-box">
             <div className="tutorial-trial-content">
-              <span className="eyebrow eyebrow-light">Zero Risk · 100% Experience</span>
-              <h2>Book a Free 1-Day Trial Tutorial Session</h2>
+              <span className="eyebrow eyebrow-light">Zero Cost · Experience First</span>
+              <h2>Attend a Free 1-Day Trial Tutorial Class</h2>
               <p>
-                Bring your child to attend a real classroom tutorial session at our Puthur campus. Meet our experienced
-                faculty, experience our Interactive Smart Board teaching, and see the difference in personal attention.
+                Bring your child to attend an evening class at our Puthur campus. Meet our teachers, experience our
+                Smart Board classroom, and see how our daily notebook checking helps.
               </p>
               <div className="tutorial-trial-actions">
                 <a
-                  href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20book%20a%20Free%201-Day%20Trial%20Tutorial%20Class%20for%20my%20child."
+                  href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20attend%20a%20Free%201-Day%20Trial%20Class%20for%20my%20child."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button-gold"
                 >
-                  <MessageCircle size={17} /> Book Free Trial on WhatsApp
+                  <MessageCircle size={17} /> Message on WhatsApp
                 </a>
                 <a href="tel:+919626265456" className="button button-ghost">
                   <Phone size={16} /> Call 96262 65456
@@ -3508,10 +3479,7 @@ export function TutorialsPage() {
         </div>
       </section>
 
-      {/* Real Classroom & Facilities Showcase */}
-      <RealClassroomSection />
-      <SmartBoardSection />
-      <FacilitiesSection />
+      {/* Two Campuses in Puthur */}
       <BranchesSection />
     </main>
   );
