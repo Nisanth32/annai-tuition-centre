@@ -516,6 +516,23 @@ function Footer() {
   );
 }
 
+
+function FloatingWhatsApp() {
+  return (
+    <a
+      href="https://wa.me/919626265456?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20Annai%20Tuition%20Centre"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="floating-whatsapp-btn"
+      aria-label="Chat on WhatsApp"
+      title="Chat with Annai Tuition Centre on WhatsApp"
+    >
+      <MessageCircle size={22} />
+      <span>Chat on WhatsApp</span>
+    </a>
+  );
+}
+
 function AppShell({ children }) {
   return (
     <>
@@ -1490,6 +1507,9 @@ function ReferenceHero() {
             <span className="welcome-tag">Welcome to</span>
             <span className="ref-since-pill">
               <ShieldCheck size={13} /> Since 2008
+            </span>
+            <span className="ref-admissions-live-pill">
+              <Sparkles size={13} /> Admissions Open 2026–2027
             </span>
           </div>
           
