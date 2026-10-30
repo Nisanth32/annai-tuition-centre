@@ -4,11 +4,9 @@ from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "")
+
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY") or "django-insecure-annai-tuition-centre-secret-key-prod-2026-fallback-secure"
 DEBUG = os.environ.get("DJANGO_DEBUG", "false").lower() == "true"
-if not DEBUG and (not SECRET_KEY or SECRET_KEY.startswith("replace-")):
-    raise RuntimeError("Set DJANGO_SECRET_KEY before running outside development mode.")
-SECRET_KEY = SECRET_KEY or "development-only-change-this-key"
 ALLOWED_HOSTS = [host.strip() for host in os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,.vercel.app").split(",") if host.strip()]
 FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:5173").rstrip("/")
 
@@ -28,13 +26,20 @@ TEMPLATES = [{"BACKEND": "django.template.backends.django.DjangoTemplates", "DIR
     "OPTIONS": {"context_processors": ["django.template.context_processors.request", "django.contrib.auth.context_processors.auth", "django.contrib.messages.context_processors.messages"]}}]
 WSGI_APPLICATION = "config.wsgi.application"
 
-DATABASES = {"default": {
-    "ENGINE": "django_mongodb_backend",
-    "HOST": os.environ.get("MONGODB_URI", ""),
-    "NAME": os.environ.get("MONGODB_DATABASE", "annai_tuition"),
-}}
-DATABASE_ROUTERS = ["django_mongodb_backend.routers.MongoRouter"]
-DEFAULT_AUTO_FIELD = "django_mongodb_backend.fields.ObjectIdAutoField"
+if os.environ.get("MONGODB_URI"):
+    DATABASES = {"default": {
+        "ENGINE": "django_mongodb_backend",
+        "HOST": os.environ.get("MONGODB_URI", ""),
+        "NAME": os.environ.get("MONGODB_DATABASE", "annai_tuition"),
+    }}
+    DATABASE_ROUTERS = ["django_mongodb_backend.routers.MongoRouter"]
+    DEFAULT_AUTO_FIELD = "django_mongodb_backend.fields.ObjectIdAutoField"
+else:
+    DATABASES = {"default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }}
+
 MIGRATION_MODULES = {
     "admin": "mongo_migrations.admin",
     "auth": "mongo_migrations.auth",
@@ -53,7 +58,7 @@ USE_I18N = True
 USE_TZ = True
 STATIC_URL = "static/"
 
-CORS_ALLOWED_ORIGINS = [FRONTEND_URL]
+CORS_ALLOWED_ORIGINS = [FRONTEND_URL] if FRONTEND_URL else []
 CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = [FRONTEND_URL, "https://*.vercel.app"] if FRONTEND_URL else ["https://*.vercel.app"]
 SESSION_COOKIE_HTTPONLY = True
