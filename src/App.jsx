@@ -6,8 +6,6 @@ import {
   ArrowUpRight,
   Award,
   BookOpen,
-  Briefcase,
-  Calculator,
   Camera,
   Car,
   Check,
@@ -27,7 +25,6 @@ import {
   Lock,
   MapPin,
   Menu,
-  MessageCircle,
   Microscope,
   Monitor,
   Navigation,
@@ -39,7 +36,6 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
-  TrendingUp,
   Trophy,
   Tv,
   UserCheck,
@@ -50,23 +46,15 @@ import {
 
 const phoneNumbers = ['96262 65456', '99941 48476'];
 const apiErrorText = (data, fallback) => data?.detail || (data && Object.values(data).flat().filter(Boolean).join(' ')) || fallback;
-const classes = [
-  'Classes 1–8 (Junior Foundation)',
-  '9th Standard',
-  '10th Standard (SSLC Board)',
-  '11th Standard (Science Stream)',
-  '11th Standard (Commerce Stream)',
-  '12th Standard (Science Stream)',
-  '12th Standard (Commerce Stream)',
-];
+const classes = ['Classes 1–8', '9th Standard', '10th Standard', '11th Standard', '12th Standard'];
 
 export const facultyFounder = {
   name: 'S. Thiyagarajan',
   qualifications: 'M.Sc. (IT), B.Ed.',
   role: 'Founder & Academic Director | Mathematics & CS Lead',
-  experience: '8+ Years Dedicated Teaching Experience',
+  experience: '18+ Years Dedicated Teaching Experience',
   subjects: ['Higher Secondary Mathematics', 'Computer Science (Python & C++)', 'Board Exam Centum Drills'],
-  about: 'Founded Annai Tuition Centre in 2008 in Puthur, Trichy. With over 8+ years of classroom teaching and personal mentorship, S. Thiyagarajan has directly guided thousands of students to board exam distinction and centums through shortcut techniques, concept visualization, and dedicated care.',
+  about: 'Founded Annai Tuition Centre in 2008 in Puthur, Trichy. With over 18+ years of classroom teaching and personal mentorship, S. Thiyagarajan has directly guided thousands of students to board exam distinction and centums through shortcut techniques, concept visualization, and dedicated care.',
   initials: 'ST',
 };
 
@@ -74,20 +62,20 @@ export const facultyPanels = [
   {
     department: 'Mathematics Faculty Panel',
     qualifications: 'Experienced Postgraduate & B.Ed. Mentors',
-    experience: '8+ Years Average Experience',
+    experience: '15+ Years Average Experience',
     badge: 'Mathematics Department',
     focus: 'How We Improve Students:',
     points: [
       'Eliminating exam fear through step-by-step problem breakdown and formula clarity',
       'Daily 5-problem formula practice and speed calculation shortcut techniques',
       'Regular chapter unit tests with personalized correction and error analysis',
-      'Proven blueprint drills for scoring 100/100 Centums in 10th & 12th State Board Exams',
+      'Proven blueprint drills for scoring 100/100 Centums in 10th & 12th Board Exams',
     ],
   },
   {
     department: 'Physics & Chemistry Faculty Panel',
     qualifications: 'Experienced Postgraduate & B.Ed. Mentors',
-    experience: '7+ Years Average Experience',
+    experience: '14+ Years Average Experience',
     badge: 'Physical Sciences Panel',
     focus: 'How We Improve Students:',
     points: [
@@ -98,35 +86,35 @@ export const facultyPanels = [
     ],
   },
   {
-    department: 'Biology & Life Sciences Faculty Panel',
-    qualifications: 'Experienced Botany & Zoology Specialists (State Board)',
-    experience: '8+ Years Teaching Experience',
+    department: 'Biology & NEET Foundation Faculty Panel',
+    qualifications: 'Experienced Botany & Zoology Specialists',
+    experience: '12+ Years Teaching Experience',
     badge: 'Life Sciences Panel',
     focus: 'How We Improve Students:',
     points: [
-      'Samacheer Kalvi syllabus line-by-line concept mastery with high visual clarity',
+      'Line-by-line NCERT and Samacheer syllabus mastery with smart 3D animations',
       'Speed diagram drawing drills with accurate scientific labeling',
       'Concept maps for genetics, plant physiology, and human anatomy',
-      'Systematic chapter-wise tests and 100/100 board exam scoring techniques',
+      'Foundation coaching for NEET and medical entrance fundamentals',
     ],
   },
   {
-    department: 'Commerce & Accountancy Faculty Panel',
-    qualifications: 'Postgraduate (M.Com, M.Phil, B.Ed.) Mentors',
-    experience: '8+ Years Average Experience',
-    badge: 'Commerce & Management Wing',
+    department: 'Computer Science & Coding Faculty Panel',
+    qualifications: 'Experienced CS & IT Practical Mentors',
+    experience: '10+ Years Technical Experience',
+    badge: 'Computer Science Lead',
     focus: 'How We Improve Students:',
     points: [
-      'Accountancy ledger balancing, debit-credit rules & step-by-step problem accuracy',
-      'Commerce blueprint analysis, point-wise presentation & scoring 100/100',
-      'Business Mathematics speed shortcuts, formula charts & statistics workouts',
-      'Economics concept maps, graphs & national income numerical practice',
+      'Live big-screen coding demonstrations on smart panels in Python & C++',
+      'Hands-on logic building, algorithm tracing, and syntax debugging assistance',
+      'Complete MySQL database table queries and practical record guidance',
+      'Specialized sessions to secure full 100/100 marks in board practical exams',
     ],
   },
   {
     department: 'Foundation & Junior School Faculty (Classes 1–8)',
     qualifications: 'Trained Graduate & B.Ed. Certified Teachers',
-    experience: '7+ Years Foundation Coaching',
+    experience: '12+ Years Foundation Coaching',
     badge: 'Junior Foundation Team',
     focus: 'How We Improve Students:',
     points: [
@@ -138,44 +126,76 @@ export const facultyPanels = [
   },
 ];
 
-export const subjectsList = [
+export const smartClassFeatures = [
   {
-    id: 'commerce',
-    title: 'Commerce & Accountancy',
-    grade: 'Classes 11 & 12 (Tamil Nadu State Board & CBSE)',
-    icon: 'Briefcase',
-    color: 'commerce',
-    points: [
-      'Step-by-step balance sheet & ledger balancing made crystal clear',
-      'Zero exam stress with simple debit-credit rules & shortcut tricks',
-      'Proven blueprint strategy for scoring 100/100 centum marks',
-      'Real-world business economics with interactive classroom coaching',
-    ],
+    icon: 'Monitor',
+    title: 'Digital Interactive Smart Panels',
+    tagline: 'Multi-Touch Ultra-HD Visual Displays',
+    desc: 'Teachers annotate diagrams, step-by-step calculus derivations, and live textbook highlights on large digital flat panels. Lecture notes are instantly exported as PDFs for students.',
+    badge: 'Digital Touch',
   },
+  {
+    icon: 'Dna',
+    title: '3D Biology & Science Animations',
+    tagline: 'Concept Visualization at Depth',
+    desc: 'Complex microscopic processes such as DNA replication, human cardiac anatomy, plant physiology, and atomic orbitals come alive with rich 3D animations and medical-grade graphics.',
+    badge: '3D Science',
+  },
+  {
+    icon: 'Code',
+    title: 'Live Computer Science Coding Lab',
+    tagline: 'Python, C++ & SQL on Big Screen',
+    desc: 'Interactive live coding demonstrations where teachers and students write, compile, and debug code real-time. Full support for CBSE and State Board Class 11 & 12 practical exams.',
+    badge: 'Coding Lab',
+  },
+  {
+    icon: 'Tv',
+    title: 'Audio-Visual Tutorial Archives',
+    tagline: 'Recorded Lessons & Revision Playback',
+    desc: 'Chapter-wise digital tutorials, concept recaps, and board exam question walkthroughs enable students to re-watch tough concepts before unit tests and revision exams.',
+    badge: 'Tutorial Library',
+  },
+  {
+    icon: 'Cpu',
+    title: 'AI-Assisted Diagnostic Quizzes',
+    tagline: 'Targeted Weak-Area Correction',
+    desc: 'Speed quizzes and digital objective tests pinpoint individual student knowledge gaps, allowing our mentors to deliver personalized one-on-one remedial sessions.',
+    badge: 'AI Diagnostics',
+  },
+  {
+    icon: 'Car',
+    title: 'Dedicated Parking & Safe Campus',
+    tagline: 'Hassle-Free Transit for Families',
+    desc: 'Spacious on-campus two-wheeler, bicycle, and parent vehicle parking zone under active 24/7 CCTV surveillance, guaranteeing zero road congestion and absolute student safety.',
+    badge: 'Safe Parking',
+  },
+];
+
+export const subjectsList = [
   {
     id: 'cs',
     title: 'Computer Science',
-    grade: 'Classes 11 & 12 (Tamil Nadu State Board)',
+    grade: 'Classes 11 & 12 (CBSE & State Board)',
     icon: 'Code',
     color: 'cs',
     points: [
-      'Easy hands-on Python programming & C++ logic building',
-      '100% practical record completion with full-marks viva prep',
-      'Fast database MySQL query mastery & visual algorithm diagrams',
-      'Consistent past board centum track record year after year',
+      'Python Programming: OOP, Functions, File Handling & Modules',
+      'C++ Fundamentals, Data Structures & Logic Gates',
+      'Database Management with MySQL & SQL Table Queries',
+      'Practical record completion & viva-voce 100/100 scoring prep',
     ],
   },
   {
     id: 'bio',
     title: 'Biology (Botany & Zoology)',
-    grade: 'Classes 9, 10, 11, 12 (Tamil Nadu State Board)',
+    grade: 'Classes 9, 10, 11, 12 & NEET Foundation',
     icon: 'Dna',
     color: 'bio',
     points: [
-      'Fast scientific diagram drawing drills with perfect labeling',
-      'Line-by-line Samacheer Kalvi clarity that makes concepts stick',
-      'Weekly unit tests with 10-year previous board question analysis',
-      'Strong foundation building for future medical aspirants (NEET/MBBS)',
+      'NCERT & Samacheer line-by-line conceptual decoding',
+      'Human Physiology, Plant Anatomy, Genetics & Biotechnology',
+      'High-speed scientific diagrammatic drawing & labeling drills',
+      'Weekly unit tests, previous 10-year board paper analyses',
     ],
   },
   {
@@ -185,23 +205,23 @@ export const subjectsList = [
     icon: 'Layers',
     color: 'tut',
     points: [
-      '1-on-1 personalized mentoring with daily doubt clearing',
-      'Daily homework tracking & confidence building for junior classes',
-      'Turning difficult subjects into high-scoring student strengths',
-      'Flexible evening timings (6:30–9:00 PM) plus Sunday revision',
+      '1-on-1 personalized doubt clearing tutorials with senior faculty',
+      'Daily homework tracking & mental arithmetic drills for Classes 1–8',
+      'Board exam crash tutorials & blueprint model question series',
+      'Evening concept-strengthening tutorials for slow learners',
     ],
   },
   {
     id: 'math',
     title: 'Mathematics & Centum Coaching',
-    grade: 'Classes 6 to 12 (Tamil Nadu State Board)',
+    grade: 'Classes 6 to 12 (CBSE & State Board)',
     icon: 'Cpu',
     color: 'math',
     points: [
-      'Speed shortcut techniques & easy formula memory mnemonics',
-      'Daily 5-problem challenge for 100% calculation accuracy',
-      'Step-by-step problem breakdown that removes all math fear',
-      'Consistent 100/100 centum results produced every single year',
+      'Calculus, Trigonometry, Coordinate Geometry & Algebra mastery',
+      'Proprietary formula mnemonics and speed shortcut techniques',
+      'Daily 5-problem challenge & chapter-wise unit assessments',
+      'Proven track record of centums (100/100) year after year',
     ],
   },
   {
@@ -211,10 +231,10 @@ export const subjectsList = [
     icon: 'Sparkles',
     color: 'phy',
     points: [
-      'Visual learning on smart interactive boards for complex concepts',
-      'Step-by-step derivation drills formatted for full board marks',
-      'Easy numerical problem-solving formulas and dimensional checks',
-      'Targeted board blueprint revision to maximize final scores',
+      'Mechanics, Electromagnetism, Wave Optics & Modern Physics',
+      'Derivations written step-by-step with mark allocation focus',
+      'Numerical problem-solving formulas and dimensional checks',
+      'Board blueprint-aligned revision drills',
     ],
   },
   {
@@ -224,10 +244,10 @@ export const subjectsList = [
     icon: 'Microscope',
     color: 'chem',
     points: [
-      'Simplified organic reaction roadmaps & quick memory tricks',
-      'Ready-to-use chapter formula charts for effortless recall',
-      'Balanced equation workouts & hands-on practical exam readiness',
-      'Chapter-wise mock tests ensuring total board exam confidence',
+      'Organic chemistry conversions, named reactions & mechanisms',
+      'Physical chemistry thermodynamics, chemical kinetics & solutions',
+      'Inorganic coordination compounds, p-block & d-block elements',
+      'Chapter-wise formula sheets & quick memory maps',
     ],
   },
 ];
@@ -237,7 +257,7 @@ const branchesInfo = [
   {
     type: 'Registered Office',
     name: 'Annai Tuition Centre',
-    subtitle: 'Main Administrative Hub & State Board Coaching Wings',
+    subtitle: 'Main Administrative Hub & Smart-Base Classrooms',
     doorNo: 'Door No.: 21/87',
     street: 'Puthur Agraharam',
     landmark: 'Near Bishop School',
@@ -246,8 +266,8 @@ const branchesInfo = [
     mapLink: 'https://www.google.com/maps/search/?api=1&query=21%2F87+Puthur+Agraharam+Near+Bishop+School+Trichy+17',
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=21%2F87+Puthur+Agraharam+Near+Bishop+School+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=21%2F87%2C+Puthur+Agraharam%2C+Near+Bishop+School%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
-    timings: 'Class Timings: 6:30 PM – 9:00 PM | Mon – Sat & Sunday Special Classes',
-    facilities: ['Dedicated Parking Facility', 'Interactive Smart Board', '24/7 CCTV Surveillance', 'Spacious Classrooms', '100% Safe for Girls'],
+    timings: 'Mon – Sat: 6:00 AM – 8:30 PM | Sunday: Special Batches',
+    facilities: ['Dedicated Parking Facility', '24/7 CCTV Surveillance', 'Smart-Base Classroom', '100% Safe for Girls'],
   },
   {
     type: 'Branch Campus',
@@ -261,8 +281,8 @@ const branchesInfo = [
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=Ramakrishna+Middle+School%2C+Near+Aruna+Theatre%2C+Puthur%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
-    timings: 'Class Timings: 6:30 PM – 9:00 PM | Mon – Sat & Sunday Special Classes',
-    facilities: ['Dedicated Parking Facility', 'Interactive Smart Board', 'Spacious Desks & CCTV', 'Distraction-Free Environment', '100% Safe for Girls'],
+    timings: 'Mon – Sat: 6:00 AM – 8:30 PM | Sunday: Test Series',
+    facilities: ['Dedicated Parking Facility', 'Spacious Desks & CCTV', 'Smart-Base Classroom', '100% Safe for Girls'],
   },
 ];
 
@@ -309,9 +329,6 @@ function Header() {
       <div className="topline">
         <div className="topline-left">
           <span>Welcome to Annai Tuition Centre, Trichy</span>
-          <span className="topline-timing-pill">
-            <Clock size={11} /> Timings: 6:30 PM – 9:00 PM (Sunday Classes Available)
-          </span>
           <span className="msme-pill">
             <ShieldCheck size={12} /> MSME Registered
           </span>
@@ -335,8 +352,9 @@ function Header() {
         <nav className={open ? 'nav open' : 'nav'} aria-label="Main navigation">
           {[
             { label: 'Home', path: '/' },
-            { label: 'Courses', path: '/classes' },
-            { label: 'About Us', path: '/about' },
+            { label: 'About', path: '/about' },
+            { label: 'Smart Class', path: '/smart-class' },
+            { label: 'Classes & Tutorials', path: '/classes' },
             { label: 'Faculty', path: '/faculty' },
             { label: 'Results', path: '/results' },
             { label: 'Contact', path: '/contact' },
@@ -352,18 +370,8 @@ function Header() {
               {item.label}
             </NavLink>
           ))}
-          <a
-            href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20admissions."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="whatsapp-nav-btn"
-            onClick={() => setOpen(false)}
-          >
-            <MessageCircle size={15} />
-            <span>Chat on WhatsApp</span>
-          </a>
           <Link className="button button-primary nav-cta" to="/admissions" onClick={() => setOpen(false)}>
-            Enroll Now <ArrowRight size={15} />
+            Enquire now <ArrowRight size={15} />
           </Link>
         </nav>
       </div>
@@ -432,9 +440,10 @@ function Footer() {
 
         <div>
           <h3>Explore</h3>
-          <Link to="/about">About Us & 7K+ Legacy</Link>
-          <Link to="/classes">Classes & Subjects</Link>
-          <Link to="/faculty">Faculty & Teaching Careers</Link>
+          <Link to="/about">About Us & 70K Legacy</Link>
+          <Link to="/smart-class">Smart-Base Classrooms</Link>
+          <Link to="/classes">Classes & Tutorials</Link>
+          <Link to="/faculty">Faculty & Mentors</Link>
           <Link to="/results">Student Results & Toppers</Link>
           <Link to="/admissions">Admission Enquiry</Link>
           <Link to="/contact">Our Branches & Parking</Link>
@@ -505,24 +514,9 @@ function Footer() {
   );
 }
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'instant',
-    });
-  }, [pathname]);
-
-  return null;
-}
-
 function AppShell({ children }) {
   return (
     <>
-      <ScrollToTop />
       <Header />
       {children}
       <Footer />
@@ -556,7 +550,7 @@ function CallButtons() {
   );
 }
 
-/* 7,000+ Students Passed Out Achievement Banner */
+/* 70,000+ Students Passed Out Achievement Banner */
 function AchievementsStrip() {
   return (
     <section className="achievements-strip">
@@ -566,7 +560,7 @@ function AchievementsStrip() {
             <Trophy size={28} />
           </div>
           <div>
-            <span className="achievement-number">7,000+</span>
+            <span className="achievement-number">70,000+</span>
             <strong className="achievement-title">Students Passed Out</strong>
             <p>Empowering students to achieve board exam mastery & academic success.</p>
           </div>
@@ -624,7 +618,7 @@ function CoachingSection() {
         <div className="coaching-cards-grid">
           {/* 10th Standard Card */}
           <div className="coaching-card coaching-card-10">
-            <div className="coaching-card-badge">Class 10 (SSLC State Board)</div>
+            <div className="coaching-card-badge">Class 10 (SSLC & CBSE)</div>
             <div className="coaching-card-head">
               <span className="coaching-grade-num">10th</span>
               <div>
@@ -668,7 +662,7 @@ function CoachingSection() {
 
           {/* 12th Standard Card */}
           <div className="coaching-card coaching-card-12">
-            <div className="coaching-card-badge navy-badge">Class 12 (+2 HSC State Board)</div>
+            <div className="coaching-card-badge navy-badge">Class 12 (+2 HSC & CBSE)</div>
             <div className="coaching-card-head">
               <span className="coaching-grade-num navy-grade">12th</span>
               <div>
@@ -824,7 +818,7 @@ function GirlsSafetySection() {
   );
 }
 
-/* Facilities Section (CCTV, Dedicated Parking Facility, Spacious Classrooms, MSME) */
+/* Facilities Section (CCTV, Dedicated Parking Facility, Smart Class, MSME) */
 function FacilitiesSection() {
   return (
     <section className="facilities-section section" id="facilities">
@@ -844,7 +838,7 @@ function FacilitiesSection() {
             </div>
             <h3>24/7 CCTV Monitoring</h3>
             <p>
-              Round-the-clock high-definition CCTV camera monitoring across all classrooms, entrances, corridors,
+              Round-the-clock high-definition CCTV camera monitoring across all smart classrooms, entrances, corridors,
               and parking zones for complete safety and transparent supervision.
             </p>
             <span className="facility-tag">Zero-Compromise Security</span>
@@ -863,17 +857,17 @@ function FacilitiesSection() {
             <span className="facility-tag">Safe Drop-off & Parking</span>
           </div>
 
-          {/* Spacious & Well-Ventilated Classrooms */}
-          <div className="facility-card">
+          {/* Smart-Base Digital Classrooms */}
+          <div className="facility-card smart-class-card">
             <div className="facility-icon monitor-icon">
-              <BookOpen size={24} />
+              <Monitor size={24} />
             </div>
-            <h3>Spacious Classrooms</h3>
+            <h3>Smart-Base Classrooms</h3>
             <p>
-              Comfortable individual study desks, bright natural ventilation, and a calm, disciplined learning atmosphere
-              tailored for uninterrupted exam focus and high concentration.
+              Equipped with interactive touch flat panels, high-lumen projectors, 3D science animations, and live
+              coding displays for Computer Science, Biology, and Maths.
             </p>
-            <span className="facility-tag">Distraction-Free Learning</span>
+            <span className="facility-tag">Next-Gen EdTech</span>
           </div>
 
           {/* MSME Registered Quality */}
@@ -895,7 +889,7 @@ function FacilitiesSection() {
 }
 
 /* =========================================================================
-   7,000+ STUDENTS PASSED OUT - COMPREHENSIVE MILESTONE SECTION
+   70,000+ STUDENTS PASSED OUT - COMPREHENSIVE MILESTONE SECTION
    ========================================================================= */
 export function Legacy70kSection() {
   return (
@@ -907,19 +901,20 @@ export function Legacy70kSection() {
               <Trophy size={14} /> Historic Milestone · Established 2008
             </div>
             <h2 className="milestone-heading">
-              The 7,000+ Alumni Legacy: <br />
+              The 70,000+ Alumni Legacy: <br />
               <em>16+ Years</em> of Proven Academic Excellence
             </h2>
             <p className="milestone-intro-text">
-              Since 2008, <strong>Annai Tuition Centre</strong> has empowered over <strong>7,000+ students</strong> across Trichy
-              to achieve board exam success. We turn exam stress into genuine confidence, guiding every learner to top ranks
-              and centum marks with personal care and proven shortcut techniques.
+              Since 2008, <strong>Annai Tuition Centre</strong> has trained and guided over <strong>70,000+ students</strong> to
+              board exam triumph in Trichy. This milestone represents 16+ uninterrupted years of transformative teaching,
+              turning academic stress into confidence and producing thousands of top board scorers and centum achievers.
             </p>
             <div className="milestone-quote-box">
               <Quote size={20} className="milestone-quote-icon" />
               <p>
-                “Every student has the power to excel. For 16+ years, our promise to parents has been simple — caring
-                individual attention, crystal-clear concepts, and the confidence to achieve 100/100.”
+                “70,000+ students passed out is not merely a number to us. It stands for 70,000+ families who trusted us with
+                their children’s future, hundreds of doctors, engineers, and software professionals whom we helped nurture,
+                and our unwavering commitment to concept clarity since day one.”
               </p>
               <div className="milestone-author">
                 <strong>S. Thiyagarajan</strong>
@@ -929,9 +924,9 @@ export function Legacy70kSection() {
           </div>
 
           <div className="milestone-stat-callout">
-            <span className="milestone-big-number">7,000+</span>
+            <span className="milestone-big-number">70,000+</span>
             <strong className="milestone-big-label">Students Passed Out Successfully</strong>
-            <span className="milestone-big-sub">Classes 10 & 12 Tamil Nadu State Board Examinations</span>
+            <span className="milestone-big-sub">Classes 10 & 12 Board Examinations (CBSE & State Board)</span>
 
             <div className="milestone-mini-badges">
               <div className="mini-badge">
@@ -962,9 +957,10 @@ export function Legacy70kSection() {
             <div className="pillar-icon-box gold">
               <Award size={22} />
             </div>
-            <h4>16+ Years of Trust</h4>
+            <h4>16+ Golden Years of Trust</h4>
             <p>
-              Trichy’s most trusted tuition landmark since 2008 with 2 modern, student-friendly Puthur campuses.
+              Serving Trichy families since 2008 across 2 prime campuses in Puthur. Pioneering modern teaching methods
+              with compassionate care.
             </p>
           </div>
 
@@ -972,9 +968,10 @@ export function Legacy70kSection() {
             <div className="pillar-icon-box blue">
               <CheckCircle size={22} />
             </div>
-            <h4>100/100 Centum Mastery</h4>
+            <h4>Consistent Centums (100/100)</h4>
             <p>
-              Smart shortcut techniques & daily problem drills producing consistent top board rankers every year.
+              Proven blueprint drills and individual problem solving yield centum scores in Mathematics, Physics, Chemistry,
+              Biology, and Computer Science.
             </p>
           </div>
 
@@ -984,7 +981,8 @@ export function Legacy70kSection() {
             </div>
             <h4>MSME Certified & Safe Campus</h4>
             <p>
-              Government-registered, 24/7 CCTV surveillance, 100% safety for girls, and dedicated on-site parking.
+              Officially MSME-registered institution with 24/7 CCTV surveillance, 100% safety for girls, and dedicated on-site
+              parking facility.
             </p>
           </div>
 
@@ -992,10 +990,96 @@ export function Legacy70kSection() {
             <div className="pillar-icon-box purple">
               <Users size={22} />
             </div>
-            <h4>Doctor & Engineer Alumni</h4>
+            <h4>Illustrious Alumni Network</h4>
             <p>
-              Proud alumni excelling in premier Medical Colleges (MBBS), IITs, NIT Trichy, and global tech firms.
+              Our passed-out students study in premier medical colleges (MBBS), IITs, NIT Trichy, and work in global tech
+              companies and civil services.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* =========================================================================
+   SMART BASE CLASSROOMS SHOWCASE SECTION
+   ========================================================================= */
+export function SmartClassSection() {
+  return (
+    <section className="smart-class-section section" id="smart-class">
+      <div className="container">
+        <SectionTitle
+          eyebrow="Next-Gen Classroom Technology"
+          title={
+            <>
+              Smart-Base Classrooms: Learning with <span className="serif-accent">Digital Precision</span>.
+            </>
+          }
+          text="Step into Trichy’s most technologically advanced tuition classrooms. We combine interactive touch panels, 3D animated science models, and live coding demos to accelerate concept absorption and student scores."
+          align="align-center"
+        />
+
+        <div className="smart-feature-grid">
+          {smartClassFeatures.map((feat) => {
+            const IconComponent =
+              feat.icon === 'Monitor'
+                ? Monitor
+                : feat.icon === 'Dna'
+                ? Dna
+                : feat.icon === 'Code'
+                ? Code
+                : feat.icon === 'Tv'
+                ? Tv
+                : feat.icon === 'Cpu'
+                ? Cpu
+                : Car;
+
+            return (
+              <div className="smart-card" key={feat.title}>
+                <div className="smart-card-head">
+                  <div
+                    className={`smart-card-icon ${
+                      feat.icon === 'Monitor'
+                        ? 'cyan'
+                        : feat.icon === 'Dna'
+                        ? 'green'
+                        : feat.icon === 'Code'
+                        ? 'indigo'
+                        : feat.icon === 'Tv'
+                        ? 'purple'
+                        : feat.icon === 'Cpu'
+                        ? 'amber'
+                        : 'rose'
+                    }`}
+                  >
+                    <IconComponent size={24} />
+                  </div>
+                  <span className="smart-card-tag">{feat.badge}</span>
+                </div>
+                <h3>{feat.title}</h3>
+                <span className="smart-card-sub">{feat.tagline}</span>
+                <p>{feat.desc}</p>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="smart-class-banner">
+          <div className="smart-banner-copy">
+            <h3>Experience a Free Smart Classroom Session in Trichy</h3>
+            <p>
+              Visit our Puthur campus to witness how our interactive digital flat panels and visual tutorials make math,
+              science, and coding effortlessly clear.
+            </p>
+          </div>
+          <div className="smart-banner-actions">
+            <Link to="/admissions?class=Smart%20Class%20Demo" className="button button-gold">
+              Book Free Demo Class <ArrowRight size={15} />
+            </Link>
+            <a href="tel:+919626265456" className="button button-dark">
+              <Phone size={15} /> Call 96262 65456
+            </a>
           </div>
         </div>
       </div>
@@ -1017,7 +1101,7 @@ export function FacultySection() {
               Led by Founder <span className="serif-accent">S. Thiyagarajan</span> & Experienced Faculty.
             </>
           }
-          text="Dedicated educators with 7–8+ years of classroom teaching experience in Puthur, Trichy. Our focus is on continuous student improvement — converting weak concepts into strengths and guiding learners to high marks and centums."
+          text="Dedicated educators with over a decade of classroom experience in Puthur, Trichy. Our focus is on continuous student improvement — converting weak concepts into strengths and guiding learners to high marks and centums."
           align="align-center"
         />
 
@@ -1110,8 +1194,8 @@ export function FacultySection() {
             </div>
             <div className="step-card">
               <span className="step-num">02</span>
-              <h4>Concept-First Teaching</h4>
-              <p>Step-by-step formula derivations, memory maps, and real-life examples making tough math and science intuitively clear.</p>
+              <h4>Smart Visual Teaching</h4>
+              <p>Using interactive smart boards and 3D simulations to make abstract math and science intuitively clear.</p>
             </div>
             <div className="step-card">
               <span className="step-num">03</span>
@@ -1123,35 +1207,6 @@ export function FacultySection() {
               <h4>1-on-1 Doubt Clearing</h4>
               <p>Dedicated personal mentorship sessions to build unshakeable confidence before board exams.</p>
             </div>
-          </div>
-        </div>
-
-        {/* Careers & Apply for Teaching Position Card */}
-        <div className="faculty-apply-band" id="careers">
-          <div className="faculty-apply-content">
-            <span className="eyebrow eyebrow-light">Faculty Recruitment & Careers</span>
-            <h3>Join Our Faculty Panel — Apply for Teaching Positions</h3>
-            <p>
-              Are you an experienced educator dedicated to academic excellence? Annai Tuition Centre invites qualified <strong>Postgraduate (PG) & B.Ed. Teachers</strong> for <strong>Mathematics, Physics, Chemistry, Biology, English</strong>, and <strong>Junior Foundation</strong> for coaching batches in Puthur, Trichy.
-            </p>
-            <div className="faculty-apply-perks">
-              <span className="apply-perk-badge"><CheckCircle size={14} /> Structured Batch Timings</span>
-              <span className="apply-perk-badge"><CheckCircle size={14} /> Respectful Academic Environment</span>
-              <span className="apply-perk-badge"><CheckCircle size={14} /> Competitive Compensation</span>
-            </div>
-          </div>
-          <div className="faculty-apply-actions">
-            <a
-              href="https://wa.me/919626265456?text=Hello%2C%20I%20am%20interested%20in%20applying%20for%20a%20teaching%20position%20at%20Annai%20Tuition%20Centre."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button button-gold"
-            >
-              Apply for Teaching Position <ArrowRight size={15} />
-            </a>
-            <a href="tel:+919626265456" className="button apply-call-btn">
-              <Phone size={15} /> Call: 96262 65456
-            </a>
           </div>
         </div>
 
@@ -1182,19 +1237,17 @@ export function SubjectsTutorialsSection() {
           eyebrow="Subject Mastery & Special Batches"
           title={
             <>
-              Science, Commerce & <span className="serif-accent">Specialized Tutorials</span>.
+              Computer Science, Biology & <span className="serif-accent">Specialized Tutorials</span>.
             </>
           }
-          text="Master every subject with Trichy's top mentors. Simple concepts, smart shortcuts, and caring personal attention to help your child score top marks."
+          text="From high-scoring Computer Science coding labs and diagram-intensive Biology drills to daily 1-on-1 concept tutorials, we deliver targeted subject mastery for every student."
           align="align-center"
         />
 
         <div className="subjects-showcase-grid">
           {subjectsList.map((subj) => {
             const IconComponent =
-              subj.icon === 'Briefcase'
-                ? Briefcase
-                : subj.icon === 'Code'
+              subj.icon === 'Code'
                 ? Code
                 : subj.icon === 'Dna'
                 ? Dna
@@ -1417,317 +1470,142 @@ function SocialMediaSection() {
   );
 }
 
-/* =========================================================================
-   HOME PAGE HERO SECTION (MATCHING FIRST IMAGE REFERENCE)
-   ========================================================================= */
-function ReferenceHeroSection() {
-  return (
-    <section className="ref-hero-section">
-      <div className="container">
-        <div className="ref-hero-grid">
-          <div className="ref-hero-copy">
-            <div className="ref-welcome-text">Welcome to</div>
-            <h1 className="ref-main-title">ANNAI TUITION CENTRE</h1>
-            <p className="ref-tagline">Better Learning | Brighter Future</p>
-            <p className="ref-description">
-              We provide quality education with experienced faculty, personal attention and a supportive environment
-              to help every student achieve their goals.
-            </p>
-            <div className="ref-timing-chip">
-              <Clock size={16} />
-              <span>Class Timings: 6:30 PM – 9:00 PM (Sunday Classes Available)</span>
-            </div>
-            <div className="ref-cta-group">
-              <Link to="/admissions" className="ref-enroll-btn">
-                Enroll Now <ArrowRight size={17} />
-              </Link>
-              <a
-                href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20admissions."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ref-whatsapp-btn"
-              >
-                <MessageCircle size={17} /> Chat on WhatsApp
-              </a>
-              <a href="tel:+919626265456" className="ref-call-btn">
-                <Phone size={16} /> 96262 65456
-              </a>
-            </div>
-          </div>
-
-          <div className="ref-visual-wrapper">
-            <div className="ref-image-frame">
-              <img
-                src="/images/annai-classroom-hero.jpg"
-                alt="Students studying in classroom at Annai Tuition Centre"
-              />
-              <div className="ref-chalk-doodle">
-                <span className="ref-chalk-rays">✨ Small Steps ✨</span>
-                <strong>Big Dreams</strong>
-                <GraduationCap size={22} />
-              </div>
-              <div className="ref-brush-badge">
-                Your Success Our Priority
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 5-Column Reference Feature Strip */}
-        <div className="ref-features-strip">
-          <div className="ref-feature-item">
-            <div className="ref-feature-icon icon-faculty">
-              <GraduationCap size={24} />
-            </div>
-            <div className="ref-feature-text">
-              <strong>Experienced Faculty</strong>
-              <small>7–8+ Years Mentors</small>
-            </div>
-          </div>
-
-          <div className="ref-feature-item">
-            <div className="ref-feature-icon icon-subjects">
-              <BookOpen size={24} />
-            </div>
-            <div className="ref-feature-text">
-              <strong>All Subjects</strong>
-              <small>Classes 1 - 12 & Commerce</small>
-            </div>
-          </div>
-
-          <div className="ref-feature-item">
-            <div className="ref-feature-icon icon-batches">
-              <Users size={24} />
-            </div>
-            <div className="ref-feature-text">
-              <strong>Small Batches</strong>
-              <small>Personal Attention</small>
-            </div>
-          </div>
-
-          <div className="ref-feature-item">
-            <div className="ref-feature-icon icon-tests">
-              <TrendingUp size={24} />
-            </div>
-            <div className="ref-feature-text">
-              <strong>Regular Tests</strong>
-              <small>& Progress Tracking</small>
-            </div>
-          </div>
-
-          <div className="ref-feature-item">
-            <div className="ref-feature-icon icon-results">
-              <Trophy size={24} />
-            </div>
-            <div className="ref-feature-text">
-              <strong>Better Results</strong>
-              <small>Brighter Future</small>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Winged Quote */}
-        <div className="ref-bottom-quote">
-          <span className="ref-quote-wing">✦ ✦</span>
-          <span>Join Annai Tuition Centre and take the first step towards a successful tomorrow!</span>
-          <span className="ref-quote-wing">✦ ✦</span>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* =========================================================================
-   REAL CLASSROOM SHOWCASE SECTION (FROM USER SECOND ATTACHED PHOTO)
-   ========================================================================= */
-function RealClassroomSection() {
-  return (
-    <section className="real-classroom-section" id="classroom">
-      <div className="container">
-        <div className="real-class-grid">
-          <div className="real-class-photo-card">
-            <img
-              src="/images/annai-real-classroom.jpg"
-              alt="Real Classroom teaching at Annai Tuition Centre Puthur Trichy"
-            />
-            <div className="real-class-badge-pill">
-              <Camera size={13} />
-              <span>Real Classroom · 21/87 Puthur Agraharam Campus</span>
-            </div>
-            <div className="real-class-timing-overlay">
-              <strong>
-                <Clock size={14} /> Class Timings: 6:30 PM – 9:00 PM
-              </strong>
-              <span>Monday – Saturday & Sunday Special Classes</span>
-            </div>
-          </div>
-
-          <div className="real-class-copy">
-            <span className="eyebrow">Authentic Campus Life</span>
-            <h2>Inside Our Real Classroom in Puthur, Trichy</h2>
-            <p className="lead">
-              Experience our disciplined, concept-first learning atmosphere where dedicated faculty explain formulas step-by-step
-              on the board with individual care for every student.
-            </p>
-
-            <div className="real-class-features">
-              <div className="real-class-feature-row">
-                <div className="real-feat-icon blue">
-                  <BookOpen size={20} />
-                </div>
-                <div className="real-feat-text">
-                  <strong>Concept-First Blackboard Teaching</strong>
-                  <p>Step-by-step problem breakdown in Maths (Trigonometry, Calculus), Sciences & Accountancy.</p>
-                </div>
-              </div>
-
-              <div className="real-class-feature-row">
-                <div className="real-feat-icon gold">
-                  <Clock size={20} />
-                </div>
-                <div className="real-feat-text">
-                  <strong>Class Timings: 6:30 PM – 9:00 PM</strong>
-                  <p>Structured daily schedule with Sunday special classes allowing students to master concepts and prepare for exams.</p>
-                </div>
-              </div>
-
-              <div className="real-class-feature-row">
-                <div className="real-feat-icon green">
-                  <ShieldCheck size={20} />
-                </div>
-                <div className="real-feat-text">
-                  <strong>100% Safe for Girls & 24/7 CCTV Monitored</strong>
-                  <p>Disciplined, respectful environment with dedicated parking facility for two-wheelers and bicycles.</p>
-                </div>
-              </div>
-
-              <div className="real-class-feature-row">
-                <div className="real-feat-icon purple">
-                  <Users size={20} />
-                </div>
-                <div className="real-feat-text">
-                  <strong>Personal Mentorship & Small Batches</strong>
-                  <p>Individual desk seating where mentors check every student’s notebook and clear doubts patiently.</p>
-                </div>
-              </div>
-            </div>
-
-            <Link to="/admissions" className="button button-gold">
-              Book a Classroom Visit <ArrowRight size={15} />
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* =========================================================================
-   INTERACTIVE SMART BOARD DIGITAL CLASSROOM SECTION
-   ========================================================================= */
-function SmartBoardSection() {
-  return (
-    <section className="smart-board-section" id="smart-board">
-      <div className="container">
-        <div className="smart-board-grid">
-          <div className="smart-board-copy">
-            <span className="eyebrow eyebrow-light">Modern Technology</span>
-            <h2>
-              Interactive Smart Board <em>Digital Learning</em>
-            </h2>
-            <p className="smart-board-lead">
-              We empower learners by combining blackboard concept depth with state-of-the-art interactive Smart Boards
-              for high-definition visual clarity.
-            </p>
-
-            <div className="smart-features-list">
-              <div className="smart-feature-item">
-                <div className="smart-icon-badge">
-                  <Tv size={18} />
-                </div>
-                <div className="smart-feature-text">
-                  <strong>High-Definition Touch Display</strong>
-                  <p>Interactive touch annotations, equation solvers, and real-time geometry breakdowns.</p>
-                </div>
-              </div>
-
-              <div className="smart-feature-item">
-                <div className="smart-icon-badge">
-                  <Sparkles size={18} />
-                </div>
-                <div className="smart-feature-text">
-                  <strong>3D Visual Science & Math Simulations</strong>
-                  <p>Animated Biology anatomy, Physics ray optics, and Chemistry molecular reaction models.</p>
-                </div>
-              </div>
-
-              <div className="smart-feature-item">
-                <div className="smart-icon-badge">
-                  <Code size={18} />
-                </div>
-                <div className="smart-feature-text">
-                  <strong>Computer Science & Commerce Live Labs</strong>
-                  <p>Live Python coding demonstrations, SQL database tables, and Accountancy balance sheet models.</p>
-                </div>
-              </div>
-
-              <div className="smart-feature-item">
-                <div className="smart-icon-badge">
-                  <CheckCircle size={18} />
-                </div>
-                <div className="smart-feature-text">
-                  <strong>Instant Digital Notes & Question Blueprints</strong>
-                  <p>Annotated digital board notes and model question solutions shared directly for revision.</p>
-                </div>
-              </div>
-            </div>
-
-            <Link to="/classes" className="button button-gold">
-              Explore Our Smart Curriculum <ArrowRight size={15} />
-            </Link>
-          </div>
-
-          <div className="smart-board-visual">
-            <div className="smart-board-img-card">
-              <img
-                src="/images/smart-classroom-hero.jpg"
-                alt="Interactive Smart Board Classroom at Annai Tuition Centre"
-              />
-              <div className="smart-img-tag">
-                <Tv size={14} /> Interactive Smart Board Classroom
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function Home() {
   return (
     <main>
-      {/* 1. Reference Hero Section (matching user image 1) */}
-      <ReferenceHeroSection />
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-glow" />
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <div className="hero-badge-group">
+              <span className="eyebrow eyebrow-light">
+                <span className="eyebrow-dot" /> Admissions Open · Classes 1 to 12
+              </span>
+              <span className="msme-badge-hero">
+                <ShieldCheck size={13} /> MSME Registered Centre
+              </span>
+            </div>
+            <h1>
+              Smart-Base Learning. <em>Brighter</em> Results.
+            </h1>
+            <p className="hero-lead">
+              Trichy’s most trusted tuition centre since 2008. Tech-enabled Smart-Base Classrooms, dedicated coaching
+              in Computer Science, Biology, Maths & Science, guided by distinguished faculty.
+            </p>
+            <p className="hero-tagline">Better Education... Brighter Future...</p>
 
-      {/* 2. Real Classroom Showcase (user image 2) */}
-      <RealClassroomSection />
+            <div className="hero-actions">
+              <Link to="/admissions" className="button button-gold">
+                Enquire for Admission <ArrowRight size={17} />
+              </Link>
+              <Link to="/smart-class" className="button button-ghost">
+                Explore Smart Classes <Sparkles size={16} />
+              </Link>
+            </div>
 
-      {/* 3. Interactive Smart Board Section */}
-      <SmartBoardSection />
+            <div className="hero-proof">
+              <span className="proof-icon">
+                <Trophy size={18} />
+              </span>
+              <span>
+                <strong>70,000+ Students Passed Out</strong>
+                <small>16+ Years of Proven Academic Excellence · Puthur, Trichy</small>
+              </span>
+            </div>
+          </div>
 
-      {/* 4. 7,000+ Students Passed Out Achievement Stats Strip */}
+          <div className="hero-art hero-art-modern">
+            <div className="hero-smart-visual-wrap">
+              <div className="hero-smart-glass-header">
+                <div className="hero-glass-dots">
+                  <span className="dot red-dot"></span>
+                  <span className="dot yellow-dot"></span>
+                  <span className="dot green-dot"></span>
+                </div>
+                <div className="hero-glass-title">
+                  <Sparkles size={13} /> Smart-Base Class · AI & EdTech Hub
+                </div>
+                <span className="live-indicator">● LIVE CLASS</span>
+              </div>
+
+              <div className="hero-smart-img-box">
+                <img
+                  src="/images/smart-classroom-hero.jpg"
+                  alt="Annai Tuition Centre Modern Smart Classroom with Digital Interactive Board"
+                  className="hero-smart-main-img"
+                />
+
+                {/* Floating Tech Badges */}
+                <div className="floating-badge badge-top-left">
+                  <div className="badge-icon-mini gold">
+                    <Trophy size={14} />
+                  </div>
+                  <div>
+                    <strong>70,000+ Alumni</strong>
+                    <small>Passed Out Since 2008</small>
+                  </div>
+                </div>
+
+                <div className="floating-badge badge-bottom-right">
+                  <div className="badge-icon-mini cyan">
+                    <Monitor size={14} />
+                  </div>
+                  <div>
+                    <strong>Smart Touch Panels</strong>
+                    <small>Digital Visual Learning</small>
+                  </div>
+                </div>
+
+                <div className="floating-badge badge-bottom-left">
+                  <div className="badge-icon-mini green">
+                    <Code size={14} />
+                  </div>
+                  <div>
+                    <strong>Comp Science & Bio</strong>
+                    <small>Theory + Practical Labs</small>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hero-note-modern">
+                <div className="hero-note-brand">
+                  <img src="/images/annai-logo.png" alt="Logo" className="hero-note-logo" />
+                  <div>
+                    <strong>Annai Tuition Centre · Trichy</strong>
+                    <span>Smart-Base Classes · 100% Safe For Girls · Dedicated Parking</span>
+                  </div>
+                </div>
+                <Link to="/smart-class" className="hero-note-action">
+                  Tour Smart Class <ArrowRight size={13} />
+                </Link>
+              </div>
+            </div>
+            <div className="hero-spark spark-a">✳</div>
+            <div className="hero-spark spark-b">✦</div>
+          </div>
+        </div>
+        <a className="scroll-cue" href="#achievements">
+          <span>Scroll to explore</span>
+          <ArrowDown size={14} />
+        </a>
+      </section>
+
+      {/* 70,000+ Students Passed Out Stats Strip */}
       <div id="achievements">
         <AchievementsStrip />
       </div>
 
-      {/* 5. Comprehensive 7,000+ Milestone Section */}
+      {/* Comprehensive 70,000+ Milestone Section */}
       <Legacy70kSection />
 
-      {/* 6. Advanced Subjects & Specialized Tutorials (CS, Bio, Commerce, Maths) */}
+      {/* Smart Base Classrooms Showcase */}
+      <SmartClassSection />
+
+      {/* Advanced Subjects & Specialized Tutorials */}
       <SubjectsTutorialsSection />
 
-      {/* 7. Welcome Summary (Small & Sweet) */}
+      {/* Welcome / About Summary */}
       <section className="welcome section" id="welcome">
         <div className="container welcome-grid">
           <div>
@@ -1742,7 +1620,7 @@ function Home() {
             />
             <p className="body-copy">
               Founded in 2008 by <strong>S. Thiyagarajan</strong> (M.Sc., IT., B.Ed.), Annai Tuition Centre has guided
-              over <strong>7,000+ students</strong> with personalized academic care, certified MSME standards,
+              over <strong>70,000+ students</strong> with personalized academic care, certified MSME standards,
               dedicated parking facilities, and uncompromising safety for all learners.
             </p>
             <Link to="/about" className="text-link">
@@ -1752,11 +1630,11 @@ function Home() {
           <div className="welcome-cards">
             <div className="welcome-card">
               <span className="card-icon navy-icon">
-                <BookOpen size={21} />
+                <Monitor size={21} />
               </span>
-              <span className="card-overline">Academic Excellence</span>
-              <h3>Focused Classroom Learning</h3>
-              <p>Individual student desks, disciplined study environment, and concept-first teaching by senior faculty.</p>
+              <span className="card-overline">Smart Infrastructure</span>
+              <h3>Smart-Base Tech Classrooms</h3>
+              <p>Digital interactive panels, 3D animated science models, and big-screen computer coding labs.</p>
             </div>
             <div className="welcome-card welcome-card-gold">
               <span className="card-icon gold-icon">
@@ -1770,13 +1648,13 @@ function Home() {
         </div>
       </section>
 
-      {/* 8. Specialized Board Exam Coaching (Classes 10 & 12) */}
+      {/* Specialized Board Exam Coaching (Classes 10 & 12) */}
       <CoachingSection />
 
-      {/* 9. Distinguished Faculty Section (7-8+ Years Experience) */}
+      {/* Distinguished Faculty Section */}
       <FacultySection />
 
-      {/* 10. Classes Overview Strip */}
+      {/* Classes Overview Strip */}
       <section className="classes-strip section">
         <div className="container">
           <div className="strip-heading">
@@ -1797,26 +1675,26 @@ function Home() {
               </Link>
             ))}
           </div>
-          <p className="note-small">Class timings: 6:30 PM – 9:00 PM (Sunday classes available). Contact us for current admissions.</p>
+          <p className="note-small">Contact us for current batch timings, subject combinations, and admissions.</p>
         </div>
       </section>
 
-      {/* 11. Facilities Section (CCTV, Dedicated Parking Facility, Smart Boards, MSME) */}
+      {/* Facilities Section (CCTV, Dedicated Parking Facility, Smart Class, MSME) */}
       <FacilitiesSection />
 
-      {/* 12. Girls' Safety and Security Section */}
+      {/* Girls' Safety and Security Section */}
       <GirlsSafetySection />
 
-      {/* 13. Student Results Preview */}
+      {/* Student Results Preview */}
       <ResultsPreview />
 
-      {/* 14. Our Branches Section */}
+      {/* Our Branches Section */}
       <BranchesSection />
 
-      {/* 15. Social Media Links Section */}
+      {/* Social Media Links Section */}
       <SocialMediaSection />
 
-      {/* 16. Banner CTA */}
+      {/* Banner CTA */}
       <section className="banner-cta">
         <div className="container banner-inner">
           <span className="banner-icon">
@@ -1825,10 +1703,10 @@ function Home() {
           <div>
             <span className="eyebrow eyebrow-light">Learn Today... Lead Tomorrow.</span>
             <h2>Ready to take the next step?</h2>
-            <p>Class timings: 6:30 PM – 9:00 PM with Sunday special classes. Tell us what your child needs to secure their seat.</p>
+            <p>Tell us what your child needs. We’ll help you find out more and secure their seat.</p>
           </div>
           <Link to="/admissions" className="button button-gold">
-            Enroll Now <ArrowRight size={16} />
+            Send an enquiry <ArrowRight size={16} />
           </Link>
         </div>
       </section>
@@ -1884,7 +1762,7 @@ function About() {
             A place to learn with <em>purpose.</em>
           </>
         }
-        text="Annai Tuition Centre has been a cornerstone of quality education in Puthur, Trichy since 2008, helping over 7,000+ students excel academically."
+        text="Annai Tuition Centre has been a cornerstone of quality education in Puthur, Trichy since 2008, helping over 70,000+ students excel academically."
       />
 
       <section className="section">
@@ -1897,26 +1775,18 @@ function About() {
             />
             <p className="body-copy">
               Led by founder <strong>S. Thiyagarajan</strong> (M.Sc., IT., B.Ed.), Annai Tuition Centre provides
-              structured coaching for students from 1st standard to 12th standard (Science & Commerce), with specialized focus on 10th and
+              structured coaching for students from 1st standard to 12th standard, with specialized focus on 10th and
               12th Board examinations.
             </p>
 
             <div className="about-highlights-grid">
               <div className="about-point">
                 <CheckCircle size={17} />
-                <span>Over 7,000+ Students Passed Out with distinction</span>
+                <span>Over 70,000+ Students Passed Out with distinction</span>
               </div>
               <div className="about-point">
-                <Clock size={17} />
-                <span>Class Timings: 6:30 PM – 9:00 PM (Daily & Sunday Classes)</span>
-              </div>
-              <div className="about-point">
-                <Tv size={17} />
-                <span>Interactive Smart Board Digital Classrooms</span>
-              </div>
-              <div className="about-point">
-                <BookOpen size={17} />
-                <span>Spacious & Focused Classroom Learning Environment</span>
+                <Monitor size={17} />
+                <span>Smart-Base Classrooms with Digital Touch Panels</span>
               </div>
               <div className="about-point">
                 <ShieldCheck size={17} />
@@ -1931,8 +1801,8 @@ function About() {
                 <span>Dedicated On-Premises Parking Facility with CCTV</span>
               </div>
               <div className="about-point">
-                <Briefcase size={17} />
-                <span>Science, Computer Science, Biology & Commerce Streams</span>
+                <Code size={17} />
+                <span>Specialized Computer Science, Biology & Subject Tutorials</span>
               </div>
               <div className="about-point">
                 <Shield size={17} />
@@ -1961,8 +1831,8 @@ function About() {
             </div>
             <div className="about-visual">
               <img
-                src="/images/annai-real-classroom.jpg"
-                alt="Real Classroom Coaching at Annai Tuition Centre"
+                src="/images/smart-classroom-hero.jpg"
+                alt="Annai Tuition Centre Smart Base Classroom"
                 className="about-smart-preview-img"
                 loading="lazy"
               />
@@ -1971,7 +1841,7 @@ function About() {
         </div>
       </section>
 
-      {/* 7,000+ Students Passed Out Legacy Section */}
+      {/* 70,000+ Students Passed Out Legacy Section */}
       <Legacy70kSection />
 
       {/* Our Distinguished Faculty */}
@@ -1998,7 +1868,7 @@ function About() {
           </p>
           <div className="mission-stat">
             <GraduationCap size={22} />
-            <strong>7,000+</strong>
+            <strong>70,000+</strong>
             <small>Students Trained in Trichy</small>
           </div>
         </div>
@@ -2030,42 +1900,40 @@ function ClassesPage() {
             The next step starts <em>here.</em>
           </>
         }
-        text="Explore our comprehensive coaching programs from Class 1 to 12. Specialized batches for Science & Commerce streams, Mathematics, Computer Science, Biology, and Board examinations with proven centum results."
+        text="Explore our comprehensive coaching programs from Class 1 to 12. Specialized batches for Computer Science, Biology, Mathematics, and Board examinations with proven centum results."
       />
 
-      {/* Specialized Science, Commerce & Tutorials */}
+      {/* Specialized Computer Science, Biology & Tutorials */}
       <SubjectsTutorialsSection />
 
       {/* Dedicated Coaching Section for Classes 10 & 12 */}
       <CoachingSection />
 
+      {/* Smart Base Classrooms Technology */}
+      <SmartClassSection />
+
       <section className="section">
         <div className="container">
           <SectionTitle
-            eyebrow="All Grade Levels & Streams"
+            eyebrow="All Grade Levels"
             title="All Classes We Offer"
-            text="Choose your class to enquire about class timings (6:30 PM – 9:00 PM), Sunday special classes, subjects, and batch availability."
+            text="Choose your class to enquire about timing, subjects, and batch availability."
           />
           <div className="courses-grid">
             {classes.map((c, i) => (
               <article className="course-card" key={c}>
                 <span className="course-index">
-                  0{i + 1} <span> / 0{classes.length}</span>
+                  0{i + 1} <span> / 05</span>
                 </span>
                 <span className="card-icon navy-icon">
-                  {c.includes('Commerce') ? <Briefcase size={22} /> : <BookOpen size={22} />}
+                  <BookOpen size={22} />
                 </span>
                 <h2>{c}</h2>
                 <p>
-                  {c.includes('10th') || c.includes('12th')
-                    ? 'Intensive Board Exam coaching with blueprint unit tests, revision model series, and centum drill sessions.'
-                    : c.includes('Commerce')
-                    ? 'Comprehensive Accountancy, Commerce, Economics & Business Maths coaching with practical drills.'
+                  {c === '10th Standard' || c === '12th Standard'
+                    ? 'Intensive Board Exam coaching with unit tests, revision series, and centum drill sessions.'
                     : 'Concept-based coaching with daily homework support, foundational tests, and personalized care.'}
                 </p>
-                <div className="class-chip-timing">
-                  <Clock size={12} /> Daily: 6:30 PM – 9:00 PM
-                </div>
                 <Link to={`/admissions?class=${encodeURIComponent(c)}`} className="course-link">
                   Enquire about this class <ArrowRight size={15} />
                 </Link>
@@ -2075,7 +1943,7 @@ function ClassesPage() {
 
           <div className="course-contact">
             <div>
-              <strong>Have a question about a class or batch timings (6:30 PM – 9:00 PM)?</strong>
+              <strong>Have a question about a class or batch timings?</strong>
               <span>We’ll guide you to the right program and batch for your child.</span>
             </div>
             <div className="course-contact-actions">
@@ -3013,17 +2881,37 @@ function Admin() {
   );
 }
 
+function SmartClassPage() {
+  return (
+    <main>
+      <PageHero
+        eyebrow="Smart-Base Digital Classrooms"
+        title={
+          <>
+            Where technology powers <em>understanding.</em>
+          </>
+        }
+        text="Experience Trichy’s premier smart-base tuition classrooms. Multi-touch digital panels, 3D biology simulations, live Computer Science coding labs, and recorded tutorial archives for maximum exam retention."
+      />
+      <SmartClassSection />
+      <SubjectsTutorialsSection />
+      <FacilitiesSection />
+      <BranchesSection />
+    </main>
+  );
+}
+
 function FacultyPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Academic Leadership & Faculty Careers"
+        eyebrow="Academic Leadership & Experienced Faculty"
         title={
           <>
             Learn from Trichy’s <em>top mentors.</em>
           </>
         }
-        text="Led by Founder S. Thiyagarajan, M.Sc. (IT), B.Ed., alongside 7–8+ years experienced postgraduate subject specialist faculty dedicated to continuous student improvement, personal concept clarity, and top board results. Now inviting applications for teaching positions."
+        text="Led by Founder S. Thiyagarajan, M.Sc. (IT), B.Ed., alongside experienced postgraduate subject specialist faculty dedicated to continuous student improvement, personal concept clarity, and top board results."
       />
       <FacultySection />
       <Legacy70kSection />
@@ -3038,6 +2926,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/smart-class" element={<SmartClassPage />} />
         <Route path="/faculty" element={<FacultyPage />} />
         <Route path="/classes" element={<ClassesPage />} />
         <Route path="/results" element={<Results />} />
