@@ -3109,3 +3109,267 @@
     font-size: 13px;
   }
 }
+
+
+
+/* =========================================================================
+   ENHANCED VIBRANT ROYAL PURPLE & GOLD STYLING
+   ========================================================================= */
+:root {
+  --purple-royal: #4c1d95;
+  --purple-vivid: #6b21a8;
+  --purple-glow: #7c3aed;
+  --purple-tint: #f5f3ff;
+  --purple-card-border: #ddd6fe;
+}
+
+.eyebrow-purple {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #6b21a8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+}
+
+/* Enquiry Now Section (Replaces Heavy Form) */
+.enquiry-now-section {
+  background: linear-gradient(135deg, #2e1065 0%, #4c1d95 60%, #581c87 100%);
+  padding: 56px 0;
+  color: #ffffff;
+}
+
+.enquiry-now-card {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: 36px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  padding: 36px 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.enquiry-now-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(251, 191, 36, 0.2);
+  border: 1px solid rgba(251, 191, 36, 0.5);
+  color: #fbbf24;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.enquiry-now-content h2 {
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 0 10px;
+}
+
+.enquiry-now-content p {
+  font-size: 14px;
+  color: #e9d5ff;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.enquiry-timing-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #fef08a;
+  margin-bottom: 16px;
+}
+
+.enquiry-now-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Faculty Careers & Teaching Positions Section */
+.faculty-careers-section {
+  background: #fdf4ff;
+  padding: 56px 0;
+}
+
+.careers-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+.careers-header h2 {
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 900;
+  color: #4c1d95;
+  margin: 8px 0 10px;
+}
+.careers-header p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.careers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.job-card {
+  background: #ffffff;
+  border: 1.5px solid #e9d5ff;
+  border-radius: 18px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.06);
+  transition: all 0.25s ease;
+}
+.job-card:hover {
+  transform: translateY(-4px);
+  border-color: #7c3aed;
+  box-shadow: 0 16px 36px rgba(124, 58, 237, 0.15);
+}
+
+.job-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.job-badge {
+  font-size: 10px;
+  font-weight: 800;
+  color: #7c3aed;
+  background: #ede9fe;
+  padding: 3px 9px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+.job-exp {
+  font-size: 11px;
+  font-weight: 700;
+  color: #047857;
+  background: #d1fae5;
+  padding: 3px 9px;
+  border-radius: 9999px;
+}
+
+.job-card h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1e1b4b;
+  margin: 0 0 6px;
+}
+.job-classes {
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c3aed;
+  margin: 0 0 12px;
+}
+
+.job-req {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: #4b5563;
+  line-height: 1.45;
+  margin-bottom: 16px;
+  flex: 1;
+}
+.job-req svg {
+  color: #10b981;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.job-apply-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #7c3aed;
+  margin-top: auto;
+  transition: gap 0.2s ease;
+}
+.job-apply-link:hover {
+  gap: 9px;
+  color: #4c1d95;
+}
+
+.careers-callout {
+  margin-top: 36px;
+  background: #ffffff;
+  border: 1.5px solid #ddd6fe;
+  border-radius: 20px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 8px 24px rgba(76, 29, 149, 0.07);
+}
+.careers-callout-text strong {
+  display: block;
+  font-size: 15px;
+  color: #1e1b4b;
+}
+.careers-callout-text span {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 3px;
+}
+.careers-callout-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Responsive Overrides */
+@media (max-width: 900px) {
+  .enquiry-now-card {
+    grid-template-columns: 1fr;
+    padding: 28px 22px;
+    text-align: center;
+  }
+  .enquiry-now-actions {
+    width: 100%;
+  }
+  .careers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .careers-callout {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 16px;
+  }
+  .careers-callout-btns {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .careers-grid {
+    grid-template-columns: 1fr;
+  }
+}

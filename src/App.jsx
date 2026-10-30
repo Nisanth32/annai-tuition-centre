@@ -64,7 +64,7 @@ export const facultyPanels = [
   {
     department: 'Mathematics Faculty Panel',
     qualifications: 'Experienced Postgraduate & B.Ed. Mentors',
-    experience: '15+ Years Average Experience',
+    experience: '7–8+ Years Teaching Experience',
     badge: 'Mathematics Department',
     focus: 'How We Improve Students:',
     points: [
@@ -77,7 +77,7 @@ export const facultyPanels = [
   {
     department: 'Physics & Chemistry Faculty Panel',
     qualifications: 'Experienced Postgraduate & B.Ed. Mentors',
-    experience: '14+ Years Average Experience',
+    experience: '7–8+ Years Teaching Experience',
     badge: 'Physical Sciences Panel',
     focus: 'How We Improve Students:',
     points: [
@@ -90,7 +90,7 @@ export const facultyPanels = [
   {
     department: 'Biology & NEET Foundation Faculty Panel',
     qualifications: 'Experienced Botany & Zoology Specialists',
-    experience: '12+ Years Teaching Experience',
+    experience: '7–8+ Years Teaching Experience',
     badge: 'Life Sciences Panel',
     focus: 'How We Improve Students:',
     points: [
@@ -103,7 +103,7 @@ export const facultyPanels = [
   {
     department: 'Computer Science & Coding Faculty Panel',
     qualifications: 'Experienced CS & IT Practical Mentors',
-    experience: '10+ Years Technical Experience',
+    experience: '7–8+ Years Teaching Experience',
     badge: 'Computer Science Lead',
     focus: 'How We Improve Students:',
     points: [
@@ -116,7 +116,7 @@ export const facultyPanels = [
   {
     department: 'Foundation & Junior School Faculty (Classes 1–8)',
     qualifications: 'Trained Graduate & B.Ed. Certified Teachers',
-    experience: '12+ Years Foundation Coaching',
+    experience: '7–8+ Years Teaching Experience',
     badge: 'Junior Foundation Team',
     focus: 'How We Improve Students:',
     points: [
@@ -268,7 +268,7 @@ const branchesInfo = [
     mapLink: 'https://www.google.com/maps/search/?api=1&query=21%2F87+Puthur+Agraharam+Near+Bishop+School+Trichy+17',
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=21%2F87+Puthur+Agraharam+Near+Bishop+School+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=21%2F87%2C+Puthur+Agraharam%2C+Near+Bishop+School%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
-    timings: 'Mon – Sat: 6:00 AM – 8:30 PM | Sunday: Special Batches',
+    timings: 'Morning: 5:30 AM – 7:00 AM & Evening: 6:30 PM – 9:00 PM | Sunday: Special Batches',
     facilities: ['Dedicated Parking Facility', '24/7 CCTV Surveillance', 'Smart-Base Classroom', '100% Safe for Girls'],
   },
   {
@@ -283,7 +283,7 @@ const branchesInfo = [
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=Ramakrishna+Middle+School%2C+Near+Aruna+Theatre%2C+Puthur%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
-    timings: 'Mon – Sat: 6:00 AM – 8:30 PM | Sunday: Test Series',
+    timings: 'Morning: 5:30 AM – 7:00 AM & Evening: 6:30 PM – 9:00 PM | Sunday: Special Batches',
     facilities: ['Dedicated Parking Facility', 'Spacious Desks & CCTV', 'Smart-Base Classroom', '100% Safe for Girls'],
   },
 ];
@@ -569,7 +569,7 @@ function CallButtons() {
   );
 }
 
-/* 70,000+ Students Passed Out Achievement Banner */
+/* 7,000+ Students Passed Out Achievement Banner */
 function AchievementsStrip() {
   return (
     <section className="achievements-strip">
@@ -579,7 +579,7 @@ function AchievementsStrip() {
             <Trophy size={28} />
           </div>
           <div>
-            <span className="achievement-number">70,000+</span>
+            <span className="achievement-number">7,000+</span>
             <strong className="achievement-title">Students Passed Out</strong>
             <p>Empowering students to achieve board exam mastery & academic success.</p>
           </div>
@@ -908,7 +908,7 @@ function FacilitiesSection() {
 }
 
 /* =========================================================================
-   70,000+ STUDENTS PASSED OUT - COMPREHENSIVE MILESTONE SECTION
+   7,000+ STUDENTS PASSED OUT - COMPREHENSIVE MILESTONE SECTION
    ========================================================================= */
 export function Legacy70kSection() {
   return (
@@ -920,18 +920,18 @@ export function Legacy70kSection() {
               <Trophy size={14} /> Historic Milestone · Established 2008
             </div>
             <h2 className="milestone-heading">
-              The 70,000+ Alumni Legacy: <br />
+              The 7,000+ Alumni Legacy: <br />
               <em>16+ Years</em> of Proven Academic Excellence
             </h2>
             <p className="milestone-intro-text">
-              Since 2008, <strong>Annai Tuition Centre</strong> has trained and guided over <strong>70,000+ students</strong> to
+              Since 2008, <strong>Annai Tuition Centre</strong> has trained and guided over <strong>7,000+ students</strong> to
               board exam triumph in Trichy. This milestone represents 16+ uninterrupted years of transformative teaching,
               turning academic stress into confidence and producing thousands of top board scorers and centum achievers.
             </p>
             <div className="milestone-quote-box">
               <Quote size={20} className="milestone-quote-icon" />
               <p>
-                “70,000+ students passed out is not merely a number to us. It stands for 70,000+ families who trusted us with
+                “7,000+ students passed out is not merely a number to us. It stands for 7,000+ families who trusted us with
                 their children’s future, hundreds of doctors, engineers, and software professionals whom we helped nurture,
                 and our unwavering commitment to concept clarity since day one.”
               </p>
@@ -943,7 +943,7 @@ export function Legacy70kSection() {
           </div>
 
           <div className="milestone-stat-callout">
-            <span className="milestone-big-number">70,000+</span>
+            <span className="milestone-big-number">7,000+</span>
             <strong className="milestone-big-label">Students Passed Out Successfully</strong>
             <span className="milestone-big-sub">Classes 10 & 12 Board Examinations (CBSE & State Board)</span>
 
@@ -1578,7 +1578,7 @@ function ReferenceHero() {
               <GraduationCap size={22} />
             </div>
             <h4>Experienced Faculty</h4>
-            <p>16+ Yrs Lead Mentors</p>
+            <p>7–8+ Yrs Expert Mentors</p>
           </div>
 
           <div className="ref-feature-card">
@@ -1624,148 +1624,155 @@ function ReferenceHero() {
   );
 }
 
+
 /* =========================================================================
-   PROMINENT QUICK ADMISSION ENQUIRY SECTION (ON HOME PAGE)
+   ENQUIRY NOW SECTION (CLEAN & CONCISE - NO HEAVY FORM)
    ========================================================================= */
-function HomeQuickEnquiry() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    studentClass: '10th Standard (Board Exam)',
-    branch: 'Branch 1: Puthur Agraharam (Near Bishop School)',
-    message: '',
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!formData.name || !formData.phone) {
-      alert('Please enter student name and phone number.');
-      return;
-    }
-    const text = '*New Admission Enquiry - Annai Tuition Centre*\n\n' +
-      '*Student Name:* ' + formData.name + '\n' +
-      '*Phone Number:* ' + formData.phone + '\n' +
-      '*Class:* ' + formData.studentClass + '\n' +
-      '*Preferred Branch:* ' + formData.branch + '\n' +
-      '*Notes/Subjects:* ' + (formData.message || 'Admission details requested');
-
-    window.open('https://wa.me/919626265456?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
-    setSubmitted(true);
-  };
-
+function HomeEnquirySection() {
   return (
-    <section className="home-enquiry-section section" id="enquiry">
+    <section className="enquiry-now-section section" id="enquiry">
       <div className="container">
-        <div className="enquiry-card-wrapper">
-          <div className="enquiry-header">
-            <span className="enquiry-badge">
-              <Sparkles size={14} /> Admissions Open 2026-2027
+        <div className="enquiry-now-card">
+          <div className="enquiry-now-content">
+            <span className="enquiry-now-badge">
+              <Sparkles size={14} /> Admissions Open 2026–2027
             </span>
-            <h2>Quick Admission Enquiry</h2>
+            <h2>Enquire Now for Admissions</h2>
             <p>
-              Fill out your details below to get instant WhatsApp fee details, batch timings, and seat availability.
+              Get current batch availability, subject combinations, and fee details. Dedicated coaching with 7–8+ years experienced faculty and safe parking.
             </p>
+            <div className="enquiry-timing-pill">
+              <Clock size={16} />
+              <span><strong>Tuition Timings:</strong> Morning 5:30 AM – 7:00 AM &amp; Evening 6:30 PM – 9:00 PM</span>
+            </div>
+            <div className="enquiry-trust-strip">
+              <span>✓ Dedicated Parking Facility</span>
+              <span>✓ 100% Safe For Girls</span>
+              <span>✓ 24/7 CCTV Surveillance</span>
+              <span>✓ MSME Registered</span>
+            </div>
           </div>
 
-          {submitted ? (
-            <div className="enquiry-success-box">
-              <CheckCircle2 size={40} className="text-green" />
-              <h3>Thank you for enquiring!</h3>
-              <p>Your details have been submitted via WhatsApp. Our admissions coordinator will reach out shortly.</p>
-              <button
-                type="button"
-                className="button button-outline"
-                onClick={() => setSubmitted(false)}
+          <div className="enquiry-now-actions">
+            <a
+              href="https://wa.me/919626265456?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20Annai%20Tuition%20Centre"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button button-whatsapp-enquiry"
+            >
+              <MessageCircle size={18} /> Enquire on WhatsApp
+            </a>
+            <a href="tel:+919626265456" className="button button-call-enquiry">
+              <Phone size={16} /> Call: 96262 65456
+            </a>
+            <Link to="/admissions" className="button button-outline">
+              Admission Form <ArrowRight size={15} />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* =========================================================================
+   FACULTY CAREERS & TEACHING POSITIONS (HIRING SECTION)
+   ========================================================================= */
+function FacultyCareersSection() {
+  const jobs = [
+    {
+      title: 'Higher Secondary Mathematics Teacher',
+      classes: 'Classes 11 & 12 (Board Exam & Centum Coaching)',
+      qualification: 'M.Sc. (Maths) / B.Ed. with 7–8+ years experience',
+      badge: 'Urgent Opening',
+    },
+    {
+      title: 'Computer Science Faculty',
+      classes: 'Classes 11 & 12 (Python, C++ & Practical Labs)',
+      qualification: 'M.Sc. (CS/IT) / MCA / B.Ed. with hands-on coding expertise',
+      badge: 'Immediate Opening',
+    },
+    {
+      title: 'Biology & Life Sciences Faculty',
+      classes: 'Classes 11 & 12 (Botany & Zoology)',
+      qualification: 'M.Sc. (Botany/Zoology) / B.Ed. with diagram & concept clarity',
+      badge: 'Immediate Opening',
+    },
+    {
+      title: 'Commerce & Accountancy Teacher',
+      classes: 'Classes 11 & 12 (Commerce, Accountancy & Economics)',
+      qualification: 'M.Com / B.Ed. with strong balance sheet & problem skills',
+      badge: 'Immediate Opening',
+    },
+    {
+      title: 'Secondary Science & Maths Teacher',
+      classes: 'Classes 8, 9 & 10 (Physics, Chemistry & Maths)',
+      qualification: 'B.Sc. / M.Sc. / B.Ed. with 7–8+ years teaching experience',
+      badge: 'Active Opening',
+    },
+    {
+      title: 'Primary Foundation Teacher',
+      classes: 'Classes 1 to 5 (All Subjects Foundation & Handwriting)',
+      qualification: 'Graduate / D.T.Ed / B.Ed. with caring, patient mentorship',
+      badge: 'Active Opening',
+    },
+  ];
+
+  return (
+    <section className="faculty-careers-section section" id="careers">
+      <div className="container">
+        <div className="careers-header">
+          <span className="eyebrow eyebrow-purple">
+            <Sparkles size={14} /> Join Our Faculty Team
+          </span>
+          <h2>Apply for Teaching Positions</h2>
+          <p>
+            We are hiring passionate subject specialist teachers with 7–8+ years of classroom experience. Excellent work environment and attractive remuneration in Puthur, Trichy.
+          </p>
+        </div>
+
+        <div className="careers-grid">
+          {jobs.map((job) => (
+            <div className="job-card" key={job.title}>
+              <div className="job-top">
+                <span className="job-badge">{job.badge}</span>
+                <span className="job-exp">7–8+ Yrs Exp</span>
+              </div>
+              <h3>{job.title}</h3>
+              <p className="job-classes">{job.classes}</p>
+              <div className="job-req">
+                <Check size={14} />
+                <span>{job.qualification}</span>
+              </div>
+              <a
+                href={`https://wa.me/919626265456?text=${encodeURIComponent('Hi, I am interested in applying for the position of ' + job.title)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="job-apply-link"
               >
-                Send Another Enquiry
-              </button>
+                Apply for this Position <ArrowRight size={14} />
+              </a>
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="enquiry-form-grid">
-              <div className="form-group">
-                <label htmlFor="home-student-name">Student Full Name *</label>
-                <input
-                  id="home-student-name"
-                  type="text"
-                  required
-                  placeholder="e.g. S. Radhakrishnan"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                />
-              </div>
+          ))}
+        </div>
 
-              <div className="form-group">
-                <label htmlFor="home-parent-phone">Parent Phone Number *</label>
-                <input
-                  id="home-parent-phone"
-                  type="tel"
-                  required
-                  placeholder="e.g. 96262 65456"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="home-class-select">Class / Standard *</label>
-                <select
-                  id="home-class-select"
-                  value={formData.studentClass}
-                  onChange={(e) => setFormData({ ...formData, studentClass: e.target.value })}
-                >
-                  <option value="Classes 1 - 5 (Primary Foundation)">Classes 1 - 5 (Primary Foundation)</option>
-                  <option value="Classes 6 - 8 (Middle School)">Classes 6 - 8 (Middle School)</option>
-                  <option value="9th Standard">9th Standard</option>
-                  <option value="10th Standard (Board Exam)">10th Standard (Board Exam)</option>
-                  <option value="11th Standard">11th Standard (Higher Secondary)</option>
-                  <option value="12th Standard (Board Exam)">12th Standard (Board Exam)</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="home-branch-select">Select Campus *</label>
-                <select
-                  id="home-branch-select"
-                  value={formData.branch}
-                  onChange={(e) => setFormData({ ...formData, branch: e.target.value })}
-                >
-                  <option value="Branch 1: Puthur Agraharam (Near Bishop School)">
-                    Branch 1: Puthur Agraharam (Near Bishop School)
-                  </option>
-                  <option value="Branch 2: Ramakrishna Middle School Campus">
-                    Branch 2: Ramakrishna Middle School Campus
-                  </option>
-                </select>
-              </div>
-
-              <div className="form-group full-width">
-                <label htmlFor="home-notes">Subjects Needed / Message (Optional)</label>
-                <input
-                  id="home-notes"
-                  type="text"
-                  placeholder="e.g. Maths, Science, Computer Science, Biology Centum coaching..."
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                />
-              </div>
-
-              <div className="enquiry-actions full-width">
-                <button type="submit" className="button button-whatsapp-enquiry">
-                  <MessageCircle size={18} /> Send Enquiry via WhatsApp
-                </button>
-                <a href="tel:+919626265456" className="button button-call-enquiry">
-                  <Phone size={16} /> Call Us: 96262 65456
-                </a>
-              </div>
-            </form>
-          )}
-
-          <div className="enquiry-trust-strip">
-            <span>✓ 100% Safe For Girls</span>
-            <span>✓ Dedicated Parking Facility</span>
-            <span>✓ 24/7 CCTV Surveillance</span>
-            <span>✓ MSME Registered</span>
+        <div className="careers-callout">
+          <div className="careers-callout-text">
+            <strong>Send your resume or contact Centre Head S. Thiyagarajan</strong>
+            <span>Timings: Morning 5:30 AM – 7:00 AM & Evening 6:30 PM – 9:00 PM</span>
+          </div>
+          <div className="careers-callout-btns">
+            <a
+              href="https://wa.me/919626265456?text=Hi%2C%20I%20would%20like%20to%20apply%20for%20a%20teaching%20job%20at%20Annai%20Tuition%20Centre"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button button-whatsapp-enquiry"
+            >
+              <MessageCircle size={16} /> Send Resume on WhatsApp
+            </a>
+            <a href="tel:+919626265456" className="button button-call-enquiry">
+              <Phone size={15} /> Call: 96262 65456
+            </a>
           </div>
         </div>
       </div>
@@ -1791,7 +1798,7 @@ function FounderHighlightSection() {
             <h3>S. Thiyagarajan, M.Sc. (IT), B.Ed.</h3>
             <p className="founder-role-title">Founder & Academic Director | Higher Secondary Maths & CS Specialist</p>
             <p className="founder-highlight-desc">
-              With over 16+ years of dedicated teaching experience in Trichy since 2008, S. Thiyagarajan personally leads our academic program. His proven formula breakdown, concept clarity, and centum drills have guided over 70,000+ students to board exam excellence.
+              With over 16+ years of dedicated teaching experience in Trichy since 2008, S. Thiyagarajan personally leads our academic program. His proven formula breakdown, concept clarity, and centum drills have guided over 7,000+ students to board exam excellence.
             </p>
             <div className="founder-pills-row">
               <span className="fpill">✓ Higher Secondary Maths Lead</span>
@@ -1834,8 +1841,8 @@ function ClassesSimpleSection() {
     },
     {
       badge: 'Classes 11 & 12',
-      title: 'Higher Secondary Board',
-      desc: 'Expert coaching in Maths, Computer Science (Python/C++), Biology, Physics & Chemistry. Centum blueprints and doubt-clearing sessions.',
+      title: 'Higher Secondary Streams',
+      desc: 'Dedicated coaching in Computer Science (Python/C++), Biology (Botany & Zoology), and Commerce (Accountancy & Commerce) with Centum drills.',
       icon: <GraduationCap size={20} />,
       link: '/classes',
     },
@@ -1881,8 +1888,8 @@ function Home() {
       {/* Reference Hero Section matching user mockup */}
       <ReferenceHero />
 
-      {/* Prominent Quick Admission Enquiry Form on Home Page */}
-      <HomeQuickEnquiry />
+      {/* Enquiry Now Section (Clean & Direct) */}
+      <HomeEnquirySection />
 
       {/* Founder S. Thiyagarajan 16+ Years Experience Highlight (Since 2008) */}
       <FounderHighlightSection />
@@ -1896,11 +1903,14 @@ function Home() {
       {/* Girls' Safety and Security Section */}
       <GirlsSafetySection />
 
-      {/* Student Results Preview (Real Toppers & 70,000+ Alumni) */}
+      {/* Student Results Preview (Real Toppers & 7,000+ Alumni) */}
       <ResultsPreview />
 
       {/* Our Two Branches in Puthur, Trichy (Google Maps, No branch images) */}
       <BranchesSection />
+
+      {/* Faculty Careers & Teaching Positions Hiring Section */}
+      <FacultyCareersSection />
 
       {/* Social Media Links Section */}
       <SocialMediaSection />
@@ -1973,7 +1983,7 @@ function About() {
             A place to learn with <em>purpose.</em>
           </>
         }
-        text="Annai Tuition Centre has been a cornerstone of quality education in Puthur, Trichy since 2008, helping over 70,000+ students excel academically."
+        text="Annai Tuition Centre has been a cornerstone of quality education in Puthur, Trichy since 2008, helping over 7,000+ students excel academically."
       />
 
       <section className="section">
@@ -1993,7 +2003,7 @@ function About() {
             <div className="about-highlights-grid">
               <div className="about-point">
                 <CheckCircle size={17} />
-                <span>Over 70,000+ Students Passed Out with distinction</span>
+                <span>Over 7,000+ Students Passed Out with distinction</span>
               </div>
               <div className="about-point">
                 <Monitor size={17} />
@@ -2052,7 +2062,7 @@ function About() {
         </div>
       </section>
 
-      {/* 70,000+ Students Passed Out Legacy Section */}
+      {/* 7,000+ Students Passed Out Legacy Section */}
       <Legacy70kSection />
 
       {/* Our Distinguished Faculty */}
@@ -2079,7 +2089,7 @@ function About() {
           </p>
           <div className="mission-stat">
             <GraduationCap size={22} />
-            <strong>70,000+</strong>
+            <strong>7,000+</strong>
             <small>Students Trained in Trichy</small>
           </div>
         </div>
