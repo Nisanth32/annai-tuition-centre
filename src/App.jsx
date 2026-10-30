@@ -24,6 +24,7 @@ import {
   Layers,
   Lock,
   MapPin,
+  MessageCircle,
   Menu,
   Microscope,
   Monitor,
@@ -36,6 +37,7 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
+  TrendingUp,
   Trophy,
   Tv,
   UserCheck,
@@ -52,9 +54,9 @@ export const facultyFounder = {
   name: 'S. Thiyagarajan',
   qualifications: 'M.Sc. (IT), B.Ed.',
   role: 'Founder & Academic Director | Mathematics & CS Lead',
-  experience: '18+ Years Dedicated Teaching Experience',
+  experience: 'Working in Teaching Field Since 2008 (16+ Years Experience)',
   subjects: ['Higher Secondary Mathematics', 'Computer Science (Python & C++)', 'Board Exam Centum Drills'],
-  about: 'Founded Annai Tuition Centre in 2008 in Puthur, Trichy. With over 18+ years of classroom teaching and personal mentorship, S. Thiyagarajan has directly guided thousands of students to board exam distinction and centums through shortcut techniques, concept visualization, and dedicated care.',
+  about: 'Working in the teaching field since 2008. Founder S. Thiyagarajan, M.Sc. (IT), B.Ed., has over 16+ years of proven teaching experience in Trichy, guiding thousands of students to board exam distinction and centums through shortcut techniques, concept visualization, and dedicated care.',
   initials: 'ST',
 };
 
@@ -1470,225 +1472,414 @@ function SocialMediaSection() {
   );
 }
 
+
+/* =========================================================================
+   REFERENCE HERO SECTION (MATCHING USER REFERENCE DESIGN)
+   ========================================================================= */
+function ReferenceHero() {
+  return (
+    <section className="ref-hero">
+      <div className="ref-hero-bg-shapes">
+        <div className="ref-hero-glow glow-1" />
+        <div className="ref-hero-glow glow-2" />
+      </div>
+
+      <div className="container ref-hero-grid">
+        <div className="ref-hero-copy">
+          <div className="ref-hero-welcome-badge">
+            <span className="welcome-tag">Welcome to</span>
+            <span className="ref-since-pill">
+              <ShieldCheck size={13} /> Since 2008
+            </span>
+          </div>
+          
+          <h1 className="ref-hero-title">
+            ANNAI <span className="title-highlight">TUITION CENTRE</span>
+          </h1>
+
+          <p className="ref-hero-tagline">Better Learning | Brighter Future</p>
+
+          <p className="ref-hero-desc">
+            We provide quality education with experienced faculty, personal attention and a supportive environment to help every student achieve their goals.
+          </p>
+
+          <div className="ref-hero-actions">
+            <a href="#enquiry" className="ref-enroll-btn">
+              Enroll Now <ArrowRight size={17} />
+            </a>
+            <a href="tel:+919626265456" className="ref-call-btn">
+              <Phone size={15} /> Call: 96262 65456
+            </a>
+          </div>
+
+          <div className="ref-founder-mini-badge">
+            <div className="founder-mini-avatar">ST</div>
+            <div>
+              <strong>Founder: S. Thiyagarajan, M.Sc. (IT), B.Ed.</strong>
+              <small>Working in Teaching Field Since 2008 · 16+ Years Experience</small>
+            </div>
+          </div>
+        </div>
+
+        <div className="ref-hero-visual">
+          <div className="ref-hero-frame">
+            {/* Real Classroom Image with Students */}
+            <img
+              src="/images/annai-classroom-students.jpg"
+              alt="Annai Tuition Centre Classroom with Students"
+              className="ref-hero-photo"
+            />
+
+            {/* Hand-drawn style chalk doodle: Small Steps Big Dreams */}
+            <div className="ref-chalk-doodle" aria-hidden="true">
+              <div className="doodle-sparkle">✦</div>
+              <div className="doodle-text-wrap">
+                <span className="doodle-row-1">Small Steps</span>
+                <span className="doodle-row-2">Big Dreams</span>
+              </div>
+              <div className="doodle-cap">
+                <GraduationCap size={22} />
+              </div>
+            </div>
+
+            {/* Vibrant Yellow Brush Badge: Your Success Our Priority */}
+            <div className="ref-brush-badge">
+              <div className="brush-text">Your Success Our Priority</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 5-Feature Strip Directly Under Hero */}
+      <div className="container ref-features-wrap">
+        <div className="ref-features-strip">
+          <div className="ref-feature-card">
+            <div className="ref-feature-icon icon-blue">
+              <GraduationCap size={22} />
+            </div>
+            <h4>Experienced Faculty</h4>
+            <p>16+ Yrs Lead Mentors</p>
+          </div>
+
+          <div className="ref-feature-card">
+            <div className="ref-feature-icon icon-pink">
+              <BookOpen size={22} />
+            </div>
+            <h4>All Subjects</h4>
+            <p>Classes 1 - 12 (All Boards)</p>
+          </div>
+
+          <div className="ref-feature-card">
+            <div className="ref-feature-icon icon-green">
+              <Users size={22} />
+            </div>
+            <h4>Small Batches</h4>
+            <p>Personal Attention</p>
+          </div>
+
+          <div className="ref-feature-card">
+            <div className="ref-feature-icon icon-purple">
+              <TrendingUp size={22} />
+            </div>
+            <h4>Regular Tests</h4>
+            <p>& Progress Tracking</p>
+          </div>
+
+          <div className="ref-feature-card">
+            <div className="ref-feature-icon icon-gold">
+              <Trophy size={22} />
+            </div>
+            <h4>Better Results</h4>
+            <p>Brighter Future</p>
+          </div>
+        </div>
+
+        <div className="ref-winged-quote">
+          <span className="quote-wing">〰</span>
+          <p>Join Annai Tuition Centre and take the first step towards a successful tomorrow!</p>
+          <span className="quote-wing">〰</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* =========================================================================
+   PROMINENT QUICK ADMISSION ENQUIRY SECTION (ON HOME PAGE)
+   ========================================================================= */
+function HomeQuickEnquiry() {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    studentClass: '10th Standard (Board Exam)',
+    branch: 'Branch 1: Puthur Agraharam (Near Bishop School)',
+    message: '',
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!formData.name || !formData.phone) {
+      alert('Please enter student name and phone number.');
+      return;
+    }
+    const text = '*New Admission Enquiry - Annai Tuition Centre*\n\n' +
+      '*Student Name:* ' + formData.name + '\n' +
+      '*Phone Number:* ' + formData.phone + '\n' +
+      '*Class:* ' + formData.studentClass + '\n' +
+      '*Preferred Branch:* ' + formData.branch + '\n' +
+      '*Notes/Subjects:* ' + (formData.message || 'Admission details requested');
+
+    window.open('https://wa.me/919626265456?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
+    setSubmitted(true);
+  };
+
+  return (
+    <section className="home-enquiry-section section" id="enquiry">
+      <div className="container">
+        <div className="enquiry-card-wrapper">
+          <div className="enquiry-header">
+            <span className="enquiry-badge">
+              <Sparkles size={14} /> Admissions Open 2026-2027
+            </span>
+            <h2>Quick Admission Enquiry</h2>
+            <p>
+              Fill out your details below to get instant WhatsApp fee details, batch timings, and seat availability.
+            </p>
+          </div>
+
+          {submitted ? (
+            <div className="enquiry-success-box">
+              <CheckCircle2 size={40} className="text-green" />
+              <h3>Thank you for enquiring!</h3>
+              <p>Your details have been submitted via WhatsApp. Our admissions coordinator will reach out shortly.</p>
+              <button
+                type="button"
+                className="button button-outline"
+                onClick={() => setSubmitted(false)}
+              >
+                Send Another Enquiry
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="enquiry-form-grid">
+              <div className="form-group">
+                <label htmlFor="home-student-name">Student Full Name *</label>
+                <input
+                  id="home-student-name"
+                  type="text"
+                  required
+                  placeholder="e.g. S. Radhakrishnan"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="home-parent-phone">Parent Phone Number *</label>
+                <input
+                  id="home-parent-phone"
+                  type="tel"
+                  required
+                  placeholder="e.g. 96262 65456"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="home-class-select">Class / Standard *</label>
+                <select
+                  id="home-class-select"
+                  value={formData.studentClass}
+                  onChange={(e) => setFormData({ ...formData, studentClass: e.target.value })}
+                >
+                  <option value="Classes 1 - 5 (Primary Foundation)">Classes 1 - 5 (Primary Foundation)</option>
+                  <option value="Classes 6 - 8 (Middle School)">Classes 6 - 8 (Middle School)</option>
+                  <option value="9th Standard">9th Standard</option>
+                  <option value="10th Standard (Board Exam)">10th Standard (Board Exam)</option>
+                  <option value="11th Standard">11th Standard (Higher Secondary)</option>
+                  <option value="12th Standard (Board Exam)">12th Standard (Board Exam)</option>
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="home-branch-select">Select Campus *</label>
+                <select
+                  id="home-branch-select"
+                  value={formData.branch}
+                  onChange={(e) => setFormData({ ...formData, branch: e.target.value })}
+                >
+                  <option value="Branch 1: Puthur Agraharam (Near Bishop School)">
+                    Branch 1: Puthur Agraharam (Near Bishop School)
+                  </option>
+                  <option value="Branch 2: Ramakrishna Middle School Campus">
+                    Branch 2: Ramakrishna Middle School Campus
+                  </option>
+                </select>
+              </div>
+
+              <div className="form-group full-width">
+                <label htmlFor="home-notes">Subjects Needed / Message (Optional)</label>
+                <input
+                  id="home-notes"
+                  type="text"
+                  placeholder="e.g. Maths, Science, Computer Science, Biology Centum coaching..."
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                />
+              </div>
+
+              <div className="enquiry-actions full-width">
+                <button type="submit" className="button button-whatsapp-enquiry">
+                  <MessageCircle size={18} /> Send Enquiry via WhatsApp
+                </button>
+                <a href="tel:+919626265456" className="button button-call-enquiry">
+                  <Phone size={16} /> Call Us: 96262 65456
+                </a>
+              </div>
+            </form>
+          )}
+
+          <div className="enquiry-trust-strip">
+            <span>✓ 100% Safe For Girls</span>
+            <span>✓ Dedicated Parking Facility</span>
+            <span>✓ 24/7 CCTV Surveillance</span>
+            <span>✓ MSME Registered</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* =========================================================================
+   FOUNDER S. THIYAGARAJAN EXPERIENCE HIGHLIGHT (SINCE 2008)
+   ========================================================================= */
+function FounderHighlightSection() {
+  return (
+    <section className="founder-highlight-section section" id="founder-highlight">
+      <div className="container">
+        <div className="founder-highlight-box">
+          <div className="founder-highlight-avatar">
+            <span>ST</span>
+          </div>
+          <div className="founder-highlight-content">
+            <div className="founder-since-pill">
+              <ShieldCheck size={14} /> Working in Teaching Field Since 2008 (16+ Years Experience)
+            </div>
+            <h3>S. Thiyagarajan, M.Sc. (IT), B.Ed.</h3>
+            <p className="founder-role-title">Founder & Academic Director | Higher Secondary Maths & CS Specialist</p>
+            <p className="founder-highlight-desc">
+              With over 16+ years of dedicated teaching experience in Trichy since 2008, S. Thiyagarajan personally leads our academic program. His proven formula breakdown, concept clarity, and centum drills have guided over 70,000+ students to board exam excellence.
+            </p>
+            <div className="founder-pills-row">
+              <span className="fpill">✓ Higher Secondary Maths Lead</span>
+              <span className="fpill">✓ Computer Science (Python & C++)</span>
+              <span className="fpill">✓ 10th & 12th Board Centum Mentor</span>
+              <span className="fpill">✓ Personal Attention Guaranteed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* =========================================================================
+   CLASSES 1 TO 12 SIMPLE & SWEET OVERVIEW (NO HEAVY THEORY)
+   ========================================================================= */
+function ClassesSimpleSection() {
+  const classCards = [
+    {
+      badge: 'Classes 1 to 5',
+      title: 'Primary Foundation',
+      desc: 'Fun, concept-based learning in Maths, Science, English, and Tamil. Daily homework guidance and handwriting care.',
+      icon: <BookOpen size={20} />,
+      link: '/classes',
+    },
+    {
+      badge: 'Classes 6 to 8',
+      title: 'Middle School',
+      desc: 'Deep concept building, formula mastery, and regular unit tests to eliminate exam fear and strengthen basic fundamentals.',
+      icon: <Layers size={20} />,
+      link: '/classes',
+    },
+    {
+      badge: 'Classes 9 & 10',
+      title: 'Secondary & 10th Board',
+      desc: 'Intensive board preparation for State Board & CBSE. Chapter-wise test series, previous 10-year question analysis, and centum drills.',
+      icon: <Trophy size={20} />,
+      link: '/classes',
+    },
+    {
+      badge: 'Classes 11 & 12',
+      title: 'Higher Secondary Board',
+      desc: 'Expert coaching in Maths, Computer Science (Python/C++), Biology, Physics & Chemistry. Centum blueprints and doubt-clearing sessions.',
+      icon: <GraduationCap size={20} />,
+      link: '/classes',
+    },
+  ];
+
+  return (
+    <section className="classes-simple-section section" id="classes-simple">
+      <div className="container">
+        <div className="strip-heading">
+          <div>
+            <span className="eyebrow">Academic Batches</span>
+            <h2>All Classes Supported (Classes 1 to 12)</h2>
+          </div>
+          <Link to="/classes" className="text-link">
+            View full syllabus <ArrowRight size={16} />
+          </Link>
+        </div>
+
+        <div className="classes-simple-grid">
+          {classCards.map((c) => (
+            <div className="class-simple-card" key={c.badge}>
+              <div className="card-top-row">
+                <span className="card-badge">{c.badge}</span>
+                <span className="card-icon-pill">{c.icon}</span>
+              </div>
+              <h3>{c.title}</h3>
+              <p>{c.desc}</p>
+              <a href="#enquiry" className="card-enquire-link">
+                Enquire for {c.badge} <ArrowRight size={14} />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 function Home() {
   return (
     <main>
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-glow" />
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <div className="hero-badge-group">
-              <span className="eyebrow eyebrow-light">
-                <span className="eyebrow-dot" /> Admissions Open · Classes 1 to 12
-              </span>
-              <span className="msme-badge-hero">
-                <ShieldCheck size={13} /> MSME Registered Centre
-              </span>
-            </div>
-            <h1>
-              Smart-Base Learning. <em>Brighter</em> Results.
-            </h1>
-            <p className="hero-lead">
-              Trichy’s most trusted tuition centre since 2008. Tech-enabled Smart-Base Classrooms, dedicated coaching
-              in Computer Science, Biology, Maths & Science, guided by distinguished faculty.
-            </p>
-            <p className="hero-tagline">Better Education... Brighter Future...</p>
+      {/* Reference Hero Section matching user mockup */}
+      <ReferenceHero />
 
-            <div className="hero-actions">
-              <Link to="/admissions" className="button button-gold">
-                Enquire for Admission <ArrowRight size={17} />
-              </Link>
-              <Link to="/smart-class" className="button button-ghost">
-                Explore Smart Classes <Sparkles size={16} />
-              </Link>
-            </div>
+      {/* Prominent Quick Admission Enquiry Form on Home Page */}
+      <HomeQuickEnquiry />
 
-            <div className="hero-proof">
-              <span className="proof-icon">
-                <Trophy size={18} />
-              </span>
-              <span>
-                <strong>70,000+ Students Passed Out</strong>
-                <small>16+ Years of Proven Academic Excellence · Puthur, Trichy</small>
-              </span>
-            </div>
-          </div>
+      {/* Founder S. Thiyagarajan 16+ Years Experience Highlight (Since 2008) */}
+      <FounderHighlightSection />
 
-          <div className="hero-art hero-art-modern">
-            <div className="hero-smart-visual-wrap">
-              <div className="hero-smart-glass-header">
-                <div className="hero-glass-dots">
-                  <span className="dot red-dot"></span>
-                  <span className="dot yellow-dot"></span>
-                  <span className="dot green-dot"></span>
-                </div>
-                <div className="hero-glass-title">
-                  <Sparkles size={13} /> Smart-Base Class · AI & EdTech Hub
-                </div>
-                <span className="live-indicator">● LIVE CLASS</span>
-              </div>
+      {/* Simple & Sweet Classes 1 to 12 Overview (No heavy theory) */}
+      <ClassesSimpleSection />
 
-              <div className="hero-smart-img-box">
-                <img
-                  src="/images/smart-classroom-hero.jpg"
-                  alt="Annai Tuition Centre Modern Smart Classroom with Digital Interactive Board"
-                  className="hero-smart-main-img"
-                />
-
-                {/* Floating Tech Badges */}
-                <div className="floating-badge badge-top-left">
-                  <div className="badge-icon-mini gold">
-                    <Trophy size={14} />
-                  </div>
-                  <div>
-                    <strong>70,000+ Alumni</strong>
-                    <small>Passed Out Since 2008</small>
-                  </div>
-                </div>
-
-                <div className="floating-badge badge-bottom-right">
-                  <div className="badge-icon-mini cyan">
-                    <Monitor size={14} />
-                  </div>
-                  <div>
-                    <strong>Smart Touch Panels</strong>
-                    <small>Digital Visual Learning</small>
-                  </div>
-                </div>
-
-                <div className="floating-badge badge-bottom-left">
-                  <div className="badge-icon-mini green">
-                    <Code size={14} />
-                  </div>
-                  <div>
-                    <strong>Comp Science & Bio</strong>
-                    <small>Theory + Practical Labs</small>
-                  </div>
-                </div>
-              </div>
-
-              <div className="hero-note-modern">
-                <div className="hero-note-brand">
-                  <img src="/images/annai-logo.png" alt="Logo" className="hero-note-logo" />
-                  <div>
-                    <strong>Annai Tuition Centre · Trichy</strong>
-                    <span>Smart-Base Classes · 100% Safe For Girls · Dedicated Parking</span>
-                  </div>
-                </div>
-                <Link to="/smart-class" className="hero-note-action">
-                  Tour Smart Class <ArrowRight size={13} />
-                </Link>
-              </div>
-            </div>
-            <div className="hero-spark spark-a">✳</div>
-            <div className="hero-spark spark-b">✦</div>
-          </div>
-        </div>
-        <a className="scroll-cue" href="#achievements">
-          <span>Scroll to explore</span>
-          <ArrowDown size={14} />
-        </a>
-      </section>
-
-      {/* 70,000+ Students Passed Out Stats Strip */}
-      <div id="achievements">
-        <AchievementsStrip />
-      </div>
-
-      {/* Comprehensive 70,000+ Milestone Section */}
-      <Legacy70kSection />
-
-      {/* Smart Base Classrooms Showcase */}
-      <SmartClassSection />
-
-      {/* Advanced Subjects & Specialized Tutorials */}
-      <SubjectsTutorialsSection />
-
-      {/* Welcome / About Summary */}
-      <section className="welcome section" id="welcome">
-        <div className="container welcome-grid">
-          <div>
-            <SectionTitle
-              eyebrow="A little about us"
-              title={
-                <>
-                  A steady place to <span className="serif-accent">grow</span>.
-                </>
-              }
-              text="Annai Tuition Centre supports students and families in Trichy with a welcoming place to learn, build deep concept understanding, and achieve outstanding board exam results."
-            />
-            <p className="body-copy">
-              Founded in 2008 by <strong>S. Thiyagarajan</strong> (M.Sc., IT., B.Ed.), Annai Tuition Centre has guided
-              over <strong>70,000+ students</strong> with personalized academic care, certified MSME standards,
-              dedicated parking facilities, and uncompromising safety for all learners.
-            </p>
-            <Link to="/about" className="text-link">
-              Get to know Annai <ArrowRight size={16} />
-            </Link>
-          </div>
-          <div className="welcome-cards">
-            <div className="welcome-card">
-              <span className="card-icon navy-icon">
-                <Monitor size={21} />
-              </span>
-              <span className="card-overline">Smart Infrastructure</span>
-              <h3>Smart-Base Tech Classrooms</h3>
-              <p>Digital interactive panels, 3D animated science models, and big-screen computer coding labs.</p>
-            </div>
-            <div className="welcome-card welcome-card-gold">
-              <span className="card-icon gold-icon">
-                <ShieldCheck size={21} />
-              </span>
-              <span className="card-overline">Safety & Convenience</span>
-              <h3>100% Safe for Girls & Dedicated Parking</h3>
-              <p>Round-the-clock CCTV surveillance, safe on-site two-wheeler & parent vehicle parking facility.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Specialized Board Exam Coaching (Classes 10 & 12) */}
-      <CoachingSection />
-
-      {/* Distinguished Faculty Section */}
-      <FacultySection />
-
-      {/* Classes Overview Strip */}
-      <section className="classes-strip section">
-        <div className="container">
-          <div className="strip-heading">
-            <div>
-              <span className="eyebrow">All Learning Paths</span>
-              <h2>All Classes Supported</h2>
-            </div>
-            <Link to="/classes" className="text-link">
-              Explore all classes <ArrowRight size={16} />
-            </Link>
-          </div>
-          <div className="class-chips">
-            {classes.map((c, i) => (
-              <Link key={c} to={`/admissions?class=${encodeURIComponent(c)}`} className="class-chip">
-                <span className="class-number">{i === 0 ? '01' : `0${i + 2}`}</span>
-                <span>{c}</span>
-                <ArrowRight size={15} />
-              </Link>
-            ))}
-          </div>
-          <p className="note-small">Contact us for current batch timings, subject combinations, and admissions.</p>
-        </div>
-      </section>
-
-      {/* Facilities Section (CCTV, Dedicated Parking Facility, Smart Class, MSME) */}
+      {/* Essential Facilities: Dedicated Parking, CCTV, Safe for Girls */}
       <FacilitiesSection />
 
       {/* Girls' Safety and Security Section */}
       <GirlsSafetySection />
 
-      {/* Student Results Preview */}
+      {/* Student Results Preview (Real Toppers & 70,000+ Alumni) */}
       <ResultsPreview />
 
-      {/* Our Branches Section */}
+      {/* Our Two Branches in Puthur, Trichy (Google Maps, No branch images) */}
       <BranchesSection />
 
       {/* Social Media Links Section */}
@@ -1703,11 +1894,11 @@ function Home() {
           <div>
             <span className="eyebrow eyebrow-light">Learn Today... Lead Tomorrow.</span>
             <h2>Ready to take the next step?</h2>
-            <p>Tell us what your child needs. We’ll help you find out more and secure their seat.</p>
+            <p>Secure your child's seat at Annai Tuition Centre. Small batches, personal care, and proven centums.</p>
           </div>
-          <Link to="/admissions" className="button button-gold">
-            Send an enquiry <ArrowRight size={16} />
-          </Link>
+          <a href="#enquiry" className="button button-gold">
+            Enquire for Admission <ArrowRight size={16} />
+          </a>
         </div>
       </section>
 
