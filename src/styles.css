@@ -4703,3 +4703,444 @@ iframe {
     min-height: 40px !important;
   }
 }
+/* ==========================================================================
+   TUTORIALS & CONCEPT COACHING SUITE
+   Annai Tuition Centre - Multi-Device Tutorial Showcase & Dedicated Page
+   ========================================================================== */
+
+/* 1. Quick Overview Strip on Tutorials Page */
+.tutorials-section {
+  background: #ffffff;
+  position: relative;
+}
+
+.tutorial-quick-strip {
+  background: var(--navy2, #0f2048);
+  color: #ffffff;
+  padding: 24px 0;
+  border-bottom: 2px solid var(--gold, #f3bd42);
+}
+
+.tutorial-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.quick-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.quick-item svg {
+  color: var(--gold, #f3bd42);
+  flex-shrink: 0;
+}
+
+.quick-item strong {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.quick-item span {
+  display: block;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+/* 2. 5-Step Learning Method */
+.tutorial-method-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 36px 32px;
+  margin-bottom: 48px;
+}
+
+.tutorial-method-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 32px;
+}
+
+.tutorial-method-header h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--navy, #162956);
+  letter-spacing: -0.03em;
+  margin: 6px 0 0;
+}
+
+.tutorial-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.tutorial-steps-grid.full-grid {
+  margin-top: 10px;
+}
+
+.tutorial-step-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 22px 18px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorial-step-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold, #f3bd42);
+  box-shadow: 0 10px 24px rgba(22, 41, 86, 0.08);
+}
+
+.step-num {
+  font-size: 13px;
+  font-weight: 800;
+  color: #d97706;
+  background: #fef3c7;
+  padding: 3px 9px;
+  border-radius: 6px;
+  display: inline-block;
+  width: max-content;
+  margin-bottom: 12px;
+}
+
+.tutorial-step-card h4 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--navy, #162956);
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.tutorial-step-card p {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* 3. Tutorial Cards Grid */
+.tutorials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  margin-top: 16px;
+}
+
+.tutorial-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 4px 18px rgba(22, 41, 86, 0.04);
+}
+
+.tutorial-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 14px 32px rgba(22, 41, 86, 0.09);
+}
+
+.tutorial-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.tutorial-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  display: grid;
+  place-items: center;
+}
+
+.tutorial-category {
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748b;
+  margin-right: 8px;
+}
+
+.tutorial-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.tutorial-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--navy, #162956);
+  letter-spacing: -0.03em;
+  margin: 0 0 4px;
+}
+
+.tutorial-grade {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #d97706;
+  margin-bottom: 12px;
+}
+
+.tutorial-desc {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 16px;
+}
+
+.tutorial-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.tutorial-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.tutorial-highlights li svg {
+  color: #16a34a;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tutorial-timing-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  width: max-content;
+}
+
+.tutorial-card-actions {
+  margin-top: auto;
+}
+
+.tutorial-enquire-btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 13.5px;
+}
+
+.tutorials-view-all-wrap {
+  text-align: center;
+  margin-top: 36px;
+}
+
+/* 4. Free 1-Day Trial Tutorial Session Banner */
+.tutorial-trial-section {
+  padding: 20px 0 50px;
+}
+
+.tutorial-trial-box {
+  background: linear-gradient(135deg, var(--navy2, #0f2048) 0%, var(--navy, #162956) 100%);
+  border-radius: 20px;
+  padding: 50px 40px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(15, 32, 72, 0.18);
+  border: 1px solid rgba(243, 189, 66, 0.25);
+}
+
+.tutorial-trial-content {
+  max-width: 680px;
+  position: relative;
+  z-index: 1;
+}
+
+.tutorial-trial-box h2 {
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 12px 0 14px;
+  color: #ffffff;
+}
+
+.tutorial-trial-box p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin: 0 0 24px;
+}
+
+.tutorial-trial-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* 5. Mobile & Tablet Responsive Adjustments for Tutorials */
+@media (max-width: 992px) {
+  .tutorial-quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .tutorial-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tutorial-step-card:nth-child(4),
+  .tutorial-step-card:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Update 5-column mobile bottom bar */
+  .mobile-bottom-bar {
+    grid-template-columns: repeat(5, 1fr) !important;
+    padding: 2px 2px !important;
+  }
+
+  .mobile-bar-item {
+    font-size: 9px !important;
+    gap: 2px !important;
+  }
+
+  .mobile-bar-tutorials {
+    color: #b45309 !important;
+  }
+
+  .mobile-bar-tutorials:active {
+    background: #fff8e6 !important;
+  }
+
+  /* Tutorial Quick Strip on Mobile */
+  .tutorial-quick-strip {
+    padding: 18px 0;
+  }
+
+  .tutorial-quick-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .quick-item {
+    gap: 8px;
+  }
+
+  .quick-item strong {
+    font-size: 12px;
+  }
+
+  .quick-item span {
+    font-size: 10px;
+  }
+
+  /* 5-Step Method on Mobile */
+  .tutorial-method-box {
+    padding: 22px 14px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+  }
+
+  .tutorial-method-header h3 {
+    font-size: 19px;
+  }
+
+  .tutorial-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .tutorial-step-card {
+    padding: 16px 14px;
+    border-radius: 10px;
+  }
+
+  /* Tutorial Cards Grid on Mobile */
+  .tutorials-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .tutorial-card {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .tutorial-card h3 {
+    font-size: 18px;
+  }
+
+  .tutorial-timing-chip {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tutorial-enquire-btn {
+    min-height: 46px;
+    font-size: 14px;
+  }
+
+  /* Free Trial Box on Mobile */
+  .tutorial-trial-box {
+    padding: 28px 18px;
+    border-radius: 14px;
+  }
+
+  .tutorial-trial-box h2 {
+    font-size: 22px;
+  }
+
+  .tutorial-trial-box p {
+    font-size: 13.5px;
+  }
+
+  .tutorial-trial-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .tutorial-trial-actions a {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+  }
+}
