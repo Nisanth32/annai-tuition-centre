@@ -345,14 +345,23 @@ function Header() {
       </div>
       <div className="nav-wrap container">
         <Brand />
-        <button
-          className="menu-toggle"
-          aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
-          aria-expanded={open}
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="header-mobile-right">
+          <a
+            href="tel:+919626265456"
+            className="mobile-header-call-btn"
+            aria-label="Call Annai Tuition Centre"
+          >
+            <Phone size={18} />
+          </a>
+          <button
+            className="menu-toggle"
+            aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
         {open && <div className="nav-backdrop" onClick={() => setOpen(false)} aria-hidden="true" />}
         <nav className={open ? 'nav open' : 'nav'} aria-label="Main navigation">
           {[
@@ -386,6 +395,24 @@ function Header() {
           <Link className="button button-gold nav-cta" to="/contact" onClick={() => setOpen(false)}>
             Enroll Now <ArrowRight size={15} />
           </Link>
+          <div className="nav-mobile-info">
+            <div className="nav-mobile-hours">
+              <Clock size={13} />
+              <span>Timings: 6:30 PM – 9:00 PM (Daily & Sunday)</span>
+            </div>
+            <div className="nav-mobile-location">
+              <MapPin size={13} />
+              <span>Campus: Puthur, Trichy – 17</span>
+            </div>
+            <div className="nav-mobile-call-row">
+              <a href="tel:+919626265456" className="nav-mobile-phone-btn">
+                <Phone size={13} /> Call 96262 65456
+              </a>
+              <a href="tel:+919994148476" className="nav-mobile-phone-btn">
+                <Phone size={13} /> Call 99941 48476
+              </a>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
@@ -539,6 +566,34 @@ function ScrollToTop() {
   return null;
 }
 
+function MobileBottomBar() {
+  return (
+    <nav className="mobile-bottom-bar" aria-label="Mobile quick actions">
+      <a href="tel:+919626265456" className="mobile-bar-item mobile-bar-call">
+        <Phone size={18} />
+        <span>Call</span>
+      </a>
+      <a
+        href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20admissions."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mobile-bar-item mobile-bar-whatsapp"
+      >
+        <MessageCircle size={18} />
+        <span>WhatsApp</span>
+      </a>
+      <Link to="/classes" className="mobile-bar-item mobile-bar-classes">
+        <BookOpen size={18} />
+        <span>Classes</span>
+      </Link>
+      <Link to="/contact" className="mobile-bar-item mobile-bar-enquire">
+        <GraduationCap size={18} />
+        <span>Admission</span>
+      </Link>
+    </nav>
+  );
+}
+
 function AppShell({ children }) {
   return (
     <>
@@ -546,6 +601,7 @@ function AppShell({ children }) {
       <Header />
       {children}
       <Footer />
+      <MobileBottomBar />
     </>
   );
 }

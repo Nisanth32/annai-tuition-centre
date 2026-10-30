@@ -3942,3 +3942,764 @@ iframe {
     font-size: 12.5px;
   }
 }
+/* ==========================================================================
+   DEDICATED NATIVE MOBILE EXPERIENCE SUITE
+   Annai Tuition Centre - Mobile Smartphone Layout (< 769px)
+   Preserves 100% desktop design while delivering an app-like mobile experience.
+   ========================================================================== */
+
+/* 1. Desktop Defaults for Mobile-Specific Elements */
+.header-mobile-right {
+  display: none;
+}
+.mobile-header-call-btn {
+  display: none;
+}
+.nav-mobile-info {
+  display: none;
+}
+.mobile-bottom-bar {
+  display: none;
+}
+
+/* 2. Dedicated Smartphone Mobile Experience (Screen width <= 768px) */
+@media (max-width: 768px) {
+  /* Reserve bottom space for the sticky action bar */
+  body {
+    padding-bottom: 64px !important;
+  }
+
+  /* Compact Sleek Mobile Header */
+  .topline {
+    display: none !important; /* Hide cluttered desktop banner on mobile screens */
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(22, 41, 86, 0.08);
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .nav-wrap {
+    height: 58px !important;
+    min-height: 58px !important;
+    padding: 0 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .brand {
+    gap: 8px !important;
+    text-decoration: none;
+  }
+
+  .brand-icon {
+    height: 36px !important;
+    width: 36px !important;
+    border-radius: 9px !important;
+    background: #fff8e6 !important;
+    color: #162956 !important;
+  }
+
+  .brand strong {
+    font-size: 15.5px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.03em !important;
+  }
+
+  .brand small {
+    font-size: 8.5px !important;
+    margin-top: 2px !important;
+  }
+
+  /* Header Right: Call Button & Hamburger Toggle */
+  .header-mobile-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .mobile-header-call-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 8px !important;
+    background: #fff8e6 !important;
+    color: #b45309 !important;
+    border: 1px solid #fde68a !important;
+    text-decoration: none !important;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+
+  .mobile-header-call-btn:active {
+    transform: scale(0.92);
+    background: #fef3c7 !important;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 8px !important;
+    background: #f8fafc !important;
+    color: #162956 !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 0 !important;
+    cursor: pointer;
+  }
+
+  /* Mobile Slide-down Navigation Drawer */
+  .nav {
+    display: none;
+    position: fixed !important;
+    top: 58px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    z-index: 9999 !important;
+    padding: 16px 18px 85px !important;
+    flex-direction: column !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 8px !important;
+    box-shadow: 0 16px 32px rgba(22, 41, 86, 0.16) !important;
+  }
+
+  .nav.open {
+    display: flex !important;
+  }
+
+  .nav > a:not(.button):not(.whatsapp-nav-btn) {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 14px !important;
+    background: #f8fafc !important;
+    border-radius: 10px !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    border: 1px solid #eef2f6 !important;
+    min-height: 46px !important;
+  }
+
+  .nav > a:not(.button):hover,
+  .nav > a:not(.button).active {
+    background: #fff8e6 !important;
+    color: #162956 !important;
+    border-color: #fde68a !important;
+    border-left: 4px solid #f3bd42 !important;
+  }
+
+  .whatsapp-nav-btn {
+    width: 100% !important;
+    min-height: 46px !important;
+    justify-content: center !important;
+    font-size: 14px !important;
+    border-radius: 10px !important;
+    margin-top: 4px !important;
+  }
+
+  .nav-cta {
+    width: 100% !important;
+    min-height: 46px !important;
+    justify-content: center !important;
+    font-size: 14px !important;
+    border-radius: 10px !important;
+    margin-top: 2px !important;
+  }
+
+  /* Drawer Mobile Info Details */
+  .nav-mobile-info {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    margin-top: 14px !important;
+    padding-top: 14px !important;
+    border-top: 1px dashed #e2e8f0 !important;
+  }
+
+  .nav-mobile-hours,
+  .nav-mobile-location {
+    display: flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    font-size: 12px !important;
+    color: #64748b !important;
+    font-weight: 500 !important;
+  }
+
+  .nav-mobile-call-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    margin-top: 6px !important;
+  }
+
+  .nav-mobile-phone-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background: #f1f5f9 !important;
+    color: #162956 !important;
+    padding: 10px 6px !important;
+    border-radius: 8px !important;
+    font-size: 11.5px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  /* 3. Sticky Bottom Mobile Quick Actions Bar */
+  .mobile-bottom-bar {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 58px !important;
+    background: #ffffff !important;
+    box-shadow: 0 -3px 16px rgba(22, 41, 86, 0.12) !important;
+    border-top: 1px solid #e2e8f0 !important;
+    z-index: 998 !important;
+    padding: 3px 6px !important;
+    align-items: center !important;
+  }
+
+  .mobile-bar-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3px !important;
+    color: #64748b !important;
+    text-decoration: none !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    height: 100% !important;
+    border-radius: 8px !important;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .mobile-bar-call {
+    color: #162956 !important;
+  }
+
+  .mobile-bar-call:active {
+    background: #f1f5f9 !important;
+  }
+
+  .mobile-bar-whatsapp {
+    color: #16a34a !important;
+  }
+
+  .mobile-bar-whatsapp:active {
+    background: #f0fdf4 !important;
+  }
+
+  .mobile-bar-classes {
+    color: #475569 !important;
+  }
+
+  .mobile-bar-classes:active {
+    background: #f8fafc !important;
+  }
+
+  .mobile-bar-enquire {
+    color: #b45309 !important;
+    background: #fff8e6 !important;
+    border: 1px solid #fde68a !important;
+  }
+
+  .mobile-bar-enquire:active {
+    background: #fef3c7 !important;
+  }
+
+  /* 4. Natural Smartphone Hero Layout */
+  .ref-hero-section {
+    padding: 20px 0 24px !important;
+  }
+
+  .ref-hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    text-align: center !important;
+  }
+
+  .ref-hero-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+
+  .ref-welcome-text {
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.14em !important;
+    color: #b45309 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .ref-main-title {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.04em !important;
+    color: #162956 !important;
+    margin: 4px 0 6px !important;
+  }
+
+  .ref-tagline {
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    color: #b45309 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .ref-description {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    margin-bottom: 16px !important;
+    max-width: 420px !important;
+  }
+
+  .ref-timing-chip {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    padding: 8px 12px !important;
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    background: #f0fdf4 !important;
+    border: 1px solid #bbf7d0 !important;
+    color: #15803d !important;
+    border-radius: 8px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Full-width Touch CTAs in Hero */
+  .ref-cta-group {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    gap: 10px !important;
+    margin: 0 auto !important;
+  }
+
+  .ref-enroll-btn,
+  .ref-whatsapp-btn,
+  .ref-call-btn {
+    width: 100% !important;
+    min-height: 48px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 14.5px !important;
+    border-radius: 10px !important;
+    padding: 12px 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .ref-enroll-btn {
+    background: #f59e0b !important;
+    color: #162956 !important;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3) !important;
+  }
+
+  .ref-whatsapp-btn {
+    background: #25d366 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25) !important;
+  }
+
+  .ref-call-btn {
+    background: #ffffff !important;
+    color: #162956 !important;
+    border: 1.5px solid #cbd5e1 !important;
+  }
+
+  /* Hero Visual & Image */
+  .ref-visual-wrapper {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+  }
+
+  .ref-image-frame {
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 24px rgba(22, 41, 86, 0.12) !important;
+    position: relative !important;
+  }
+
+  .ref-image-frame img {
+    height: 230px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .ref-chalk-doodle {
+    display: none !important; /* Hide cluttered badge on small screens */
+  }
+
+  .ref-brush-badge {
+    position: static !important;
+    display: inline-block !important;
+    margin-top: 10px !important;
+    font-size: 13px !important;
+    padding: 6px 14px !important;
+    border-radius: 8px !important;
+  }
+
+  /* Features Strip (2x2 Grid + Centered 5th item) */
+  .ref-features-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    padding: 14px 10px !important;
+    margin-top: 20px !important;
+    border-radius: 12px !important;
+  }
+
+  .ref-feature-item {
+    padding: 10px 6px !important;
+  }
+
+  .ref-feature-item::after {
+    display: none !important;
+  }
+
+  .ref-feature-item:nth-child(5) {
+    grid-column: 1 / -1 !important;
+  }
+
+  .ref-feature-icon {
+    width: 38px !important;
+    height: 38px !important;
+    margin: 0 auto 6px !important;
+  }
+
+  .ref-feature-text strong {
+    font-size: 12.5px !important;
+  }
+
+  .ref-feature-text small {
+    font-size: 10.5px !important;
+  }
+
+  .ref-bottom-quote {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 6px !important;
+    padding: 10px !important;
+    font-size: 12px !important;
+  }
+
+  /* 5. Mobile Achievements & Milestone Cards */
+  .achievements-strip {
+    padding: 24px 0 !important;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .achievement-item {
+    padding: 14px 10px !important;
+    border-radius: 12px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 6px !important;
+  }
+
+  .achievement-icon-wrap {
+    width: 40px !important;
+    height: 40px !important;
+    margin: 0 auto !important;
+  }
+
+  .achievement-number {
+    font-size: 22px !important;
+    line-height: 1.1 !important;
+  }
+
+  .achievement-title {
+    font-size: 12px !important;
+  }
+
+  .achievement-item p {
+    font-size: 10.5px !important;
+    line-height: 1.35 !important;
+    margin-top: 3px !important;
+  }
+
+  /* 6. Mobile 10th & 12th Coaching Cards */
+  .coaching-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .coaching-card {
+    padding: 18px 14px !important;
+    border-radius: 14px !important;
+  }
+
+  .coaching-card-badge {
+    position: static !important;
+    display: inline-block !important;
+    margin-bottom: 12px !important;
+    font-size: 10.5px !important;
+    padding: 4px 10px !important;
+  }
+
+  .coaching-card-head {
+    gap: 12px !important;
+  }
+
+  .coaching-grade-num {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 18px !important;
+    min-width: 48px !important;
+  }
+
+  .coaching-card-head h3 {
+    font-size: 16.5px !important;
+  }
+
+  .subject-tags {
+    gap: 6px !important;
+  }
+
+  .subject-tags span {
+    font-size: 11px !important;
+    padding: 4px 9px !important;
+  }
+
+  .coaching-features li {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    gap: 7px !important;
+  }
+
+  .coaching-card-action {
+    margin-top: 16px !important;
+  }
+
+  .coaching-card-action .button {
+    width: 100% !important;
+    min-height: 46px !important;
+    justify-content: center !important;
+    font-size: 14px !important;
+  }
+
+  /* 7. Mobile Subjects & Specialized Tutorials */
+  .subjects-showcase-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .subject-card {
+    padding: 18px 14px !important;
+    border-radius: 12px !important;
+  }
+
+  .subject-link {
+    width: 100% !important;
+    min-height: 42px !important;
+    justify-content: center !important;
+    display: inline-flex !important;
+    background: #f8fafc !important;
+    border-radius: 8px !important;
+    align-items: center !important;
+  }
+
+  /* 8. Mobile Real Classroom & Smart Board Sections */
+  .real-class-grid,
+  .smart-board-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .real-class-photo-card img,
+  .smart-board-img-card img {
+    height: 210px !important;
+    border-radius: 12px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+  }
+
+  .real-class-copy,
+  .smart-board-copy {
+    text-align: left !important;
+  }
+
+  .real-class-features,
+  .smart-features-list {
+    gap: 12px !important;
+  }
+
+  .real-class-feature-row,
+  .smart-feature-item {
+    gap: 10px !important;
+  }
+
+  /* 9. Mobile Campus Facilities */
+  .facilities-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .facility-card {
+    padding: 16px 14px !important;
+    border-radius: 12px !important;
+  }
+
+  .facility-card h3 {
+    font-size: 15.5px !important;
+  }
+
+  .facility-card p {
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* 10. Mobile Faculty & Mentor Panels */
+  .founder-card-top {
+    flex-direction: column !important;
+    gap: 14px !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .founder-title-row {
+    flex-direction: column !important;
+    gap: 5px !important;
+    align-items: center !important;
+  }
+
+  .founder-subjects-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+
+  .faculty-subjects-tags {
+    justify-content: center !important;
+  }
+
+  .faculty-panels-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .faculty-panel-card {
+    padding: 16px 14px !important;
+  }
+
+  /* 11. Mobile Branches with Google Maps */
+  .branches-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .branch-card {
+    padding: 16px 12px !important;
+    border-radius: 14px !important;
+  }
+
+  .branch-map-frame-box iframe {
+    height: 190px !important;
+    border-radius: 8px !important;
+  }
+
+  .branch-card-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 8px !important;
+  }
+
+  .branch-card-actions a {
+    width: 100% !important;
+    min-height: 44px !important;
+    justify-content: center !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  /* 12. Mobile Contact Form (No iPhone Auto-Zoom) */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .form-card {
+    padding: 18px 12px !important;
+    border-radius: 12px !important;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .form-grid input,
+  .form-grid select,
+  .form-grid textarea {
+    font-size: 16px !important; /* CRITICAL: prevents iPhone auto-zoom */
+    padding: 12px 12px !important;
+    min-height: 48px !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .form-card button[type="submit"] {
+    width: 100% !important;
+    min-height: 48px !important;
+    font-size: 15px !important;
+    border-radius: 10px !important;
+    justify-content: center !important;
+  }
+
+  /* 13. Mobile Footer */
+  .footer {
+    padding: 32px 0 20px !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .social-links-row {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .social-btn {
+    flex: 1 1 calc(50% - 8px) !important;
+    min-width: 120px !important;
+    justify-content: center !important;
+    min-height: 40px !important;
+  }
+}
