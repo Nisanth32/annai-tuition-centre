@@ -9,7 +9,7 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "false").lower() == "true"
 if not DEBUG and (not SECRET_KEY or SECRET_KEY.startswith("replace-")):
     raise RuntimeError("Set DJANGO_SECRET_KEY before running outside development mode.")
 SECRET_KEY = SECRET_KEY or "development-only-change-this-key"
-ALLOWED_HOSTS = [host.strip() for host in os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",") if host.strip()]
+ALLOWED_HOSTS = [host.strip() for host in os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,.vercel.app").split(",") if host.strip()]
 FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:5173").rstrip("/")
 
 INSTALLED_APPS = [
@@ -55,7 +55,7 @@ STATIC_URL = "static/"
 
 CORS_ALLOWED_ORIGINS = [FRONTEND_URL]
 CORS_ALLOW_CREDENTIALS = True
-CSRF_TRUSTED_ORIGINS = [FRONTEND_URL]
+CSRF_TRUSTED_ORIGINS = [FRONTEND_URL, "https://*.vercel.app"] if FRONTEND_URL else ["https://*.vercel.app"]
 SESSION_COOKIE_HTTPONLY = True
 CSRF_COOKIE_SAMESITE = "Lax"
 SESSION_COOKIE_SAMESITE = "Lax"

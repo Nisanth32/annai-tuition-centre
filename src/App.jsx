@@ -2714,7 +2714,7 @@ function Admin() {
 
   async function request(path, options = {}) {
     const root = apiRoot();
-    if (!root) throw new Error('Set VITE_API_BASE_URL in .env.local and start the Django API.');
+    // root defaults to '/api' for Vercel multi-service routing
     const res = await fetch(`${root}${path}`, {
       credentials: 'include',
       ...options,
@@ -2767,7 +2767,7 @@ function Admin() {
     setError('');
     try {
       const root = apiRoot();
-      if (!root) throw new Error('Set VITE_API_BASE_URL in .env.local and start the Django API.');
+      // root defaults to '/api' for Vercel multi-service routing
       const token = await request('/auth/csrf/');
       const response = await request('/auth/login/', {
         method: 'POST',
