@@ -304,11 +304,24 @@ function Brand({ small = false }) {
 function Header() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    function handleKeyDown(e) {
+      if (e.key === 'Escape') setOpen(false);
+    }
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   return (
     <header className="header">
       <div className="topline">
         <div className="topline-left">
-          <span>Welcome to Annai Tuition Centre, Trichy</span>
+          <span className="topline-welcome">Welcome to Annai Tuition Centre, Trichy</span>
           <span className="topline-timing-pill">
             <Clock size={11} /> Timings: 6:30 PM – 9:00 PM (Sunday Classes Available)
           </span>
@@ -317,21 +330,30 @@ function Header() {
           </span>
         </div>
         <span className="topline-right">
-          <MapPin size={13} /> Puthur, Trichy-17 <i></i>
-          <a href="tel:+919626265456">
+          <span className="topline-loc">
+            <MapPin size={13} /> Puthur, Trichy-17
+          </span>
+          <i></i>
+          <a href="tel:+919626265456" className="topline-phone-link">
             <Phone size={13} /> 96262 65456
           </a>
           <i></i>
-          <a href="tel:+919994148476">
+          <a href="tel:+919994148476" className="topline-phone-link">
             <Phone size={13} /> 99941 48476
           </a>
         </span>
       </div>
       <div className="nav-wrap container">
         <Brand />
-        <button className="menu-toggle" aria-label={open ? 'Close menu' : 'Open menu'} onClick={() => setOpen(!open)}>
-          {open ? <X /> : <Menu />}
+        <button
+          className="menu-toggle"
+          aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X size={24} /> : <Menu size={24} />}
         </button>
+        {open && <div className="nav-backdrop" onClick={() => setOpen(false)} aria-hidden="true" />}
         <nav className={open ? 'nav open' : 'nav'} aria-label="Main navigation">
           {[
             { label: 'Home', path: '/' },
