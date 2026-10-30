@@ -5141,3 +5141,420 @@ iframe {
     min-height: 46px;
   }
 }
+/* ==========================================================================
+   ORIGINAL NAVY & GOLD HERO ENHANCEMENTS + 2-BRANCH REAL SHOWCASE + ENQUIRY
+   ========================================================================== */
+
+/* Hero Timing Pill */
+.hero-timing-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(243, 189, 66, 0.16);
+  border: 1px solid rgba(243, 189, 66, 0.4);
+  color: #fef08a;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 10px 0 20px;
+  width: max-content;
+  max-width: 100%;
+}
+
+.button-whatsapp-hero {
+  background: #25d366 !important;
+  color: #ffffff !important;
+  border: 1px solid #22c55e !important;
+}
+.button-whatsapp-hero:hover {
+  background: #16a34a !important;
+}
+
+/* Hero Showcase Box (Both Branches) */
+.hero-showcase-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(243, 189, 66, 0.45);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-showcase-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-showcase-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.hero-showcase-head strong {
+  display: block;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.hero-showcase-head small {
+  display: block;
+  font-size: 11px;
+  color: #fde68a;
+}
+
+.hero-showcase-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.hero-thumb {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-thumb img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-thumb span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(15, 32, 72, 0.88);
+  color: #fef08a;
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 3px 5px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.hero-features-wrap {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+/* Two Branch Real Classroom Showcase */
+.two-branch-real-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.real-branch-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(22, 41, 86, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.real-branch-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(22, 41, 86, 0.1);
+}
+
+.real-branch-img-box {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background: #0f1c3f;
+}
+
+.real-branch-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.real-branch-card:hover .real-branch-img-box img {
+  transform: scale(1.03);
+}
+
+.real-branch-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11.5px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.real-branch-badge.gold-badge {
+  background: #f59e0b;
+  color: #162956;
+}
+
+.real-branch-badge.navy-badge {
+  background: #162956;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.real-branch-info {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.real-branch-info h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--navy, #162956);
+  margin: 0 0 4px;
+}
+
+.real-branch-landmark {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0 0 14px;
+  font-weight: 500;
+}
+
+.real-branch-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.real-branch-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #334155;
+}
+
+.real-branch-points li svg {
+  color: #16a34a;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.real-branch-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.real-branch-chips .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 4px 9px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.real-class-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+/* Branch Classroom Photo in BranchesSection */
+.branch-photo-box {
+  position: relative;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.branch-photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.branch-photo-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(15, 32, 72, 0.92);
+  color: #ffd875;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  backdrop-filter: blur(4px);
+}
+
+/* Home Quick Admission Enquiry Section */
+.home-enquiry-section {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 70px 0;
+}
+
+.home-enquiry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 24px;
+}
+
+.home-enquiry-info-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 24px rgba(22, 41, 86, 0.05);
+}
+
+.home-enquiry-info-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--navy, #162956);
+  margin: 0 0 8px;
+}
+
+.home-enquiry-info-card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.enquiry-facts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.enquiry-fact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.enquiry-fact-item svg {
+  color: #d97706;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.enquiry-fact-item strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy, #162956);
+}
+
+.enquiry-fact-item span {
+  display: block;
+  font-size: 12.5px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.enquiry-direct-calls span {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.enquiry-call-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.home-enquiry-form-card .form-card {
+  box-shadow: 0 10px 30px rgba(22, 41, 86, 0.08);
+  border: 1.5px solid #fde68a;
+}
+
+/* Mobile Responsiveness for First Theme & Branches */
+@media (max-width: 768px) {
+  .hero-showcase-box {
+    padding: 14px;
+  }
+  .hero-showcase-photos {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .hero-thumb img {
+    height: 90px;
+  }
+  .two-branch-real-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .real-branch-img-box {
+    height: 200px;
+  }
+  .home-enquiry-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .home-enquiry-info-card {
+    padding: 22px 16px;
+  }
+  .enquiry-call-row {
+    flex-direction: column;
+  }
+  .enquiry-call-row .button {
+    width: 100%;
+    justify-content: center;
+  }
+}

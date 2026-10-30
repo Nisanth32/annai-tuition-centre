@@ -386,7 +386,7 @@ export const subjectsList = [
 
 const branchesInfo = [
   {
-    type: 'Registered Office',
+    type: 'Branch 1 (Registered Office)',
     name: 'Annai Tuition Centre',
     subtitle: 'Main Administrative Hub & State Board Coaching Wings',
     doorNo: 'Door No.: 21/87',
@@ -394,6 +394,7 @@ const branchesInfo = [
     landmark: 'Near Bishop School',
     city: 'Trichy – 17',
     fullAddress: 'Door No.: 21/87, Puthur Agraharam, Near Bishop School, Trichy – 17',
+    image: '/images/annai-real-classroom.jpg',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=21%2F87+Puthur+Agraharam+Near+Bishop+School+Trichy+17',
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=21%2F87+Puthur+Agraharam+Near+Bishop+School+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=21%2F87%2C+Puthur+Agraharam%2C+Near+Bishop+School%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
@@ -401,7 +402,7 @@ const branchesInfo = [
     facilities: ['Dedicated Parking Facility', 'Interactive Smart Board', '24/7 CCTV Surveillance', 'Spacious Classrooms', '100% Safe for Girls'],
   },
   {
-    type: 'Branch Campus',
+    type: 'Branch 2 (Campus)',
     name: 'Annai Tuition Centre',
     subtitle: 'Secondary & Higher Secondary Exam Wing',
     doorNo: 'Branch 2',
@@ -409,6 +410,7 @@ const branchesInfo = [
     landmark: 'Near Aruna Theatre, Puthur',
     city: 'Trichy – 17',
     fullAddress: 'Ramakrishna Middle School, Near Aruna Theatre, Puthur, Trichy – 17',
+    image: '/images/annai-branch2-classroom.jpg',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=Ramakrishna+Middle+School%2C+Near+Aruna+Theatre%2C+Puthur%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
@@ -1495,6 +1497,13 @@ function BranchesSection() {
                 <span className="branch-status-badge">● Admissions Open</span>
               </div>
 
+              <div className="branch-photo-box">
+                <img src={branch.image} alt={`${branch.name} - ${branch.doorNo} Classroom`} />
+                <span className="branch-photo-badge">
+                  <Camera size={13} /> {branch.doorNo === 'Branch 2' ? 'Branch 2 Classroom (Ramakrishna Middle School)' : 'Branch 1 Classroom (Puthur Agraharam)'}
+                </span>
+              </div>
+
               <h3>{branch.name}</h3>
               <p className="branch-subtitle">{branch.subtitle}</p>
 
@@ -1651,62 +1660,100 @@ function SocialMediaSection() {
 }
 
 /* =========================================================================
-   HOME PAGE HERO SECTION (MATCHING FIRST IMAGE REFERENCE)
+   ORIGINAL PRESTIGIOUS NAVY & GOLD HERO (FIRST THEME RESTORED)
    ========================================================================= */
-function ReferenceHeroSection() {
+function Hero() {
   return (
-    <section className="ref-hero-section">
-      <div className="container">
-        <div className="ref-hero-grid">
-          <div className="ref-hero-copy">
-            <div className="ref-welcome-text">Welcome to</div>
-            <h1 className="ref-main-title">ANNAI TUITION CENTRE</h1>
-            <p className="ref-tagline">Better Learning | Brighter Future</p>
-            <p className="ref-description">
-              We provide quality education with experienced faculty, personal attention and a supportive environment
-              to help every student achieve their goals.
-            </p>
-            <div className="ref-timing-chip">
-              <Clock size={16} />
-              <span>Class Timings: 6:30 PM – 9:00 PM (Sunday Classes Available)</span>
-            </div>
-            <div className="ref-cta-group">
-              <Link to="/contact" className="ref-enroll-btn">
-                Enroll Now <ArrowRight size={17} />
-              </Link>
-              <a
-                href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20admissions."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ref-whatsapp-btn"
-              >
-                <MessageCircle size={17} /> Chat on WhatsApp
-              </a>
-              <a href="tel:+919626265456" className="ref-call-btn">
-                <Phone size={16} /> 96262 65456
-              </a>
-            </div>
+    <section className="hero">
+      <div className="hero-glow" />
+      <div className="container hero-grid">
+        <div className="hero-copy">
+          <div className="hero-badge-group">
+            <span className="eyebrow eyebrow-light">
+              <span className="eyebrow-dot" /> Admissions Open · Est. 2008
+            </span>
+            <span className="msme-badge-hero">
+              <ShieldCheck size={13} /> MSME Registered
+            </span>
+          </div>
+          <h1>
+            Every learner has a <em>brighter</em> future.
+          </h1>
+          <p className="hero-lead">
+            Trichy’s trusted tuition centre in Puthur since 2008. Dedicated concept-based coaching for
+            Classes 1 to 12 & Board Examinations with individual care, personal attention, and weekly tests.
+          </p>
+          <p className="hero-tagline">Better Education... Brighter Future...</p>
+
+          <div className="hero-timing-pill">
+            <Clock size={15} />
+            <span>Class Timings: 6:30 PM – 9:00 PM (Sunday Classes Available)</span>
           </div>
 
-          <div className="ref-visual-wrapper">
-            <div className="ref-image-frame">
-              <img
-                src="/images/annai-classroom-hero.jpg"
-                alt="Students studying in classroom at Annai Tuition Centre"
-              />
-              <div className="ref-chalk-doodle">
-                <span className="ref-chalk-rays">✨ Small Steps ✨</span>
-                <strong>Big Dreams</strong>
-                <GraduationCap size={22} />
-              </div>
-              <div className="ref-brush-badge">
-                Your Success Our Priority
-              </div>
-            </div>
+          <div className="hero-actions">
+            <a href="#enquiry" className="button button-gold">
+              Apply for Admission <ArrowRight size={17} />
+            </a>
+            <a
+              href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20admissions."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button button-whatsapp-hero"
+            >
+              <MessageCircle size={16} /> WhatsApp Us
+            </a>
+            <a href="tel:+919626265456" className="button button-ghost">
+              <Phone size={15} /> 96262 65456
+            </a>
+          </div>
+
+          <div className="hero-proof">
+            <span className="proof-icon">
+              <Trophy size={18} />
+            </span>
+            <span>
+              <strong>7,000+ Students Passed Out</strong>
+              <small>Established 2008 · 2 Campuses in Puthur, Trichy</small>
+            </span>
           </div>
         </div>
 
-        {/* 5-Column Reference Feature Strip */}
+        <div className="hero-art">
+          <div className="hero-showcase-box">
+            <div className="hero-showcase-head">
+              <img src="/images/annai-logo.png" alt="Annai Tuition Centre Logo" className="hero-showcase-logo" />
+              <div>
+                <strong>Annai Tuition Centre</strong>
+                <small>2 Campuses in Puthur, Trichy</small>
+              </div>
+            </div>
+            <div className="hero-showcase-photos">
+              <div className="hero-thumb">
+                <img src="/images/annai-real-classroom.jpg" alt="Branch 1 Classroom - Puthur Agraharam" />
+                <span>Branch 1 (Agraharam)</span>
+              </div>
+              <div className="hero-thumb">
+                <img src="/images/annai-branch2-classroom.jpg" alt="Branch 2 Classroom - Ramakrishna Middle School" />
+                <span>Branch 2 (Ramakrishna School)</span>
+              </div>
+            </div>
+            <div className="hero-note">
+              <span className="hero-note-icon">
+                <Trophy size={18} />
+              </span>
+              <span>
+                <strong>100% Board Exam Results</strong>
+                <small>Maths Centums & Top Scores Year after Year</small>
+              </span>
+            </div>
+          </div>
+          <div className="hero-spark spark-a">✳</div>
+          <div className="hero-spark spark-b">✦</div>
+        </div>
+      </div>
+
+      {/* 5-Column Feature Strip */}
+      <div className="container hero-features-wrap">
         <div className="ref-features-strip">
           <div className="ref-feature-item">
             <div className="ref-feature-icon icon-faculty">
@@ -1758,97 +1805,102 @@ function ReferenceHeroSection() {
             </div>
           </div>
         </div>
-
-        {/* Bottom Winged Quote */}
-        <div className="ref-bottom-quote">
-          <span className="ref-quote-wing">✦ ✦</span>
-          <span>Join Annai Tuition Centre and take the first step towards a successful tomorrow!</span>
-          <span className="ref-quote-wing">✦ ✦</span>
-        </div>
       </div>
+
+      <a className="scroll-cue" href="#achievements">
+        <span>Scroll to explore</span>
+        <ArrowDown size={14} />
+      </a>
     </section>
   );
 }
 
 /* =========================================================================
-   REAL CLASSROOM SHOWCASE SECTION (FROM USER SECOND ATTACHED PHOTO)
+   REAL CLASSROOM SHOWCASE - BOTH BRANCHES 1 & 2 WITH AUTHENTIC PHOTOS
    ========================================================================= */
 function RealClassroomSection() {
   return (
-    <section className="real-classroom-section" id="classroom">
+    <section className="real-classroom-section section" id="classroom">
       <div className="container">
-        <div className="real-class-grid">
-          <div className="real-class-photo-card">
-            <img
-              src="/images/annai-real-classroom.jpg"
-              alt="Real Classroom teaching at Annai Tuition Centre Puthur Trichy"
-            />
-            <div className="real-class-badge-pill">
-              <Camera size={13} />
-              <span>Real Classroom · 21/87 Puthur Agraharam Campus</span>
+        <SectionTitle
+          eyebrow="Inside Our 2 Campuses in Puthur"
+          title={
+            <>
+              Real Classrooms in <span className="serif-accent">Both Branches</span>
+            </>
+          }
+          text="Authentic photos from our daily classes. Disciplined, concept-first teaching with blackboard and interactive Smart Board."
+          align="align-center"
+        />
+
+        <div className="two-branch-real-grid">
+          {/* Branch 1 Real Classroom */}
+          <div className="real-branch-card">
+            <div className="real-branch-img-box">
+              <img
+                src="/images/annai-real-classroom.jpg"
+                alt="Branch 1 Classroom - 21/87 Puthur Agraharam, Trichy"
+              />
+              <span className="real-branch-badge gold-badge">
+                <Camera size={13} /> Branch 1 (Registered Office)
+              </span>
             </div>
-            <div className="real-class-timing-overlay">
-              <strong>
-                <Clock size={14} /> Class Timings: 6:30 PM – 9:00 PM
-              </strong>
-              <span>Monday – Saturday & Sunday Special Classes</span>
+            <div className="real-branch-info">
+              <h3>Branch 1: 21/87, Puthur Agraharam</h3>
+              <p className="real-branch-landmark">Near Bishop School, Puthur, Trichy – 17</p>
+              <ul className="real-branch-points">
+                <li><Check size={14} /> Individual desk seating with daily notebook checking</li>
+                <li><Check size={14} /> Interactive Smart Board & concept blackboard coaching</li>
+                <li><Check size={14} /> Class Timings: 6:30 PM – 9:00 PM (Sunday classes available)</li>
+              </ul>
+              <div className="real-branch-chips">
+                <span className="chip"><ShieldCheck size={12} /> 100% Safe for Girls</span>
+                <span className="chip"><Video size={12} /> 24/7 CCTV</span>
+                <span className="chip"><Car size={12} /> Dedicated Parking</span>
+              </div>
             </div>
           </div>
 
-          <div className="real-class-copy">
-            <span className="eyebrow">Authentic Campus Life</span>
-            <h2>Inside Our Real Classroom in Puthur, Trichy</h2>
-            <p className="lead">
-              Experience our disciplined, concept-first learning atmosphere where dedicated faculty explain formulas step-by-step
-              on the board with individual care for every student.
-            </p>
-
-            <div className="real-class-features">
-              <div className="real-class-feature-row">
-                <div className="real-feat-icon blue">
-                  <BookOpen size={20} />
-                </div>
-                <div className="real-feat-text">
-                  <strong>Concept-First Blackboard Teaching</strong>
-                  <p>Step-by-step problem breakdown in Maths (Trigonometry, Calculus), Sciences & Accountancy.</p>
-                </div>
-              </div>
-
-              <div className="real-class-feature-row">
-                <div className="real-feat-icon gold">
-                  <Clock size={20} />
-                </div>
-                <div className="real-feat-text">
-                  <strong>Class Timings: 6:30 PM – 9:00 PM</strong>
-                  <p>Structured daily schedule with Sunday special classes allowing students to master concepts and prepare for exams.</p>
-                </div>
-              </div>
-
-              <div className="real-class-feature-row">
-                <div className="real-feat-icon green">
-                  <ShieldCheck size={20} />
-                </div>
-                <div className="real-feat-text">
-                  <strong>100% Safe for Girls & 24/7 CCTV Monitored</strong>
-                  <p>Disciplined, respectful environment with dedicated parking facility for two-wheelers and bicycles.</p>
-                </div>
-              </div>
-
-              <div className="real-class-feature-row">
-                <div className="real-feat-icon purple">
-                  <Users size={20} />
-                </div>
-                <div className="real-feat-text">
-                  <strong>Personal Mentorship & Small Batches</strong>
-                  <p>Individual desk seating where mentors check every student’s notebook and clear doubts patiently.</p>
-                </div>
+          {/* Branch 2 Real Classroom (User uploaded image!) */}
+          <div className="real-branch-card">
+            <div className="real-branch-img-box">
+              <img
+                src="/images/annai-branch2-classroom.jpg"
+                alt="Branch 2 Classroom - Ramakrishna Middle School, Puthur, Trichy"
+              />
+              <span className="real-branch-badge navy-badge">
+                <Camera size={13} /> Branch 2 (Campus)
+              </span>
+            </div>
+            <div className="real-branch-info">
+              <h3>Branch 2: Ramakrishna Middle School</h3>
+              <p className="real-branch-landmark">Near Aruna Theatre, Puthur, Trichy – 17</p>
+              <ul className="real-branch-points">
+                <li><Check size={14} /> High-focus Mathematics, Science & Commerce classes</li>
+                <li><Check size={14} /> Step-by-step formula drills and chapter revision tests</li>
+                <li><Check size={14} /> Class Timings: 6:30 PM – 9:00 PM (Sunday classes available)</li>
+              </ul>
+              <div className="real-branch-chips">
+                <span className="chip"><ShieldCheck size={12} /> 100% Safe for Girls</span>
+                <span className="chip"><Video size={12} /> 24/7 CCTV</span>
+                <span className="chip"><Car size={12} /> Dedicated Parking</span>
               </div>
             </div>
-
-            <Link to="/contact" className="button button-gold">
-              Book a Classroom Visit <ArrowRight size={15} />
-            </Link>
           </div>
+        </div>
+
+        <div className="real-class-actions">
+          <a href="#enquiry" className="button button-gold">
+            Book a Classroom Visit <ArrowRight size={15} />
+          </a>
+          <a
+            href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20visit%20your%20campus%20in%20Puthur."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button-outline"
+          >
+            <MessageCircle size={15} /> Chat on WhatsApp
+          </a>
         </div>
       </div>
     </section>
@@ -1940,8 +1992,8 @@ function SmartBoardSection() {
 function Home() {
   return (
     <main>
-      {/* 1. Reference Hero Section */}
-      <ReferenceHeroSection />
+      {/* 1. Original Prestigious Deep Navy & Gold Hero */}
+      <Hero />
 
       {/* 2. 7,000+ Students Passed Out Achievement Stats Strip */}
       <div id="achievements">
@@ -1954,14 +2006,11 @@ function Home() {
       {/* 4. Specialized Board Exam Coaching (Classes 10 & 12) */}
       <CoachingSection />
 
-      {/* 5. Subject Tutorials & Concept Coaching */}
+      {/* 5. Subject Tutorials & Daily Teaching Routine */}
       <TutorialsSpotlightSection />
 
-      {/* 6. Real Classroom Showcase */}
+      {/* 6. Real Classroom Showcase - Both Branches with Photos */}
       <RealClassroomSection />
-
-      {/* 6. Interactive Smart Board Section */}
-      <SmartBoardSection />
 
       {/* 7. Facilities Section (CCTV, Dedicated Parking Facility, Smart Boards, MSME) */}
       <FacilitiesSection />
@@ -1969,28 +2018,91 @@ function Home() {
       {/* 8. Student Results Preview */}
       <ResultsPreview />
 
-      {/* 9. Our Branches Section with Google Maps */}
+      {/* 9. Our 2 Branches with Google Maps & Classroom Photos */}
       <BranchesSection />
 
-      {/* 10. Banner CTA */}
-      <section className="banner-cta">
-        <div className="container banner-inner">
-          <span className="banner-icon">
-            <GraduationCap size={25} />
-          </span>
-          <div>
-            <span className="eyebrow eyebrow-light">Learn Today... Lead Tomorrow.</span>
-            <h2>Ready to give your child the winning edge?</h2>
-            <p>Class timings: 6:30 PM – 9:00 PM with Sunday special classes. Admissions open for current batches.</p>
-          </div>
-          <Link to="/contact" className="button button-gold">
-            Enroll Now <ArrowRight size={16} />
-          </Link>
-        </div>
-      </section>
-
-      <ContactPreview />
+      {/* 10. Direct Admission Enquiry Section (Prominent Enquiry Form on Home) */}
+      <HomeEnquirySection />
     </main>
+  );
+}
+
+/* =========================================================================
+   HOME QUICK ADMISSION ENQUIRY SECTION (ENQUIRY FORM PROMINENT ON HOME)
+   ========================================================================= */
+function HomeEnquirySection() {
+  return (
+    <section className="section home-enquiry-section" id="enquiry">
+      <div className="container">
+        <SectionTitle
+          eyebrow="Admissions Open 2026–2027"
+          title={
+            <>
+              Direct Admission <span className="serif-accent">Enquiry</span>
+            </>
+          }
+          text="Fill out your details below to enquire about classes, batch timings (6:30 PM – 9:00 PM), or visit either campus in Puthur, Trichy."
+          align="align-center"
+        />
+
+        <div className="home-enquiry-grid">
+          <div className="home-enquiry-info-card">
+            <h3>Why Parents Choose Annai</h3>
+            <p>16+ years of academic trust in Puthur, Trichy. Simple concept teaching, personal care, and high board marks.</p>
+
+            <div className="enquiry-facts-list">
+              <div className="enquiry-fact-item">
+                <Clock size={18} />
+                <div>
+                  <strong>Class Timings</strong>
+                  <span>6:30 PM – 9:00 PM (Mon–Sat + Sunday Special Classes)</span>
+                </div>
+              </div>
+
+              <div className="enquiry-fact-item">
+                <MapPin size={18} />
+                <div>
+                  <strong>2 Campuses in Puthur</strong>
+                  <span>Branch 1 (Agraharam) & Branch 2 (Ramakrishna School)</span>
+                </div>
+              </div>
+
+              <div className="enquiry-fact-item">
+                <ShieldCheck size={18} />
+                <div>
+                  <strong>100% Safety for Girls</strong>
+                  <span>24/7 CCTV Camera Monitored at Both Campuses</span>
+                </div>
+              </div>
+
+              <div className="enquiry-fact-item">
+                <Car size={18} />
+                <div>
+                  <strong>Dedicated Parking</strong>
+                  <span>Safe parking facility for cycles & two-wheelers</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="enquiry-direct-calls">
+              <span>Need immediate assistance? Call us directly:</span>
+              <div className="enquiry-call-row">
+                <a href="tel:+919626265456" className="button button-primary">
+                  <Phone size={14} /> 96262 65456
+                </a>
+                <a href="tel:+919994148476" className="button button-outline">
+                  <Phone size={14} /> 99941 48476
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="home-enquiry-form-card">
+            <ContactForm />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
