@@ -335,9 +335,9 @@ function Header() {
         <nav className={open ? 'nav open' : 'nav'} aria-label="Main navigation">
           {[
             { label: 'Home', path: '/' },
+            { label: 'Faculty', path: '/faculty' },
             { label: 'Courses', path: '/classes' },
             { label: 'Results', path: '/results' },
-            { label: 'About Us', path: '/about' },
             { label: 'Contact', path: '/contact' },
           ].map((item) => (
             <NavLink
@@ -432,9 +432,9 @@ function Footer() {
         <div>
           <h3>Explore</h3>
           <Link to="/">Home</Link>
+          <Link to="/faculty">Faculty & Mentors</Link>
           <Link to="/classes">Classes & Subjects</Link>
           <Link to="/results">Student Results & Toppers</Link>
-          <Link to="/about">About Us & Faculty</Link>
           <Link to="/contact">Contact & Campuses</Link>
         </div>
 
@@ -1713,7 +1713,10 @@ function Home() {
         <AchievementsStrip />
       </div>
 
-      {/* 3. Specialized Board Exam Coaching (Classes 10 & 12) */}
+      {/* 3. Distinguished Faculty Spotlight */}
+      <FacultySection />
+
+      {/* 4. Specialized Board Exam Coaching (Classes 10 & 12) */}
       <CoachingSection />
 
       {/* 4. Advanced Subjects & Specialized Tutorials (CS, Bio, Commerce, Maths) */}
@@ -2985,12 +2988,12 @@ export default function App() {
     <AppShell>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/faculty" element={<FacultyPage />} />
         <Route path="/classes" element={<ClassesPage />} />
         <Route path="/results" element={<Results />} />
-        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         {/* Simplified navigation aliases for backward compatibility */}
-        <Route path="/faculty" element={<About />} />
+        <Route path="/about" element={<FacultyPage />} />
         <Route path="/admissions" element={<Contact />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<NotFound />} />
