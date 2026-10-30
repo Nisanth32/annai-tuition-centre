@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import { Link, NavLink, Route, Routes, useLocation, useSearchParams } from 'react-router-dom';
 import {
   ArrowDown,
   ArrowRight,
@@ -336,9 +336,8 @@ function Header() {
           {[
             { label: 'Home', path: '/' },
             { label: 'Courses', path: '/classes' },
-            { label: 'About Us', path: '/about' },
-            { label: 'Faculty', path: '/faculty' },
             { label: 'Results', path: '/results' },
+            { label: 'About Us', path: '/about' },
             { label: 'Contact', path: '/contact' },
           ].map((item) => (
             <NavLink
@@ -362,7 +361,7 @@ function Header() {
             <MessageCircle size={15} />
             <span>Chat on WhatsApp</span>
           </a>
-          <Link className="button button-primary nav-cta" to="/admissions" onClick={() => setOpen(false)}>
+          <Link className="button button-gold nav-cta" to="/contact" onClick={() => setOpen(false)}>
             Enroll Now <ArrowRight size={15} />
           </Link>
         </nav>
@@ -432,12 +431,11 @@ function Footer() {
 
         <div>
           <h3>Explore</h3>
-          <Link to="/about">About Us & 7K+ Legacy</Link>
+          <Link to="/">Home</Link>
           <Link to="/classes">Classes & Subjects</Link>
-          <Link to="/faculty">Faculty & Teaching Careers</Link>
           <Link to="/results">Student Results & Toppers</Link>
-          <Link to="/admissions">Admission Enquiry</Link>
-          <Link to="/contact">Our Branches & Parking</Link>
+          <Link to="/about">About Us & Faculty</Link>
+          <Link to="/contact">Contact & Campuses</Link>
         </div>
 
         <div>
@@ -660,7 +658,7 @@ function CoachingSection() {
             </ul>
 
             <div className="coaching-card-action">
-              <Link to="/admissions?class=10th%20Standard" className="button button-gold">
+              <Link to="/contact?class=10th%20Standard" className="button button-gold">
                 Enquire for 10th Admission <ArrowRight size={15} />
               </Link>
             </div>
@@ -705,7 +703,7 @@ function CoachingSection() {
             </ul>
 
             <div className="coaching-card-action">
-              <Link to="/admissions?class=12th%20Standard" className="button button-primary">
+              <Link to="/contact?class=12th%20Standard" className="button button-primary">
                 Enquire for 12th Admission <ArrowRight size={15} />
               </Link>
             </div>
@@ -949,7 +947,7 @@ export function Legacy70kSection() {
             </div>
 
             <div className="milestone-action-cta">
-              <Link to="/admissions" className="button button-gold">
+              <Link to="/contact" className="button button-gold">
                 Join Our Next Batch of Toppers <ArrowRight size={15} />
               </Link>
             </div>
@@ -1161,7 +1159,7 @@ export function FacultySection() {
             <span>Meet Founder S. Thiyagarajan and our experienced faculty at our Puthur campus.</span>
           </div>
           <div className="faculty-strip-cta">
-            <Link to="/admissions" className="button button-primary">
+            <Link to="/contact" className="button button-primary">
               Book Faculty Consultation <ArrowRight size={15} />
             </Link>
           </div>
@@ -1223,7 +1221,7 @@ export function SubjectsTutorialsSection() {
                 </ul>
                 <div className="subject-card-action">
                   <Link
-                    to={`/admissions?class=${encodeURIComponent(subj.title)}`}
+                    to={`/contact?class=${encodeURIComponent(subj.title)}`}
                     className="subject-link"
                   >
                     Enquire for {subj.title} <ArrowRight size={14} />
@@ -1351,7 +1349,7 @@ function BranchesSection() {
                   <ExternalLink size={14} /> Open Map
                 </a>
                 <Link
-                  to={`/admissions?branch=${encodeURIComponent(branch.fullAddress)}`}
+                  to={`/contact?branch=${encodeURIComponent(branch.fullAddress)}`}
                   className="button button-gold branch-enquire-btn"
                 >
                   Enquire for this Campus <ArrowRight size={14} />
@@ -1438,7 +1436,7 @@ function ReferenceHeroSection() {
               <span>Class Timings: 6:30 PM – 9:00 PM (Sunday Classes Available)</span>
             </div>
             <div className="ref-cta-group">
-              <Link to="/admissions" className="ref-enroll-btn">
+              <Link to="/contact" className="ref-enroll-btn">
                 Enroll Now <ArrowRight size={17} />
               </Link>
               <a
@@ -1612,7 +1610,7 @@ function RealClassroomSection() {
               </div>
             </div>
 
-            <Link to="/admissions" className="button button-gold">
+            <Link to="/contact" className="button button-gold">
               Book a Classroom Visit <ArrowRight size={15} />
             </Link>
           </div>
@@ -1707,116 +1705,36 @@ function SmartBoardSection() {
 function Home() {
   return (
     <main>
-      {/* 1. Reference Hero Section (matching user image 1) */}
+      {/* 1. Reference Hero Section */}
       <ReferenceHeroSection />
 
-      {/* 2. Real Classroom Showcase (user image 2) */}
-      <RealClassroomSection />
-
-      {/* 3. Interactive Smart Board Section */}
-      <SmartBoardSection />
-
-      {/* 4. 7,000+ Students Passed Out Achievement Stats Strip */}
+      {/* 2. 7,000+ Students Passed Out Achievement Stats Strip */}
       <div id="achievements">
         <AchievementsStrip />
       </div>
 
-      {/* 5. Comprehensive 7,000+ Milestone Section */}
-      <Legacy70kSection />
-
-      {/* 6. Advanced Subjects & Specialized Tutorials (CS, Bio, Commerce, Maths) */}
-      <SubjectsTutorialsSection />
-
-      {/* 7. Welcome Summary (Small & Sweet) */}
-      <section className="welcome section" id="welcome">
-        <div className="container welcome-grid">
-          <div>
-            <SectionTitle
-              eyebrow="A little about us"
-              title={
-                <>
-                  A steady place to <span className="serif-accent">grow</span>.
-                </>
-              }
-              text="Annai Tuition Centre supports students and families in Trichy with a welcoming place to learn, build deep concept understanding, and achieve outstanding board exam results."
-            />
-            <p className="body-copy">
-              Founded in 2008 by <strong>S. Thiyagarajan</strong> (M.Sc., IT., B.Ed.), Annai Tuition Centre has guided
-              over <strong>7,000+ students</strong> with personalized academic care, certified MSME standards,
-              dedicated parking facilities, and uncompromising safety for all learners.
-            </p>
-            <Link to="/about" className="text-link">
-              Get to know Annai <ArrowRight size={16} />
-            </Link>
-          </div>
-          <div className="welcome-cards">
-            <div className="welcome-card">
-              <span className="card-icon navy-icon">
-                <BookOpen size={21} />
-              </span>
-              <span className="card-overline">Academic Excellence</span>
-              <h3>Focused Classroom Learning</h3>
-              <p>Individual student desks, disciplined study environment, and concept-first teaching by senior faculty.</p>
-            </div>
-            <div className="welcome-card welcome-card-gold">
-              <span className="card-icon gold-icon">
-                <ShieldCheck size={21} />
-              </span>
-              <span className="card-overline">Safety & Convenience</span>
-              <h3>100% Safe for Girls & Dedicated Parking</h3>
-              <p>Round-the-clock CCTV surveillance, safe on-site two-wheeler & parent vehicle parking facility.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. Specialized Board Exam Coaching (Classes 10 & 12) */}
+      {/* 3. Specialized Board Exam Coaching (Classes 10 & 12) */}
       <CoachingSection />
 
-      {/* 9. Distinguished Faculty Section (7-8+ Years Experience) */}
-      <FacultySection />
+      {/* 4. Advanced Subjects & Specialized Tutorials (CS, Bio, Commerce, Maths) */}
+      <SubjectsTutorialsSection />
 
-      {/* 10. Classes Overview Strip */}
-      <section className="classes-strip section">
-        <div className="container">
-          <div className="strip-heading">
-            <div>
-              <span className="eyebrow">All Learning Paths</span>
-              <h2>All Classes Supported</h2>
-            </div>
-            <Link to="/classes" className="text-link">
-              Explore all classes <ArrowRight size={16} />
-            </Link>
-          </div>
-          <div className="class-chips">
-            {classes.map((c, i) => (
-              <Link key={c} to={`/admissions?class=${encodeURIComponent(c)}`} className="class-chip">
-                <span className="class-number">{i === 0 ? '01' : `0${i + 2}`}</span>
-                <span>{c}</span>
-                <ArrowRight size={15} />
-              </Link>
-            ))}
-          </div>
-          <p className="note-small">Class timings: 6:30 PM – 9:00 PM (Sunday classes available). Contact us for current admissions.</p>
-        </div>
-      </section>
+      {/* 5. Real Classroom Showcase */}
+      <RealClassroomSection />
 
-      {/* 11. Facilities Section (CCTV, Dedicated Parking Facility, Smart Boards, MSME) */}
+      {/* 6. Interactive Smart Board Section */}
+      <SmartBoardSection />
+
+      {/* 7. Facilities Section (CCTV, Dedicated Parking Facility, Smart Boards, MSME) */}
       <FacilitiesSection />
 
-      {/* 12. Girls' Safety and Security Section */}
-      <GirlsSafetySection />
-
-      {/* 13. Student Results Preview */}
+      {/* 8. Student Results Preview */}
       <ResultsPreview />
 
-      {/* 14. Our Branches Section */}
+      {/* 9. Our Branches Section with Google Maps */}
       <BranchesSection />
 
-      {/* 15. Social Media Links Section */}
-      <SocialMediaSection />
-
-      {/* 16. Banner CTA */}
+      {/* 10. Banner CTA */}
       <section className="banner-cta">
         <div className="container banner-inner">
           <span className="banner-icon">
@@ -1824,10 +1742,10 @@ function Home() {
           </span>
           <div>
             <span className="eyebrow eyebrow-light">Learn Today... Lead Tomorrow.</span>
-            <h2>Ready to take the next step?</h2>
-            <p>Class timings: 6:30 PM – 9:00 PM with Sunday special classes. Tell us what your child needs to secure their seat.</p>
+            <h2>Ready to give your child the winning edge?</h2>
+            <p>Class timings: 6:30 PM – 9:00 PM with Sunday special classes. Admissions open for current batches.</p>
           </div>
-          <Link to="/admissions" className="button button-gold">
+          <Link to="/contact" className="button button-gold">
             Enroll Now <ArrowRight size={16} />
           </Link>
         </div>
@@ -1941,8 +1859,8 @@ function About() {
             </div>
 
             <div className="about-cta-row">
-              <Link to="/admissions" className="button button-primary">
-                Ask about admission <ArrowRight size={16} />
+              <Link to="/contact" className="button button-gold">
+                Enquire for Admission <ArrowRight size={16} />
               </Link>
               <a href="tel:+919626265456" className="button button-outline">
                 <Phone size={15} /> 96262 65456
@@ -2066,7 +1984,7 @@ function ClassesPage() {
                 <div className="class-chip-timing">
                   <Clock size={12} /> Daily: 6:30 PM – 9:00 PM
                 </div>
-                <Link to={`/admissions?class=${encodeURIComponent(c)}`} className="course-link">
+                <Link to={`/contact?class=${encodeURIComponent(c)}`} className="course-link">
                   Enquire about this class <ArrowRight size={15} />
                 </Link>
               </article>
@@ -2472,21 +2390,31 @@ function ContactPreview() {
 }
 
 function Contact() {
+  const [params] = useSearchParams();
+  const classParam = params.get('class');
+  const branchParam = params.get('branch');
+  let defaultSubject = '';
+  if (classParam) {
+    defaultSubject = `I would like to enquire about coaching for ${classParam}.`;
+  } else if (branchParam) {
+    defaultSubject = `I would like to enquire about admissions at ${branchParam}.`;
+  }
+
   return (
     <main>
       <PageHero
-        eyebrow="Get in touch"
+        eyebrow="Get in touch & Admissions"
         title={
           <>
-            We’re just a call <em>away.</em>
+            We’re just a call or message <em>away.</em>
           </>
         }
-        text="Contact Annai Tuition Centre to ask about classes, admission, or visiting either location in Puthur, Trichy."
+        text="Contact Annai Tuition Centre to ask about classes, admissions, batch timings (6:30 PM – 9:00 PM), or visit either campus in Puthur, Trichy."
       />
 
       <section className="phone-band">
         <div className="container">
-          <span className="eyebrow eyebrow-light">Call Us Directly</span>
+          <span className="eyebrow eyebrow-light">Call or WhatsApp Directly</span>
           <div className="phone-links">
             {phoneNumbers.map((n) => (
               <a key={n} href={`tel:+91${n.replaceAll(' ', '')}`}>
@@ -2495,41 +2423,41 @@ function Contact() {
               </a>
             ))}
             <a
-              href="https://wa.me/919626265456"
+              href="https://wa.me/919626265456?text=Hi%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20admissions."
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-phone-link"
             >
-              WhatsApp: 96262 65456
+              <MessageCircle size={17} /> WhatsApp: 96262 65456
             </a>
           </div>
         </div>
       </section>
 
-      {/* Branches with detailed cards */}
+      {/* Branches with detailed cards & Google Maps */}
       <BranchesSection />
 
       {/* Contact Form Section */}
-      <section className="section">
+      <section className="section" id="enquiry">
         <div className="container contact-form-layout">
           <div>
-            <span className="eyebrow">Write to us</span>
-            <h2>How can we help?</h2>
-            <p>Leave a contact enquiry and our academic counselors will follow up using your preferred details.</p>
+            <span className="eyebrow">Quick Enquiry</span>
+            <h2>How can we help you?</h2>
+            <p>Leave your enquiry below. Our team connects immediately via WhatsApp or phone to guide you on courses, batch timings, and admissions.</p>
 
             <div className="contact-side-card">
               <h3>Centre Operating Information</h3>
               <p>
-                <strong>Center Head:</strong> S. Thiyagarajan (M.Sc., IT., B.Ed.)
+                <strong>Centre Head:</strong> S. Thiyagarajan (M.Sc., IT., B.Ed.)
               </p>
               <p>
-                <strong>Admissions & Enquiries:</strong> Available Mon – Sat
+                <strong>Class Timings:</strong> 6:30 PM – 9:00 PM (Mon – Sat & Sunday Special Classes)
               </p>
               <p>
                 <strong>Phone Numbers:</strong> 96262 65456, 99941 48476
               </p>
               <p>
-                <strong>Facilities:</strong> 24/7 CCTV Monitoring, Dedicated Parking Facility, Smart-Base Classrooms, 100% Safe for Girls
+                <strong>Facilities:</strong> 24/7 CCTV Monitoring, Dedicated Parking Facility, Smart Boards, 100% Safe for Girls
               </p>
               <div className="contact-social-embed">
                 <strong>Follow us on Social Media:</strong>
@@ -2537,14 +2465,14 @@ function Contact() {
               </div>
             </div>
           </div>
-          <ContactForm />
+          <ContactForm defaultSubject={defaultSubject} />
         </div>
       </section>
     </main>
   );
 }
 
-function ContactForm() {
+function ContactForm({ defaultSubject = '' }) {
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState('');
 
@@ -2554,38 +2482,61 @@ function ContactForm() {
     if (!form.reportValidity()) return;
     setBusy(true);
     setMessage('');
+
+    const data = Object.fromEntries(new FormData(form));
+
+    // Compile WhatsApp message
+    const msgLines = [
+      'Hello Annai Tuition Centre, I have an enquiry:',
+      `• Name: ${data.parent_name}`,
+      `• Mobile: ${data.mobile}`,
+      data.email ? `• Email: ${data.email}` : null,
+      `• Message / Subject: ${data.message}`,
+    ].filter(Boolean);
+
+    const waText = msgLines.join('\n');
+    const waUrl = `https://wa.me/919626265456?text=${encodeURIComponent(waText)}`;
+
+    // Open WhatsApp directly
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
+
+    // Attempt background save if VITE_API_BASE_URL is set
     try {
       const url = import.meta.env.VITE_API_BASE_URL;
-      if (!url) throw new Error('Contact enquiries are not connected yet. Please call 96262 65456 or 99941 48476.');
-      const r = await fetch(`${url.replace(/\/$/, '')}/contact/`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(Object.fromEntries(new FormData(form))),
-      });
-      const data = await r.json();
-      if (!r.ok) throw new Error(apiErrorText(data, 'We could not save this enquiry. Please call us instead.'));
-      setMessage('Your enquiry has been saved. We’ll be in touch.');
-      form.reset();
-    } catch (err) {
-      setMessage(err.message);
-    } finally {
-      setBusy(false);
-    }
+      if (url) {
+        await fetch(`${url.replace(/\/$/, '')}/contact/`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+      }
+    } catch {}
+
+    setMessage('Your enquiry has been opened in WhatsApp. Please tap Send to complete. You can also call us directly at 96262 65456.');
+    setBusy(false);
+    form.reset();
   }
 
   return (
     <form onSubmit={submit} className="contact-form form-card">
       <label>
         Your name *
-        <input name="parent_name" required maxLength="120" placeholder="Full name" />
+        <input name="parent_name" required maxLength="120" placeholder="Full name" autoComplete="name" />
       </label>
       <label>
         Mobile number *
-        <input name="mobile" required inputMode="tel" pattern="[+0-9 ()-]{10,18}" placeholder="e.g. 98765 43210" />
+        <input
+          name="mobile"
+          required
+          inputMode="tel"
+          pattern="[+0-9 ()-]{10,18}"
+          placeholder="e.g. 98765 43210"
+          autoComplete="tel"
+        />
       </label>
       <label>
         Email address
-        <input type="email" name="email" maxLength="254" placeholder="Optional" autoComplete="off" />
+        <input type="email" name="email" maxLength="254" placeholder="Optional" autoComplete="email" />
       </label>
       <label>
         Message *
@@ -2594,18 +2545,15 @@ function ContactForm() {
           required
           rows="4"
           maxLength="1200"
+          defaultValue={defaultSubject}
           placeholder="Which class or subject are you enquiring about?"
         />
       </label>
-      <label className="consent">
-        <input name="consent" type="checkbox" value="true" required />
-        <span>I agree that Annai Tuition Centre may contact me regarding this enquiry. *</span>
-      </label>
-      <button disabled={busy} className="button button-primary">
+      <button disabled={busy} className="button button-gold form-submit" style={{ width: '100%', marginTop: '14px' }}>
         {busy ? 'Sending…' : 'Send enquiry'} <Send size={15} />
       </button>
       {message && (
-        <p role="status" className="form-status">
+        <p role="status" className="form-status success">
           {message}
         </p>
       )}
@@ -3037,12 +2985,13 @@ export default function App() {
     <AppShell>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/faculty" element={<FacultyPage />} />
         <Route path="/classes" element={<ClassesPage />} />
         <Route path="/results" element={<Results />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/admissions" element={<Admissions />} />
+        {/* Simplified navigation aliases for backward compatibility */}
+        <Route path="/faculty" element={<About />} />
+        <Route path="/admissions" element={<Contact />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
