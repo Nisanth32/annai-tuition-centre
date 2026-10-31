@@ -329,9 +329,9 @@ function Brand({ small = false }) {
   return (
     <Link className={`brand ${small ? 'brand-small' : ''}`} to="/" aria-label="Annai Tuition Centre home">
       <img className="brand-logo" src="/images/annai-logo.png" alt="Annai Tuition Centre Logo" />
-      <span>
-        <strong>Annai</strong>
-        <small>Tuition Centre</small>
+      <span className="brand-text-col">
+        <strong className="brand-main-title">ANNAI TUITION CENTRE</strong>
+        <small className="brand-sub-title">ESTD. 2008 · PUTHUR, TRICHY</small>
       </span>
     </Link>
   );
@@ -1033,53 +1033,7 @@ function FacilitiesSection() {
             </div>
           </div>
 
-          {/* MSME Registered Quality */}
-          <div className="facility-card">
-            <div className="facility-img-wrap">
-              <img
-                src="/images/facility-msme.jpg"
-                alt="MSME Registered Institution Govt of India"
-                onError={(e) => { e.currentTarget.src = '/images/annai-logo.png'; }}
-              />
-              <span className="facility-img-badge">
-                <ShieldCheck size={13} /> Govt. of India Recognized
-              </span>
-            </div>
-            <div className="facility-card-body">
-              <div className="facility-card-title-row">
-                <div className="facility-icon msme-icon">
-                  <ShieldCheck size={20} />
-                </div>
-                <h3>MSME Registered Institution</h3>
-              </div>
-              <p>
-                Recognized and registered with MSME (Govt. of India), committed to ethical education, structured
-                academic calendar, and student-first mentoring since 2008.
-              </p>
-              <span
-                className="facility-tag"
-                style={{
-                  background: 'rgba(13, 27, 62, 0.95)',
-                  border: '1.5px solid #f59e0b',
-                  color: '#ffd875',
-                  fontWeight: 900,
-                  fontSize: '12px',
-                  padding: '7px 18px',
-                  borderRadius: '999px',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  width: 'max-content',
-                  letterSpacing: '0.06em',
-                  textTransform: 'uppercase',
-                  boxShadow: '0 4px 15px rgba(0,0,0,0.6)',
-                  marginTop: 'auto',
-                }}
-              >
-                Government Certified
-              </span>
-            </div>
           </div>
-        </div>
       </div>
     </section>
   );
@@ -1389,17 +1343,7 @@ export function FacultySection() {
           </div>
         </div>
 
-        <div className="faculty-advisory-strip" style={{ marginTop: '36px' }}>
-          <div>
-            <strong>Need academic guidance or subject counselling?</strong>
-            <span>Meet Founder S. Thiyagarajan and our experienced faculty at our Puthur campus.</span>
-          </div>
-          <div className="faculty-strip-cta">
-            <Link to="/admissions" className="button button-primary">
-              Book Faculty Consultation <ArrowRight size={15} />
-            </Link>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
@@ -1410,13 +1354,13 @@ export function SubjectsTutorialsSection() {
     <section className="subjects-section section" id="subjects-tutorials">
       <div className="container">
         <SectionTitle
-          eyebrow="Subject Mastery & Special Batches"
+          eyebrow="Subject Offerings"
           title={
             <>
-              Computer Science, Biology & <span className="serif-accent">Specialized Tutorials</span>.
+              Computer Science, Biology & <span className="serif-accent">Specialized Tutorials</span>
             </>
           }
-          text="From high-scoring Computer Science coding labs and diagram-intensive Biology drills to daily 1-on-1 concept tutorials, we deliver targeted subject mastery for every student."
+          text="Core subjects offered with focused curriculum coverage and concept coaching."
           align="align-center"
         />
 
@@ -1427,13 +1371,7 @@ export function SubjectsTutorialsSection() {
                 ? Code
                 : subj.icon === 'Dna'
                 ? Dna
-                : subj.icon === 'Layers'
-                ? Layers
-                : subj.icon === 'Cpu'
-                ? Cpu
-                : subj.icon === 'Sparkles'
-                ? Sparkles
-                : Microscope;
+                : Layers;
 
             return (
               <div className="subject-card" key={subj.id}>
@@ -1442,14 +1380,30 @@ export function SubjectsTutorialsSection() {
                 </div>
                 <h3>{subj.title}</h3>
                 <span className="subject-card-sub">{subj.grade}</span>
-                <ul className="subject-card-points">
-                  {subj.points.map((pt, idx) => (
-                    <li key={idx}>
-                      <Check size={14} />
-                      <span>{pt}</span>
-                    </li>
+                
+                <div className="subject-chips-wrap" style={{ display: 'flex', flexDirection: 'column', gap: '8px', margin: '18px 0' }}>
+                  {subj.subjects.map((s) => (
+                    <div
+                      key={s}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        background: 'rgba(7, 21, 54, 0.75)',
+                        border: '1px solid rgba(245, 158, 11, 0.3)',
+                        borderRadius: '6px',
+                        padding: '7px 12px',
+                        fontSize: '12px',
+                        fontWeight: 600,
+                        color: '#f4f8ff',
+                      }}
+                    >
+                      <Check size={14} style={{ color: '#f5b82e', flexShrink: 0 }} />
+                      <span>{s}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
+
                 <div className="subject-card-action">
                   <Link
                     to={`/admissions?class=${encodeURIComponent(subj.title)}`}
@@ -2321,8 +2275,6 @@ function ClassesPage() {
       {/* Specialized Computer Science, Biology & Tutorials */}
       <SubjectsTutorialsSection />
 
-      {/* Dedicated Coaching Section for Classes 10 & 12 */}
-      <CoachingSection />
 
       {/* All Classes 1 to 12 Grade Levels */}
       <section className="section">
