@@ -5193,3 +5193,179 @@ html, body {
     padding-bottom: 76px !important;
   }
 }
+
+
+/* =========================================================================
+   PROFESSIONAL EDITORIAL UNBOXED DESIGN OVERRIDES (REMOVE "BOX" FEEL)
+   ========================================================================= */
+
+/* Remove harsh borders, excessive shadows, and repeated boxed containers */
+.welcome-card, 
+.course-card, 
+.location-card, 
+.form-card, 
+.branch-card, 
+.milestone-stat-card, 
+.facility-card, 
+.tutorial-card, 
+.aside-card, 
+.results-list, 
+.ref-feature-card, 
+.careers-simple-card, 
+.student-feature, 
+.founder-highlight-box, 
+.class-simple-card,
+.poster-tile,
+.class-chip,
+.score-card,
+.marks-only,
+.about-logo-card,
+.safety-card-box,
+.home-enquiry-card {
+  background: rgba(12, 30, 74, 0.45) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Hover effect: Subtle lift with gentle gold highlight, no heavy glowing shadows */
+.welcome-card:hover, 
+.course-card:hover, 
+.branch-card:hover, 
+.facility-card:hover, 
+.careers-simple-card:hover,
+.class-simple-card:hover,
+.poster-tile:hover,
+.student-feature:hover {
+  border-color: rgba(245, 184, 46, 0.35) !important;
+  background: rgba(15, 38, 94, 0.6) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Unbox Hero Feature Strip */
+.ref-features-strip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.ref-feature-card {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid rgba(245, 184, 46, 0.25) !important;
+  border-radius: 0 !important;
+  padding: 16px 12px !important;
+  text-align: left !important;
+}
+.ref-feature-card h4 {
+  font-size: 15px !important;
+  margin: 8px 0 3px !important;
+  color: #ffffff !important;
+}
+.ref-feature-card p {
+  font-size: 12px !important;
+  color: #ffd875 !important;
+  margin: 0 !important;
+}
+
+/* Unbox Home Enquiry Section */
+.home-enquiry-card {
+  background: rgba(10, 25, 62, 0.6) !important;
+  border: 1px solid rgba(245, 184, 46, 0.2) !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  padding: 32px 28px !important;
+}
+
+/* Unbox Founder Highlight Section */
+.founder-highlight-box {
+  background: transparent !important;
+  border: none !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0 !important;
+  padding: 36px 0 !important;
+  box-shadow: none !important;
+}
+
+/* Unbox Classes Simple Cards */
+.classes-simple-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 20px !important;
+}
+.class-simple-card {
+  background: rgba(12, 30, 74, 0.4) !important;
+  border: none !important;
+  border-left: 3px solid #f5b82e !important;
+  border-radius: 0 8px 8px 0 !important;
+  padding: 20px 22px !important;
+  box-shadow: none !important;
+}
+@media (max-width: 700px) {
+  .classes-simple-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Unbox Subjects Showcase Cards */
+.subjects-showcase-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 22px !important;
+}
+.subject-card {
+  background: rgba(12, 30, 74, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  padding: 24px !important;
+}
+@media (max-width: 850px) {
+  .subjects-showcase-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Unbox Facilities Section (About page) */
+.facilities-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+}
+.facility-card {
+  background: rgba(10, 26, 64, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+}
+@media (max-width: 850px) {
+  .facilities-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Unbox Student Feature Results */
+.student-feature {
+  background: rgba(10, 26, 64, 0.45) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+/* Clean, Spacious Section Separators */
+.section {
+  padding: 72px 0 !important;
+  position: relative !important;
+}
+.section:not(:last-child):after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(245, 184, 46, 0.18) 50%, transparent 100%);
+}
