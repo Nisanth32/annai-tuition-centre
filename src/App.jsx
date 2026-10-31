@@ -88,29 +88,42 @@ export const facultyPanels = [
     ],
   },
   {
-    department: 'Biology & NEET Foundation Faculty Panel',
+    department: 'Biology (Botany & Zoology) Faculty Panel',
     qualifications: 'Experienced Botany & Zoology Specialists',
     experience: '7–8+ Years Teaching Experience',
-    badge: 'Life Sciences Panel',
-    focus: 'How We Improve Students:',
+    badge: 'Biology Specialist Panel',
+    focus: 'Key Focus Areas:',
     points: [
-      'Line-by-line NCERT and Samacheer syllabus mastery with smart 3D animations',
-      'Speed diagram drawing drills with accurate scientific labeling',
-      'Concept maps for genetics, plant physiology, and human anatomy',
-      'Foundation coaching for NEET and medical entrance fundamentals',
+      'Line-by-line NCERT and Samacheer syllabus mastery',
+      'Accurate scientific diagram drawing and labeling drills',
+      'Clear concept maps for genetics and plant & human physiology',
+      'Targeted revision sessions for board exam 100/100 centum prep',
     ],
   },
   {
-    department: 'Computer Science & Coding Faculty Panel',
-    qualifications: 'Experienced CS & IT Practical Mentors',
+    department: 'Computer Science Faculty Panel',
+    qualifications: 'Experienced CS & IT Mentors',
     experience: '7–8+ Years Teaching Experience',
-    badge: 'Computer Science Lead',
-    focus: 'How We Improve Students:',
+    badge: 'Computer Science Panel',
+    focus: 'Key Focus Areas:',
     points: [
-      'Live big-screen coding demonstrations on smart panels in Python & C++',
-      'Hands-on logic building, algorithm tracing, and syntax debugging assistance',
+      'Python & C++ syllabus concepts and logic building',
+      'Step-by-step syntax understanding and error debugging',
       'Complete MySQL database table queries and practical record guidance',
-      'Specialized sessions to secure full 100/100 marks in board practical exams',
+      'Targeted board exam practical and theory preparation',
+    ],
+  },
+  {
+    department: 'Commerce & Accountancy Faculty Panel',
+    qualifications: 'Specialized Commerce & Accountancy Mentors',
+    experience: '7–8+ Years Teaching Experience',
+    badge: 'Commerce & Accounts Panel',
+    focus: 'Key Focus Areas:',
+    points: [
+      'Step-by-step ledger balance, journal entries & final accounts practice',
+      'Business Maths formula sheets and shortcut calculation techniques',
+      'Economics and Commerce theory structured for full board marks',
+      'Regular unit tests and past board exam question paper workouts',
     ],
   },
   {
@@ -355,9 +368,8 @@ function Header() {
           {[
             { label: 'Home', path: '/' },
             { label: 'About', path: '/about' },
-            { label: 'Smart Class', path: '/smart-class' },
-            { label: 'Classes & Tutorials', path: '/classes' },
-            { label: 'Faculty', path: '/faculty' },
+            { label: 'Classes', path: '/classes' },
+            { label: 'Faculty & Careers', path: '/faculty' },
             { label: 'Results', path: '/results' },
             { label: 'Contact', path: '/contact' },
           ].map((item) => (
@@ -442,13 +454,12 @@ function Footer() {
 
         <div>
           <h3>Explore</h3>
-          <Link to="/about">About Us & 70K Legacy</Link>
-          <Link to="/smart-class">Smart-Base Classrooms</Link>
-          <Link to="/classes">Classes & Tutorials</Link>
-          <Link to="/faculty">Faculty & Mentors</Link>
-          <Link to="/results">Student Results & Toppers</Link>
-          <Link to="/admissions">Admission Enquiry</Link>
-          <Link to="/contact">Our Branches & Parking</Link>
+          <Link to="/about">About Us & 7,000+ Alumni</Link>
+          <Link to="/classes">Classes & Batches</Link>
+          <Link to="/faculty">Faculty & Careers</Link>
+          <Link to="/results">Student Results & Centums</Link>
+          <Link to="/admissions">Enquiry Now</Link>
+          <Link to="/contact">Our Campuses & Parking</Link>
         </div>
 
         <div>
@@ -539,6 +550,19 @@ function AppShell({ children }) {
       <Header />
       {children}
       <Footer />
+      <div className="mobile-bottom-bar" aria-label="Quick mobile contact">
+        <a href="tel:+919626265456" className="mobile-bar-btn call">
+          <Phone size={15} /> Call 96262 65456
+        </a>
+        <a
+          href="https://wa.me/919626265456?text=Hello%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20classes"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mobile-bar-btn whatsapp"
+        >
+          <MessageCircle size={15} /> WhatsApp
+        </a>
+      </div>
     </>
   );
 }
@@ -1322,7 +1346,7 @@ function BranchesSection() {
               Our Two Branches in <span className="serif-accent">Puthur, Trichy</span>
             </>
           }
-          text="Both campuses are fully equipped with dedicated parking facilities, 24/7 CCTV surveillance, and modern Smart-Base classrooms. Locate us via interactive Google Maps or get instant driving directions."
+          text="Both campuses are fully equipped with dedicated parking facilities, 24/7 CCTV surveillance, and modern coaching rooms. Locate us via interactive Google Maps or get instant driving directions."
           align="align-center"
         />
 
@@ -1331,7 +1355,7 @@ function BranchesSection() {
             <div className={`branch-card ${idx === 0 ? 'branch-card-primary' : ''}`} key={branch.type}>
               <div className="branch-card-header">
                 <span className="branch-type-badge">{branch.type}</span>
-                <span className="branch-status-badge">● Admissions Open</span>
+                <span className="branch-status-badge">● Active Campus</span>
               </div>
 
               <h3>{branch.name}</h3>
@@ -1509,7 +1533,7 @@ function ReferenceHero() {
               <ShieldCheck size={13} /> Since 2008
             </span>
             <span className="ref-admissions-live-pill">
-              <Sparkles size={13} /> Admissions Open 2026–2027
+              <Sparkles size={13} /> Puthur, Trichy
             </span>
           </div>
           
@@ -1635,9 +1659,9 @@ function HomeEnquirySection() {
         <div className="enquiry-now-card">
           <div className="enquiry-now-content">
             <span className="enquiry-now-badge">
-              <Sparkles size={14} /> Admissions Open 2026–2027
+              <Sparkles size={14} /> Instant Student Enquiry
             </span>
-            <h2>Enquire Now for Admissions</h2>
+            <h2>Enquire for Batches &amp; Admission</h2>
             <p>
               Get current batch availability, subject combinations, and fee details. Dedicated coaching with 7–8+ years experienced faculty and safe parking.
             </p>
@@ -2129,9 +2153,6 @@ function ClassesPage() {
 
       {/* Dedicated Coaching Section for Classes 10 & 12 */}
       <CoachingSection />
-
-      {/* Smart Base Classrooms Technology */}
-      <SmartClassSection />
 
       <section className="section">
         <div className="container">
@@ -2634,69 +2655,60 @@ function Contact() {
 }
 
 function ContactForm() {
-  const [busy, setBusy] = useState(false);
-  const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
 
-  async function submit(e) {
+  function submit(e) {
     e.preventDefault();
     const form = e.currentTarget;
     if (!form.reportValidity()) return;
-    setBusy(true);
-    setMessage('');
-    try {
-      const url = import.meta.env.VITE_API_BASE_URL;
-      if (!url) throw new Error('Contact enquiries are not connected yet. Please call 96262 65456 or 99941 48476.');
-      const r = await fetch(`${url.replace(/\/$/, '')}/contact/`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(Object.fromEntries(new FormData(form))),
-      });
-      const data = await r.json();
-      if (!r.ok) throw new Error(apiErrorText(data, 'We could not save this enquiry. Please call us instead.'));
-      setMessage('Your enquiry has been saved. We’ll be in touch.');
-      form.reset();
-    } catch (err) {
-      setMessage(err.message);
-    } finally {
-      setBusy(false);
-    }
+    const data = Object.fromEntries(new FormData(form));
+    const text = `Hello Annai Tuition Centre, I would like to make an enquiry.\n\nName: ${data.parent_name}\nMobile: ${data.mobile}${data.email ? `\nEmail: ${data.email}` : ''}\nMessage: ${data.message}`;
+    const whatsappUrl = `https://wa.me/919626265456?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    setSubmitted(true);
   }
 
   return (
     <form onSubmit={submit} className="contact-form form-card">
+      <div className="form-card-title">
+        <h3>Send Quick Enquiry</h3>
+        <p>Direct response from academic coordinator via WhatsApp &amp; Call</p>
+      </div>
       <label>
         Your name *
-        <input name="parent_name" required maxLength="120" placeholder="Full name" />
+        <input name="parent_name" required maxLength="120" placeholder="Parent or Student Name" />
       </label>
       <label>
         Mobile number *
-        <input name="mobile" required inputMode="tel" pattern="[+0-9 ()-]{10,18}" placeholder="e.g. 98765 43210" />
+        <input name="mobile" required inputMode="tel" pattern="[+0-9 ()-]{10,18}" placeholder="e.g. 96262 65456" />
       </label>
       <label>
-        Email address
+        Email address (Optional)
         <input type="email" name="email" maxLength="254" placeholder="Optional" autoComplete="off" />
       </label>
       <label>
-        Message *
+        Message / Questions *
         <textarea
           name="message"
           required
-          rows="4"
+          rows="3"
           maxLength="1200"
           placeholder="Which class or subject are you enquiring about?"
         />
       </label>
-      <label className="consent">
-        <input name="consent" type="checkbox" value="true" required />
-        <span>I agree that Annai Tuition Centre may contact me regarding this enquiry. *</span>
-      </label>
-      <button disabled={busy} className="button button-primary">
-        {busy ? 'Sending…' : 'Send enquiry'} <Send size={15} />
-      </button>
-      {message && (
-        <p role="status" className="form-status">
-          {message}
-        </p>
+      <div className="contact-form-actions">
+        <button type="submit" className="button button-gold contact-submit-btn">
+          Send Enquiry via WhatsApp <Send size={15} />
+        </button>
+        <a href="tel:+919626265456" className="button button-outline contact-call-btn">
+          <Phone size={15} /> Call 96262 65456
+        </a>
+      </div>
+      {submitted && (
+        <div className="form-status success">
+          <CheckCircle2 size={16} />
+          <span>Thank you! WhatsApp has been opened with your enquiry. You can also call us directly at 96262 65456.</span>
+        </div>
       )}
     </form>
   );
@@ -3102,26 +3114,6 @@ function Admin() {
   );
 }
 
-function SmartClassPage() {
-  return (
-    <main>
-      <PageHero
-        eyebrow="Smart-Base Digital Classrooms"
-        title={
-          <>
-            Where technology powers <em>understanding.</em>
-          </>
-        }
-        text="Experience Trichy’s premier smart-base tuition classrooms. Multi-touch digital panels, 3D biology simulations, live Computer Science coding labs, and recorded tutorial archives for maximum exam retention."
-      />
-      <SmartClassSection />
-      <SubjectsTutorialsSection />
-      <FacilitiesSection />
-      <BranchesSection />
-    </main>
-  );
-}
-
 function FacultyPage() {
   return (
     <main>
@@ -3132,9 +3124,11 @@ function FacultyPage() {
             Learn from Trichy’s <em>top mentors.</em>
           </>
         }
-        text="Led by Founder S. Thiyagarajan, M.Sc. (IT), B.Ed., alongside experienced postgraduate subject specialist faculty dedicated to continuous student improvement, personal concept clarity, and top board results."
+        text="Led by Founder S. Thiyagarajan, M.Sc. (IT), B.Ed., alongside experienced postgraduate subject specialist faculty with 7–8+ years teaching experience dedicated to continuous student improvement and board exam centums."
       />
       <FacultySection />
+      {/* Faculty Careers & Teaching Positions Hiring Section with 1-click WhatsApp Apply */}
+      <FacultyCareersSection />
       <Legacy70kSection />
       <BranchesSection />
     </main>
@@ -3147,7 +3141,6 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/smart-class" element={<SmartClassPage />} />
         <Route path="/faculty" element={<FacultyPage />} />
         <Route path="/classes" element={<ClassesPage />} />
         <Route path="/results" element={<Results />} />

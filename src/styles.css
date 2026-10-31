@@ -3373,3 +3373,283 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =========================================================================
+   ROYAL MIDNIGHT NAVY & GOLD GLOBAL THEME (PARENTAL PEACE OF MIND PALETTE)
+   ========================================================================= */
+body {
+  background: #091226 !important;
+  color: #e2e8f0 !important;
+}
+
+:root {
+  --navy: #162956;
+  --navy2: #0d1a3a;
+  --gold: #f3bd42;
+  --gold-glow: #ffd875;
+  --bg-deep: #091226;
+  --card-bg: linear-gradient(135deg, rgba(22, 41, 86, 0.92) 0%, rgba(13, 26, 58, 0.98) 100%);
+  --card-border: rgba(243, 189, 66, 0.32);
+}
+
+/* Header & Nav */
+.header {
+  background: #0d1a3a !important;
+  border-bottom: 2px solid rgba(243, 189, 66, 0.3) !important;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.5) !important;
+}
+.brand strong {
+  color: #ffffff !important;
+}
+.brand small {
+  color: var(--gold) !important;
+}
+.nav>a:not(.button) {
+  color: #d1dcfa !important;
+}
+.nav>a:not(.button):hover, .nav>a.active {
+  color: #ffd875 !important;
+}
+.menu-toggle {
+  color: #ffd875 !important;
+  border-color: rgba(243, 189, 66, 0.4) !important;
+}
+
+/* All Sections & Backgrounds */
+.section, .welcome, .classes-strip, .results-preview, .contact-preview, 
+.page-hero, .results-section, .about-section, .coaching-section, 
+.subjects-tutorials-section, .milestone-70k-section, .safety-section, 
+.faculty-careers-section, .enquiry-now-section, .not-found {
+  background: #091226 !important;
+  color: #e2e8f0 !important;
+  border-color: rgba(243, 189, 66, 0.2) !important;
+}
+
+/* Section Titles & Headings */
+.section-title h2, .strip-heading h2, .contact-preview h2, .page-hero h1,
+.milestone-heading, .careers-header h2, .not-found h1, h1, h2, h3, h4 {
+  color: #ffffff !important;
+}
+.section-title p, .body-copy, .hero-lead, .page-hero p, .milestone-intro-text,
+.careers-header p, .facility-card p, .welcome-card p, .course-card p {
+  color: #c7d4ee !important;
+}
+.serif-accent, em, .page-hero h1 em, .hero h1 em {
+  color: #f3bd42 !important;
+}
+
+/* Cards (Matching Parental Peace of Mind Visual Box) */
+.welcome-card, .course-card, .location-card, .form-card, 
+.branch-card, .job-card, .milestone-stat-card, .facility-card, 
+.tutorial-card, .aside-card:not(.aside-dark), .results-list {
+  background: linear-gradient(135deg, rgba(22, 41, 86, 0.92) 0%, rgba(13, 26, 58, 0.98) 100%) !important;
+  border: 1.5px solid rgba(243, 189, 66, 0.3) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 45px rgba(5, 12, 28, 0.5) !important;
+  color: #ffffff !important;
+  transition: all 0.25s ease !important;
+}
+
+.welcome-card:hover, .course-card:hover, .job-card:hover, .branch-card:hover, .facility-card:hover {
+  border-color: #f3bd42 !important;
+  box-shadow: 0 20px 50px rgba(243, 189, 66, 0.22) !important;
+  transform: translateY(-3px) !important;
+}
+
+.welcome-card h3, .course-card h2, .branch-card h3, .job-card h3, .facility-card h3 {
+  color: #ffffff !important;
+}
+
+.class-chip {
+  background: linear-gradient(135deg, rgba(22, 41, 86, 0.9) 0%, rgba(13, 26, 58, 0.95) 100%) !important;
+  border: 1.5px solid rgba(243, 189, 66, 0.25) !important;
+  color: #ffffff !important;
+}
+.class-chip:hover {
+  border-color: #f3bd42 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Score Cards & Proof Items */
+.score-card, .student-feature {
+  background: rgba(22, 41, 86, 0.7) !important;
+  border: 1px solid rgba(243, 189, 66, 0.25) !important;
+  color: #ffffff !important;
+}
+.score-card>span, .student-feature-copy strong {
+  color: #ffffff !important;
+}
+.score-card>strong, .student-feature>b {
+  background: rgba(243, 189, 66, 0.18) !important;
+  color: #ffd875 !important;
+  border: 1px solid rgba(243, 189, 66, 0.4) !important;
+}
+
+/* Gold Buttons & Primary Actions */
+.button-primary, .button-gold, .nav-cta, .contact-submit-btn {
+  background: linear-gradient(135deg, #f3bd42 0%, #d89f25 100%) !important;
+  color: #091226 !important;
+  font-weight: 800 !important;
+  border: none !important;
+  box-shadow: 0 8px 24px rgba(243, 189, 66, 0.3) !important;
+}
+.button-primary:hover, .button-gold:hover, .nav-cta:hover, .contact-submit-btn:hover {
+  background: linear-gradient(135deg, #ffd875 0%, #f3bd42 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 30px rgba(243, 189, 66, 0.45) !important;
+}
+.button-outline, .contact-call-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(243, 189, 66, 0.4) !important;
+}
+.button-outline:hover, .contact-call-btn:hover {
+  background: rgba(243, 189, 66, 0.15) !important;
+  border-color: #f3bd42 !important;
+}
+
+/* Contact Form Overrides */
+.contact-form {
+  padding: 30px !important;
+}
+.contact-form label {
+  color: #ffd875 !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+.contact-form input, .contact-form textarea, .form-grid input, .form-grid select, .form-grid textarea {
+  background: rgba(9, 18, 38, 0.8) !important;
+  border: 1.5px solid rgba(243, 189, 66, 0.3) !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  padding: 12px 14px !important;
+}
+.contact-form input:focus, .contact-form textarea:focus, .form-grid input:focus, .form-grid select:focus, .form-grid textarea:focus {
+  border-color: #f3bd42 !important;
+  box-shadow: 0 0 0 3px rgba(243, 189, 66, 0.25) !important;
+}
+.contact-form-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.contact-submit-btn {
+  flex: 1;
+  min-height: 48px;
+  border-radius: 10px !important;
+}
+.contact-call-btn {
+  min-height: 48px;
+  border-radius: 10px !important;
+}
+.form-status.success {
+  margin-top: 16px;
+  background: rgba(16, 185, 129, 0.15) !important;
+  border: 1.5px solid #10b981 !important;
+  color: #a7f3d0 !important;
+  padding: 14px 16px !important;
+  border-radius: 10px !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Faculty Careers Card Theme */
+.job-card {
+  border: 1.5px solid rgba(243, 189, 66, 0.3) !important;
+}
+.job-badge {
+  background: rgba(243, 189, 66, 0.2) !important;
+  border: 1px solid rgba(243, 189, 66, 0.5) !important;
+  color: #ffd875 !important;
+}
+.job-exp {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+.job-classes {
+  color: #c7d4ee !important;
+}
+.job-req {
+  color: #e2e8f0 !important;
+}
+.job-apply-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #f3bd42 0%, #d89f25 100%) !important;
+  color: #091226 !important;
+  font-weight: 800;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+.job-apply-link:hover {
+  background: linear-gradient(135deg, #ffd875 0%, #f3bd42 100%) !important;
+  transform: translateY(-2px);
+}
+
+/* Sticky Mobile Bottom Quick Action Bar */
+.mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 70px;
+  }
+  .mobile-bottom-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    height: 62px;
+    background: rgba(9, 18, 38, 0.95);
+    border-top: 1.5px solid rgba(243, 189, 66, 0.35);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.5);
+    padding: 8px 14px;
+    gap: 10px;
+    align-items: center;
+  }
+  .mobile-bar-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.15s ease;
+  }
+  .mobile-bar-btn.call {
+    background: linear-gradient(135deg, #f3bd42 0%, #d89f25 100%);
+    color: #091226;
+  }
+  .mobile-bar-btn.whatsapp {
+    background: #10b981;
+    color: #ffffff;
+  }
+  .nav.open {
+    background: #0d1a3a !important;
+    border: 1.5px solid rgba(243, 189, 66, 0.35) !important;
+  }
+  .section {
+    padding: 48px 0 !important;
+  }
+  .hero-grid {
+    padding: 36px 0 42px !important;
+  }
+}
