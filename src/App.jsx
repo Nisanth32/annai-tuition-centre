@@ -867,8 +867,8 @@ function FacilitiesSection() {
     <section className="facilities-section section" id="facilities">
       <div className="container">
         <SectionTitle
-          eyebrow="Centre Infrastructure"
-          title="Campus Facilities & Amenities"
+          eyebrow="Centre Infrastructure & Amenities"
+          title="Campus Facilities Designed For Excellence & Safety"
           text="Modern infrastructure designed to provide a safe, convenient, and focused learning environment for all students."
           align="align-center"
         />
@@ -876,54 +876,110 @@ function FacilitiesSection() {
         <div className="facilities-grid">
           {/* CCTV Monitoring */}
           <div className="facility-card">
-            <div className="facility-icon camera-icon">
-              <Video size={24} />
+            <div className="facility-img-wrap">
+              <img
+                src="/images/facility-cctv.jpg"
+                alt="24/7 CCTV Monitoring Camera"
+                onError={(e) => { e.currentTarget.src = '/images/annai-classroom-students.jpg'; }}
+              />
+              <span className="facility-img-badge">
+                <Video size={13} /> 24/7 Active Recording
+              </span>
             </div>
-            <h3>24/7 CCTV Monitoring</h3>
-            <p>
-              Round-the-clock high-definition CCTV camera monitoring across all smart classrooms, entrances, corridors,
-              and parking zones for complete safety and transparent supervision.
-            </p>
-            <span className="facility-tag">Zero-Compromise Security</span>
+            <div className="facility-card-body">
+              <div className="facility-card-title-row">
+                <div className="facility-icon camera-icon">
+                  <Video size={20} />
+                </div>
+                <h3>24/7 CCTV Monitoring</h3>
+              </div>
+              <p>
+                Round-the-clock high-definition CCTV camera monitoring across all classrooms, entrances, corridors,
+                and parking zones for complete student safety and transparent supervision.
+              </p>
+              <span className="facility-tag">Zero-Compromise Security</span>
+            </div>
           </div>
 
           {/* Dedicated Parking Facility */}
           <div className="facility-card parking-facility-card">
-            <div className="facility-icon parking-icon">
-              <Car size={24} />
+            <div className="facility-img-wrap">
+              <img
+                src="/images/facility-parking.jpg"
+                alt="Dedicated Parking Facility"
+                onError={(e) => { e.currentTarget.src = '/images/annai-classroom-students.jpg'; }}
+              />
+              <span className="facility-img-badge">
+                <Car size={13} /> Dedicated Campus Bay
+              </span>
             </div>
-            <h3>Dedicated Parking Facility</h3>
-            <p>
-              Spacious and organized on-premises two-wheeler, bicycle, and parent vehicle parking zone. Fully
-              CCTV-monitored with safe drop-off and pick-up bays for effortless transit.
-            </p>
-            <span className="facility-tag">Safe Drop-off & Parking</span>
+            <div className="facility-card-body">
+              <div className="facility-card-title-row">
+                <div className="facility-icon parking-icon">
+                  <Car size={20} />
+                </div>
+                <h3>Dedicated Parking Facility</h3>
+              </div>
+              <p>
+                Spacious and organized on-premises two-wheeler, bicycle, and parent vehicle parking zone. Fully
+                CCTV-monitored with safe drop-off and pick-up bays for effortless transit.
+              </p>
+              <span className="facility-tag">Safe Drop-off &amp; Parking</span>
+            </div>
           </div>
 
           {/* Smart-Base Digital Classrooms */}
           <div className="facility-card smart-class-card">
-            <div className="facility-icon monitor-icon">
-              <Monitor size={24} />
+            <div className="facility-img-wrap">
+              <img
+                src="/images/smart-classroom-hero.jpg"
+                alt="Smart-Base Interactive Classrooms"
+                onError={(e) => { e.currentTarget.src = '/images/annai-classroom-students.jpg'; }}
+              />
+              <span className="facility-img-badge">
+                <Monitor size={13} /> Interactive Digital AV
+              </span>
             </div>
-            <h3>Smart-Base Classrooms</h3>
-            <p>
-              Equipped with interactive touch flat panels, high-lumen projectors, 3D science animations, and live
-              coding displays for Computer Science, Biology, and Maths.
-            </p>
-            <span className="facility-tag">Next-Gen EdTech</span>
+            <div className="facility-card-body">
+              <div className="facility-card-title-row">
+                <div className="facility-icon monitor-icon">
+                  <Monitor size={20} />
+                </div>
+                <h3>Smart-Base Classrooms</h3>
+              </div>
+              <p>
+                Equipped with interactive touch flat panels, high-lumen projectors, 3D science animations, and live
+                coding displays for Computer Science, Biology, and Maths.
+              </p>
+              <span className="facility-tag">Next-Gen EdTech</span>
+            </div>
           </div>
 
           {/* MSME Registered Quality */}
           <div className="facility-card">
-            <div className="facility-icon msme-icon">
-              <ShieldCheck size={24} />
+            <div className="facility-img-wrap">
+              <img
+                src="/images/facility-msme.jpg"
+                alt="MSME Registered Institution Govt of India"
+                onError={(e) => { e.currentTarget.src = '/images/annai-logo.png'; }}
+              />
+              <span className="facility-img-badge">
+                <ShieldCheck size={13} /> Govt. of India Recognized
+              </span>
             </div>
-            <h3>MSME Registered Institution</h3>
-            <p>
-              Recognized and registered with MSME (Govt. of India), committed to ethical education, structured
-              academic calendar, and student-first mentoring since 2008.
-            </p>
-            <span className="facility-tag">Government Certified</span>
+            <div className="facility-card-body">
+              <div className="facility-card-title-row">
+                <div className="facility-icon msme-icon">
+                  <ShieldCheck size={20} />
+                </div>
+                <h3>MSME Registered Institution</h3>
+              </div>
+              <p>
+                Recognized and registered with MSME (Govt. of India), committed to ethical education, structured
+                academic calendar, and student-first mentoring since 2008.
+              </p>
+              <span className="facility-tag">Government Certified</span>
+            </div>
           </div>
         </div>
       </div>
