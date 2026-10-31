@@ -194,76 +194,40 @@ export const subjectsList = [
     grade: 'Classes 11 & 12 (CBSE & State Board)',
     icon: 'Code',
     color: 'cs',
-    points: [
-      'Python Programming: OOP, Functions, File Handling & Modules',
-      'C++ Fundamentals, Data Structures & Logic Gates',
-      'Database Management with MySQL & SQL Table Queries',
-      'Practical record completion & viva-voce 100/100 scoring prep',
+    subjects: [
+      'Python Programming',
+      'C++ Fundamentals',
+      'MySQL & SQL Databases',
+      'Logic Gates & Data Structures',
+      'Practical Record & Viva Prep',
     ],
   },
   {
     id: 'bio',
-    title: 'Biology (Botany & Zoology)',
-    grade: 'Classes 9, 10, 11, 12 & NEET Foundation',
+    title: 'Biology',
+    grade: 'Classes 9, 10, 11 & 12 (CBSE & State Board)',
     icon: 'Dna',
     color: 'bio',
-    points: [
-      'NCERT & Samacheer line-by-line conceptual decoding',
-      'Human Physiology, Plant Anatomy, Genetics & Biotechnology',
-      'High-speed scientific diagrammatic drawing & labeling drills',
-      'Weekly unit tests, previous 10-year board paper analyses',
+    subjects: [
+      'Botany & Plant Anatomy',
+      'Zoology & Human Physiology',
+      'Genetics & Biotechnology',
+      'Scientific Diagram Labeling',
+      'NEET Foundation Concepts',
     ],
   },
   {
     id: 'tut',
-    title: 'Specialized Subject Tutorials',
+    title: 'Specialized Tutorials',
     grade: 'Classes 1 to 12 · All Subjects',
     icon: 'Layers',
     color: 'tut',
-    points: [
-      '1-on-1 personalized doubt clearing tutorials with senior faculty',
-      'Daily homework tracking & mental arithmetic drills for Classes 1–8',
-      'Board exam crash tutorials & blueprint model question series',
-      'Evening concept-strengthening tutorials for slow learners',
-    ],
-  },
-  {
-    id: 'math',
-    title: 'Mathematics & Centum Coaching',
-    grade: 'Classes 6 to 12 (CBSE & State Board)',
-    icon: 'Cpu',
-    color: 'math',
-    points: [
-      'Calculus, Trigonometry, Coordinate Geometry & Algebra mastery',
-      'Proprietary formula mnemonics and speed shortcut techniques',
-      'Daily 5-problem challenge & chapter-wise unit assessments',
-      'Proven track record of centums (100/100) year after year',
-    ],
-  },
-  {
-    id: 'phy',
-    title: 'Physics In-Depth',
-    grade: 'Classes 11 & 12 & Foundation',
-    icon: 'Sparkles',
-    color: 'phy',
-    points: [
-      'Mechanics, Electromagnetism, Wave Optics & Modern Physics',
-      'Derivations written step-by-step with mark allocation focus',
-      'Numerical problem-solving formulas and dimensional checks',
-      'Board blueprint-aligned revision drills',
-    ],
-  },
-  {
-    id: 'chem',
-    title: 'Chemistry Mastery',
-    grade: 'Classes 11 & 12 & Foundation',
-    icon: 'Microscope',
-    color: 'chem',
-    points: [
-      'Organic chemistry conversions, named reactions & mechanisms',
-      'Physical chemistry thermodynamics, chemical kinetics & solutions',
-      'Inorganic coordination compounds, p-block & d-block elements',
-      'Chapter-wise formula sheets & quick memory maps',
+    subjects: [
+      'Mathematics (Classes 1 to 12)',
+      'Science (Physics, Chemistry, Biology)',
+      'Social Science, Tamil & English',
+      'Commerce & Accountancy',
+      '1-on-1 Daily Concept Clearing',
     ],
   },
 ];
@@ -1382,7 +1346,7 @@ export function SubjectsTutorialsSection() {
                 <span className="subject-card-sub">{subj.grade}</span>
                 
                 <div className="subject-chips-wrap" style={{ display: 'flex', flexDirection: 'column', gap: '8px', margin: '18px 0' }}>
-                  {subj.subjects.map((s) => (
+                  {(subj.subjects || subj.points || []).map((s) => (
                     <div
                       key={s}
                       style={{
@@ -2424,8 +2388,7 @@ function Results() {
         </div>
       </section>
 
-      <CoachingSection />
-    </main>
+      </main>
   );
 }
 
