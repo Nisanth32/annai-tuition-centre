@@ -1288,17 +1288,44 @@ export function SmartClassSection() {
    OUR DISTINGUISHED FACULTY & EXPERT SUBJECT PANELS
    ========================================================================= */
 export function FacultySection() {
+  const facultyHighlights = [
+    {
+      title: '7–8+ Years Teaching Experience',
+      desc: 'Our faculty mentors have over 7 to 8+ years of proven classroom teaching experience in Trichy.',
+      badge: 'Experienced Faculty',
+      icon: <Award size={20} />,
+    },
+    {
+      title: 'Dedicated Subject Specialists',
+      desc: 'Expert mentors for Mathematics, Physics, Chemistry, Biology, Computer Science, and Commerce.',
+      badge: 'Subject Panels',
+      icon: <BookOpen size={20} />,
+    },
+    {
+      title: 'Personal Student Attention',
+      desc: 'Small batches ensure every student receives one-on-one doubt clearance and regular progress reviews.',
+      badge: 'Focused Care',
+      icon: <Users size={20} />,
+    },
+    {
+      title: 'Concept Clarity & Centum Drills',
+      desc: 'Formula practice, step-by-step problem breakdown, and model exams to achieve top board results.',
+      badge: 'Board Excellence',
+      icon: <Sparkles size={20} />,
+    },
+  ];
+
   return (
     <section className="faculty-section section" id="faculty">
       <div className="container">
         <SectionTitle
-          eyebrow="Academic Leadership & Experienced Faculty"
+          eyebrow="Academic Leadership & Faculty"
           title={
             <>
-              Led by Founder <span className="serif-accent">S. Thiyagarajan</span> & Experienced Faculty.
+              Led by Founder <span className="serif-accent">S. Thiyagarajan</span> & Experienced Mentors
             </>
           }
-          text="Dedicated educators with over a decade of classroom experience in Puthur, Trichy. Our focus is on continuous student improvement — converting weak concepts into strengths and guiding learners to high marks and centums."
+          text="Our faculty members have 7–8+ years of teaching experience in Trichy, committed to simple concept teaching, personal attention, and high board exam marks."
           align="align-center"
         />
 
@@ -1339,77 +1366,32 @@ export function FacultySection() {
           </div>
         </div>
 
-        {/* Experienced Faculty Subject Panels */}
-        <div className="faculty-panel-header">
-          <div>
-            <span className="eyebrow">Subject-Wise Mentorship Panels</span>
-            <h3>Experienced Faculty Dedicated to Student Improvement</h3>
-            <p>Our subject specialist teachers work collaboratively to identify learning gaps, eliminate exam stress, and accelerate student progress.</p>
+        {/* Simple & Professional 7–8+ Years Experienced Faculty Highlights */}
+        <div className="faculty-simple-wrap" style={{ marginTop: '36px' }}>
+          <div className="strip-heading" style={{ marginBottom: '22px' }}>
+            <div>
+              <span className="eyebrow">Faculty Experience & Standards</span>
+              <h3 style={{ fontSize: '24px', margin: '6px 0 0', color: '#ffffff' }}>Mentors with 7–8+ Years Teaching Experience</h3>
+            </div>
           </div>
-        </div>
 
-        <div className="faculty-panels-grid">
-          {facultyPanels.map((panel) => (
-            <div className="faculty-panel-card" key={panel.department}>
-              <div className="panel-card-head">
-                <span className="panel-badge">{panel.badge}</span>
-                <span className="panel-exp-pill">
-                  <Clock size={12} /> {panel.experience}
-                </span>
+          <div className="classes-simple-grid">
+            {facultyHighlights.map((f) => (
+              <div className="class-simple-card" key={f.title}>
+                <div className="card-top-row">
+                  <span className="card-badge">{f.badge}</span>
+                  <span className="card-icon-pill">{f.icon}</span>
+                </div>
+                <h4 style={{ color: '#ffffff', fontSize: '17px', margin: '10px 0 6px' }}>{f.title}</h4>
+                <p style={{ color: '#d6e4f8', fontSize: '13px', lineHeight: 1.6, margin: 0 }}>{f.desc}</p>
               </div>
-              <h4>{panel.department}</h4>
-              <span className="panel-qualifications">{panel.qualifications}</span>
-
-              <div className="panel-improve-box">
-                <strong className="panel-improve-title">
-                  <Sparkles size={13} /> {panel.focus}
-                </strong>
-                <ul className="panel-points-list">
-                  {panel.points.map((pt, i) => (
-                    <li key={i}>
-                      <Check size={14} />
-                      <span>{pt}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* 4-Step Student Improvement Methodology */}
-        <div className="improvement-methodology-band">
-          <div className="improvement-heading">
-            <span className="eyebrow eyebrow-light">Proven Teaching System</span>
-            <h3>How Annai Faculty Drives Continuous Student Improvement</h3>
-          </div>
-          <div className="improvement-steps-grid">
-            <div className="step-card">
-              <span className="step-num">01</span>
-              <h4>Diagnostic Baseline</h4>
-              <p>We analyze each student’s current conceptual gaps and board syllabus blueprint requirements.</p>
-            </div>
-            <div className="step-card">
-              <span className="step-num">02</span>
-              <h4>Smart Visual Teaching</h4>
-              <p>Using interactive smart boards and 3D simulations to make abstract math and science intuitively clear.</p>
-            </div>
-            <div className="step-card">
-              <span className="step-num">03</span>
-              <h4>Weekly Testing & Corrections</h4>
-              <p>Rigorous unit assessments with line-by-line answer key analysis to eliminate common exam mistakes.</p>
-            </div>
-            <div className="step-card">
-              <span className="step-num">04</span>
-              <h4>1-on-1 Doubt Clearing</h4>
-              <p>Dedicated personal mentorship sessions to build unshakeable confidence before board exams.</p>
-            </div>
+            ))}
           </div>
         </div>
 
-        <div className="faculty-advisory-strip">
+        <div className="faculty-advisory-strip" style={{ marginTop: '36px' }}>
           <div>
-            <strong>Need personalized academic guidance or subject counseling?</strong>
+            <strong>Need academic guidance or subject counselling?</strong>
             <span>Meet Founder S. Thiyagarajan and our experienced faculty at our Puthur campus.</span>
           </div>
           <div className="faculty-strip-cta">
@@ -1423,9 +1405,6 @@ export function FacultySection() {
   );
 }
 
-/* =========================================================================
-   SPECIALIZED SUBJECTS & TUTORIALS SECTION (CS, BIO, TUTORIALS, ETC.)
-   ========================================================================= */
 export function SubjectsTutorialsSection() {
   return (
     <section className="subjects-section section" id="subjects-tutorials">
@@ -2121,20 +2100,11 @@ function Home() {
       {/* Simple & Sweet Classes 1 to 12 Overview (No heavy theory) */}
       <ClassesSimpleSection />
 
-      {/* Essential Facilities: Dedicated Parking, CCTV, Safe for Girls */}
-      <FacilitiesSection />
-
-      {/* Girls' Safety and Security Section */}
-      <GirlsSafetySection />
-
-      {/* Student Results Preview (Real Toppers & 7,000+ Alumni) */}
+      {/* Student Results Preview (Real Toppers & Alumni) */}
       <ResultsPreview />
 
-      {/* Our Two Branches in Puthur, Trichy (Google Maps, No branch images) */}
+      {/* Our Two Branches in Puthur, Trichy */}
       <BranchesSection />
-
-      {/* Apply for Teaching Positions on WhatsApp */}
-      <FacultyCareersSection />
 
       {/* Social Media Links Section */}
       <SocialMediaSection />
@@ -2354,6 +2324,7 @@ function ClassesPage() {
       {/* Dedicated Coaching Section for Classes 10 & 12 */}
       <CoachingSection />
 
+      {/* All Classes 1 to 12 Grade Levels */}
       <section className="section">
         <div className="container">
           <SectionTitle
@@ -2399,9 +2370,6 @@ function ClassesPage() {
           </div>
         </div>
       </section>
-
-      <FacilitiesSection />
-      <BranchesSection />
     </main>
   );
 }
@@ -3324,13 +3292,11 @@ function FacultyPage() {
             Learn from Trichy’s <em>top mentors.</em>
           </>
         }
-        text="Led by Founder S. Thiyagarajan alongside experienced postgraduate subject specialist mentors with 7–8+ years coaching experience dedicated to student excellence."
+        text="Led by Founder S. Thiyagarajan alongside experienced faculty mentors with 7–8+ years of dedicated teaching experience in Trichy."
       />
       <FacultySection />
       {/* Faculty Careers & Teaching Positions Hiring Section with 1-click WhatsApp Apply */}
       <FacultyCareersSection />
-      <Legacy70kSection />
-      <BranchesSection />
     </main>
   );
 }
