@@ -915,7 +915,27 @@ function FacilitiesSection() {
                 Round-the-clock high-definition CCTV camera monitoring across all classrooms, entrances, corridors,
                 and parking zones for complete student safety and transparent supervision.
               </p>
-              <span className="facility-tag">Zero-Compromise Security</span>
+              <span
+                className="facility-tag"
+                style={{
+                  background: '#f59e0b',
+                  color: '#060d1f',
+                  fontWeight: 900,
+                  fontSize: '12px',
+                  padding: '7px 16px',
+                  borderRadius: '999px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  width: 'max-content',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.5)',
+                  marginTop: 'auto',
+                  border: 'none',
+                }}
+              >
+                Zero-Compromise Security
+              </span>
             </div>
           </div>
 
@@ -942,7 +962,27 @@ function FacilitiesSection() {
                 Spacious and organized on-premises two-wheeler, bicycle, and parent vehicle parking zone. Fully
                 CCTV-monitored with safe drop-off and pick-up bays for effortless transit.
               </p>
-              <span className="facility-tag">Safe Drop-off &amp; Parking</span>
+              <span
+                className="facility-tag"
+                style={{
+                  background: '#f59e0b',
+                  color: '#060d1f',
+                  fontWeight: 900,
+                  fontSize: '12px',
+                  padding: '7px 16px',
+                  borderRadius: '999px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  width: 'max-content',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.5)',
+                  marginTop: 'auto',
+                  border: 'none',
+                }}
+              >
+                Safe Drop-off &amp; Parking
+              </span>
             </div>
           </div>
 
@@ -969,7 +1009,27 @@ function FacilitiesSection() {
                 Equipped with interactive touch flat panels, high-lumen projectors, 3D science animations, and live
                 coding displays for Computer Science, Biology, and Maths.
               </p>
-              <span className="facility-tag">Next-Gen EdTech</span>
+              <span
+                className="facility-tag"
+                style={{
+                  background: '#f59e0b',
+                  color: '#060d1f',
+                  fontWeight: 900,
+                  fontSize: '12px',
+                  padding: '7px 16px',
+                  borderRadius: '999px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  width: 'max-content',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.5)',
+                  marginTop: 'auto',
+                  border: 'none',
+                }}
+              >
+                Interactive Smart Board
+              </span>
             </div>
           </div>
 
@@ -996,7 +1056,27 @@ function FacilitiesSection() {
                 Recognized and registered with MSME (Govt. of India), committed to ethical education, structured
                 academic calendar, and student-first mentoring since 2008.
               </p>
-              <span className="facility-tag">Government Certified</span>
+              <span
+                className="facility-tag"
+                style={{
+                  background: '#f59e0b',
+                  color: '#060d1f',
+                  fontWeight: 900,
+                  fontSize: '12px',
+                  padding: '7px 16px',
+                  borderRadius: '999px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  width: 'max-content',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.5)',
+                  marginTop: 'auto',
+                  border: 'none',
+                }}
+              >
+                Government Certified
+              </span>
             </div>
           </div>
         </div>
@@ -1732,22 +1812,54 @@ function HomeEnquirySection() {
       <div className="container">
         <div className="enquiry-now-card">
           <div className="enquiry-now-content">
-            <span className="enquiry-now-badge">
+            <span
+              className="enquiry-now-badge"
+              style={{
+                background: '#f59e0b',
+                color: '#060d1f',
+                fontWeight: 900,
+                padding: '7px 18px',
+                borderRadius: '999px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                fontSize: '13px',
+                width: 'max-content',
+                marginBottom: '14px',
+                border: 'none',
+              }}
+            >
               <Sparkles size={14} /> Instant Student Enquiry
             </span>
             <h2>Enquire for Batches &amp; Admission</h2>
             <p>
               Get current batch availability, subject combinations, and fee details. Dedicated coaching with 7–8+ years experienced faculty and safe parking.
             </p>
-            <div className="enquiry-timing-pill">
+            <div
+              className="enquiry-timing-pill"
+              style={{
+                background: '#08122c',
+                border: '2px solid #f59e0b',
+                color: '#ffd875',
+                borderRadius: '12px',
+                padding: '12px 20px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                fontSize: '15px',
+                fontWeight: 800,
+                margin: '14px 0',
+                boxShadow: '0 6px 20px rgba(0,0,0,0.6)',
+              }}
+            >
               <Clock size={16} />
-              <span><strong>Tuition Timings:</strong> Morning 5:30 AM – 7:00 AM &amp; Evening 6:30 PM – 9:00 PM</span>
+              <span><strong style={{ color: '#fbbf24' }}>Tuition Timings:</strong> Morning 5:30 AM – 7:00 AM &amp; Evening 6:30 PM – 9:00 PM</span>
             </div>
             <div className="enquiry-trust-strip">
-              <span>✓ Dedicated Parking Facility</span>
-              <span>✓ 100% Safe For Girls</span>
-              <span>✓ 24/7 CCTV Surveillance</span>
-              <span>✓ MSME Registered</span>
+              <span style={{ background: '#f59e0b', color: '#060d1f', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ Dedicated Parking Facility</span>
+              <span style={{ background: '#f59e0b', color: '#060d1f', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ 100% Safe For Girls</span>
+              <span style={{ background: '#f59e0b', color: '#060d1f', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ 24/7 CCTV Surveillance</span>
+              <span style={{ background: '#f59e0b', color: '#060d1f', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ MSME Registered</span>
             </div>
           </div>
 
@@ -1763,7 +1875,23 @@ function HomeEnquirySection() {
             <a href="tel:+919626265456" className="button button-call-enquiry">
               <Phone size={16} /> Call: 96262 65456
             </a>
-            <Link to="/admissions" className="button button-outline">
+            <Link
+              to="/admissions"
+              className="button button-outline"
+              style={{
+                background: '#f59e0b',
+                color: '#060d1f',
+                border: 'none',
+                fontWeight: 900,
+                padding: '0 24px',
+                minHeight: '50px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                borderRadius: '10px',
+                textDecoration: 'none',
+              }}
+            >
               Admission Form <ArrowRight size={15} />
             </Link>
           </div>
