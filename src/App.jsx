@@ -1703,99 +1703,35 @@ function HomeEnquirySection() {
    FACULTY CAREERS & TEACHING POSITIONS (HIRING SECTION)
    ========================================================================= */
 function FacultyCareersSection() {
-  const jobs = [
-    {
-      title: 'Higher Secondary Mathematics Teacher',
-      classes: 'Classes 11 & 12 (Board Exam & Centum Coaching)',
-      qualification: 'M.Sc. (Maths) / B.Ed. with 7–8+ years experience',
-      badge: 'Urgent Opening',
-    },
-    {
-      title: 'Computer Science Faculty',
-      classes: 'Classes 11 & 12 (Python, C++ & Practical Labs)',
-      qualification: 'M.Sc. (CS/IT) / MCA / B.Ed. with hands-on coding expertise',
-      badge: 'Immediate Opening',
-    },
-    {
-      title: 'Biology & Life Sciences Faculty',
-      classes: 'Classes 11 & 12 (Botany & Zoology)',
-      qualification: 'M.Sc. (Botany/Zoology) / B.Ed. with diagram & concept clarity',
-      badge: 'Immediate Opening',
-    },
-    {
-      title: 'Commerce & Accountancy Teacher',
-      classes: 'Classes 11 & 12 (Commerce, Accountancy & Economics)',
-      qualification: 'M.Com / B.Ed. with strong balance sheet & problem skills',
-      badge: 'Immediate Opening',
-    },
-    {
-      title: 'Secondary Science & Maths Teacher',
-      classes: 'Classes 8, 9 & 10 (Physics, Chemistry & Maths)',
-      qualification: 'B.Sc. / M.Sc. / B.Ed. with 7–8+ years teaching experience',
-      badge: 'Active Opening',
-    },
-    {
-      title: 'Primary Foundation Teacher',
-      classes: 'Classes 1 to 5 (All Subjects Foundation & Handwriting)',
-      qualification: 'Graduate / D.T.Ed / B.Ed. with caring, patient mentorship',
-      badge: 'Active Opening',
-    },
-  ];
-
   return (
     <section className="faculty-careers-section section" id="careers">
       <div className="container">
-        <div className="careers-header">
-          <span className="eyebrow eyebrow-purple">
-            <Sparkles size={14} /> Join Our Faculty Team
-          </span>
-          <h2>Apply for Teaching Positions</h2>
-          <p>
-            We are hiring passionate subject specialist teachers with 7–8+ years of classroom experience. Excellent work environment and attractive remuneration in Puthur, Trichy.
-          </p>
-        </div>
-
-        <div className="careers-grid">
-          {jobs.map((job) => (
-            <div className="job-card" key={job.title}>
-              <div className="job-top">
-                <span className="job-badge">{job.badge}</span>
-                <span className="job-exp">7–8+ Yrs Exp</span>
-              </div>
-              <h3>{job.title}</h3>
-              <p className="job-classes">{job.classes}</p>
-              <div className="job-req">
-                <Check size={14} />
-                <span>{job.qualification}</span>
-              </div>
-              <a
-                href={`https://wa.me/919626265456?text=${encodeURIComponent('Hi, I am interested in applying for the position of ' + job.title)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="job-apply-link"
-              >
-                Apply for this Position <ArrowRight size={14} />
-              </a>
+        <div className="careers-simple-card">
+          <div className="careers-simple-content">
+            <span className="eyebrow eyebrow-gold">
+              <Sparkles size={14} /> Join Our Faculty Team
+            </span>
+            <h2>Apply for Teaching Positions</h2>
+            <p>
+              We are inviting experienced subject specialist teachers (7–8+ years experience) for Higher Secondary (Maths, Computer Science, Biology, Commerce &amp; Accountancy) and Secondary classes in Puthur, Trichy.
+            </p>
+            <div className="careers-simple-points">
+              <span>✓ Higher Secondary Maths, CS, Biology &amp; Commerce</span>
+              <span>✓ Secondary Science, Maths &amp; Primary Foundation</span>
+              <span>✓ Supportive Academic Environment &amp; Attractive Remuneration</span>
             </div>
-          ))}
-        </div>
-
-        <div className="careers-callout">
-          <div className="careers-callout-text">
-            <strong>Send your resume or contact Centre Head S. Thiyagarajan</strong>
-            <span>Timings: Morning 5:30 AM – 7:00 AM & Evening 6:30 PM – 9:00 PM</span>
           </div>
-          <div className="careers-callout-btns">
+          <div className="careers-simple-action">
             <a
-              href="https://wa.me/919626265456?text=Hi%2C%20I%20would%20like%20to%20apply%20for%20a%20teaching%20job%20at%20Annai%20Tuition%20Centre"
+              href="https://wa.me/919626265456?text=Hello%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20apply%20for%20a%20teaching%20position"
               target="_blank"
               rel="noopener noreferrer"
-              className="button button-whatsapp-enquiry"
+              className="button button-gold careers-whatsapp-main-btn"
             >
-              <MessageCircle size={16} /> Send Resume on WhatsApp
+              <MessageCircle size={18} /> Apply for Teaching Positions on WhatsApp
             </a>
-            <a href="tel:+919626265456" className="button button-call-enquiry">
-              <Phone size={15} /> Call: 96262 65456
+            <a href="tel:+919626265456" className="button button-outline careers-call-main-btn">
+              <Phone size={15} /> Call 96262 65456
             </a>
           </div>
         </div>
@@ -1932,9 +1868,6 @@ function Home() {
 
       {/* Our Two Branches in Puthur, Trichy (Google Maps, No branch images) */}
       <BranchesSection />
-
-      {/* Faculty Careers & Teaching Positions Hiring Section */}
-      <FacultyCareersSection />
 
       {/* Social Media Links Section */}
       <SocialMediaSection />
