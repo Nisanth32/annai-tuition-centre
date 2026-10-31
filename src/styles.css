@@ -4460,12 +4460,60 @@ p, li, label, .body-copy, .section-title p, .ref-hero-desc,
   color: #060d1f !important;
 }
 
+
 /* =========================================================================
-   USER EXPLICIT REQUIREMENT: "in the white background pl dark the letter colour in black to visible"
-   Forces 100% PURE BOLD BLACK (#000000) on all white, cream, yellow, or light backgrounds
+   PURGE ALL WHITE BACKGROUNDS & APPLY SUITABLE ROYAL SAPPHIRE & GOLD THEME
+   (Zero white backgrounds anywhere on the website)
    ========================================================================= */
 
-/* 1. Facility Tags, Badges, Pills & Labels */
+/* 1. Global Background - Deep Midnight Sapphire */
+html, body {
+  background: #060d1f !important;
+  color: #fef08a !important;
+}
+
+/* 2. All Sections - Royal Sapphire Radial Gradient */
+section, .section, .welcome, .classes-strip, .results-preview, .contact-preview, 
+.page-hero, .results-section, .about-section, .coaching-section, 
+.subjects-tutorials-section, .safety-section, .ref-hero,
+.faculty-careers-section, .enquiry-now-section, .facilities-section,
+.branches-section, .home-enquiry-section, .founder-highlight-section,
+.classes-simple-section, .milestone-70k-section, footer, .footer,
+.smart-class-section, .faculty-section, .subjects-section, .banner-cta {
+  background: radial-gradient(circle at 10% 20%, #0d1b3e 0%, #060d1f 100%) !important;
+  color: #fef08a !important;
+  border-color: rgba(245, 158, 11, 0.25) !important;
+}
+
+/* 3. Header & Nav - Sleek Navy Sapphire with Gold Accents */
+.header, .topline {
+  background: #081127 !important;
+  border-bottom: 2px solid rgba(245, 158, 11, 0.35) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6) !important;
+}
+.nav.open {
+  background: #081127 !important;
+  border: 2px solid rgba(245, 158, 11, 0.5) !important;
+}
+
+/* 4. All Cards, Boxes & Containers - Glassmorphic Sapphire (NO WHITE CARDS) */
+.facility-card, .welcome-card, .course-card, .branch-card, 
+.form-card, .aside-card, .student-feature, .score-card, 
+.marks-only, .location-card, .class-simple-card, .coaching-card, 
+.subject-card, .careers-simple-card, .enquiry-now-card, 
+.enquiry-card-wrapper, .founder-highlight-box, .tutorial-card, 
+.smart-card, .poster-tile, .results-list, .achievement-card, 
+.safety-point, .lightbox, .mobile-bottom-bar, .contact-side-card,
+.about-logo-card, .hero-art-modern, .ref-feature-card,
+.faculty-panel-card, .branch-address-box, .white-bg, .card-white {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(22, 41, 86, 0.75) 100%) !important;
+  border: 1.5px solid rgba(245, 158, 11, 0.45) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(245, 158, 11, 0.12) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* 5. All Badges, Pills & Tags - Deep Sapphire with Glowing Gold Border & Text (NO WHITE PILLS) */
 .facility-tag,
 .card-badge,
 .card-icon-pill,
@@ -4478,102 +4526,67 @@ p, li, label, .body-copy, .section-title p, .ref-hero-desc,
 .ref-since-pill,
 .msme-pill,
 .enquiry-now-badge,
-.enquiry-trust-strip span,
-.student-feature>b,
-.score-card>strong,
-.brush-text,
 .facility-img-badge,
-.marks-only,
-.marks-only span,
-.marks-only strong,
-.score-card {
-  color: #000000 !important;
-  font-weight: 900 !important;
+.class-chip,
+.welcome-tag,
+.hero-note,
+.hero-note-icon,
+.brand-icon,
+.doodle-sparkle,
+.doodle-cap,
+.student-feature>b,
+.score-card>strong {
+  background: rgba(13, 27, 62, 0.95) !important;
+  border: 1.5px solid #f59e0b !important;
+  color: #ffd875 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important;
   text-shadow: none !important;
 }
 
-.facility-tag *,
-.card-badge *,
-.panel-badge *,
-.coaching-card-badge *,
-.enquiry-now-badge *,
-.enquiry-trust-strip span *,
-.brush-text * {
-  color: #000000 !important;
-  text-shadow: none !important;
+/* 6. Form Inputs & Selects - Deep Sapphire Background with Gold Border */
+input:not([type=checkbox]), select, textarea,
+.contact-form input, .contact-form textarea,
+.form-grid input, .form-grid select, .form-grid textarea,
+.enquiry-form-grid input, .enquiry-form-grid select {
+  background: rgba(9, 19, 44, 0.95) !important;
+  border: 1.5px solid rgba(245, 158, 11, 0.45) !important;
+  color: #ffd875 !important;
+  border-radius: 10px !important;
+}
+input::placeholder, textarea::placeholder {
+  color: #94a3b8 !important;
 }
 
-/* 2. Pure Black on any White, Light Cream, or Gold Background */
-*[style*="background: #f59e0b"],
-*[style*="background: #ffd875"],
-*[style*="background: #f5eedc"],
-*[style*="background: #ffffff"],
-*[style*="background: #fff"],
-*[style*="background: white"],
-*[style*="background:#fff"],
-*[style*="background:#ffffff"],
-*[style*="background:#f59e0b"],
-*[style*="background: #f8fafc"],
-*[style*="background: #f1f5f9"],
-*[style*="background: #edf2f9"],
-*[style*="background: rgb(245, 158, 11)"],
-*[style*="background: rgb(255, 255, 255)"],
-*[style*="background: rgb(245, 238, 220)"] {
-  color: #000000 !important;
-  text-shadow: none !important;
+/* 7. Typography - Glowing Gold for Headings & Sunny Cream for Body Copy */
+h1, h2, h3, h4, h5, h6,
+.hero h1, .page-hero h1, .section-title h2, .strip-heading h2,
+.results-list-head h2, .faculty-panel-card h4, .subject-card h3,
+.form-heading h2, .aside-card h2, .aside-card h3, .safety-point strong,
+.branch-card h3, .branch-card h4, .careers-simple-content h2,
+.careers-header h2, .ref-hero-title, .welcome-card h3, .course-card h2,
+.facility-card h3, .milestone-heading, .founder-highlight-name,
+.student-feature-copy strong, .coaching-card-head h3,
+.about-point, .contact-social-embed strong, .banner-inner h2,
+.marks-only strong, strong, b, .brand strong {
+  color: #ffd875 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
 }
 
-*[style*="background: #f59e0b"] *,
-*[style*="background: #ffd875"] *,
-*[style*="background: #f5eedc"] *,
-*[style*="background: #ffffff"] *,
-*[style*="background: #fff"] *,
-*[style*="background: white"] *,
-*[style*="background:#fff"] *,
-*[style*="background:#ffffff"] *,
-*[style*="background:#f59e0b"] *,
-*[style*="background: #f8fafc"] *,
-*[style*="background: #f1f5f9"] *,
-*[style*="background: #edf2f9"] *,
-*[style*="background: rgb(245, 158, 11)"] *,
-*[style*="background: rgb(255, 255, 255)"] *,
-*[style*="background: rgb(245, 238, 220)"] * {
-  color: #000000 !important;
-  text-shadow: none !important;
-}
-
-/* 3. Gold & Yellow Action Buttons - Solid Bold Black Text */
-.button-gold,
-.button-primary,
-.ref-enroll-btn,
-.button-call-enquiry,
-.mobile-bar-btn.call,
-.button-outline:hover,
-.ref-call-btn:hover {
-  color: #000000 !important;
-  font-weight: 900 !important;
-  text-shadow: none !important;
-}
-
-.button-gold *,
-.button-primary *,
-.ref-enroll-btn *,
-.mobile-bar-btn.call * {
-  color: #000000 !important;
-  text-shadow: none !important;
-}
-
-/* 4. White or Light Containers */
-.white-bg,
-.bg-white,
-.card-white,
-.light-container {
-  background: #ffffff !important;
-  color: #000000 !important;
-}
-
-.white-bg h1, .white-bg h2, .white-bg h3, .white-bg h4,
-.white-bg p, .white-bg span, .white-bg strong, .white-bg li {
-  color: #000000 !important;
-  text-shadow: none !important;
+p, li, label, .body-copy, .section-title p, .ref-hero-desc,
+.class-simple-card p, .safety-copy p, .coaching-card-head p,
+.faculty-panel p, .subject-card p, .enquiry-header p, .welcome-card p,
+.course-card p, .branch-card p, .branch-subtitle, .branch-info-item span,
+.branch-features-chip span, .facility-card p, .ref-feature-card small,
+.footer-copy, .footer-grid p, .copyright, .milestone-intro-text,
+.milestone-quote-box p, .milestone-author small, .founder-highlight-desc,
+.subject-card-points li, .faculty-points li, .contact-form p,
+.hero-lead, .page-hero p, .form-heading p, .branch-hours-line,
+.panel-qualifications, .panel-improve-title, .panel-points-list li,
+.coaching-features li, .subject-card-sub, .smart-card p,
+.score-card>span, .marks-only span, .student-feature-copy small,
+.aside-card p, .safety-point p, .facility-card-body p,
+.ref-hero-tagline, .nav>a:not(.button) {
+  color: #fef08a !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) !important;
 }

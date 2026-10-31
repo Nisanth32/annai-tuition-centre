@@ -918,20 +918,20 @@ function FacilitiesSection() {
               <span
                 className="facility-tag"
                 style={{
-                  background: '#f59e0b',
-                  color: '#000000',
+                  background: 'rgba(13, 27, 62, 0.95)',
+                  border: '1.5px solid #f59e0b',
+                  color: '#ffd875',
                   fontWeight: 900,
                   fontSize: '12px',
-                  padding: '7px 16px',
+                  padding: '7px 18px',
                   borderRadius: '999px',
                   display: 'inline-flex',
                   alignItems: 'center',
                   width: 'max-content',
                   letterSpacing: '0.06em',
                   textTransform: 'uppercase',
-                  boxShadow: '0 4px 14px rgba(0,0,0,0.5)',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.6)',
                   marginTop: 'auto',
-                  border: 'none',
                 }}
               >
                 Zero-Compromise Security
@@ -965,20 +965,20 @@ function FacilitiesSection() {
               <span
                 className="facility-tag"
                 style={{
-                  background: '#f59e0b',
-                  color: '#000000',
+                  background: 'rgba(13, 27, 62, 0.95)',
+                  border: '1.5px solid #f59e0b',
+                  color: '#ffd875',
                   fontWeight: 900,
                   fontSize: '12px',
-                  padding: '7px 16px',
+                  padding: '7px 18px',
                   borderRadius: '999px',
                   display: 'inline-flex',
                   alignItems: 'center',
                   width: 'max-content',
                   letterSpacing: '0.06em',
                   textTransform: 'uppercase',
-                  boxShadow: '0 4px 14px rgba(0,0,0,0.5)',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.6)',
                   marginTop: 'auto',
-                  border: 'none',
                 }}
               >
                 Safe Drop-off &amp; Parking
@@ -1012,20 +1012,20 @@ function FacilitiesSection() {
               <span
                 className="facility-tag"
                 style={{
-                  background: '#f59e0b',
-                  color: '#000000',
+                  background: 'rgba(13, 27, 62, 0.95)',
+                  border: '1.5px solid #f59e0b',
+                  color: '#ffd875',
                   fontWeight: 900,
                   fontSize: '12px',
-                  padding: '7px 16px',
+                  padding: '7px 18px',
                   borderRadius: '999px',
                   display: 'inline-flex',
                   alignItems: 'center',
                   width: 'max-content',
                   letterSpacing: '0.06em',
                   textTransform: 'uppercase',
-                  boxShadow: '0 4px 14px rgba(0,0,0,0.5)',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.6)',
                   marginTop: 'auto',
-                  border: 'none',
                 }}
               >
                 Interactive Smart Board
@@ -1059,20 +1059,20 @@ function FacilitiesSection() {
               <span
                 className="facility-tag"
                 style={{
-                  background: '#f59e0b',
-                  color: '#000000',
+                  background: 'rgba(13, 27, 62, 0.95)',
+                  border: '1.5px solid #f59e0b',
+                  color: '#ffd875',
                   fontWeight: 900,
                   fontSize: '12px',
-                  padding: '7px 16px',
+                  padding: '7px 18px',
                   borderRadius: '999px',
                   display: 'inline-flex',
                   alignItems: 'center',
                   width: 'max-content',
                   letterSpacing: '0.06em',
                   textTransform: 'uppercase',
-                  boxShadow: '0 4px 14px rgba(0,0,0,0.5)',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.6)',
                   marginTop: 'auto',
-                  border: 'none',
                 }}
               >
                 Government Certified
@@ -1815,19 +1815,21 @@ function HomeEnquirySection() {
             <span
               className="enquiry-now-badge"
               style={{
-                background: '#f59e0b',
-                color: '#000000',
-                fontWeight: 900,
-                padding: '7px 18px',
-                borderRadius: '999px',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                fontSize: '13px',
-                width: 'max-content',
-                marginBottom: '14px',
-                border: 'none',
-              }}
+                  background: 'rgba(13, 27, 62, 0.95)',
+                  border: '1.5px solid #f59e0b',
+                  color: '#ffd875',
+                  fontWeight: 900,
+                  fontSize: '12px',
+                  padding: '7px 18px',
+                  borderRadius: '999px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  width: 'max-content',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.6)',
+                  marginTop: 'auto',
+                }}
             >
               <Sparkles size={14} /> Instant Student Enquiry
             </span>
@@ -1856,10 +1858,70 @@ function HomeEnquirySection() {
               <span><strong style={{ color: '#fbbf24' }}>Tuition Timings:</strong> Morning 5:30 AM – 7:00 AM &amp; Evening 6:30 PM – 9:00 PM</span>
             </div>
             <div className="enquiry-trust-strip">
-              <span style={{ background: '#f59e0b', color: '#000000', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ Dedicated Parking Facility</span>
-              <span style={{ background: '#f59e0b', color: '#000000', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ 100% Safe For Girls</span>
-              <span style={{ background: '#f59e0b', color: '#000000', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ 24/7 CCTV Surveillance</span>
-              <span style={{ background: '#f59e0b', color: '#000000', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ MSME Registered</span>
+              <span style={{
+                  background: 'rgba(13, 27, 62, 0.95)',
+                  border: '1.5px solid #f59e0b',
+                  color: '#ffd875',
+                  fontWeight: 900,
+                  fontSize: '12px',
+                  padding: '7px 18px',
+                  borderRadius: '999px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  width: 'max-content',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.6)',
+                  marginTop: 'auto',
+                }}>✓ Dedicated Parking Facility</span>
+              <span style={{
+                  background: 'rgba(13, 27, 62, 0.95)',
+                  border: '1.5px solid #f59e0b',
+                  color: '#ffd875',
+                  fontWeight: 900,
+                  fontSize: '12px',
+                  padding: '7px 18px',
+                  borderRadius: '999px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  width: 'max-content',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.6)',
+                  marginTop: 'auto',
+                }}>✓ 100% Safe For Girls</span>
+              <span style={{
+                  background: 'rgba(13, 27, 62, 0.95)',
+                  border: '1.5px solid #f59e0b',
+                  color: '#ffd875',
+                  fontWeight: 900,
+                  fontSize: '12px',
+                  padding: '7px 18px',
+                  borderRadius: '999px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  width: 'max-content',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.6)',
+                  marginTop: 'auto',
+                }}>✓ 24/7 CCTV Surveillance</span>
+              <span style={{
+                  background: 'rgba(13, 27, 62, 0.95)',
+                  border: '1.5px solid #f59e0b',
+                  color: '#ffd875',
+                  fontWeight: 900,
+                  fontSize: '12px',
+                  padding: '7px 18px',
+                  borderRadius: '999px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  width: 'max-content',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.6)',
+                  marginTop: 'auto',
+                }}>✓ MSME Registered</span>
             </div>
           </div>
 
