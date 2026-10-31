@@ -3530,3 +3530,216 @@ h1, h2, h3, h4, strong, b {
     font-weight: 800 !important;
   }
 }
+
+
+/* =========================================================================
+   100% BULLETPROOF VISIBILITY - CRYSTAL CLEAR HIGH CONTRAST OVERRIDES
+   Ensures EVERY word, title, badge, icon, and card is bright and easily readable
+   ========================================================================= */
+
+/* Headings and Titles - Crisp White */
+.ref-hero-title,
+.ref-feature-card h4,
+.class-simple-card h3,
+.safety-copy h2,
+.coaching-card-head h3,
+.faculty-panel-header h3,
+.subject-card h3,
+.enquiry-header h2,
+.enquiry-success-box h3,
+.about-point,
+.contact-social-embed strong,
+.branch-card h3,
+.branch-card h4,
+.welcome-card h3,
+.course-card h2,
+.facility-card h3,
+.milestone-heading,
+.careers-simple-content h2,
+.careers-header h2,
+.section-title h2,
+.strip-heading h2,
+.contact-preview h2,
+.page-hero h1,
+.founder-highlight-name,
+.founder-mini-badge strong,
+.ref-founder-mini-badge strong,
+.hero-proof strong,
+.banner-inner h2,
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Glowing Gold Highlights & Accents */
+.ref-hero-title .title-highlight,
+.ref-hero-tagline,
+.serif-accent,
+em,
+.title-highlight,
+.milestone-heading em,
+.doodle-sparkle,
+.doodle-cap,
+.branch-type-badge,
+.branch-status-badge,
+.ref-since-pill,
+.card-number,
+.class-number,
+.class-chip>svg,
+.score-card>strong,
+.student-feature>b,
+.founder-mini-avatar,
+.contact-form label,
+.form-grid label,
+.eyebrow,
+.card-overline,
+.welcome-tag,
+.founder-highlight-role,
+.founder-pills-row span,
+.milestone-big-number,
+.milestone-author strong,
+.careers-simple-points span,
+.branch-addr-icon,
+.ref-founder-mini-badge small {
+  color: #ffd875 !important;
+}
+
+/* All Descriptions, Body Copy, Lists, and Subtitles - Clear Silver White */
+.ref-hero-desc,
+.class-simple-card p,
+.safety-copy p,
+.coaching-card-head p,
+.faculty-panel p,
+.subject-card p,
+.enquiry-header p,
+.welcome-card p,
+.course-card p,
+.branch-card p,
+.branch-subtitle,
+.branch-info-item span,
+.branch-features-chip span,
+.facility-card p,
+.ref-feature-card small,
+.footer-copy,
+.footer-grid p,
+.copyright,
+.body-copy,
+.section-title p,
+.milestone-intro-text,
+.milestone-quote-box p,
+.milestone-author small,
+.founder-highlight-desc,
+.subject-card-points li,
+.faculty-points li,
+.contact-form p,
+.hero-lead,
+.page-hero p,
+p, li, span:not(.button):not(.badge):not(.pill):not(.brush-text) {
+  color: #cbd5e1 !important;
+}
+
+/* Doodle on Hero Photo */
+.ref-chalk-doodle {
+  background: rgba(13, 27, 62, 0.95) !important;
+  border: 2px dashed #ffd875 !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+}
+.doodle-row-1 {
+  color: #cbd5e1 !important;
+}
+.doodle-row-2 {
+  color: #ffffff !important;
+}
+
+/* Brush Badge on Hero Photo */
+.ref-brush-badge {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
+}
+.brush-text {
+  color: #060d1f !important;
+  font-weight: 900 !important;
+}
+
+/* Feature Cards on Hero */
+.ref-feature-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 14px !important;
+  padding: 12px 10px !important;
+}
+.ref-feature-card h4 {
+  color: #ffffff !important;
+}
+.ref-feature-card small {
+  color: #cbd5e1 !important;
+}
+
+/* Cards across site - matching 7000+ stat callout */
+.welcome-card, .course-card, .location-card, .form-card, 
+.branch-card, .milestone-stat-card, .facility-card, 
+.tutorial-card, .aside-card:not(.aside-dark), .results-list,
+.class-simple-card, .founder-highlight-box, .subject-card,
+.coaching-card, .careers-simple-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(22, 41, 86, 0.72) 100%) !important;
+  border: 1.5px solid rgba(245, 158, 11, 0.42) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 30px rgba(245, 158, 11, 0.12) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* Card Titles & Text */
+.class-simple-card h3,
+.founder-highlight-name,
+.subject-card h3,
+.coaching-card h3,
+.location-card h3 {
+  color: #ffffff !important;
+}
+
+.class-simple-card p,
+.founder-highlight-desc,
+.subject-card p,
+.location-card p {
+  color: #cbd5e1 !important;
+}
+
+/* Badges */
+.founder-pills-row span,
+.branch-features-chip {
+  background: rgba(245, 158, 11, 0.18) !important;
+  border: 1px solid rgba(245, 158, 11, 0.45) !important;
+  color: #ffd875 !important;
+}
+
+/* Forms and Inputs */
+.contact-form input, .contact-form textarea, 
+.form-grid input, .form-grid select, .form-grid textarea,
+.enquiry-form-grid input, .enquiry-form-grid select, .enquiry-form-grid textarea {
+  background: rgba(9, 19, 44, 0.95) !important;
+  border: 1.5px solid rgba(245, 158, 11, 0.45) !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+}
+.contact-form input:focus, .contact-form textarea:focus,
+.enquiry-form-grid input:focus, .enquiry-form-grid select:focus, .enquiry-form-grid textarea:focus {
+  border-color: #ffd875 !important;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3) !important;
+  outline: none !important;
+}
+
+/* Links */
+a:not(.button):not(.ref-enroll-btn):not(.mobile-bar-btn):not(.brand) {
+  color: #93c5fd !important;
+}
+a:not(.button):not(.ref-enroll-btn):not(.mobile-bar-btn):not(.brand):hover {
+  color: #ffd875 !important;
+}
+
+/* Navigation Links */
+.nav>a:not(.button) {
+  color: #e2e8f0 !important;
+}
+.nav>a:not(.button):hover, .nav>a.active {
+  color: #ffd875 !important;
+}
