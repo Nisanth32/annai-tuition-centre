@@ -22,6 +22,7 @@ import {
   Menu,
   Monitor,
   Phone,
+  Send,
   ShieldCheck,
   Sparkles,
   Star,
