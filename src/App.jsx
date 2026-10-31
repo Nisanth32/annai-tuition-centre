@@ -798,7 +798,7 @@ function GirlsSafetySection() {
               </div>
               <div>
                 <strong>24/7 CCTV Monitoring</strong>
-                <p>Continuous surveillance covering all classrooms, corridors, entrances, and study spaces.</p>
+                <p>Continuous surveillance across all classrooms, corridors, entrances, and study areas.</p>
               </div>
             </div>
 
@@ -808,7 +808,7 @@ function GirlsSafetySection() {
               </div>
               <div>
                 <strong>Respectful & Disciplined Atmosphere</strong>
-                <p>Comfortable separate seating arrangements and strict behavioural conduct standards.</p>
+                <p>Separate comfortable seating arrangements and strict behavioural conduct standards.</p>
               </div>
             </div>
 
@@ -818,7 +818,7 @@ function GirlsSafetySection() {
               </div>
               <div>
                 <strong>Dedicated Faculty Presence</strong>
-                <p>Mentors and staff are always on campus throughout class hours until every student departs safely.</p>
+                <p>Caring mentors and staff remain on campus throughout class hours until every student departs safely.</p>
               </div>
             </div>
 
@@ -828,7 +828,7 @@ function GirlsSafetySection() {
               </div>
               <div>
                 <strong>Safe Pickup & Drop Point</strong>
-                <p>Well-lit street access with dedicated waiting area for parents and students.</p>
+                <p>Well-lit street access with an organized waiting zone for parents and students.</p>
               </div>
             </div>
           </div>
@@ -1698,7 +1698,7 @@ function ReferenceHero() {
           <p className="ref-hero-tagline">Better Learning | Brighter Future</p>
 
           <p className="ref-hero-desc">
-            We provide quality education with experienced faculty, personal attention and a supportive environment to help every student achieve their goals.
+            Personal attention, expert faculty, and focused learning to help every student succeed with confidence.
           </p>
 
           <div className="ref-hero-actions">
@@ -2022,7 +2022,7 @@ function FounderHighlightSection() {
             <h3>S. Thiyagarajan, M.Sc. (IT), B.Ed.</h3>
             <p className="founder-role-title">Founder & Academic Director | Higher Secondary Maths & CS Specialist</p>
             <p className="founder-highlight-desc">
-              With over 16+ years of dedicated teaching experience in Trichy since 2008, S. Thiyagarajan personally leads our academic program. His proven formula breakdown, concept clarity, and centum drills have guided over 7,000+ students to board exam excellence.
+              Over 16 years of dedicated teaching in Trichy since 2008. S. Thiyagarajan personally leads our academic programs with concept clarity, formula mastery, and board exam centum coaching.
             </p>
             <div className="founder-pills-row">
               <span className="fpill">✓ Higher Secondary Maths Lead</span>
@@ -2207,7 +2207,7 @@ function About() {
             A place to learn with <em>purpose.</em>
           </>
         }
-        text="Annai Tuition Centre has been a cornerstone of quality education in Puthur, Trichy since 2008, helping over 7,000+ students excel academically."
+        text="Empowering students in Puthur, Trichy since 2008 with quality coaching, personal care, and over 7,000+ successful alumni."
       />
 
       <section className="section">
@@ -2216,7 +2216,7 @@ function About() {
             <SectionTitle
               eyebrow="Annai Tuition Centre (Since 2008)"
               title="Better Education... Brighter Future..."
-              text="Our centre welcomes students and families looking for a supportive, disciplined, and empowering place to achieve academic success. We believe progress grows from steady effort, encouragement, and clear concept understanding."
+              text="At Annai Tuition Centre, we believe every student can achieve more with the right guidance. We focus on clear concepts, personal attention, and consistent practice to help students perform with confidence."
             />
             <p className="body-copy">
               Led by founder <strong>S. Thiyagarajan</strong> (M.Sc., IT., B.Ed.), Annai Tuition Centre provides
@@ -2345,7 +2345,7 @@ function ClassesPage() {
             The next step starts <em>here.</em>
           </>
         }
-        text="Explore our comprehensive coaching programs from Class 1 to 12. Specialized batches for Computer Science, Biology, Mathematics, and Board examinations with proven centum results."
+        text="Comprehensive coaching programs from Class 1 to 12. Specialized batches for Mathematics, Science, Computer Science, and Board Exam Centums."
       />
 
       {/* Specialized Computer Science, Biology & Tutorials */}
@@ -2791,7 +2791,7 @@ function Contact() {
             We’re just a call <em>away.</em>
           </>
         }
-        text="Contact Annai Tuition Centre to ask about classes, admission, or visiting either location in Puthur, Trichy."
+        text="Have questions about admissions, batch timings, or courses? We are here to help. Call us or visit our Puthur campuses."
       />
 
       <section className="phone-band">
@@ -3324,7 +3324,7 @@ function FacultyPage() {
             Learn from Trichy’s <em>top mentors.</em>
           </>
         }
-        text="Led by Founder S. Thiyagarajan, M.Sc. (IT), B.Ed., alongside experienced postgraduate subject specialist faculty with 7–8+ years teaching experience dedicated to continuous student improvement and board exam centums."
+        text="Led by Founder S. Thiyagarajan alongside experienced postgraduate subject specialist mentors with 7–8+ years coaching experience dedicated to student excellence."
       />
       <FacultySection />
       {/* Faculty Careers & Teaching Positions Hiring Section with 1-click WhatsApp Apply */}
