@@ -919,7 +919,7 @@ function FacilitiesSection() {
                 className="facility-tag"
                 style={{
                   background: '#f59e0b',
-                  color: '#060d1f',
+                  color: '#000000',
                   fontWeight: 900,
                   fontSize: '12px',
                   padding: '7px 16px',
@@ -966,7 +966,7 @@ function FacilitiesSection() {
                 className="facility-tag"
                 style={{
                   background: '#f59e0b',
-                  color: '#060d1f',
+                  color: '#000000',
                   fontWeight: 900,
                   fontSize: '12px',
                   padding: '7px 16px',
@@ -1013,7 +1013,7 @@ function FacilitiesSection() {
                 className="facility-tag"
                 style={{
                   background: '#f59e0b',
-                  color: '#060d1f',
+                  color: '#000000',
                   fontWeight: 900,
                   fontSize: '12px',
                   padding: '7px 16px',
@@ -1060,7 +1060,7 @@ function FacilitiesSection() {
                 className="facility-tag"
                 style={{
                   background: '#f59e0b',
-                  color: '#060d1f',
+                  color: '#000000',
                   fontWeight: 900,
                   fontSize: '12px',
                   padding: '7px 16px',
@@ -1816,7 +1816,7 @@ function HomeEnquirySection() {
               className="enquiry-now-badge"
               style={{
                 background: '#f59e0b',
-                color: '#060d1f',
+                color: '#000000',
                 fontWeight: 900,
                 padding: '7px 18px',
                 borderRadius: '999px',
@@ -1856,10 +1856,10 @@ function HomeEnquirySection() {
               <span><strong style={{ color: '#fbbf24' }}>Tuition Timings:</strong> Morning 5:30 AM – 7:00 AM &amp; Evening 6:30 PM – 9:00 PM</span>
             </div>
             <div className="enquiry-trust-strip">
-              <span style={{ background: '#f59e0b', color: '#060d1f', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ Dedicated Parking Facility</span>
-              <span style={{ background: '#f59e0b', color: '#060d1f', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ 100% Safe For Girls</span>
-              <span style={{ background: '#f59e0b', color: '#060d1f', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ 24/7 CCTV Surveillance</span>
-              <span style={{ background: '#f59e0b', color: '#060d1f', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ MSME Registered</span>
+              <span style={{ background: '#f59e0b', color: '#000000', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ Dedicated Parking Facility</span>
+              <span style={{ background: '#f59e0b', color: '#000000', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ 100% Safe For Girls</span>
+              <span style={{ background: '#f59e0b', color: '#000000', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ 24/7 CCTV Surveillance</span>
+              <span style={{ background: '#f59e0b', color: '#000000', fontWeight: 900, padding: '7px 16px', borderRadius: '999px', fontSize: '13px', border: 'none' }}>✓ MSME Registered</span>
             </div>
           </div>
 
@@ -1880,7 +1880,7 @@ function HomeEnquirySection() {
               className="button button-outline"
               style={{
                 background: '#f59e0b',
-                color: '#060d1f',
+                color: '#000000',
                 border: 'none',
                 fontWeight: 900,
                 padding: '0 24px',

@@ -4459,3 +4459,121 @@ p, li, label, .body-copy, .section-title p, .ref-hero-desc,
   background: #f59e0b !important;
   color: #060d1f !important;
 }
+
+/* =========================================================================
+   USER EXPLICIT REQUIREMENT: "in the white background pl dark the letter colour in black to visible"
+   Forces 100% PURE BOLD BLACK (#000000) on all white, cream, yellow, or light backgrounds
+   ========================================================================= */
+
+/* 1. Facility Tags, Badges, Pills & Labels */
+.facility-tag,
+.card-badge,
+.card-icon-pill,
+.panel-badge,
+.panel-exp-pill,
+.coaching-card-badge,
+.branch-type-badge,
+.branch-status-badge,
+.branch-tag-pill,
+.ref-since-pill,
+.msme-pill,
+.enquiry-now-badge,
+.enquiry-trust-strip span,
+.student-feature>b,
+.score-card>strong,
+.brush-text,
+.facility-img-badge,
+.marks-only,
+.marks-only span,
+.marks-only strong,
+.score-card {
+  color: #000000 !important;
+  font-weight: 900 !important;
+  text-shadow: none !important;
+}
+
+.facility-tag *,
+.card-badge *,
+.panel-badge *,
+.coaching-card-badge *,
+.enquiry-now-badge *,
+.enquiry-trust-strip span *,
+.brush-text * {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* 2. Pure Black on any White, Light Cream, or Gold Background */
+*[style*="background: #f59e0b"],
+*[style*="background: #ffd875"],
+*[style*="background: #f5eedc"],
+*[style*="background: #ffffff"],
+*[style*="background: #fff"],
+*[style*="background: white"],
+*[style*="background:#fff"],
+*[style*="background:#ffffff"],
+*[style*="background:#f59e0b"],
+*[style*="background: #f8fafc"],
+*[style*="background: #f1f5f9"],
+*[style*="background: #edf2f9"],
+*[style*="background: rgb(245, 158, 11)"],
+*[style*="background: rgb(255, 255, 255)"],
+*[style*="background: rgb(245, 238, 220)"] {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+*[style*="background: #f59e0b"] *,
+*[style*="background: #ffd875"] *,
+*[style*="background: #f5eedc"] *,
+*[style*="background: #ffffff"] *,
+*[style*="background: #fff"] *,
+*[style*="background: white"] *,
+*[style*="background:#fff"] *,
+*[style*="background:#ffffff"] *,
+*[style*="background:#f59e0b"] *,
+*[style*="background: #f8fafc"] *,
+*[style*="background: #f1f5f9"] *,
+*[style*="background: #edf2f9"] *,
+*[style*="background: rgb(245, 158, 11)"] *,
+*[style*="background: rgb(255, 255, 255)"] *,
+*[style*="background: rgb(245, 238, 220)"] * {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* 3. Gold & Yellow Action Buttons - Solid Bold Black Text */
+.button-gold,
+.button-primary,
+.ref-enroll-btn,
+.button-call-enquiry,
+.mobile-bar-btn.call,
+.button-outline:hover,
+.ref-call-btn:hover {
+  color: #000000 !important;
+  font-weight: 900 !important;
+  text-shadow: none !important;
+}
+
+.button-gold *,
+.button-primary *,
+.ref-enroll-btn *,
+.mobile-bar-btn.call * {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* 4. White or Light Containers */
+.white-bg,
+.bg-white,
+.card-white,
+.light-container {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.white-bg h1, .white-bg h2, .white-bg h3, .white-bg h4,
+.white-bg p, .white-bg span, .white-bg strong, .white-bg li {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
