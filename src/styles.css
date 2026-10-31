@@ -3743,3 +3743,265 @@ a:not(.button):not(.ref-enroll-btn):not(.mobile-bar-btn):not(.brand):hover {
 .nav>a:not(.button):hover, .nav>a.active {
   color: #ffd875 !important;
 }
+
+/* =========================================================================
+   COMPREHENSIVE RESPONSIVE (MOBILE & DESKTOP) & 100% VISIBLE CONTRAST SUITE
+   ========================================================================= */
+
+/* 1. UNIVERSAL TEXT VISIBILITY OVERRIDES */
+/* Crisp White for every title, heading, strong, and table header */
+h1, h2, h3, h4, h5, h6,
+.hero h1, .page-hero h1, .section-title h2, .strip-heading h2,
+.results-list-head h2, .faculty-panel-card h4, .subject-card h3,
+.form-heading h2, .aside-card h2, .aside-card h3, .safety-point strong,
+.branch-card h3, .branch-card h4, .careers-simple-content h2,
+.careers-header h2, .ref-hero-title, .welcome-card h3, .course-card h2,
+.facility-card h3, .milestone-heading, .founder-highlight-name,
+.student-feature-copy strong, .coaching-card-head h3,
+.about-point, .contact-social-embed strong, .banner-inner h2,
+.marks-only strong, strong, b {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Glistening Warm Gold for tags, highlights, metrics, and badges */
+em, .title-highlight, .serif-accent, .eyebrow,
+.ref-hero-title .title-highlight, .ref-hero-tagline,
+.welcome-tag, .card-badge, .card-overline, .card-number, .class-number,
+.badge, .pill, .branch-tag-pill, .branch-type-badge, .branch-status-badge,
+.panel-badge, .panel-exp-pill, .coaching-card-badge, .score-card>strong,
+.student-feature>b, .milestone-big-number, .milestone-author strong,
+.careers-simple-points span, .branch-addr-icon, .founder-highlight-role,
+.founder-pills-row span, .doodle-sparkle, .doodle-cap, .msme-pill,
+.ref-founder-mini-badge small, .contact-form label, .form-grid label,
+.enquiry-form-grid label {
+  color: #ffd875 !important;
+}
+
+/* Clear Silver-White for all paragraphs, body text, lists, and subtitles */
+p, li, label, .body-copy, .section-title p, .ref-hero-desc,
+.class-simple-card p, .safety-copy p, .coaching-card-head p,
+.faculty-panel p, .subject-card p, .enquiry-header p, .welcome-card p,
+.course-card p, .branch-card p, .branch-subtitle, .branch-info-item span,
+.branch-features-chip span, .facility-card p, .ref-feature-card small,
+.footer-copy, .footer-grid p, .copyright, .milestone-intro-text,
+.milestone-quote-box p, .milestone-author small, .founder-highlight-desc,
+.subject-card-points li, .faculty-points li, .contact-form p,
+.hero-lead, .page-hero p, .form-heading p, .branch-hours-line,
+.panel-qualifications, .panel-improve-title, .panel-points-list li,
+.coaching-features li, .subject-card-sub, .smart-card p,
+.score-card>span, .marks-only span, .student-feature-copy small,
+.aside-card p, .safety-point p, .enquiry-trust-strip span {
+  color: #cbd5e1 !important;
+}
+
+/* 2. ALL CARD CONTAINERS - Sleek Sapphire Glassmorphism matching 7000+ stat callout */
+.welcome-card, .course-card, .location-card, .form-card, 
+.branch-card, .milestone-stat-card, .facility-card, 
+.tutorial-card, .aside-card:not(.aside-dark), .results-list,
+.class-simple-card, .founder-highlight-box, .subject-card,
+.coaching-card, .careers-simple-card, .student-feature,
+.score-card, .marks-only, .faculty-panel-card, .smart-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(22, 41, 86, 0.72) 100%) !important;
+  border: 1.5px solid rgba(245, 158, 11, 0.42) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 30px rgba(245, 158, 11, 0.12) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.student-feature>b {
+  background: rgba(245, 158, 11, 0.22) !important;
+  border: 1px solid rgba(245, 158, 11, 0.5) !important;
+  border-radius: 8px !important;
+  color: #ffd875 !important;
+}
+
+.score-card>strong {
+  background: rgba(245, 158, 11, 0.22) !important;
+  border: 1px solid rgba(245, 158, 11, 0.5) !important;
+  border-radius: 6px !important;
+  color: #ffd875 !important;
+}
+
+/* 3. BUTTONS & ACTIONS */
+.button-primary, .button-gold, .ref-enroll-btn, .nav-cta {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+  color: #060d1f !important;
+  font-weight: 800 !important;
+  border: none !important;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35) !important;
+}
+.button-primary:hover, .button-gold:hover, .ref-enroll-btn:hover, .nav-cta:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.5) !important;
+}
+
+.button-outline, .ref-call-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1.5px solid rgba(245, 158, 11, 0.55) !important;
+  color: #ffd875 !important;
+  font-weight: 700 !important;
+}
+.button-outline:hover, .ref-call-btn:hover {
+  background: rgba(245, 158, 11, 0.18) !important;
+  border-color: #ffd875 !important;
+  color: #ffffff !important;
+}
+
+/* 4. FORMS & INPUTS - High contrast and 16px font to prevent mobile zoom */
+input:not([type=checkbox]), select, textarea {
+  background: rgba(9, 19, 44, 0.95) !important;
+  border: 1.5px solid rgba(245, 158, 11, 0.45) !important;
+  border-radius: 10px !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  min-height: 48px !important;
+  padding: 10px 14px !important;
+}
+input::placeholder, textarea::placeholder {
+  color: #94a3b8 !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #ffd875 !important;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3) !important;
+  outline: none !important;
+}
+
+/* 5. RESPONSIVE NAVIGATION & HEADER (TABLETS & MOBILE <= 900px) */
+@media (max-width: 900px) {
+  .nav-wrap {
+    position: relative !important;
+    height: 68px !important;
+  }
+  .menu-toggle {
+    display: grid !important;
+    place-items: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 8px !important;
+    border: 1.5px solid rgba(245, 158, 11, 0.5) !important;
+    background: rgba(245, 158, 11, 0.15) !important;
+    color: #ffd875 !important;
+    cursor: pointer !important;
+  }
+  .nav {
+    display: none !important;
+  }
+  .nav.open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 68px !important;
+    left: -24px !important;
+    right: -24px !important;
+    width: calc(100% + 48px) !important;
+    background: #081127 !important;
+    border-top: 1.5px solid rgba(245, 158, 11, 0.4) !important;
+    border-bottom: 2px solid rgba(245, 158, 11, 0.5) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85) !important;
+    padding: 16px 20px 22px !important;
+    gap: 8px !important;
+    z-index: 9999 !important;
+  }
+  .nav.open > a:not(.button) {
+    display: block !important;
+    padding: 13px 16px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+  .nav.open > a:not(.button):hover,
+  .nav.open > a.active {
+    background: rgba(245, 158, 11, 0.2) !important;
+    border-color: rgba(245, 158, 11, 0.5) !important;
+    color: #ffd875 !important;
+  }
+  .nav.open .nav-cta {
+    margin-top: 10px !important;
+    width: 100% !important;
+    height: 48px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 16px !important;
+  }
+
+  /* Grids to Single Column on Mobile/Tablets */
+  .student-feature-grid,
+  .results-columns,
+  .admission-layout,
+  .coaching-cards-grid,
+  .faculty-panel-grid,
+  .facilities-grid,
+  .courses-grid,
+  .about-grid,
+  .contact-grid,
+  .welcome-cards,
+  .subjects-grid,
+  .branch-grid,
+  .achievements-grid,
+  .milestone-pillars-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .ref-hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    text-align: center !important;
+  }
+  .ref-hero-actions {
+    justify-content: center !important;
+  }
+}
+
+/* 6. ULTRA-RESPONSIVE MOBILE BREAKPOINT (<= 480px) */
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 24px) !important;
+  }
+  .topline {
+    height: auto !important;
+    padding: 6px 12px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 6px !important;
+    font-size: 11px !important;
+  }
+  .topline-left {
+    display: none !important;
+  }
+  .topline-right {
+    margin: 0 auto !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+  .ref-hero-title {
+    font-size: clamp(26px, 7.5vw, 34px) !important;
+    line-height: 1.25 !important;
+  }
+  .ref-hero-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+  .ref-hero-actions a {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .ref-features-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .welcome-card, .course-card, .location-card, .form-card, 
+  .branch-card, .facility-card, .class-simple-card, .coaching-card,
+  .careers-simple-card, .student-feature, .score-card {
+    padding: 16px 14px !important;
+  }
+}
