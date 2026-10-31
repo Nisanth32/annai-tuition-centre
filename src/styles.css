@@ -4293,3 +4293,169 @@ input:focus, select:focus, textarea:focus {
   font-size: 12px !important;
   font-weight: 700 !important;
 }
+
+/* =========================================================================
+   100% VISIBLE WARM GOLD & SUNNY AMBER TYPOGRAPHY (ZERO INVISIBLE WHITE TEXT)
+   Ensures every single letter and word is instantly readable with zero glare
+   ========================================================================= */
+
+/* ALL HEADINGS, TITLES, NAMES, CARD HEADERS - RICH GLOWING WARM GOLD */
+h1, h2, h3, h4, h5, h6,
+.hero h1, .page-hero h1, .section-title h2, .strip-heading h2,
+.results-list-head h2, .faculty-panel-card h4, .subject-card h3,
+.form-heading h2, .aside-card h2, .aside-card h3, .safety-point strong,
+.branch-card h3, .branch-card h4, .careers-simple-content h2,
+.careers-header h2, .ref-hero-title, .welcome-card h3, .course-card h2,
+.facility-card h3, .milestone-heading, .founder-highlight-name,
+.student-feature-copy strong, .coaching-card-head h3,
+.about-point, .contact-social-embed strong, .banner-inner h2,
+.marks-only strong, strong, b, .card-title,
+.ref-hero-title .title-highlight, .serif-accent, em, .brand strong {
+  color: #ffd875 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* ALL PARAGRAPHS, DESCRIPTIONS, BODY COPY, LISTS - CRISP SUNNY CREAM */
+p, li, label, .body-copy, .section-title p, .ref-hero-desc,
+.class-simple-card p, .safety-copy p, .coaching-card-head p,
+.faculty-panel p, .subject-card p, .enquiry-header p, .welcome-card p,
+.course-card p, .branch-card p, .branch-subtitle, .branch-info-item span,
+.branch-features-chip span, .facility-card p, .ref-feature-card small,
+.footer-copy, .footer-grid p, .copyright, .milestone-intro-text,
+.milestone-quote-box p, .milestone-author small, .founder-highlight-desc,
+.subject-card-points li, .faculty-points li, .contact-form p,
+.hero-lead, .page-hero p, .form-heading p, .branch-hours-line,
+.panel-qualifications, .panel-improve-title, .panel-points-list li,
+.coaching-features li, .subject-card-sub, .smart-card p,
+.score-card>span, .marks-only span, .student-feature-copy small,
+.aside-card p, .safety-point p, .enquiry-trust-strip span,
+.facility-card-body p, .ref-hero-tagline, .doodle-row-1, .doodle-row-2,
+.ref-feature-card p, .enquiry-now-content p, .nav>a:not(.button) {
+  color: #fef08a !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* VIBRANT AMBER HIGHLIGHTS, BADGES, PILLS, TAGS & ICONS */
+.eyebrow, .card-overline, .card-number, .class-number,
+.welcome-tag, .card-badge, .badge, .pill, .msme-pill,
+.branch-tag-pill, .branch-type-badge, .branch-status-badge,
+.panel-badge, .panel-exp-pill, .coaching-card-badge,
+.milestone-big-number, .milestone-author strong,
+.careers-simple-points span, .branch-addr-icon, .founder-highlight-role,
+.founder-pills-row span, .doodle-sparkle, .doodle-cap,
+.ref-founder-mini-badge small, .founder-mini-badge small,
+.facility-tag, .enquiry-now-badge, .facility-img-badge {
+  color: #fbbf24 !important;
+}
+
+/* BADGES & PILL CONTAINERS - DARK TINTED WITH GLOWING BORDER */
+.facility-tag, .enquiry-now-badge, .ref-since-pill, .msme-pill,
+.branch-tag-pill, .branch-type-badge, .branch-status-badge,
+.panel-badge, .panel-exp-pill, .coaching-card-badge {
+  background: rgba(13, 27, 62, 0.95) !important;
+  border: 1.5px solid #f59e0b !important;
+  color: #ffd875 !important;
+  font-weight: 900 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* MARKS & STUDENT SCORES */
+.student-feature>b, .score-card>strong {
+  background: rgba(245, 158, 11, 0.25) !important;
+  border: 1.5px solid #f59e0b !important;
+  color: #ffd875 !important;
+  font-weight: 900 !important;
+}
+
+/* TIMING PILL ON HOME ENQUIRY */
+.enquiry-timing-pill {
+  background: rgba(8, 17, 39, 0.98) !important;
+  border: 2px solid #f59e0b !important;
+  color: #ffd875 !important;
+}
+.enquiry-timing-pill strong {
+  color: #fbbf24 !important;
+}
+.enquiry-timing-pill span {
+  color: #fef08a !important;
+}
+
+/* TRUST STRIP */
+.enquiry-trust-strip span {
+  background: rgba(13, 27, 62, 0.92) !important;
+  border: 1.5px solid #f59e0b !important;
+  color: #ffd875 !important;
+  font-weight: 800 !important;
+}
+
+/* MOBILE BOTTOM BAR WITH 3 QUICK BUTTONS */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 84px !important;
+  }
+  .mobile-bottom-bar {
+    display: grid !important;
+    grid-template-columns: 1fr 1.1fr 1.25fr !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    height: 68px !important;
+    background: rgba(6, 13, 31, 0.98) !important;
+    border-top: 2px solid #f59e0b !important;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(16px) !important;
+    padding: 10px 8px !important;
+    gap: 8px !important;
+    align-items: center !important;
+  }
+  .mobile-bar-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    border-radius: 10px !important;
+    font-size: 12px !important;
+    font-weight: 900 !important;
+    height: 46px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    padding: 0 4px !important;
+  }
+  .mobile-bar-btn.call {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+    color: #060d1f !important;
+  }
+  .mobile-bar-btn.whatsapp {
+    background: #10b981 !important;
+    color: #ffffff !important;
+  }
+  .mobile-bar-btn.teaching {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+    color: #ffd875 !important;
+    border: 1.5px solid #a5b4fc !important;
+  }
+}
+
+/* MOBILE NAV TEACHER APPLICATION BUTTON */
+.mobile-nav-teacher-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: rgba(245, 158, 11, 0.22) !important;
+  border: 1.5px solid #f59e0b !important;
+  color: #ffd875 !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  padding: 14px 16px !important;
+  border-radius: 10px !important;
+  margin-top: 10px !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+.mobile-nav-teacher-btn:hover {
+  background: #f59e0b !important;
+  color: #060d1f !important;
+}

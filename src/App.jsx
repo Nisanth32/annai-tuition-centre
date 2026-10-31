@@ -6,6 +6,7 @@ import {
   ArrowUpRight,
   Award,
   BookOpen,
+  Briefcase,
   Camera,
   Car,
   Check,
@@ -272,7 +273,7 @@ const branchesInfo = [
   {
     type: 'Registered Office',
     name: 'Annai Tuition Centre',
-    subtitle: 'Main Administrative Hub & Smart-Base Classrooms',
+    subtitle: 'Main Administrative Hub & Smart Board',
     doorNo: 'Door No.: 21/87',
     street: 'Puthur Agraharam',
     landmark: 'Near Bishop School',
@@ -282,7 +283,7 @@ const branchesInfo = [
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=21%2F87+Puthur+Agraharam+Near+Bishop+School+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=21%2F87%2C+Puthur+Agraharam%2C+Near+Bishop+School%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
     timings: 'Morning: 5:30 AM – 7:00 AM & Evening: 6:30 PM – 9:00 PM | Sunday: Special Batches',
-    facilities: ['Dedicated Parking Facility', '24/7 CCTV Surveillance', 'Smart-Base Classroom', '100% Safe for Girls'],
+    facilities: ['Dedicated Parking Facility', '24/7 CCTV Surveillance', 'Smart Board', '100% Safe for Girls'],
   },
   {
     type: 'Branch Campus',
@@ -297,7 +298,7 @@ const branchesInfo = [
     directionsLink: 'https://www.google.com/maps/dir/?api=1&destination=Ramakrishna+Middle+School+Near+Aruna+Theatre+Puthur+Trichy+17',
     embedMapUrl: 'https://maps.google.com/maps?q=Ramakrishna+Middle+School%2C+Near+Aruna+Theatre%2C+Puthur%2C+Trichy+17&t=&z=16&ie=UTF8&iwloc=&output=embed',
     timings: 'Morning: 5:30 AM – 7:00 AM & Evening: 6:30 PM – 9:00 PM | Sunday: Special Batches',
-    facilities: ['Dedicated Parking Facility', 'Spacious Desks & CCTV', 'Smart-Base Classroom', '100% Safe for Girls'],
+    facilities: ['Dedicated Parking Facility', 'Spacious Desks & CCTV', 'Smart Board', '100% Safe for Girls'],
   },
 ];
 
@@ -387,6 +388,15 @@ function Header() {
           <Link className="button button-primary nav-cta" to="/admissions" onClick={() => setOpen(false)}>
             Enquire now <ArrowRight size={15} />
           </Link>
+          <a
+            href="https://wa.me/919626265456?text=Hi%2C%20I%20am%20interested%20in%20applying%20for%20a%20teaching%20position%20at%20Annai%20Tuition%20Centre"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mobile-nav-teacher-btn"
+            onClick={() => setOpen(false)}
+          >
+            <Briefcase size={16} /> Apply for Teaching Positions on WhatsApp
+          </a>
         </nav>
       </div>
     </header>
@@ -552,15 +562,23 @@ function AppShell({ children }) {
       <Footer />
       <div className="mobile-bottom-bar" aria-label="Quick mobile contact">
         <a href="tel:+919626265456" className="mobile-bar-btn call">
-          <Phone size={15} /> Call 96262 65456
+          <Phone size={13} /> Call
         </a>
         <a
-          href="https://wa.me/919626265456?text=Hello%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20classes"
+          href="https://wa.me/919626265456?text=Hello%20Annai%20Tuition%20Centre,%20I%20would%20like%20to%20enquire%20about%20admissions"
           target="_blank"
           rel="noopener noreferrer"
           className="mobile-bar-btn whatsapp"
         >
-          <MessageCircle size={15} /> WhatsApp
+          <MessageCircle size={13} /> WhatsApp
+        </a>
+        <a
+          href="https://wa.me/919626265456?text=Hi%2C%20I%20am%20interested%20in%20applying%20for%20a%20teaching%20position%20at%20Annai%20Tuition%20Centre"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mobile-bar-btn teaching"
+        >
+          <Briefcase size={13} /> Teaching Jobs
         </a>
       </div>
     </>
@@ -928,12 +946,12 @@ function FacilitiesSection() {
             </div>
           </div>
 
-          {/* Smart-Base Digital Classrooms */}
+          {/* Interactive Smart Board */}
           <div className="facility-card smart-class-card">
             <div className="facility-img-wrap">
               <img
                 src="/images/smart-classroom-hero.jpg"
-                alt="Smart-Base Interactive Classrooms"
+                alt="Smart Board Interactive Classrooms"
                 onError={(e) => { e.currentTarget.src = '/images/annai-classroom-students.jpg'; }}
               />
               <span className="facility-img-badge">
@@ -945,7 +963,7 @@ function FacilitiesSection() {
                 <div className="facility-icon monitor-icon">
                   <Monitor size={20} />
                 </div>
-                <h3>Smart-Base Classrooms</h3>
+                <h3>Smart Board</h3>
               </div>
               <p>
                 Equipped with interactive touch flat panels, high-lumen projectors, 3D science animations, and live
@@ -1112,7 +1130,7 @@ export function SmartClassSection() {
           eyebrow="Next-Gen Classroom Technology"
           title={
             <>
-              Smart-Base Classrooms: Learning with <span className="serif-accent">Digital Precision</span>.
+              Smart Board: Learning with <span className="serif-accent">Digital Precision</span>.
             </>
           }
           text="Step into Trichy’s most technologically advanced tuition classrooms. We combine interactive touch panels, 3D animated science models, and live coding demos to accelerate concept absorption and student scores."
@@ -1925,6 +1943,9 @@ function Home() {
       {/* Our Two Branches in Puthur, Trichy (Google Maps, No branch images) */}
       <BranchesSection />
 
+      {/* Apply for Teaching Positions on WhatsApp */}
+      <FacultyCareersSection />
+
       {/* Social Media Links Section */}
       <SocialMediaSection />
 
@@ -2020,7 +2041,7 @@ function About() {
               </div>
               <div className="about-point">
                 <Monitor size={17} />
-                <span>Smart-Base Classrooms with Digital Touch Panels</span>
+                <span>Smart Board with Digital Touch Panels</span>
               </div>
               <div className="about-point">
                 <ShieldCheck size={17} />
@@ -2628,7 +2649,7 @@ function Contact() {
                 <strong>Phone Numbers:</strong> 96262 65456, 99941 48476
               </p>
               <p>
-                <strong>Facilities:</strong> 24/7 CCTV Monitoring, Dedicated Parking Facility, Smart-Base Classrooms, 100% Safe for Girls
+                <strong>Facilities:</strong> 24/7 CCTV Monitoring, Dedicated Parking Facility, Smart Board, 100% Safe for Girls
               </p>
               <div className="contact-social-embed">
                 <strong>Follow us on Social Media:</strong>
