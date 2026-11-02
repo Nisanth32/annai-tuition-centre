@@ -98,3 +98,4 @@ function initDatabaseTables(PDO $pdo) {
         $insert->execute([ADMIN_USERNAME, ADMIN_PASSWORD_HASH]);
     }
 }
+

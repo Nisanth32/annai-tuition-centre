@@ -7,3 +7,5 @@ backend/.venv/
 __pycache__/
 *.pyc
 .DS_Store
+*.zip
+*.7z

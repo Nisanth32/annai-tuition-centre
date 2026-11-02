@@ -44,3 +44,4 @@ define('ADMIN_PASSWORD_HASH', password_hash('Admin@Annai2026', PASSWORD_DEFAULT)
 // -------------------------------------------------------------
 define('NOTIFICATION_EMAIL', 'annaituitioncentrepth@gmail.com');
 define('FROM_EMAIL', 'noreply@annaituitioncentertrichy.com');
+

@@ -325,3 +325,4 @@ if (preg_match('#^/admin/admissions/([^/]+)/(?:status/)?$#', $path, $matches)) {
 
 // Fallback: 404 Not Found
 jsonReply(['detail' => 'Not found: ' . $path], 404);
+
