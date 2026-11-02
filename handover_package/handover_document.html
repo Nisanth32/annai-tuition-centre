@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Handover Document — Annai Tuition Centre</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 18mm 20mm 18mm;
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #172544;
+      background: #ffffff;
+      line-height: 1.6;
+      font-size: 11pt;
+      margin: 0;
+      padding: 0;
+    }
+    .cover {
+      page-break-after: always;
+      padding: 40px 0;
+      text-align: left;
+    }
+    .badge-tag {
+      display: inline-block;
+      background: #071b45;
+      color: #ffc857;
+      padding: 6px 14px;
+      font-size: 9pt;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      margin-bottom: 24px;
+    }
+    h1.doc-title {
+      font-size: 30pt;
+      line-height: 1.15;
+      color: #071b45;
+      font-weight: 900;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.03em;
+    }
+    .doc-subtitle {
+      font-size: 15pt;
+      color: #c98a0c;
+      font-weight: 600;
+      margin: 0 0 35px 0;
+    }
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 40px;
+      border: 1px solid #d8e2f0;
+      background: #f8fafd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .meta-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid #e2ecf8;
+      font-size: 10.5pt;
+    }
+    .meta-table td.label {
+      font-weight: 700;
+      color: #071b45;
+      width: 32%;
+      background: #edf3fc;
+    }
+    .meta-table td.val {
+      color: #2a3b5c;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+    h2 {
+      font-size: 17pt;
+      color: #071b45;
+      font-weight: 800;
+      border-bottom: 2px solid #ffc857;
+      padding-bottom: 6px;
+      margin-top: 35px;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d2864;
+      font-weight: 700;
+      margin-top: 18px;
+      margin-bottom: 6px;
+    }
+    p {
+      margin: 0 0 10px 0;
+      color: #2b3a58;
+    }
+    ul {
+      margin: 6px 0 16px 20px;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 6px;
+      color: #2b3a58;
+    }
+    .callout {
+      background: #f2f7fd;
+      border-left: 4px solid #071b45;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 18px 0;
+    }
+    .callout-warning {
+      background: #fff8e6;
+      border-left: 4px solid #e59c00;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 18px 0;
+    }
+    .callout-warning strong {
+      color: #8c5900;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 16px 0;
+    }
+    .feature-box {
+      border: 1px solid #dbe4f0;
+      border-radius: 6px;
+      padding: 12px 14px;
+      background: #fafcff;
+    }
+    .feature-box strong {
+      display: block;
+      color: #071b45;
+      font-size: 10.5pt;
+      margin-bottom: 4px;
+    }
+    .feature-box span {
+      font-size: 9.5pt;
+      color: #516382;
+      line-height: 1.4;
+    }
+    .link-pill {
+      display: inline-block;
+      background: #071b45;
+      color: #ffffff !important;
+      padding: 6px 14px;
+      border-radius: 5px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 10pt;
+    }
+    .steps-list {
+      counter-reset: step-counter;
+      list-style: none;
+      margin: 14px 0;
+      padding: 0;
+    }
+    .steps-list li {
+      counter-increment: step-counter;
+      position: relative;
+      padding-left: 38px;
+      margin-bottom: 16px;
+    }
+    .steps-list li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 26px;
+      height: 26px;
+      background: #071b45;
+      color: #ffc857;
+      font-weight: 800;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 26px;
+      font-size: 9.5pt;
+    }
+    .footer-note {
+      margin-top: 50px;
+      border-top: 1px solid #dbe4f0;
+      padding-top: 14px;
+      font-size: 8.5pt;
+      color: #7b8ea8;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- COVER PAGE -->
+  <div class="cover">
+    <span class="badge-tag">Official Website Handover Package</span>
+    <h1 class="doc-title">ANNAI TUITION CENTRE</h1>
+    <div class="doc-subtitle">Trichy — Established 2008 · 7,000+ Alumni</div>
+    
+    <p style="font-size: 12pt; color: #435472; max-width: 90%;">
+      Comprehensive handover documentation, project scope overview, live verification links, access ownership instructions, and ongoing maintenance guidelines.
+    </p>
+
+    <table class="meta-table">
+      <tr>
+        <td class="label">Client / Institution</td>
+        <td class="val"><strong>Annai Tuition Centre</strong>, Puthur, Trichy – 620 017</td>
+      </tr>
+      <tr>
+        <td class="label">Founder & Academic Director</td>
+        <td class="val"><strong>S. Thiyagarajan</strong>, M.Sc. (IT), B.Ed.</td>
+      </tr>
+      <tr>
+        <td class="label">Primary Contact Numbers</td>
+        <td class="val">+91 96262 65456 &nbsp;|&nbsp; +91 99941 48476</td>
+      </tr>
+      <tr>
+        <td class="label">Official Email</td>
+        <td class="val">annaituitioncentre@gmail.com</td>
+      </tr>
+      <tr>
+        <td class="label">Live Production URL</td>
+        <td class="val"><strong>https://annai-tuition-centre-lv8z.vercel.app/</strong></td>
+      </tr>
+      <tr>
+        <td class="label">Technology Architecture</td>
+        <td class="val">React 18 + Vite 6 + React Router v7 + Lucide Icons + Vercel Cloud</td>
+      </tr>
+      <tr>
+        <td class="label">Date of Handover</td>
+        <td class="val">October 31, 2026</td>
+      </tr>
+      <tr>
+        <td class="label">Deployment Status</td>
+        <td class="val" style="color: #12753e; font-weight: 700;">● 100% Deployed & Live on Vercel Global Edge Network</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- SECTION 1: PROJECT OVERVIEW & DELIVERABLES -->
+  <div>
+    <h2>1. Project Scope & Architecture Overview</h2>
+    <p>
+      The Annai Tuition Centre web platform has been redesigned into a modern educational web application tailored specifically for students and parents in Trichy. The application emphasizes trust, academic credibility, mobile responsiveness, and high conversion through direct WhatsApp & phone contact channels.
+    </p>
+
+    <h3>Core Technology Stack</h3>
+    <ul>
+      <li><strong>Frontend Engine:</strong> React 18 single-page application built with modern functional components and hooks.</li>
+      <li><strong>Build System:</strong> Vite 6 bundler for rapid page load times and optimized code splitting.</li>
+      <li><strong>Routing System:</strong> React Router DOM v7 providing seamless page transitions without page reloads.</li>
+      <li><strong>Design Theme:</strong> Royal Sapphire Navy (<code>#071536</code>) with Golden Warm Accents (<code>#f5b82e</code>). WCAG AA contrast compliant with zero unstyled white containers.</li>
+      <li><strong>Hosting Infrastructure:</strong> Vercel Global Edge Network with automated continuous integration (CI/CD) and free SSL/TLS certificate.</li>
+    </ul>
+
+    <h2>2. Key Features & Page Breakdown</h2>
+    <div class="feature-grid">
+      <div class="feature-box">
+        <strong>Home Page (/)</strong>
+        <span>Opening hero, Instant Batch Enquiry, Founder S. Thiyagarajan 16+ years highlight, Classes 1 to 12 overview, Toppers preview, and Puthur campus locations.</span>
+      </div>
+      <div class="feature-box">
+        <strong>About Us (/about)</strong>
+        <span>Exclusive home for all institution credentials: 7,000+ Alumni legacy, 24/7 CCTV surveillance, Dedicated Parking Facility, and Girls' Safety protocols.</span>
+      </div>
+      <div class="feature-box">
+        <strong>Classes & Curriculum (/classes)</strong>
+        <span>Computer Science, Biology, and Specialized Tutorials subject tags, alongside Classes 1 to 12 grade syllabi with direct admission enquiry buttons.</span>
+      </div>
+      <div class="feature-box">
+        <strong>Faculty & Careers (/faculty)</strong>
+        <span>Founder Director profile, mentors with 7–8+ years teaching experience, and an active 1-click WhatsApp application for teaching jobs.</span>
+      </div>
+      <div class="feature-box">
+        <strong>Results & Milestones (/results)</strong>
+        <span>Verified student board toppers, 10th and 12th marks gallery, and academic centum scores presented in high-contrast royal sapphire cards.</span>
+      </div>
+      <div class="feature-box">
+        <strong>Contact & Campuses (/contact)</strong>
+        <span>Both campus addresses (Vannarapettai & Ramakrishna Middle School), live interactive Google Maps embeds with driving directions, and instant phone calls.</span>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Instant WhatsApp Admission Forwarding:</strong>
+      <p style="margin: 4px 0 0; font-size: 10pt;">
+        The Admissions application form on <code>/admissions</code> is fully automated. When a parent or student submits the form, it formats all student details (name, class, mobile, school, preferred branch) and opens WhatsApp directly to <strong>96262 65456</strong>, allowing instant enrollment communication without relying on third-party servers.
+      </p>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 3: ACCESS & OWNERSHIP TRANSFER -->
+  <div>
+    <h2>3. Access & Ownership Transfer Instructions</h2>
+    <div class="callout-warning">
+      <strong>IMPORTANT SECURITY DIRECTIVE (பாதுகாப்பு நெறிமுறை):</strong><br>
+      Passwords are <strong>NEVER</strong> written in plaintext documents. True ownership and administrative access are granted securely through direct account transfer and administrative invitation on GitHub and Vercel.
+    </div>
+
+    <h3>Step 1: Vercel Cloud Hosting Ownership Transfer</h3>
+    <p>Vercel hosts the live production website. To transfer complete administrative control to the client:</p>
+    <ol class="steps-list">
+      <li>The client signs up for a free Vercel account at <strong>https://vercel.com/signup</strong> using the official tuition email (<code>annaituitioncentre@gmail.com</code>).</li>
+      <li>In the developer Vercel Dashboard, navigate to <strong>Project Settings → Members</strong>.</li>
+      <li>Invite <code>annaituitioncentre@gmail.com</code> as an <strong>Owner / Admin</strong>.</li>
+      <li>The client accepts the invitation from their email. The project can also be transferred completely to the client's team under <strong>Project Settings → Transfer Project</strong>.</li>
+    </ol>
+
+    <h3>Step 2: GitHub Source Code Repository Transfer</h3>
+    <p>The entire source code is maintained on GitHub under Git version control:</p>
+    <ol class="steps-list">
+      <li>The client creates or shares their GitHub username or email (e.g. <code>annaituitioncentre</code>).</li>
+      <li>In the GitHub repository settings (<code>Nisanth32/annai-tuition-centre</code>), click on <strong>Collaborators → Add people</strong> and grant <strong>Admin access</strong>.</li>
+      <li>Alternatively, under <strong>Settings → Danger Zone → Transfer Ownership</strong>, the entire repository can be permanently transferred to the client's GitHub account.</li>
+    </ol>
+
+    <h3>Step 3: Connecting a Custom Domain Name (e.g. annaituitioncentre.com)</h3>
+    <p>When the client purchases or points their custom domain name:</p>
+    <ol class="steps-list">
+      <li>Go to Vercel Dashboard → Select <strong>annai-tuition-centre</strong> → <strong>Settings → Domains</strong>.</li>
+      <li>Enter the desired domain (e.g., <code>annaituitioncentre.com</code> or <code>.in</code>) and click <strong>Add</strong>.</li>
+      <li>Vercel will display two DNS records to configure at the domain registrar (GoDaddy, Hostinger, Namecheap):
+        <ul>
+          <li><strong>A Record:</strong> Name <code>@</code> → Value <code>76.76.21.21</code></li>
+          <li><strong>CNAME Record:</strong> Name <code>www</code> → Value <code>cname.vercel-dns.com</code></li>
+        </ul>
+      </li>
+      <li>Within minutes, Vercel verifies ownership and automatically issues a free, auto-renewing SSL certificate.</li>
+    </ol>
+
+    <h2>4. Ongoing Maintenance & Backup Protocol</h2>
+    <ul>
+      <li><strong>Automatic Git Backups:</strong> Every code modification is tracked with complete history in Git commits. Any version can be restored at any time in seconds.</li>
+      <li><strong>No Server Maintenance Required:</strong> The website is deployed as a static-optimized SPA on Vercel's serverless CDN, meaning zero server crashes, zero maintenance fees, and 99.99% uptime.</li>
+      <li><strong>Updating Student Results / Toppers:</strong> Whenever new board results are released, new marks and student photos can be added to <code>src/App.jsx</code> and deployed instantly with <code>git push</code>.</li>
+    </ul>
+
+    <div class="footer-note">
+      Document prepared for S. Thiyagarajan, Founder & Academic Director, Annai Tuition Centre, Trichy.<br>
+      © 2026 Annai Tuition Centre. All rights reserved.
+    </div>
+  </div>
+
+</body>
+</html>
+
