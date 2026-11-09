@@ -1592,10 +1592,10 @@ function ReferenceHero() {
             ANNAI <span className="title-highlight">TUITION CENTRE</span>
           </h1>
 
-          <p className="ref-hero-tagline">Better Learning | Brighter Future</p>
+          <p className="ref-hero-tagline">Best Tuition Centre &amp; Tutorial in Trichy · Est. 2008</p>
 
           <p className="ref-hero-desc">
-            Personal attention, expert faculty, and focused learning to help every student succeed with confidence.
+            Trichy's leading tuition centre for 10th and 12th board exams and school tuition classes. Personal attention, expert faculty, and focused learning to help every student succeed with confidence.
           </p>
 
           <div className="ref-hero-actions">
@@ -1974,8 +1974,8 @@ function ClassesSimpleSection() {
       <div className="container">
         <div className="strip-heading">
           <div>
-            <span className="eyebrow">Academic Batches</span>
-            <h2>All Classes Supported (Classes 1 to 12)</h2>
+            <span className="eyebrow">Academic Batches &amp; Tutorials in Trichy</span>
+            <h2>10th, 12th &amp; School Tuition Classes in Trichy</h2>
           </div>
           <Link to="/classes" className="text-link">
             View full syllabus <ArrowRight size={16} />
@@ -2227,13 +2227,13 @@ function ClassesPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Classes, Subjects & Tutorials"
+        eyebrow="Classes, Subjects & Tutorials in Trichy"
         title={
           <>
-            The next step starts <em>here.</em>
+            Best Tuition Classes & Tutorials in <em>Trichy.</em>
           </>
         }
-        text="Comprehensive coaching programs from Class 1 to 12. Specialized batches for Mathematics, Science, Computer Science, and Board Exam Centums."
+        text="Top-rated 10th and 12th tuition centre coaching and school tuition classes in Trichy. Specialized tutorials for Mathematics, Science, Biology, and Computer Science."
       />
 
       {/* Specialized Computer Science, Biology & Tutorials */}
