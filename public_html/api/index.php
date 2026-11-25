@@ -323,6 +323,192 @@ if (preg_match('#^/admin/admissions/([^/]+)/(?:status/)?$#', $path, $matches)) {
     }
 }
 
+// ============================================================================
+// 9. FACULTY ATTENDANCE SYSTEM (Single-User Strict Login)
+// ============================================================================
+define('ATTENDANCE_USER_ID', 'S. Thiyagarajan');
+define('ATTENDANCE_PASSWORD', 'S. Thiyagarajan123@$#');
+
+function requireAttendanceAuth() {
+    if (empty($_SESSION['attendance_authenticated']) || $_SESSION['attendance_user'] !== ATTENDANCE_USER_ID) {
+        jsonReply(['detail' => 'Authentication required. Please log in with authorized credentials.'], 401);
+    }
+}
+
+// Attendance Login
+if ($path === '/attendance/login/' && $method === 'POST') {
+    $username = trim($jsonBody['username'] ?? '');
+    $password = (string)($jsonBody['password'] ?? '');
+
+    if ($username === ATTENDANCE_USER_ID && $password === ATTENDANCE_PASSWORD) {
+        $_SESSION['attendance_authenticated'] = true;
+        $_SESSION['attendance_user'] = ATTENDANCE_USER_ID;
+        jsonReply([
+            'authenticated' => true,
+            'username' => ATTENDANCE_USER_ID
+        ]);
+    } else {
+        jsonReply(['detail' => 'Invalid User ID or Password. Access denied.'], 401);
+    }
+}
+
+// Attendance Session Check
+if ($path === '/attendance/me/' && $method === 'GET') {
+    if (!empty($_SESSION['attendance_authenticated']) && $_SESSION['attendance_user'] === ATTENDANCE_USER_ID) {
+        jsonReply([
+            'authenticated' => true,
+            'username' => ATTENDANCE_USER_ID
+        ]);
+    } else {
+        jsonReply(['detail' => 'Authentication required.'], 401);
+    }
+}
+
+// Attendance Logout
+if ($path === '/attendance/logout/' && $method === 'POST') {
+    unset($_SESSION['attendance_authenticated'], $_SESSION['attendance_user']);
+    jsonReply(['authenticated' => false]);
+}
+
+// List Faculty + Attendance Percentages
+if ($path === '/attendance/faculty/' && $method === 'GET') {
+    requireAttendanceAuth();
+    $start = trim($_GET['start'] ?? '');
+    $end = trim($_GET['end'] ?? '');
+
+    $faculty = $pdo->query("SELECT id, name, created_at FROM attendance_faculty ORDER BY id ASC")->fetchAll();
+
+    foreach ($faculty as &$f) {
+        $sql = "SELECT status FROM attendance_records WHERE faculty_id = ?";
+        $params = [$f['id']];
+        if ($start !== '' && $end !== '') {
+            $sql .= " AND record_date >= ? AND record_date <= ?";
+            $params[] = $start;
+            $params[] = $end;
+        }
+        $rStmt = $pdo->prepare($sql);
+        $rStmt->execute($params);
+        $recs = $rStmt->fetchAll();
+
+        $total = count($recs);
+        $present = 0;
+        $halfDay = 0;
+        $absent = 0;
+
+        foreach ($recs as $r) {
+            if ($r['status'] === 'Present') $present++;
+            elseif ($r['status'] === 'Half Day') $halfDay++;
+            elseif ($r['status'] === 'Absent') $absent++;
+        }
+
+        $score = $present + ($halfDay * 0.5);
+        $percentage = $total > 0 ? round(($score / $total) * 100, 1) : 0;
+
+        $f['total_days'] = $total;
+        $f['present_days'] = $present;
+        $f['half_days'] = $halfDay;
+        $f['absent_days'] = $absent;
+        $f['percentage'] = $percentage;
+    }
+
+    jsonReply(['faculty' => $faculty]);
+}
+
+// Add New Faculty
+if ($path === '/attendance/faculty/' && $method === 'POST') {
+    requireAttendanceAuth();
+    $name = trim($jsonBody['name'] ?? '');
+    if ($name === '') {
+        jsonReply(['detail' => 'Faculty name is required.'], 400);
+    }
+
+    $stmt = $pdo->prepare("INSERT INTO attendance_faculty (name) VALUES (?)");
+    $stmt->execute([$name]);
+    $newId = (int)$pdo->lastInsertId();
+
+    jsonReply([
+        'id' => $newId,
+        'name' => $name,
+        'total_days' => 0,
+        'present_days' => 0,
+        'half_days' => 0,
+        'absent_days' => 0,
+        'percentage' => 0
+    ], 201);
+}
+
+// Remove Faculty (supports DELETE /attendance/faculty/{id}/ or POST /attendance/faculty/{id}/delete/)
+if (preg_match('#^/attendance/faculty/(\d+)/(?:delete/)?$#', $path, $matches)) {
+    requireAttendanceAuth();
+    $facId = (int)$matches[1];
+
+    if ($method === 'DELETE' || ($method === 'POST' && strpos($path, '/delete/') !== false)) {
+        $pdo->prepare("DELETE FROM attendance_records WHERE faculty_id = ?")->execute([$facId]);
+        $pdo->prepare("DELETE FROM attendance_faculty WHERE id = ?")->execute([$facId]);
+        jsonReply(['deleted' => true, 'id' => $facId]);
+    }
+}
+
+// Get Attendance Records (by date or date range)
+if ($path === '/attendance/records/' && $method === 'GET') {
+    requireAttendanceAuth();
+    $date = trim($_GET['date'] ?? '');
+    $start = trim($_GET['start'] ?? '');
+    $end = trim($_GET['end'] ?? '');
+
+    if ($date !== '') {
+        $stmt = $pdo->prepare("SELECT faculty_id, record_date, status FROM attendance_records WHERE record_date = ?");
+        $stmt->execute([$date]);
+        jsonReply(['records' => $stmt->fetchAll()]);
+    } elseif ($start !== '' && $end !== '') {
+        $stmt = $pdo->prepare("SELECT r.faculty_id, f.name as faculty_name, r.record_date, r.status
+            FROM attendance_records r
+            JOIN attendance_faculty f ON f.id = r.faculty_id
+            WHERE r.record_date >= ? AND r.record_date <= ?
+            ORDER BY r.record_date ASC, f.id ASC");
+        $stmt->execute([$start, $end]);
+        jsonReply(['records' => $stmt->fetchAll()]);
+    } else {
+        $stmt = $pdo->query("SELECT r.faculty_id, f.name as faculty_name, r.record_date, r.status
+            FROM attendance_records r
+            JOIN attendance_faculty f ON f.id = r.faculty_id
+            ORDER BY r.record_date DESC, f.id ASC");
+        jsonReply(['records' => $stmt->fetchAll()]);
+    }
+}
+
+// Save Attendance Records for a Date
+if ($path === '/attendance/records/' && $method === 'POST') {
+    requireAttendanceAuth();
+    $date = trim($jsonBody['date'] ?? '');
+    $records = $jsonBody['records'] ?? [];
+
+    if ($date === '' || !is_array($records)) {
+        jsonReply(['detail' => 'Valid date and records list are required.'], 400);
+    }
+
+    $allowedStatuses = ['Present', 'Absent', 'Half Day'];
+    $pdo->beginTransaction();
+    try {
+        $delStmt = $pdo->prepare("DELETE FROM attendance_records WHERE faculty_id = ? AND record_date = ?");
+        $insStmt = $pdo->prepare("INSERT INTO attendance_records (faculty_id, record_date, status) VALUES (?, ?, ?)");
+
+        foreach ($records as $rec) {
+            $facId = (int)($rec['faculty_id'] ?? 0);
+            $status = trim($rec['status'] ?? '');
+            if ($facId > 0 && in_array($status, $allowedStatuses, true)) {
+                $delStmt->execute([$facId, $date]);
+                $insStmt->execute([$facId, $date, $status]);
+            }
+        }
+        $pdo->commit();
+        jsonReply(['saved' => true, 'date' => $date]);
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        jsonReply(['detail' => 'Failed to save attendance records.'], 500);
+    }
+}
+
 // Fallback: 404 Not Found
 jsonReply(['detail' => 'Not found: ' . $path], 404);
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import AttendanceDashboard from './AttendanceDashboard.jsx';
 import {
   ArrowDown,
   ArrowRight,
@@ -490,6 +491,9 @@ function Footer() {
           </p>
           <Link to="/admin" className="footer-directions">
             Administrator sign in <ArrowRight size={14} />
+          </Link>
+          <Link to="/attendance" className="footer-directions" style={{ marginTop: '8px' }}>
+            Faculty Attendance <ArrowRight size={14} />
           </Link>
         </div>
       </div>
@@ -3228,6 +3232,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/admissions" element={<Admissions />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/attendance" element={<AttendanceDashboard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AppShell>

@@ -90,6 +90,29 @@ function initDatabaseTables(PDO $pdo) {
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     )");
 
+    // 4. Attendance Faculty Table
+    $pdo->exec("CREATE TABLE IF NOT EXISTS attendance_faculty (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name VARCHAR(150) NOT NULL,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    )");
+
+    // 5. Attendance Records Table
+    $pdo->exec("CREATE TABLE IF NOT EXISTS attendance_records (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        faculty_id INTEGER NOT NULL,
+        record_date VARCHAR(20) NOT NULL,
+        status VARCHAR(20) NOT NULL,
+        updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE(faculty_id, record_date)
+    )");
+
+    // 6. Metadata / Seed Flags Table
+    $pdo->exec("CREATE TABLE IF NOT EXISTS app_meta (
+        meta_key VARCHAR(100) PRIMARY KEY,
+        meta_value VARCHAR(255) NOT NULL
+    )");
+
     // Seed default admin if table is empty
     $stmt = $pdo->query("SELECT COUNT(*) as cnt FROM admin_users");
     $row = $stmt->fetch();
@@ -97,4 +120,24 @@ function initDatabaseTables(PDO $pdo) {
         $insert = $pdo->prepare("INSERT INTO admin_users (username, password_hash) VALUES (?, ?)");
         $insert->execute([ADMIN_USERNAME, ADMIN_PASSWORD_HASH]);
     }
+
+    // Seed default faculty once
+    $seedCheck = $pdo->prepare("SELECT meta_value FROM app_meta WHERE meta_key = ?");
+    $seedCheck->execute(['attendance_faculty_seeded']);
+    if (!$seedCheck->fetch()) {
+        $initialFaculty = [
+            'Kishore V',
+            'Prasanna Venkatesh',
+            'Pooja',
+            'Subiksha',
+            'Kowsalya'
+        ];
+        $insFac = $pdo->prepare("INSERT INTO attendance_faculty (name) VALUES (?)");
+        foreach ($initialFaculty as $fName) {
+            $insFac->execute([$fName]);
+        }
+        $setSeed = $pdo->prepare("INSERT INTO app_meta (meta_key, meta_value) VALUES (?, ?)");
+        $setSeed->execute(['attendance_faculty_seeded', '1']);
+    }
 }
+
