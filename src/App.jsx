@@ -338,6 +338,7 @@ function Header() {
             { label: 'Faculty & Careers', path: '/faculty' },
             { label: 'Results', path: '/results' },
             { label: 'Contact', path: '/contact' },
+            { label: 'Attendance', path: '/attendance' },
           ].map((item) => (
             <NavLink
               key={item.label}
